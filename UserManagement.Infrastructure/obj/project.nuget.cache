@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yKa/0D4bmXg=",
+  "dgSpecHash": "fOPVU5AH2Z8=",
   "success": true,
   "projectFilePath": "C:\\project\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\binad\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.4\\microsoft.extensions.caching.abstractions.9.0.4.nupkg.sha512",
     "C:\\Users\\binad\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.4\\microsoft.extensions.caching.memory.9.0.4.nupkg.sha512",
     "C:\\Users\\binad\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.4\\microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512",
+    "C:\\Users\\binad\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.4\\microsoft.extensions.configuration.binder.9.0.4.nupkg.sha512",
     "C:\\Users\\binad\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.4\\microsoft.extensions.dependencyinjection.9.0.4.nupkg.sha512",
     "C:\\Users\\binad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.4\\microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512",
     "C:\\Users\\binad\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.4\\microsoft.extensions.dependencymodel.9.0.4.nupkg.sha512",

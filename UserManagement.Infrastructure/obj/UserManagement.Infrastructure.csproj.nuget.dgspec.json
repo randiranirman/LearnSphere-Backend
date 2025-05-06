@@ -239,6 +239,10 @@
               "target": "Package",
               "version": "[9.0.4, )"
             },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[9.0.4, )"

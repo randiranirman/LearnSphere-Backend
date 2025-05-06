@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace UserManagement.Application.Dtos
 {
-    internal class RefreshTokenRequestDto
+    public  class RefreshTokenRequestDto
     {
+
+        public int UserId { get; set; }
+        public required string RefreshToken { get; set; }
     }
 }
