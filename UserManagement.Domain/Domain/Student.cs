@@ -15,5 +15,6 @@ namespace UserManagement.Domain.Domain
 
         public string? ParentContactNumber { get; set; }
         public string? ParentName { get; set; }
+        public int Id { get; set; }
     }
 }

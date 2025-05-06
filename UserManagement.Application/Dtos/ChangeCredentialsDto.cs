@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace UserManagement.Application.Dtos
 {
-    internal class Class1
+    public  class ChangeCredentialsDto
     {
+        public string TemporaryPassword { get; set; } = string.Empty;
+        public string NewPassword { get; set; } = string.Empty;
+        public string ConfirmPassword { get; set; } = string.Empty;
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UserManagement.Application.Dtos;
 
 namespace UserManagement.Domain.Repositories
 {
@@ -15,7 +16,7 @@ namespace UserManagement.Domain.Repositories
         Task<bool> LogoutAsync(string username);
         Task<bool> IsFirstLogin(UserDto request);
         Task<bool> UpdateFirstLoginStatus(UserDto request);
-
+            
         Task<bool> ChangeCredentials(String username, ChangeCredentialsDto request);
     }
 }
