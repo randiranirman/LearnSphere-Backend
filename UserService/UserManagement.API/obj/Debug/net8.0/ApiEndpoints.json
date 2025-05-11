@@ -192,6 +192,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "UserManagement.API.Controllers.EmailController",
+    "Method": "SendEmail",
+    "RelativePath": "api/email/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "receptor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "subject",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "body",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "UserManagement.API.Controllers.UserController",
     "Method": "GetUsers",
     "RelativePath": "user",

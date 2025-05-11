@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UserManagement.Application.Dtos;
+using UserManagement.Application.Repositories;
 using UserManagement.Domain.Domain;
 using UserManagement.Domain.Repositories;
 
@@ -8,7 +9,7 @@ namespace UserManagement.API.Controllers
 {
     [Route("api/auth")]
     [ApiController]
-    public class AuthController(IAuthService authService) : ControllerBase
+    public class AuthController(IAuthService authService, IEmailService emailService) : ControllerBase
     {
         public static User user = new User();
 
@@ -21,6 +22,8 @@ namespace UserManagement.API.Controllers
             {
                 return BadRequest(new { message = "Username already exits" });
             }
+
+            
             return Ok(
                 new
                 {
