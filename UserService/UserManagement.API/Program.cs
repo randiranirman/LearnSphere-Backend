@@ -19,6 +19,7 @@ builder.Services.AddDbContext<UserDbContext>(options => options.UseSqlServer(bui
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost",
