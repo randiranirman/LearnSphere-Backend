@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using UserManagement.Application.Dtos;
+using UserManagement.Application.Repositories;
 using UserManagement.Domain.Domain;
 using UserManagement.Domain.Repositories;
 using UserManagement.Infrastructure.Data;
@@ -19,7 +20,7 @@ using UserManagement.Infrastructure.Data;
 
 namespace UserManagement.Infrastructure.Services
 {
-    public class AuthService(UserDbContext context, IConfiguration configuration) : IAuthService
+    public class AuthService(UserDbContext context, IConfiguration configuration, IEmailService emailService) : IAuthService
     {
         public async Task<bool> ChangeCredentials(string username, ChangeCredentialsDto request)
         {
@@ -223,6 +224,7 @@ namespace UserManagement.Infrastructure.Services
             {
                 return null;
             }
+            request.Password = GenaratERandomPassword();    
             var user = new User();
             var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
             user.IsFirstLogin = true;
@@ -270,6 +272,8 @@ namespace UserManagement.Infrastructure.Services
                 };
 
             }
+           // sending the email to the particular user
+            await emailService.SendEmailToUserAsync(user.Email, EmailTemplates.WelcomeSubject, EmailTemplates.WelcomeBody(user.Name, user.Username, request.Password));
 
 
 
@@ -299,6 +303,26 @@ namespace UserManagement.Infrastructure.Services
             context.Users.Update(user);
             await context.SaveChangesAsync();
             return true;
+
+        }
+
+        public String GenaratERandomPassword(int length=6)
+        {
+
+            // create a string of characters  , numbres ,  and special character
+            string  validChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?_-";
+            Random random = new Random();
+            // select one random character from  the string 
+            char[] chars = new char[length];
+            for (int i = 0; i < length; i++)
+            {
+                chars[i] = validChars[random.Next(0, validChars.Length)];
+            }
+
+            return new string(chars);
+
+
+
 
         }
 

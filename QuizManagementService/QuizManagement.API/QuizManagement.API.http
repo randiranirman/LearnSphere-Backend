@@ -1,0 +1,6 @@
+@QuizManagement.API_HostAddress = http://localhost:5261
+
+GET {{QuizManagement.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
