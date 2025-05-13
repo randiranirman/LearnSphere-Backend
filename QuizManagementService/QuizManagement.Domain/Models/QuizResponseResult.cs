@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace QuizManagement.Domain.Models
 {
-    public  class Teacher
+    public  class QuizResponseResult
     {
+
+        public bool IsCorrect { get; set; }
+        public int Score { get; set; }
     }
 }
