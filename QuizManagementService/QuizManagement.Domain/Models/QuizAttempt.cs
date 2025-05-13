@@ -12,7 +12,7 @@ namespace QuizManagement.Domain.Models
         public int QuizId { get; set; }
         public Quiz Quiz { get; set; }
         public int StudentId { get; set; }
-        public Student Student { get; set; }
+        public StudentDto Student { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime? EndTime { get; set; }
         public int TotalScore { get; set; }

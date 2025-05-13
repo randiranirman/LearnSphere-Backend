@@ -16,7 +16,7 @@ namespace QuizManagement.Domain.Models
 
         public Subject Subject { get; set; }
         public int TeacherID;
-        public Teacher Teacher { get; set; }
+        public TeacherDto Teacher { get; set; }
         public int ClassID;
 
         public Class Class { get; set; }
