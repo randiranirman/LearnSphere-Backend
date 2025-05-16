@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.API", "UserManagement.API\UserManagement.API.csproj", "{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.Application", "UserManagement.Application\UserManagement.Application.csproj", "{A20E3C34-9625-4034-BF9D-3A8AF51AC263}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.Infrastructure", "UserManagement.Infrastructure\UserManagement.Infrastructure.csproj", "{AC3B60B3-E36C-4E94-884D-9A96765E7A52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizManagement.API", "..\QuizManagementService\QuizManagement.API\QuizManagement.API.csproj", "{6876A838-467E-4607-981C-32BDD54FCD34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AC3B60B3-E36C-4E94-884D-9A96765E7A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC3B60B3-E36C-4E94-884D-9A96765E7A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC3B60B3-E36C-4E94-884D-9A96765E7A52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6876A838-467E-4607-981C-32BDD54FCD34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6876A838-467E-4607-981C-32BDD54FCD34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6876A838-467E-4607-981C-32BDD54FCD34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6876A838-467E-4607-981C-32BDD54FCD34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

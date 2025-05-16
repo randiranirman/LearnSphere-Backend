@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\QuizManagement.API",
+    "\\QuizManagement.Application",
+    "\\QuizManagement.Domain",
+    "\\QuizManagement.Infrastructure"
+  ],
+  "SelectedNode": "\\QuizManagement.sln",
+  "PreviewInSolutionExplorer": false
+}
