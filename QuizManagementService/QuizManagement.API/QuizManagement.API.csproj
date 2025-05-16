@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\UserService\UserManagement.API\UserManagement.API.csproj" />
     <ProjectReference Include="..\QuizManagement.Application\QuizManagement.Application.csproj" />
     <ProjectReference Include="..\QuizManagement.Domain\QuizManagement.Domain.csproj" />
     <ProjectReference Include="..\QuizManagement.Infrastructure\QuizManagement.Infrastructure.csproj" />

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "..\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "UserManagement.API\\UserManagement.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
