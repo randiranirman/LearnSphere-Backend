@@ -29,6 +29,8 @@ namespace UserManagement.Infrastructure.Services
             admin.Address = request.Address;
             admin.LastName = request.LastName;
             admin.ContactNumber = request.ContactNumber;
+            admin.Email= request.Email;
+
 
             await _context.SaveChangesAsync();
             return true;
