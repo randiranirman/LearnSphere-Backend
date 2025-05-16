@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\project\\QuizManagementService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\repositories\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\repositories\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\repositories\\iquizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\repositories\\iquizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\repositories\\irealtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\repositories\\irealtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\models\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\models\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\models\\quizattemptsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\models\\quizattemptsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +27,8 @@
       "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\models\\quizresponseresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\repositories\\irealtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\repositories\\irealtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\repositories\\iattempservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\repositories\\iattempservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\repositories\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\repositories\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\repositories\\iquizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\repositories\\iquizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\repositories\\iclassservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\models\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\models\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|c:\\project\\quizmanagementservice\\quizmanagement.domain\\models\\quizattempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A1F412F-0336-41A0-B510-EC1D42AD2E83}|QuizManagement.Domain\\QuizManagement.Domain.csproj|solutionrelative:quizmanagement.domain\\models\\quizattempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -94,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "QuizAttemptSummary.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\QuizAttemptSummary.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\QuizAttemptSummary.cs",
@@ -127,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "QuizResponseResult.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\QuizResponseResult.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\QuizResponseResult.cs",
@@ -135,8 +135,7 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\QuizResponseResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T06:01:36.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T06:01:36.882Z"
             },
             {
               "$type": "Document",
@@ -153,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "IAttempService.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\repositories\\IAttempService.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\repositories\\IAttempService.cs",
@@ -161,12 +160,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\repositories\\IAttempService.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBMAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T05:55:22.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T05:55:22.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "IQuestionService.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\repositories\\IQuestionService.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\repositories\\IQuestionService.cs",
@@ -179,20 +177,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "IQuizService.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\repositories\\IQuizService.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\repositories\\IQuizService.cs",
               "ToolTip": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\repositories\\IQuizService.cs",
               "RelativeToolTip": "QuizManagement.Domain\\repositories\\IQuizService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA+wAoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA8wAoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T05:54:30.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IClassService.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\repositories\\IClassService.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\repositories\\IClassService.cs",
@@ -200,12 +198,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\repositories\\IClassService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T05:53:24.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T05:53:24.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ISubjectService.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\repositories\\ISubjectService.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\repositories\\ISubjectService.cs",
@@ -213,12 +210,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\repositories\\ISubjectService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T05:53:04.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T05:53:04.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\repositories\\IUserService.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\repositories\\IUserService.cs",
@@ -226,12 +222,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\repositories\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T05:52:43.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T05:52:43.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "QuizDbContext.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\Data\\QuizDbContext.cs",
               "RelativeDocumentMoniker": "QuizManagement.Infrastructure\\Data\\QuizDbContext.cs",
@@ -239,12 +234,11 @@
               "RelativeToolTip": "QuizManagement.Infrastructure\\Data\\QuizDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T05:34:33.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T05:34:33.248Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\UserDto.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\UserDto.cs",
@@ -252,12 +246,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\UserDto.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAzwBAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T05:26:34.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T05:26:34.934Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "QuestionResponse.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\QuestionResponse.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\QuestionResponse.cs",
@@ -265,12 +258,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\QuestionResponse.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:20:19.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:20:19.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 3,
               "Title": "StudentDto.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\StudentDto.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\StudentDto.cs",
@@ -291,12 +283,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\QuizAttempt.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:18:00.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:18:00.392Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Option.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\Option.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\Option.cs",
@@ -304,12 +295,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\Option.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:13:45.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:13:45.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "QuestionType.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\QuestionType.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\QuestionType.cs",
@@ -317,12 +307,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\QuestionType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:13:25.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:13:25.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\Question.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\Question.cs",
@@ -330,12 +319,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\Question.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:12:10.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:12:10.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Class.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\Class.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\Class.cs",
@@ -343,12 +331,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\Class.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:10:06.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:10:06.229Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "TeacherDto.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\TeacherDto.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\TeacherDto.cs",
@@ -356,12 +343,11 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\TeacherDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:08:17.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:08:17.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Subject.cs",
               "DocumentMoniker": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\Models\\Subject.cs",
               "RelativeDocumentMoniker": "QuizManagement.Domain\\Models\\Subject.cs",
@@ -369,8 +355,7 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\Subject.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAzwBEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:07:26.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:07:26.975Z"
             },
             {
               "$type": "Document",
@@ -382,8 +367,7 @@
               "RelativeToolTip": "QuizManagement.Domain\\Models\\Quiz.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:06:04.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:06:04.222Z"
             }
           ]
         }
