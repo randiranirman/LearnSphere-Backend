@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|solutionrelative:filestorage.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.domain\\entities\\metirialentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|solutionrelative:filestorage.domain\\entities\\metirialentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.application\\querries\\getallmetirealsbytopicidquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\querries\\getallmetirealsbytopicidquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.api\\controllers\\metirealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\controllers\\metirealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.domain\\interfaces\\imetirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|solutionrelative:filestorage.domain\\interfaces\\imetirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.infrastructure\\repositories\\metirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|solutionrelative:filestorage.infrastructure\\repositories\\metirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.domain\\interfaces\\isubjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|solutionrelative:filestorage.domain\\interfaces\\isubjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.domain\\entities\\subjecttopicentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|solutionrelative:filestorage.domain\\entities\\subjecttopicentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.api\\controllers\\subjecttopiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\controllers\\subjecttopiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.application\\querries\\getalltopicsbysubjectidquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\querries\\getalltopicsbysubjectidquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|d:\\dotnet practice\\clean code\\src\\filestorage.api\\filestorage.infrastructure\\repositories\\subjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|solutionrelative:filestorage.infrastructure\\repositories\\subjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.API\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "FileStorage.API\\DependencyInjection.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.API\\DependencyInjection.cs",
+              "RelativeToolTip": "FileStorage.API\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:07:15.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.API\\appsettings.json",
+              "RelativeDocumentMoniker": "FileStorage.API\\appsettings.json",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.API\\appsettings.json",
+              "RelativeToolTip": "FileStorage.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-16T11:07:07.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MetirialEntity.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\Entities\\MetirialEntity.cs",
+              "RelativeDocumentMoniker": "FileStorage.Domain\\Entities\\MetirialEntity.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\Entities\\MetirialEntity.cs",
+              "RelativeToolTip": "FileStorage.Domain\\Entities\\MetirialEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T07:13:48.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetAllMetirealsByTopicIdQuerry.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllMetirealsByTopicIdQuerry.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\Querries\\GetAllMetirealsByTopicIdQuerry.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllMetirealsByTopicIdQuerry.cs",
+              "RelativeToolTip": "FileStorage.Application\\Querries\\GetAllMetirealsByTopicIdQuerry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:41:05.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "FileStorage.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "FileStorage.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwBAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:40:19.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMetirealRepository.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\Interfaces\\IMetirealRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage.Domain\\Interfaces\\IMetirealRepository.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\Interfaces\\IMetirealRepository.cs",
+              "RelativeToolTip": "FileStorage.Domain\\Interfaces\\IMetirealRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:39:17.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MetirealRepository.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
+              "RelativeToolTip": "FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:35:38.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MetirealsController.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.API\\Controllers\\MetirealsController.cs",
+              "RelativeDocumentMoniker": "FileStorage.API\\Controllers\\MetirealsController.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.API\\Controllers\\MetirealsController.cs",
+              "RelativeToolTip": "FileStorage.API\\Controllers\\MetirealsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:33:12.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetAllTopicsBySubjectIdQuerry.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllTopicsBySubjectIdQuerry.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\Querries\\GetAllTopicsBySubjectIdQuerry.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllTopicsBySubjectIdQuerry.cs",
+              "RelativeToolTip": "FileStorage.Application\\Querries\\GetAllTopicsBySubjectIdQuerry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:24:38.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SubjectTopicController.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.API\\Controllers\\SubjectTopicController.cs",
+              "RelativeDocumentMoniker": "FileStorage.API\\Controllers\\SubjectTopicController.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.API\\Controllers\\SubjectTopicController.cs",
+              "RelativeToolTip": "FileStorage.API\\Controllers\\SubjectTopicController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:22:45.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ISubjectTopicRepository.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\Interfaces\\ISubjectTopicRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage.Domain\\Interfaces\\ISubjectTopicRepository.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\Interfaces\\ISubjectTopicRepository.cs",
+              "RelativeToolTip": "FileStorage.Domain\\Interfaces\\ISubjectTopicRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:16:28.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SubjectTopicEntity.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
+              "RelativeDocumentMoniker": "FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
+              "RelativeToolTip": "FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:07:04.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SubjectTopicRepository.cs",
+              "DocumentMoniker": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
+              "ToolTip": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
+              "RelativeToolTip": "FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:05:01.984Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

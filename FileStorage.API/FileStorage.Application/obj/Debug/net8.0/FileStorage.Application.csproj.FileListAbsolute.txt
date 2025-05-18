@@ -1,0 +1,15 @@
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Application.deps.json
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Application.dll
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Application.pdb
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Domain.dll
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Domain.pdb
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.csproj.AssemblyReference.cache
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.AssemblyInfoInputs.cache
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.AssemblyInfo.cs
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.csproj.CoreCompileInputs.cache
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStor.FC19584B.Up2Date
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.dll
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\refint\FileStorage.Application.dll
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.pdb
+D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\ref\FileStorage.Application.dll

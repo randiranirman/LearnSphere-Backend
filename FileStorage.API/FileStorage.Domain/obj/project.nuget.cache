@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nR1IUx7HBbs=",
+  "success": true,
+  "projectFilePath": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Domain\\FileStorage.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.4\\microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
