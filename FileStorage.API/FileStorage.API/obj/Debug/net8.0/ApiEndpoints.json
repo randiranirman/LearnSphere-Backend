@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "FileStorage.API.Controllers.MetirealsController",
+    "Method": "GetAllMetirealsByTopicIdAsync",
+    "RelativePath": "api/Metireals/{topicId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "topicId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.API.Controllers.SubjectTopicController",
+    "Method": "GetAllTopicsBySubjectIdAsync",
+    "RelativePath": "api/SubjectTopic/{subjectId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subjectId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
