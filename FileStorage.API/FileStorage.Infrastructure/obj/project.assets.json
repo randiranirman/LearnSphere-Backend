@@ -4829,11 +4829,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj",
+      "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj",
       "projectName": "FileStorage.Infrastructure",
-      "projectPath": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj",
+      "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Infrastructure\\obj\\",
+      "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4855,8 +4855,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj": {
-              "projectPath": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj"
+            "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj": {
+              "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj"
             }
           }
         }

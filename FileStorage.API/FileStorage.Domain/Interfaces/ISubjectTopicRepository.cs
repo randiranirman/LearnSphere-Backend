@@ -10,5 +10,6 @@ namespace FileStorage.Domain.Interfaces
     public interface ISubjectTopicRepository
     {
         public Task<IEnumerable<SubjectTopicEntity>> GetTopicsBySubjectIdAsync(int subjectId);
+        public Task<SubjectTopicEntity?> GetTopicByIdAsync(int topicId);
     }
 }

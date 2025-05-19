@@ -16,6 +16,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FileStorage.API.Controllers.MetirealsController",
+    "Method": "CreateMetirealAsync",
+    "RelativePath": "api/Metireals/{topicId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "topicId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createMetirealRequest",
+        "Type": "FileStorage.Application.DTOs.CreateMetirealRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FileStorage.API.Controllers.SubjectTopicController",
     "Method": "GetAllTopicsBySubjectIdAsync",
     "RelativePath": "api/SubjectTopic/{subjectId}",

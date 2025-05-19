@@ -1,4 +1,6 @@
-﻿namespace FileStorage.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FileStorage.Domain.Entities
 {
     public class MetirialEntity
     {
@@ -6,6 +8,8 @@
         public string UploadLink { get; set; }
         public string FileType { get; set; }
         public string SavedName { get; set; }
+
+        [ForeignKey("SubjectTopic")]
         public int TopicId { get; set; }
         public SubjectTopicEntity SubjectTopic { get; set; }
     }

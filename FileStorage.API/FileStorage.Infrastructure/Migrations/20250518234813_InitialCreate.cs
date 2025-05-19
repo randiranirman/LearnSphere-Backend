@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace FileStorage.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class dbinit : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -78,24 +78,23 @@ namespace FileStorage.Infrastructure.Migrations
                     UploadLink = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FileType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SavedName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TopicId = table.Column<int>(type: "int", nullable: false),
-                    SubjectTopicId = table.Column<int>(type: "int", nullable: false)
+                    TopicId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MetirialEntities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MetirialEntities_SubjectTopicEntities_SubjectTopicId",
-                        column: x => x.SubjectTopicId,
+                        name: "FK_MetirialEntities_SubjectTopicEntities_TopicId",
+                        column: x => x.TopicId,
                         principalTable: "SubjectTopicEntities",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_MetirialEntities_SubjectTopicId",
+                name: "IX_MetirialEntities_TopicId",
                 table: "MetirialEntities",
-                column: "SubjectTopicId");
+                column: "TopicId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SubjectEntities_AssignedTeacherId",

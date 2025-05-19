@@ -38,9 +38,6 @@ namespace FileStorage.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SubjectTopicId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TopicId")
                         .HasColumnType("int");
 
@@ -50,7 +47,7 @@ namespace FileStorage.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SubjectTopicId");
+                    b.HasIndex("TopicId");
 
                     b.ToTable("MetirialEntities");
                 });
@@ -138,7 +135,7 @@ namespace FileStorage.Infrastructure.Migrations
                 {
                     b.HasOne("FileStorage.Domain.Entities.SubjectTopicEntity", "SubjectTopic")
                         .WithMany("Metirials")
-                        .HasForeignKey("SubjectTopicId")
+                        .HasForeignKey("TopicId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

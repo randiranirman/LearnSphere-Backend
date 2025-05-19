@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FileStorage.Infrastructure.Migrations
 {
     [DbContext(typeof(FileStorageDbContext))]
-    [Migration("20250516112413_hostDatabase")]
-    partial class hostDatabase
+    [Migration("20250518234813_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,9 +41,6 @@ namespace FileStorage.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SubjectTopicId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TopicId")
                         .HasColumnType("int");
 
@@ -53,7 +50,7 @@ namespace FileStorage.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SubjectTopicId");
+                    b.HasIndex("TopicId");
 
                     b.ToTable("MetirialEntities");
                 });
@@ -141,7 +138,7 @@ namespace FileStorage.Infrastructure.Migrations
                 {
                     b.HasOne("FileStorage.Domain.Entities.SubjectTopicEntity", "SubjectTopic")
                         .WithMany("Metirials")
-                        .HasForeignKey("SubjectTopicId")
+                        .HasForeignKey("TopicId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

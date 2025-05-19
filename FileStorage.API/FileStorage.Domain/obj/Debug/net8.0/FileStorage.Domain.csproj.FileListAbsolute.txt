@@ -10,3 +10,16 @@ D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Domain\obj\Debug\n
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\refint\FileStorage.Domain.dll
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.pdb
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\ref\FileStorage.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\bin\Debug\net8.0\FileStorage.Domain.deps.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\bin\Debug\net8.0\FileStorage.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\bin\Debug\net8.0\FileStorage.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.csproj.AssemblyReference.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.AssemblyInfoInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.AssemblyInfo.cs
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.csproj.CoreCompileInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.sourcelink.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\refint\FileStorage.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\ref\FileStorage.Domain.dll

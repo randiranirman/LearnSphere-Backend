@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lkDdLmE2KeY=",
+  "dgSpecHash": "CYBsNCNf35I=",
   "success": true,
-  "projectFilePath": "D:\\DotNet practice\\Clean Code\\src\\FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj",
+  "projectFilePath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

@@ -9,5 +9,15 @@ namespace FileStorage.Infrastructure.Data
         public DbSet<TeacherEntity> TeacherEntities { get; set; }
         public DbSet<SubjectTopicEntity> SubjectTopicEntities { get; set; }
         public DbSet<MetirialEntity> MetirialEntities { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MetirialEntity>()
+                .HasOne(m => m.SubjectTopic)
+                .WithMany(st => st.Metirials)
+                .HasForeignKey(m => m.TopicId);
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
