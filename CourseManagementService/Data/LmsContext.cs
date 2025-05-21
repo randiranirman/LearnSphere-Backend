@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using CourseManagementService.Models.Domains;
+﻿using CourseManagementService.Models.Domains;
 using Microsoft.EntityFrameworkCore;
 
 namespace CourseManagementService.Data;

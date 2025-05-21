@@ -9,7 +9,6 @@ namespace FileStorage.Domain.Entities
         public string FileType { get; set; }
         public string SavedName { get; set; }
 
-        [ForeignKey("SubjectTopic")]
         public int TopicId { get; set; }
         public SubjectTopicEntity SubjectTopic { get; set; }
     }

@@ -9,8 +9,7 @@
         public string ContactNo { get; set; }
         public string Address { get; set; }
 
-        // navigation property
-        public ICollection<SubjectEntity> Subjects { get; set; }  // to confirms the one-to-many relation
+        public ICollection<SubjectEntity> AssigedSubjects { get; set; }
 
     }
 }

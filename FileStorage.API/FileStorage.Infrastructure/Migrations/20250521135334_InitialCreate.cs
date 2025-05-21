@@ -45,8 +45,7 @@ namespace FileStorage.Infrastructure.Migrations
                         name: "FK_SubjectEntities_TeacherEntities_AssignedTeacherId",
                         column: x => x.AssignedTeacherId,
                         principalTable: "TeacherEntities",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -65,8 +64,7 @@ namespace FileStorage.Infrastructure.Migrations
                         name: "FK_SubjectTopicEntities_SubjectEntities_SubjectId",
                         column: x => x.SubjectId,
                         principalTable: "SubjectEntities",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -87,8 +85,7 @@ namespace FileStorage.Infrastructure.Migrations
                         name: "FK_MetirialEntities_SubjectTopicEntities_TopicId",
                         column: x => x.TopicId,
                         principalTable: "SubjectTopicEntities",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(

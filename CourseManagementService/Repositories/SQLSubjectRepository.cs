@@ -19,7 +19,7 @@ namespace CourseManagementService.Repositories
 
         public async Task<Subject> CreateSubjectAsync(Subject subject, Guid teacherId)
         {
-            // add new subject to thr Subject table
+            // add new subject to the Subject table
             await _context.Subjects.AddAsync(subject);
             await _context.SaveChangesAsync();
 

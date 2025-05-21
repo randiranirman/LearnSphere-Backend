@@ -15,6 +15,7 @@ public partial class TeacherSubject
     [Column(Order = 2)]
     public Guid SubjectCode { get; set; }
 
+    // navigation proparties
     public virtual Subject SubjectCodeNavigation { get; set; } = null!;
 
     public virtual Teacher Teacher { get; set; } = null!;

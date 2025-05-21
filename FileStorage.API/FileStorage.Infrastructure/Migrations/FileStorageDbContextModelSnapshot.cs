@@ -136,7 +136,7 @@ namespace FileStorage.Infrastructure.Migrations
                     b.HasOne("FileStorage.Domain.Entities.SubjectTopicEntity", "SubjectTopic")
                         .WithMany("Metirials")
                         .HasForeignKey("TopicId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("SubjectTopic");
@@ -145,9 +145,9 @@ namespace FileStorage.Infrastructure.Migrations
             modelBuilder.Entity("FileStorage.Domain.Entities.SubjectEntity", b =>
                 {
                     b.HasOne("FileStorage.Domain.Entities.TeacherEntity", "AssignedTeacher")
-                        .WithMany("Subjects")
+                        .WithMany("AssigedSubjects")
                         .HasForeignKey("AssignedTeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("AssignedTeacher");
@@ -158,7 +158,7 @@ namespace FileStorage.Infrastructure.Migrations
                     b.HasOne("FileStorage.Domain.Entities.SubjectEntity", "Subject")
                         .WithMany("SubjectTopics")
                         .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Subject");
@@ -176,7 +176,7 @@ namespace FileStorage.Infrastructure.Migrations
 
             modelBuilder.Entity("FileStorage.Domain.Entities.TeacherEntity", b =>
                 {
-                    b.Navigation("Subjects");
+                    b.Navigation("AssigedSubjects");
                 });
 #pragma warning restore 612, 618
         }

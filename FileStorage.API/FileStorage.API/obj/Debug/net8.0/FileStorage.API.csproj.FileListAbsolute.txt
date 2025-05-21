@@ -359,3 +359,4 @@ D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\F
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.API\obj\Debug\net8.0\FileStorage.API.pdb
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.API\obj\Debug\net8.0\FileStorage.API.genruntimeconfig.cache
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.API\obj\Debug\net8.0\ref\FileStorage.API.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.API\bin\Debug\net8.0\AutoMapper.dll

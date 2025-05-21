@@ -20,6 +20,8 @@ namespace FileStorage.Infrastructure
 
             services.AddScoped<IMetirealRepository, MetirealRepository>();
 
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
+
             return services;
         }
     }

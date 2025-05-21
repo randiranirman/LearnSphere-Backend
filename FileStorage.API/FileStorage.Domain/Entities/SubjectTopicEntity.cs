@@ -3,7 +3,7 @@
     public class SubjectTopicEntity
     {
         public int Id { get; set; }
-        public string TopicName { get; set; }
+        public string? TopicName { get; set; }
 
         public int SubjectId { get; set; }
         public SubjectEntity Subject { get; set; }

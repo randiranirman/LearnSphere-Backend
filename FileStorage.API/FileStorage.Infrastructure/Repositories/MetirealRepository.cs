@@ -7,7 +7,6 @@ namespace FileStorage.Infrastructure.Repositories
 {
     public class MetirealRepository(FileStorageDbContext fileStorageDbContext) : IMetirealRepository
     {
-
         public async Task<IEnumerable<MetirialEntity>> GetAllMetirealsByTopicId(int topicId)
         {
             return await fileStorageDbContext.MetirialEntities
@@ -20,6 +19,7 @@ namespace FileStorage.Infrastructure.Repositories
             fileStorageDbContext.MetirialEntities.Add(metirialEntity);
             await fileStorageDbContext.SaveChangesAsync();
 
+            metirialEntity.SubjectTopic = await fileStorageDbContext.SubjectTopicEntities.FirstOrDefaultAsync(x => x.Id == topicId);
             return metirialEntity;
         }
     }

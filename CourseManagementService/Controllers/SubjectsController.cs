@@ -27,11 +27,11 @@ namespace CourseManagementService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllSubjects()
         {
-            var subjectDomainModel = await subjectRepository.GetSubjectAsync();
+            var subjectDomainModel = await subjectRepository.GetSubjectAsync(); // return subject list
 
             var subjectDTOModel = mapper.Map<List<SubjectDTO>>(subjectDomainModel);
 
-            return Ok(subjectDTOModel);
+            return Ok(subjectDTOModel); // ok -> response code = 200(success)
         }
 
         [HttpGet("{Code:guid}")]
@@ -46,7 +46,7 @@ namespace CourseManagementService.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateSubject([FromBody] AddSubjectRequestDTO addSubjectRequestDTO, Guid assignTeacherId)
+        public async Task<IActionResult> CreateSubject([FromBody] AddSubjectRequestDTO addSubjectRequestDTO,[FromQuery] Guid assignTeacherId)
         {
             var subjectDomainModel = mapper.Map<Subject>(addSubjectRequestDTO);
             subjectDomainModel = await subjectRepository.CreateSubjectAsync(subjectDomainModel, assignTeacherId);
@@ -55,7 +55,7 @@ namespace CourseManagementService.Controllers
 
             if (assignedTeacher == null)
             {
-                return NotFound($"Teacher with ID {assignTeacherId} not found.");
+                return NotFound($"Teacher with ID {assignTeacherId} not found."); // 404 not found
             }
 
             // change DTO type for better usage of frontend

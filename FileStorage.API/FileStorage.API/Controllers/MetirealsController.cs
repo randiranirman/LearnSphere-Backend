@@ -1,4 +1,5 @@
-﻿using FileStorage.Application.Commands;
+﻿using AutoMapper;
+using FileStorage.Application.Commands;
 using FileStorage.Application.DTOs;
 using FileStorage.Application.Querries;
 using FileStorage.Domain.Entities;
@@ -10,26 +11,23 @@ namespace FileStorage.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MetirealsController(ISender sender) : ControllerBase
+    public class MetirealsController(ISender sender, IMapper mapper) : ControllerBase
     {
+        private readonly IMapper mapper = mapper;
+        
         [HttpGet("{topicId:int}")]
         public async Task<IActionResult> GetAllMetirealsByTopicIdAsync([FromRoute] int topicId)
         {
             var result = await sender.Send(new GetAllMetirealsByTopicIdQuerry(topicId));
-            return Ok(result);
+            var response = mapper.Map<List<GetAllMetirealResponseDTO>>(result);
+            return Ok(response);
         }
 
         [HttpPost("{topicId:int}")]
         public async Task<IActionResult> CreateMetirealAsync([FromRoute] int topicId, [FromBody] CreateMetirealRequestDTO createMetirealRequest) 
         {
-            MetirialEntity metirial = new MetirialEntity
-            {
-                UploadLink = createMetirealRequest.UploadLink,
-                FileType = createMetirealRequest.FileType,
-                SavedName = createMetirealRequest.SavedName,
-                TopicId = topicId
-            };
-            var result = await sender.Send(new CreateMetirealCommand(metirial));
+            var newMetirial = mapper.Map<MetirialEntity>(createMetirealRequest);
+            var result = await sender.Send(new CreateMetirealCommand(topicId, newMetirial));
             return Ok(result);
         }
     }
