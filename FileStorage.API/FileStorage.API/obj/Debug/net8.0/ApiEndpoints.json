@@ -38,6 +38,16 @@
   },
   {
     "ContainingType": "FileStorage.API.Controllers.SubjectTopicController",
+    "Method": "GetAllSubjectsWithTopics",
+    "RelativePath": "api/SubjectTopic",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.API.Controllers.SubjectTopicController",
     "Method": "GetAllTopicsBySubjectIdAsync",
     "RelativePath": "api/SubjectTopic/{subjectId}",
     "HttpMethod": "GET",

@@ -15,5 +15,12 @@ namespace FileStorage.API.Controllers
             var result = await sender.Send(new GetAllTopicsBySubjectIdQuerry(subjectId));
             return Ok(result);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllSubjectsWithTopics()
+        {
+            var result = await sender.Send(new GetAllSubjectsWithTopicsQuerry());
+            return Ok(result);
+        }
     }
 }

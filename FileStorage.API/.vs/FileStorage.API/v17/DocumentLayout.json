@@ -7,16 +7,28 @@
       "RelativeMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|solutionrelative:filestorage.infrastructure\\repositories\\subjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.domain\\interfaces\\isubjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|solutionrelative:filestorage.domain\\interfaces\\isubjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\subjecttopicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\subjecttopicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\subjectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\subjectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.domain\\entities\\subjecttopicentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|solutionrelative:filestorage.domain\\entities\\subjecttopicentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\querries\\getalltopicsbysubjectidquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\querries\\getalltopicsbysubjectidquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.api\\controllers\\subjecttopiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\controllers\\subjecttopiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\querries\\getallsubjectswithtopicsquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\querries\\getallsubjectswithtopicsquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +46,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Program.cs",
+              "RelativeDocumentMoniker": "FileStorage.API\\Program.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Program.cs",
+              "RelativeToolTip": "FileStorage.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T20:35:43.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "SubjectTopicEntity.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
               "RelativeDocumentMoniker": "FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
               "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
               "RelativeToolTip": "FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T17:10:42.763Z",
+              "WhenOpened": "2025-05-21T19:25:25.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SubjectTopicDTO.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\SubjectTopicDTO.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\SubjectTopicDTO.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\SubjectTopicDTO.cs",
+              "RelativeToolTip": "FileStorage.Application\\DTOs\\SubjectTopicDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T19:25:04.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SubjectDTO.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\SubjectDTO.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\SubjectDTO.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\SubjectDTO.cs",
+              "RelativeToolTip": "FileStorage.Application\\DTOs\\SubjectDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T19:23:32.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ISubjectTopicRepository.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Interfaces\\ISubjectTopicRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage.Domain\\Interfaces\\ISubjectTopicRepository.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Interfaces\\ISubjectTopicRepository.cs",
+              "RelativeToolTip": "FileStorage.Domain\\Interfaces\\ISubjectTopicRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T19:15:30.827Z",
               "EditorCaption": ""
             },
             {
@@ -51,38 +115,24 @@
               "Title": "SubjectTopicRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
               "RelativeDocumentMoniker": "FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs*",
-              "RelativeToolTip": "FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
+              "RelativeToolTip": "FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T17:05:34.417Z",
+              "WhenOpened": "2025-05-21T19:03:05.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SubjectTopicController.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\SubjectTopicController.cs",
-              "RelativeDocumentMoniker": "FileStorage.API\\Controllers\\SubjectTopicController.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\SubjectTopicController.cs",
-              "RelativeToolTip": "FileStorage.API\\Controllers\\SubjectTopicController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAABMAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "GetAllSubjectsWithTopicsQuerry.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllSubjectsWithTopicsQuerry.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\Querries\\GetAllSubjectsWithTopicsQuerry.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllSubjectsWithTopicsQuerry.cs",
+              "RelativeToolTip": "FileStorage.Application\\Querries\\GetAllSubjectsWithTopicsQuerry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T17:05:11.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetAllTopicsBySubjectIdQuerry.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllTopicsBySubjectIdQuerry.cs",
-              "RelativeDocumentMoniker": "FileStorage.Application\\Querries\\GetAllTopicsBySubjectIdQuerry.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllTopicsBySubjectIdQuerry.cs",
-              "RelativeToolTip": "FileStorage.Application\\Querries\\GetAllTopicsBySubjectIdQuerry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T17:05:18.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T19:07:43.664Z"
             }
           ]
         }

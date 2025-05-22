@@ -91,6 +91,18 @@
         }
       }
     },
+    "/api/SubjectTopic": {
+      "get": {
+        "tags": [
+          "SubjectTopic"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Teacher/{Id}": {
       "get": {
         "tags": [
