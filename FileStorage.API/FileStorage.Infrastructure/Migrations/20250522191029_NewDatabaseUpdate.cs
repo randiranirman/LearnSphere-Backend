@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace FileStorage.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class NewDatabaseUpdate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -45,7 +45,8 @@ namespace FileStorage.Infrastructure.Migrations
                         name: "FK_SubjectEntities_TeacherEntities_AssignedTeacherId",
                         column: x => x.AssignedTeacherId,
                         principalTable: "TeacherEntities",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -54,7 +55,7 @@ namespace FileStorage.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TopicName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TopicName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SubjectId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -64,7 +65,8 @@ namespace FileStorage.Infrastructure.Migrations
                         name: "FK_SubjectTopicEntities_SubjectEntities_SubjectId",
                         column: x => x.SubjectId,
                         principalTable: "SubjectEntities",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -85,7 +87,8 @@ namespace FileStorage.Infrastructure.Migrations
                         name: "FK_MetirialEntities_SubjectTopicEntities_TopicId",
                         column: x => x.TopicId,
                         principalTable: "SubjectTopicEntities",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

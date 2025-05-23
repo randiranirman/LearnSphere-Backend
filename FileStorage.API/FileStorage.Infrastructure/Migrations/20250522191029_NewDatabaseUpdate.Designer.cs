@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FileStorage.Infrastructure.Migrations
 {
     [DbContext(typeof(FileStorageDbContext))]
-    [Migration("20250521135334_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250522191029_NewDatabaseUpdate")]
+    partial class NewDatabaseUpdate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,7 +92,6 @@ namespace FileStorage.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("TopicName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -136,50 +135,50 @@ namespace FileStorage.Infrastructure.Migrations
 
             modelBuilder.Entity("FileStorage.Domain.Entities.MetirialEntity", b =>
                 {
-                    b.HasOne("FileStorage.Domain.Entities.SubjectTopicEntity", "SubjectTopic")
-                        .WithMany("Metirials")
+                    b.HasOne("FileStorage.Domain.Entities.SubjectTopicEntity", "SubjectTopicEntity")
+                        .WithMany("MetirialEntities")
                         .HasForeignKey("TopicId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("SubjectTopic");
+                    b.Navigation("SubjectTopicEntity");
                 });
 
             modelBuilder.Entity("FileStorage.Domain.Entities.SubjectEntity", b =>
                 {
-                    b.HasOne("FileStorage.Domain.Entities.TeacherEntity", "AssignedTeacher")
-                        .WithMany("AssigedSubjects")
+                    b.HasOne("FileStorage.Domain.Entities.TeacherEntity", "TeacherEntity")
+                        .WithMany("SubjectEntities")
                         .HasForeignKey("AssignedTeacherId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("AssignedTeacher");
+                    b.Navigation("TeacherEntity");
                 });
 
             modelBuilder.Entity("FileStorage.Domain.Entities.SubjectTopicEntity", b =>
                 {
-                    b.HasOne("FileStorage.Domain.Entities.SubjectEntity", "Subject")
-                        .WithMany("SubjectTopics")
+                    b.HasOne("FileStorage.Domain.Entities.SubjectEntity", "SubjectEntity")
+                        .WithMany("SubjectTopicEntities")
                         .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Subject");
+                    b.Navigation("SubjectEntity");
                 });
 
             modelBuilder.Entity("FileStorage.Domain.Entities.SubjectEntity", b =>
                 {
-                    b.Navigation("SubjectTopics");
+                    b.Navigation("SubjectTopicEntities");
                 });
 
             modelBuilder.Entity("FileStorage.Domain.Entities.SubjectTopicEntity", b =>
                 {
-                    b.Navigation("Metirials");
+                    b.Navigation("MetirialEntities");
                 });
 
             modelBuilder.Entity("FileStorage.Domain.Entities.TeacherEntity", b =>
                 {
-                    b.Navigation("AssigedSubjects");
+                    b.Navigation("SubjectEntities");
                 });
 #pragma warning restore 612, 618
         }

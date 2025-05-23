@@ -1,6 +1,6 @@
 ﻿using FileStorage.Domain.Entities;
 
-namespace FileStorage.Domain.Interfaces
+namespace FileStorage.Application.Interfaces
 {
     public interface IMetirealRepository
     {

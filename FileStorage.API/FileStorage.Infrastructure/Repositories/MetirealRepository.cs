@@ -1,5 +1,5 @@
-﻿using FileStorage.Domain.Entities;
-using FileStorage.Domain.Interfaces;
+﻿using FileStorage.Application.Interfaces;
+using FileStorage.Domain.Entities;
 using FileStorage.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,7 +19,7 @@ namespace FileStorage.Infrastructure.Repositories
             fileStorageDbContext.MetirialEntities.Add(metirialEntity);
             await fileStorageDbContext.SaveChangesAsync();
 
-            metirialEntity.SubjectTopic = await fileStorageDbContext.SubjectTopicEntities.FirstOrDefaultAsync(x => x.Id == topicId);
+            metirialEntity.SubjectTopicEntity = await fileStorageDbContext.SubjectTopicEntities.FirstOrDefaultAsync(x => x.Id == topicId);
             return metirialEntity;
         }
     }

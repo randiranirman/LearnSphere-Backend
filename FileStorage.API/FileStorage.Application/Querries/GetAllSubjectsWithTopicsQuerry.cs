@@ -1,15 +1,15 @@
-﻿using FileStorage.Domain.Entities;
-using FileStorage.Domain.Interfaces;
+﻿using FileStorage.Application.DTOs;
+using FileStorage.Application.Interfaces;
 using MediatR;
 
 namespace FileStorage.Application.Querries
 {
-    public record GetAllSubjectsWithTopicsQuerry() : IRequest<IEnumerable<SubjectEntity>>;
+    public record GetAllSubjectsWithTopicsQuerry() : IRequest<IEnumerable<SubjectDTO>>;
 
     public class GetAllSubjectsWithTopicsQuerryHandler(ISubjectTopicRepository subjectTopicRepository)
-        : IRequestHandler<GetAllSubjectsWithTopicsQuerry, IEnumerable<SubjectEntity>>
+        : IRequestHandler<GetAllSubjectsWithTopicsQuerry, IEnumerable<SubjectDTO>>
     {
-        public async Task<IEnumerable<SubjectEntity>> Handle(GetAllSubjectsWithTopicsQuerry request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<SubjectDTO>> Handle(GetAllSubjectsWithTopicsQuerry request, CancellationToken cancellationToken)
         {
             return await subjectTopicRepository.GetAllSubjectsWithTopicsAsync();
         }

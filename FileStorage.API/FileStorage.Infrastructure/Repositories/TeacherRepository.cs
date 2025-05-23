@@ -1,5 +1,5 @@
-﻿using FileStorage.Domain.Entities;
-using FileStorage.Domain.Interfaces;
+﻿using FileStorage.Application.Interfaces;
+using FileStorage.Domain.Entities;
 using FileStorage.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
