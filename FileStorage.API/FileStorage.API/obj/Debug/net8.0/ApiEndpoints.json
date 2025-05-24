@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "FileStorage.API.Controllers.MetirealsController",
+    "Method": "GetAllMetirealsWithTopicsAsync",
+    "RelativePath": "api/Metireals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.API.Controllers.MetirealsController",
     "Method": "GetAllMetirealsByTopicIdAsync",
     "RelativePath": "api/Metireals/{topicId}",
     "HttpMethod": "GET",

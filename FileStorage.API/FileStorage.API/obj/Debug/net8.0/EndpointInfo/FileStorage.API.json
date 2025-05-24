@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Metireals": {
+      "get": {
+        "tags": [
+          "Metireals"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Metireals/{topicId}": {
       "get": {
         "tags": [
