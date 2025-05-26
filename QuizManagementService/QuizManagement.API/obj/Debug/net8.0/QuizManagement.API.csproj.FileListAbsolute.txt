@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\project\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\appsettings.Development.json
 C:\project\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\appsettings.json
 C:\project\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\QuizManagement.API.staticwebassets.endpoints.json
@@ -10,11 +11,14 @@ C:\project\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\Microsoft.O
 C:\project\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\project\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\project\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+=======
+>>>>>>> ab4b7b58516759e26d29ff75f8f008a3c9655d47
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.csproj.AssemblyReference.cache
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.AssemblyInfoInputs.cache
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.AssemblyInfo.cs
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cs
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cache
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.sourcelink.json
@@ -35,3 +39,7 @@ C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\refint\Quiz
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.pdb
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.genruntimeconfig.cache
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\ref\QuizManagement.API.dll
+=======
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cache
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.sourcelink.json
+>>>>>>> ab4b7b58516759e26d29ff75f8f008a3c9655d47

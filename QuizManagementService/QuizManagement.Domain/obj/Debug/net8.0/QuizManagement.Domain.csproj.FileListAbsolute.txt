@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 C:\project\QuizManagementService\QuizManagement.Domain\bin\Debug\net8.0\QuizManagement.Domain.deps.json
 C:\project\QuizManagementService\QuizManagement.Domain\bin\Debug\net8.0\QuizManagement.Domain.dll
 C:\project\QuizManagementService\QuizManagement.Domain\bin\Debug\net8.0\QuizManagement.Domain.pdb
+=======
+>>>>>>> ab4b7b58516759e26d29ff75f8f008a3c9655d47
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.AssemblyInfoInputs.cache
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.AssemblyInfo.cs
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.csproj.CoreCompileInputs.cache
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.sourcelink.json
+<<<<<<< HEAD
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.dll
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\refint\QuizManagement.Domain.dll
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.pdb
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\ref\QuizManagement.Domain.dll
+=======
+>>>>>>> ab4b7b58516759e26d29ff75f8f008a3c9655d47
