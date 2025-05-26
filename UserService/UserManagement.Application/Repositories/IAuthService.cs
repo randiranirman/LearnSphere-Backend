@@ -18,5 +18,8 @@ namespace UserManagement.Domain.Repositories
         Task<bool> UpdateFirstLoginStatus(UserDto request);
             
         Task<bool> ChangeCredentials(String username, ChangeCredentialsDto request);
+        Task<bool> RequsetPasswordReset(String email);
+        Task<bool> ResetPassword(ResetPasswordDto request); 
+
     }
 }

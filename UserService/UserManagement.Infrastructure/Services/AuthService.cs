@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -326,6 +327,56 @@ namespace UserManagement.Infrastructure.Services
 
         }
 
+        public async Task<bool> RequsetPasswordReset(string email)
+        {
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if( user is null)
+            {
+                return false;
+
+            }
+
+            // generate a  reset token 
+            var resetToken = GenerateRefershToken();
+            user.ResetToken = resetToken;
+            user.ResetTokenExpiryTime= DateTime.UtcNow.AddHours(1); // Set expiry time to 1 hour from now
+            context.Users.Update(user);
+            await context.SaveChangesAsync();
+            // send the reset token to the  user email 
+            var resetLink = $"http://localhost:5173/reset-password?email={user.Email}&token={HttpUtility.UrlEncode(resetToken)}";
+            await emailService.SendEmailToUserAsync(user.Email, "Password Reset", $"Click the link to reset your password: {resetLink}");
+            return true;
+
+        }
+
+        public async Task<bool> ResetPassword(ResetPasswordDto request)
+        {
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Email == request.Email &&
+            u.ResetToken == request.Token &&
+
+            u.ResetTokenExpiryTime > DateTime.UtcNow
+            );
+
+            if( user is null)
+            {
+                return false;
+            }
+            if  ( request.NewPassword != request.ConfirmPassword)
+            {
+                return false;
+            }
+                
+            var hasher = new PasswordHasher<User>();
+            user.hashedPassword = hasher.HashPassword(user, request.NewPassword);
+            // invalidate token 
+
+            user.ResetToken = null;
+            user.ResetTokenExpiryTime = null;
+            context.Users.Update(user);
+            await context.SaveChangesAsync();
+            return true;
+
+        }
     }
        
 }

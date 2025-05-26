@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gf/kY6qR8CQ=",
+  "dgSpecHash": "UbO5Wgp6SOg=",
   "success": true,
-  "projectFilePath": "C:\\project\\QuizManagement\\QuizManagement.Domain\\QuizManagement.Domain.csproj",
+  "projectFilePath": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\binad\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
-    "C:\\Users\\binad\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
-    "C:\\Users\\binad\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.15\\microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512"
+    "C:\\Users\\binad\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.16\\microsoft.windowsdesktop.app.ref.8.0.16.nupkg.sha512",
+    "C:\\Users\\binad\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.16\\microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
+    "C:\\Users\\binad\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.16\\microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512"
   ],
   "logs": []
 }
