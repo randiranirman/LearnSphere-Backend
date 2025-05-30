@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|solutionrelative:userservice\\usermanagement.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|solutionrelative:userservice\\usermanagement.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|solutionrelative:userservice\\usermanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|solutionrelative:userservice\\usermanagement.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A02F69F4-3CCE-4F02-9B1C-E5150959B1B3}|UserService\\UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,31 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\User.cs",
-              "RelativeDocumentMoniker": "UserService\\UserManagement.Domain\\Domain\\User.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\User.cs",
-              "RelativeToolTip": "UserService\\UserManagement.Domain\\Domain\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T13:37:10.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Application\\Dtos\\UserDto.cs",
-              "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\UserDto.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Application\\Dtos\\UserDto.cs",
-              "RelativeToolTip": "UserService\\UserManagement.Application\\Dtos\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T13:36:55.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ChangeCredentialsDto.cs",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Application\\Dtos\\ChangeCredentialsDto.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\ChangeCredentialsDto.cs",
@@ -162,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Application\\Repositories\\IAuthService.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Repositories\\IAuthService.cs",
@@ -174,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PasswordResetRequsetDto.cs",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Application\\Dtos\\PasswordResetRequsetDto.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\PasswordResetRequsetDto.cs",
@@ -186,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Infrastructure\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Infrastructure\\Services\\AuthService.cs",
@@ -198,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\Program.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.API\\Program.cs",
@@ -210,20 +186,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.API\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\project\\UserService\\UserManagement.API\\Controllers\\AuthController.cs",
               "RelativeToolTip": "UserService\\UserManagement.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAmwHUAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwHUAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T15:08:49.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "UserService\\UserManagement.API\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\project\\UserService\\UserManagement.API\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "UserService\\UserManagement.API\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwEAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T15:08:52.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Application\\Dtos\\UserDto.cs",
+              "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\UserDto.cs",
+              "ToolTip": "C:\\project\\UserService\\UserManagement.Application\\Dtos\\UserDto.cs",
+              "RelativeToolTip": "UserService\\UserManagement.Application\\Dtos\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:36:55.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\User.cs",
+              "RelativeDocumentMoniker": "UserService\\UserManagement.Domain\\Domain\\User.cs",
+              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\User.cs",
+              "RelativeToolTip": "UserService\\UserManagement.Domain\\Domain\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:37:10.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ResetPasswordDto.cs",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Application\\Dtos\\ResetPasswordDto.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\ResetPasswordDto.cs",
@@ -283,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Subject.cs",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Subject.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Domain\\Domain\\Subject.cs",
@@ -296,18 +309,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "UserService\\UserManagement.API\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.API\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "UserService\\UserManagement.API\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwEAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T15:08:52.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\appsettings.json",
               "RelativeDocumentMoniker": "UserService\\UserManagement.API\\appsettings.json",
