@@ -13,3 +13,19 @@ D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\De
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\refint\FileStorage.Application.dll
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.pdb
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\ref\FileStorage.Application.dll
+C:\project\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Application.deps.json
+C:\project\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Application.dll
+C:\project\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Application.pdb
+C:\project\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Domain.dll
+C:\project\FileStorage.API\FileStorage.Application\bin\Debug\net8.0\FileStorage.Domain.pdb
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.csproj.AssemblyReference.cache
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.AssemblyInfoInputs.cache
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.AssemblyInfo.cs
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.csproj.CoreCompileInputs.cache
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.sourcelink.json
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStor.FC19584B.Up2Date
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.dll
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\refint\FileStorage.Application.dll
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\FileStorage.Application.pdb
+C:\project\FileStorage.API\FileStorage.Application\obj\Debug\net8.0\ref\FileStorage.Application.dll

@@ -1,0 +1,240 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistration.domain\\models\\teacherclassregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistration.domain\\models\\teacherclassregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5790DA18-1F47-405C-B597-D0642F7EAC82}|UserService\\UserManagement.Domain\\UserManagement.Domain.csproj|c:\\project\\userservice\\usermanagement.domain\\domain\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5790DA18-1F47-405C-B597-D0642F7EAC82}|UserService\\UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:userservice\\usermanagement.domain\\domain\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|c:\\project\\courseregistration.infrastructure\\data\\courseregistrationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|solutionrelative:courseregistration.infrastructure\\data\\courseregistrationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31838BE1-C61C-425A-B17A-B4B985FDE089}|UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|c:\\project\\userservice\\usermanagement.infrastructure\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31838BE1-C61C-425A-B17A-B4B985FDE089}|UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:userservice\\usermanagement.infrastructure\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistration.domain\\models\\teachersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistration.domain\\models\\teachersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistration.API\\CourseRegistration.API.csproj|c:\\project\\courseregistration.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistration.API\\CourseRegistration.API.csproj|solutionrelative:courseregistration.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistration.domain\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistration.domain\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistration.domain\\models\\studentsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistration.domain\\models\\studentsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistration.domain\\models\\studentclassregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistration.domain\\models\\studentclassregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistration.domain\\models\\classstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistration.domain\\models\\classstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistration.domain\\models\\registrationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistration.domain\\models\\registrationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistration.domain\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistration.domain\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Admin.cs",
+              "RelativeDocumentMoniker": "UserService\\UserManagement.Domain\\Domain\\Admin.cs",
+              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Admin.cs",
+              "RelativeToolTip": "UserService\\UserManagement.Domain\\Domain\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T17:29:45.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserDbContext.cs",
+              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
+              "RelativeDocumentMoniker": "UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
+              "ToolTip": "C:\\project\\UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
+              "RelativeToolTip": "UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T17:24:08.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.API\\appsettings.json",
+              "RelativeDocumentMoniker": "CourseRegistration.API\\appsettings.json",
+              "ToolTip": "C:\\project\\CourseRegistration.API\\appsettings.json",
+              "RelativeToolTip": "CourseRegistration.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-31T16:58:09.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TeacherSubject.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Domain\\Models\\TeacherSubject.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
+              "RelativeToolTip": "CourseRegistration.Domain\\Models\\TeacherSubject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:23:24.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeacherClassRegistration.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Domain\\Models\\TeacherClassRegistration.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Domain\\Models\\TeacherClassRegistration.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Domain\\Models\\TeacherClassRegistration.cs",
+              "RelativeToolTip": "CourseRegistration.Domain\\Models\\TeacherClassRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:23:07.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Domain\\Models\\Subject.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Domain\\Models\\Subject.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Domain\\Models\\Subject.cs",
+              "RelativeToolTip": "CourseRegistration.Domain\\Models\\Subject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:23:00.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentSubject.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Domain\\Models\\StudentSubject.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Domain\\Models\\StudentSubject.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Domain\\Models\\StudentSubject.cs",
+              "RelativeToolTip": "CourseRegistration.Domain\\Models\\StudentSubject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:22:58.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClassStatus.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Domain\\Models\\ClassStatus.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Domain\\Models\\ClassStatus.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Domain\\Models\\ClassStatus.cs",
+              "RelativeToolTip": "CourseRegistration.Domain\\Models\\ClassStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:22:46.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentClassRegistration.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Domain\\Models\\StudentClassRegistration.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Domain\\Models\\StudentClassRegistration.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Domain\\Models\\StudentClassRegistration.cs",
+              "RelativeToolTip": "CourseRegistration.Domain\\Models\\StudentClassRegistration.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:19:30.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseRegistrationDbcontext.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbcontext.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbcontext.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbcontext.cs",
+              "RelativeToolTip": "CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbcontext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:18:33.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegistrationStatus.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
+              "RelativeToolTip": "CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:19:33.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Class.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistration.Domain\\Models\\Class.cs",
+              "RelativeDocumentMoniker": "CourseRegistration.Domain\\Models\\Class.cs",
+              "ToolTip": "C:\\project\\CourseRegistration.Domain\\Models\\Class.cs",
+              "RelativeToolTip": "CourseRegistration.Domain\\Models\\Class.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:21:20.847Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
