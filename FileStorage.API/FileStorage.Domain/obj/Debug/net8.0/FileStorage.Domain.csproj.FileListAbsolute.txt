@@ -10,3 +10,16 @@ D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Domain\obj\Debug\n
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\refint\FileStorage.Domain.dll
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.pdb
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\ref\FileStorage.Domain.dll
+C:\project\FileStorage.API\FileStorage.Domain\bin\Debug\net8.0\FileStorage.Domain.deps.json
+C:\project\FileStorage.API\FileStorage.Domain\bin\Debug\net8.0\FileStorage.Domain.dll
+C:\project\FileStorage.API\FileStorage.Domain\bin\Debug\net8.0\FileStorage.Domain.pdb
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.csproj.AssemblyReference.cache
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.AssemblyInfoInputs.cache
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.AssemblyInfo.cs
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.csproj.CoreCompileInputs.cache
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.sourcelink.json
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.dll
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\refint\FileStorage.Domain.dll
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\FileStorage.Domain.pdb
+C:\project\FileStorage.API\FileStorage.Domain\obj\Debug\net8.0\ref\FileStorage.Domain.dll

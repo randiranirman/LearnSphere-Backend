@@ -1,0 +1,12 @@
+C:\project\CourseRegistration.Domain\bin\Debug\net8.0\CourseRegistration.Domain.deps.json
+C:\project\CourseRegistration.Domain\bin\Debug\net8.0\CourseRegistration.Domain.dll
+C:\project\CourseRegistration.Domain\bin\Debug\net8.0\CourseRegistration.Domain.pdb
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\CourseRegistration.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\CourseRegistration.Domain.AssemblyInfoInputs.cache
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\CourseRegistration.Domain.AssemblyInfo.cs
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\CourseRegistration.Domain.csproj.CoreCompileInputs.cache
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\CourseRegistration.Domain.sourcelink.json
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\CourseRegistration.Domain.dll
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\refint\CourseRegistration.Domain.dll
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\CourseRegistration.Domain.pdb
+C:\project\CourseRegistration.Domain\obj\Debug\net8.0\ref\CourseRegistration.Domain.dll
