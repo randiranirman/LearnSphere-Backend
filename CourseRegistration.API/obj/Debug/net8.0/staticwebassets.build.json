@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "V8fbehAGtT/tQN37eeUNdBoyl5KiOi5BzSXVzxuH7jE=",
+  "Source": "CourseRegistration.API",
+  "BasePath": "_content/CourseRegistration.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
