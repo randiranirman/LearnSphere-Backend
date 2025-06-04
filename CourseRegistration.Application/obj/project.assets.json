@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "CourseRegistration.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/CourseRegistration.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CourseRegistration.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CourseRegistration.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CourseRegistration.Domain/CourseRegistration.Domain.csproj",
+      "msbuildProject": "../CourseRegistration.Domain/CourseRegistration.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "CourseRegistration.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\binad\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\project\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj": {
+              "projectPath": "C:\\project\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

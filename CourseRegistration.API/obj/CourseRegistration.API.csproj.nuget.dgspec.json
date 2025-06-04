@@ -133,7 +133,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\project\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj": {
+                "projectPath": "C:\\project\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
