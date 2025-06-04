@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CourseRegistrationDb")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("UserDatabase")));
 
 var app = builder.Build();
 
