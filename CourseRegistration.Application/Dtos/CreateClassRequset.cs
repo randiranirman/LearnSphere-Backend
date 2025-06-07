@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CourseRegistration.Application.Dtos
 {
-    internal class CreateClassRequset
+    public  class CreateClassRequset
     {
+        public string Name { get; set; } = string.Empty;    
+        public string Code { get; set; } = string.Empty;
+        public string? Description { get; set; } = string.Empty;
+        public int Credit { get; set; }
+
     }
 }
