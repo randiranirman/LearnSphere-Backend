@@ -10,3 +10,9 @@ C:\project\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Ap
 C:\project\CourseRegistration.Application\obj\Debug\net8.0\refint\CourseRegistration.Application.dll
 C:\project\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.pdb
 C:\project\CourseRegistration.Application\obj\Debug\net8.0\ref\CourseRegistration.Application.dll
+C:\project\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Domain.dll
+C:\project\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Infrastructure.dll
+C:\project\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Domain.pdb
+C:\project\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Infrastructure.pdb
+C:\project\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.csproj.AssemblyReference.cache
+C:\project\CourseRegistration.Application\obj\Debug\net8.0\CourseRe.A4819F08.Up2Date
