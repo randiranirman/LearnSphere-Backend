@@ -17,23 +17,23 @@ D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Infrastructure\obj
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.pdb
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.genruntimeconfig.cache
 D:\DotNet practice\Clean Code\src\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\ref\FileStorage.Infrastructure.dll
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Infrastructure.deps.json
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Infrastructure.runtimeconfig.json
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Infrastructure.dll
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Infrastructure.pdb
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Application.dll
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Domain.dll
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Application.pdb
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Domain.pdb
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.csproj.AssemblyReference.cache
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.AssemblyInfoInputs.cache
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.AssemblyInfo.cs
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.csproj.CoreCompileInputs.cache
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.sourcelink.json
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStor.CD20B027.Up2Date
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.dll
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\refint\FileStorage.Infrastructure.dll
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.pdb
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.genruntimeconfig.cache
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\ref\FileStorage.Infrastructure.dll
+C:\project\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Infrastructure.deps.json
+C:\project\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Infrastructure.runtimeconfig.json
+C:\project\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Infrastructure.dll
+C:\project\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Infrastructure.pdb
+C:\project\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Application.dll
+C:\project\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Domain.dll
+C:\project\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Application.pdb
+C:\project\FileStorage.API\FileStorage.Infrastructure\bin\Debug\net8.0\FileStorage.Domain.pdb
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.csproj.AssemblyReference.cache
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.AssemblyInfoInputs.cache
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.AssemblyInfo.cs
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.csproj.CoreCompileInputs.cache
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.sourcelink.json
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStor.CD20B027.Up2Date
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.dll
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\refint\FileStorage.Infrastructure.dll
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.pdb
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\FileStorage.Infrastructure.genruntimeconfig.cache
+C:\project\FileStorage.API\FileStorage.Infrastructure\obj\Debug\net8.0\ref\FileStorage.Infrastructure.dll
