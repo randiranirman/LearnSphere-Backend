@@ -61,5 +61,46 @@ namespace FileStorage.Infrastructure.Repositories
 
             return responseModel;
         }
+
+        public async Task<MetirealDTO?> DeleteMetireal(int metirealId)
+        {
+            var existingMetireal = await fileStorageDbContext.MetirialEntities.FirstOrDefaultAsync(a => a.Id == metirealId);
+            if (existingMetireal == null) return null;
+            else
+            {
+                fileStorageDbContext.MetirialEntities.Remove(existingMetireal);
+                await fileStorageDbContext.SaveChangesAsync();
+            }
+
+            var returnModel = new MetirealDTO
+            {
+                Id = existingMetireal.Id,
+                UploadLink = existingMetireal.UploadLink,
+                FileType = existingMetireal.FileType,
+                SavedName = existingMetireal.SavedName
+            };
+
+            return returnModel;
+
+        }
+
+        public async Task<MetirealDTO?> UpdateMetirealSavedName(int metirealId, UpdateMetirealSavedNameDTO newSavedName)
+        {
+            var existingMetireal = await fileStorageDbContext.MetirialEntities.FirstOrDefaultAsync(x => x.Id == metirealId);
+            if (existingMetireal == null) return null;
+
+            existingMetireal.SavedName = newSavedName.UpdatedSavedName;
+
+            await fileStorageDbContext.SaveChangesAsync();
+
+            var returnModel = new MetirealDTO
+            {
+                Id = existingMetireal.Id,
+                UploadLink = existingMetireal.UploadLink,
+                FileType = existingMetireal.FileType,
+                SavedName = existingMetireal.SavedName
+            };
+            return returnModel;
+        }
     }
 }

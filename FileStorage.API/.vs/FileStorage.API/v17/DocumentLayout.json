@@ -7,52 +7,40 @@
       "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\controllers\\metirealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\querries\\getallmetirealswithtopicsquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\querries\\getallmetirealswithtopicsquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\querries\\getallmetirealsbytopicidquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\querries\\getallmetirealsbytopicidquerry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\interfaces\\imetirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\interfaces\\imetirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.infrastructure\\repositories\\metirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|solutionrelative:filestorage.infrastructure\\repositories\\metirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.domain\\entities\\subjecttopicentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|solutionrelative:filestorage.domain\\entities\\subjecttopicentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\updatemetirealsavednamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\updatemetirealsavednamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.infrastructure\\repositories\\subjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DCAD84C-3EC7-4DDE-8567-57C11CE3DDC1}|FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|solutionrelative:filestorage.infrastructure\\repositories\\subjecttopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\commands\\updatemetirealsavednamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\commands\\updatemetirealsavednamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\getalltopicswithmetireals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\getalltopicswithmetireals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\metirealdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\metirealdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\interfaces\\imetirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\interfaces\\imetirealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.domain\\entities\\metirialentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{816AADA1-23FF-4665-B4C7-5D84E35FC9AB}|FileStorage.Domain\\FileStorage.Domain.csproj|solutionrelative:filestorage.domain\\entities\\metirialentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.api\\controllers\\subjecttopiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\controllers\\subjecttopiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\createmetirealrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\createmetirealrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\updatetopicnamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\updatetopicnamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24B6D416-9772-49E2-9EDE-D4EB274658FC}|FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\commands\\createmetirealcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\commands\\createmetirealcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\createmetirealresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\createmetirealresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\topicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4562C8-5F68-4F4B-A577-4E13B86FFFF4}|FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.application\\dtos\\topicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,68 +58,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetAllMetirealsByTopicIdQuerry.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllMetirealsByTopicIdQuerry.cs",
-              "RelativeDocumentMoniker": "FileStorage.Application\\Querries\\GetAllMetirealsByTopicIdQuerry.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllMetirealsByTopicIdQuerry.cs",
-              "RelativeToolTip": "FileStorage.Application\\Querries\\GetAllMetirealsByTopicIdQuerry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:58:05.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetAllMetirealsWithTopicsQuerry.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllMetirealsWithTopicsQuerry.cs",
-              "RelativeDocumentMoniker": "FileStorage.Application\\Querries\\GetAllMetirealsWithTopicsQuerry.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Querries\\GetAllMetirealsWithTopicsQuerry.cs",
-              "RelativeToolTip": "FileStorage.Application\\Querries\\GetAllMetirealsWithTopicsQuerry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:57:34.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SubjectTopicEntity.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
-              "RelativeDocumentMoniker": "FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
-              "RelativeToolTip": "FileStorage.Domain\\Entities\\SubjectTopicEntity.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAIAzwBAAAAApAAAAAAAAAA==",
+              "Title": "UpdateMetirealSavedNameCommand.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Commands\\UpdateMetirealSavedNameCommand.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\Commands\\UpdateMetirealSavedNameCommand.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Commands\\UpdateMetirealSavedNameCommand.cs",
+              "RelativeToolTip": "FileStorage.Application\\Commands\\UpdateMetirealSavedNameCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:50:23.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T20:12:54.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateMetirealSavedNameDTO.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\UpdateMetirealSavedNameDTO.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\UpdateMetirealSavedNameDTO.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\UpdateMetirealSavedNameDTO.cs",
+              "RelativeToolTip": "FileStorage.Application\\DTOs\\UpdateMetirealSavedNameDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T20:04:31.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MetirealRepository.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
+              "RelativeToolTip": "FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAuwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T19:00:08.162Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "SubjectTopicRepository.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
-              "RelativeDocumentMoniker": "FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
-              "RelativeToolTip": "FileStorage.Infrastructure\\Repositories\\SubjectTopicRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Title": "MetirealDTO.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\MetirealDTO.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\MetirealDTO.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\MetirealDTO.cs",
+              "RelativeToolTip": "FileStorage.Application\\DTOs\\MetirealDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:49:48.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T18:57:54.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetAllTopicsWithMetireals.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\GetAllTopicsWithMetireals.cs",
-              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\GetAllTopicsWithMetireals.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\GetAllTopicsWithMetireals.cs",
-              "RelativeToolTip": "FileStorage.Application\\DTOs\\GetAllTopicsWithMetireals.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IMetirealRepository.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Interfaces\\IMetirealRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\Interfaces\\IMetirealRepository.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Interfaces\\IMetirealRepository.cs",
+              "RelativeToolTip": "FileStorage.Application\\Interfaces\\IMetirealRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:45:24.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T18:57:24.146Z"
             },
             {
               "$type": "Document",
@@ -141,99 +124,58 @@
               "RelativeDocumentMoniker": "FileStorage.API\\Controllers\\MetirealsController.cs",
               "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\MetirealsController.cs",
               "RelativeToolTip": "FileStorage.API\\Controllers\\MetirealsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T06:11:01.164Z",
+              "WhenOpened": "2025-05-30T18:50:57.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IMetirealRepository.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Interfaces\\IMetirealRepository.cs",
-              "RelativeDocumentMoniker": "FileStorage.Application\\Interfaces\\IMetirealRepository.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Interfaces\\IMetirealRepository.cs",
-              "RelativeToolTip": "FileStorage.Application\\Interfaces\\IMetirealRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABdAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "MetirialEntity.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Entities\\MetirialEntity.cs",
+              "RelativeDocumentMoniker": "FileStorage.Domain\\Entities\\MetirialEntity.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Entities\\MetirialEntity.cs",
+              "RelativeToolTip": "FileStorage.Domain\\Entities\\MetirialEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T06:55:20.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T16:46:14.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MetirealRepository.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
-              "RelativeDocumentMoniker": "FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
-              "RelativeToolTip": "FileStorage.Infrastructure\\Repositories\\MetirealRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "TopicDTO.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\TopicDTO.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\TopicDTO.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\TopicDTO.cs",
+              "RelativeToolTip": "FileStorage.Application\\DTOs\\TopicDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T06:33:47.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T12:27:53.561Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "UpdateTopicNameDTO.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\UpdateTopicNameDTO.cs",
+              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\UpdateTopicNameDTO.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\UpdateTopicNameDTO.cs",
+              "RelativeToolTip": "FileStorage.Application\\DTOs\\UpdateTopicNameDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:27:16.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "SubjectTopicController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\SubjectTopicController.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\Controllers\\SubjectTopicController.cs",
               "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\SubjectTopicController.cs",
               "RelativeToolTip": "FileStorage.API\\Controllers\\SubjectTopicController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:42:05.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CreateMetirealResponseDTO.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\CreateMetirealResponseDTO.cs",
-              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\CreateMetirealResponseDTO.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\CreateMetirealResponseDTO.cs",
-              "RelativeToolTip": "FileStorage.Application\\DTOs\\CreateMetirealResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T06:20:24.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CreateMetirealCommand.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Commands\\CreateMetirealCommand.cs",
-              "RelativeDocumentMoniker": "FileStorage.Application\\Commands\\CreateMetirealCommand.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Commands\\CreateMetirealCommand.cs",
-              "RelativeToolTip": "FileStorage.Application\\Commands\\CreateMetirealCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T06:29:46.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CreateMetirealRequestDTO.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\CreateMetirealRequestDTO.cs",
-              "RelativeDocumentMoniker": "FileStorage.Application\\DTOs\\CreateMetirealRequestDTO.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\DTOs\\CreateMetirealRequestDTO.cs",
-              "RelativeToolTip": "FileStorage.Application\\DTOs\\CreateMetirealRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:27:27.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Program.cs",
-              "RelativeDocumentMoniker": "FileStorage.API\\Program.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Program.cs",
-              "RelativeToolTip": "FileStorage.API\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:44:51.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T10:40:54.849Z"
             }
           ]
         }

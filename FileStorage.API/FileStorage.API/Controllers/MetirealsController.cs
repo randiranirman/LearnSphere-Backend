@@ -35,5 +35,20 @@ namespace FileStorage.API.Controllers
             var result = await sender.Send(new CreateMetirealCommand(topicId, createMetirealRequest));
             return Ok(result);
         }
+
+        [HttpDelete("{metirealId:int}")]
+        public async Task<IActionResult> DeleteMetirealAsync([FromRoute] int metirealId)
+        {
+            var result = await sender.Send(new DeleteMetirealCommad(metirealId));
+            return Ok(result);
+        }
+
+        [HttpPut("{metirealId:int}")]
+        public async Task<IActionResult> UpdateMetirealSavedNameAsync([FromRoute] int metirealId, [FromBody] UpdateMetirealSavedNameDTO updatedSavedName)
+        {
+            var result = await sender.Send(new UpdateMetirealSavedNameCommand(metirealId, updatedSavedName));
+            if (result == null) return NotFound();
+            return Ok(result);
+        }
     }
 }

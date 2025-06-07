@@ -8,5 +8,7 @@ namespace FileStorage.Application.Interfaces
         public Task<IEnumerable<GetAllTopicsWithMetireals>> GetAllMetirealsWithTopicsAsync();
         public Task<IEnumerable<MetirialEntity>> GetAllMetirealsByTopicId(int topicId);
         public Task<CreateMetirealResponseDTO> CreateMetireal(int topicId, CreateMetirealRequestDTO metirialEntity);
+        public Task<MetirealDTO?> DeleteMetireal(int metirealId);
+        public Task<MetirealDTO?> UpdateMetirealSavedName(int metirealId, UpdateMetirealSavedNameDTO newSavedName);
     }
 }

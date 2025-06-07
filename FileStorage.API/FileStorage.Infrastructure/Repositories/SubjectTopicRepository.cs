@@ -38,5 +38,22 @@ namespace FileStorage.Infrastructure.Repositories
                                 }).ToListAsync();
             return subjects;
         }
+
+        public async Task<TopicDTO?> EditTopicNameAsync(int topicId, string newTopicName)
+        {
+            var existingTopic = await fileStorageDbContext.SubjectTopicEntities.FirstOrDefaultAsync(a => a.Id == topicId);
+            if (existingTopic is null) return null;
+
+            existingTopic.TopicName = newTopicName;
+
+            await fileStorageDbContext.SaveChangesAsync();
+
+            var responseType = new TopicDTO
+            {
+                Id = existingTopic.Id,
+                TopicName = existingTopic.TopicName
+            };
+            return responseType;
+        }
     }
 }

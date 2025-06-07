@@ -1,6 +1,7 @@
-﻿using FileStorage.Application.Querries;
+﻿using FileStorage.Application.Commands;
+using FileStorage.Application.DTOs;
+using FileStorage.Application.Querries;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FileStorage.API.Controllers
@@ -20,6 +21,16 @@ namespace FileStorage.API.Controllers
         public async Task<IActionResult> GetAllTopicsBySubjectIdAsync([FromRoute] int subjectId)
         {
             var result = await sender.Send(new GetAllTopicsBySubjectIdQuerry(subjectId));
+            return Ok(result);
+        }
+
+        [HttpPut("{topicId:int}")]
+        public async Task<IActionResult> EditTopicNameAsync([FromRoute] int topicId, [FromBody] UpdateTopicNameDTO newTopicName)
+        {
+            var result = await sender.Send(new UpdateTopicNameCommand(topicId, newTopicName.topicName));
+
+            if (result is null) NotFound();
+
             return Ok(result);
         }
 
