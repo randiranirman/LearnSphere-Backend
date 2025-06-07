@@ -1,0 +1,6 @@
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.csproj.AssemblyReference.cache
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.AssemblyInfoInputs.cache
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.AssemblyInfo.cs
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.csproj.CoreCompileInputs.cache
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.sourcelink.json
