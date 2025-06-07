@@ -665,6 +665,10 @@
         }
       },
       "CourseRegistration.Application/1.0.0": {
+        "dependencies": {
+          "CourseRegistration.Domain": "1.0.0",
+          "CourseRegistration.Infrastructure": "1.0.0"
+        },
         "runtime": {
           "CourseRegistration.Application.dll": {
             "assemblyVersion": "1.0.0",
