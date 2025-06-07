@@ -109,6 +109,7 @@ namespace CourseRegistration.Infrastructure.Data
                     .IsUnique()
                     .HasDatabaseName("IX_TeacherClassRegistrations_TeacherId_ClassId");
             });
+           SeedData(modelBuilder);
         }
 
         private void SeedData(ModelBuilder modelBuilder)
