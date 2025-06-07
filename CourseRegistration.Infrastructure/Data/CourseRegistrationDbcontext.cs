@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CourseRegistration.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
+using Microsoft.IdentityModel.Tokens;
 
 namespace CourseRegistration.Infrastructure.Data
 {
@@ -109,9 +110,36 @@ namespace CourseRegistration.Infrastructure.Data
                     .HasDatabaseName("IX_TeacherClassRegistrations_TeacherId_ClassId");
             });
         }
-       }
 
-
-
-}
+        private void SeedData(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Subject>().HasData(
+                new Subject
+                {
+                    Id = 1,
+                    Name = "Mathematics",
+                    Code = "MATH101",
+                    Description = "Basic Mathematics",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new Subject
+                {
+                    Id = 2,
+                    Name = "Science",
+                    Code = "SCI101",
+                    Description = "Basic Science",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new Subject
+                {
+                    Id = 3,
+                    Name = "History",
+                    Code = "HIST101",
+                    Description = "World History",
+                    CreatedAt = DateTime.UtcNow
+                }
+            );
+        }
+    }
+    }
 
