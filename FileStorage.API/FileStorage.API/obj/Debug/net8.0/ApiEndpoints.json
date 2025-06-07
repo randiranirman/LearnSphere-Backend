@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "FileStorage.API.Controllers.MetirealsController",
+    "Method": "GetAllMetirealsWithTopicsAsync",
+    "RelativePath": "api/Metireals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.API.Controllers.MetirealsController",
     "Method": "GetAllMetirealsByTopicIdAsync",
     "RelativePath": "api/Metireals/{topicId}",
     "HttpMethod": "GET",
@@ -16,6 +26,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FileStorage.API.Controllers.MetirealsController",
+    "Method": "CreateMetirealAsync",
+    "RelativePath": "api/Metireals/{topicId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "topicId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createMetirealRequest",
+        "Type": "FileStorage.Application.DTOs.CreateMetirealRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.API.Controllers.SubjectTopicController",
+    "Method": "GetAllSubjectsWithTopics",
+    "RelativePath": "api/SubjectTopic",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FileStorage.API.Controllers.SubjectTopicController",
     "Method": "GetAllTopicsBySubjectIdAsync",
     "RelativePath": "api/SubjectTopic/{subjectId}",
@@ -25,6 +66,22 @@
     "Parameters": [
       {
         "Name": "subjectId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.API.Controllers.TeacherController",
+    "Method": "GetTeacherById",
+    "RelativePath": "api/Teacher/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -1,4 +1,4 @@
-﻿using FileStorage.Domain.Interfaces;
+﻿using FileStorage.Application.Interfaces;
 using FileStorage.Infrastructure.Data;
 using FileStorage.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -13,12 +13,14 @@ namespace FileStorage.Infrastructure
 
             services.AddDbContext<FileStorageDbContext>(options =>
             {
-                options.UseSqlServer("Data Source=lmsdatabaseserver.database.windows.net;Initial Catalog=LearnSphereDatabase;User ID=lmsadmin;Password=cop2002@;Trust Server Certificate=True");
+                options.UseSqlServer("Data Source=localhost\\MSSQLSERVER02;Initial Catalog=LMS;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
             });
 
             services.AddScoped<ISubjectTopicRepository, SubjectTopicRepository>();
 
             services.AddScoped<IMetirealRepository, MetirealRepository>();
+
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
 
             return services;
         }
