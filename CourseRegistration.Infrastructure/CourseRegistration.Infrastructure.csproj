@@ -23,4 +23,8 @@
     <ProjectReference Include="..\CourseRegistration.Domain\CourseRegistration.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
