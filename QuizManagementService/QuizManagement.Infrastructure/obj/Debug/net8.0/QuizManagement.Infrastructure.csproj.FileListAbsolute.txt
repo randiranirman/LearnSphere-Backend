@@ -4,3 +4,13 @@ C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\
 C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.AssemblyInfo.cs
 C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.csproj.CoreCompileInputs.cache
 C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.sourcelink.json
+C:\project\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Infrastructure.deps.json
+C:\project\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Infrastructure.dll
+C:\project\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Infrastructure.pdb
+C:\project\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Domain.dll
+C:\project\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Domain.pdb
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizMana.9A6EC7CA.Up2Date
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.dll
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\refint\QuizManagement.Infrastructure.dll
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.pdb
+C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\ref\QuizManagement.Infrastructure.dll

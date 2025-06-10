@@ -11,7 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace CourseRegistration.Infrastructure.Data
 {
-    public class CourseRegistrationDbcontext : DbContext // Fixed constructor syntax  
+    public class CourseRegistrationDbcontext : DbContext
     {
         public CourseRegistrationDbcontext(DbContextOptions<CourseRegistrationDbcontext> options) : base(options)
         {
@@ -38,10 +38,16 @@ namespace CourseRegistration.Infrastructure.Data
                 entity.Property(e => e.Description).HasMaxLength(500);
                 entity.HasIndex(e => e.Code).IsUnique();
 
+                // Configure relationships
                 entity.HasMany(s => s.Classes)
-                .WithOne(c => c.Subject)
-                .HasForeignKey(c => c.SubjectId)
-                .OnDelete(DeleteBehavior.Cascade);
+                    .WithOne(c => c.Subject)
+                    .HasForeignKey(c => c.SubjectId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasMany(s => s.StudentSubjects)
+                    .WithOne(ss => ss.Subject)
+                    .HasForeignKey(ss => ss.SubjectId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             // Class configuration  
@@ -57,13 +63,14 @@ namespace CourseRegistration.Infrastructure.Data
 
                 // Configure navigation properties  
                 entity.HasMany(c => c.StudentRegistrations)
-                .WithOne(sr => sr.Class)
-                .HasForeignKey(sr => sr.ClassId)
-                .OnDelete(DeleteBehavior.Cascade);
+                    .WithOne(sr => sr.Class)
+                    .HasForeignKey(sr => sr.ClassId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
                 entity.HasMany(c => c.TeacherRegistrations)
-                .WithOne(tr => tr.Class)
-                .HasForeignKey(tr => tr.ClassId)
-                .OnDelete(DeleteBehavior.Cascade);
+                    .WithOne(tr => tr.Class)
+                    .HasForeignKey(tr => tr.ClassId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             // TeacherSubject configuration  
@@ -77,7 +84,7 @@ namespace CourseRegistration.Infrastructure.Data
 
                 // Create composite unique index to prevent duplicate assignments  
                 entity.HasIndex(e => new { e.TeacherID, e.SubjectID }).IsUnique()
-                .HasDatabaseName("IX_TeacherSubject_UniqueAssignment");
+                    .HasDatabaseName("IX_TeacherSubject_UniqueAssignment");
             });
 
             // StudentSubject configuration  
@@ -91,7 +98,23 @@ namespace CourseRegistration.Infrastructure.Data
 
                 // Create composite unique index to prevent duplicate enrollment  
                 entity.HasIndex(e => new { e.StudentId, e.SubjectId }).IsUnique()
-                .HasDatabaseName("IX_StudentSubjects_StudentId_SubjectId");
+                    .HasDatabaseName("IX_StudentSubjects_StudentId_SubjectId");
+            });
+
+            // StudentClassRegistration configuration
+            modelBuilder.Entity<StudentClassRegistration>(entity =>
+            {
+                entity.ToTable("StudentClassRegistrations");
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.StudentId).IsRequired();
+                entity.Property(e => e.ClassId).IsRequired();
+                entity.Property(e => e.Status).HasConversion<int>().HasDefaultValue(RegistrationStatus.Pending);
+                entity.Property(e => e.Remarks).HasMaxLength(500);
+
+                // Create composite unique index to prevent duplicate registrations
+                entity.HasIndex(e => new { e.StudentId, e.ClassId })
+                    .IsUnique()
+                    .HasDatabaseName("IX_StudentClassRegistrations_StudentId_ClassId");
             });
 
             // TeacherClassRegistration configuration  
@@ -109,11 +132,16 @@ namespace CourseRegistration.Infrastructure.Data
                     .IsUnique()
                     .HasDatabaseName("IX_TeacherClassRegistrations_TeacherId_ClassId");
             });
-           SeedData(modelBuilder);
+
+            // Seed data
+            SeedData(modelBuilder);
         }
 
         private void SeedData(ModelBuilder modelBuilder)
         {
+            // Use fixed DateTime values instead of DateTime.UtcNow for seeding
+            var seedDate = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
             modelBuilder.Entity<Subject>().HasData(
                 new Subject
                 {
@@ -121,7 +149,7 @@ namespace CourseRegistration.Infrastructure.Data
                     Name = "Mathematics",
                     Code = "MATH101",
                     Description = "Basic Mathematics",
-                    CreatedAt = DateTime.UtcNow
+                    CreatedAt = seedDate
                 },
                 new Subject
                 {
@@ -129,7 +157,7 @@ namespace CourseRegistration.Infrastructure.Data
                     Name = "Science",
                     Code = "SCI101",
                     Description = "Basic Science",
-                    CreatedAt = DateTime.UtcNow
+                    CreatedAt = seedDate
                 },
                 new Subject
                 {
@@ -137,10 +165,9 @@ namespace CourseRegistration.Infrastructure.Data
                     Name = "History",
                     Code = "HIST101",
                     Description = "World History",
-                    CreatedAt = DateTime.UtcNow
+                    CreatedAt = seedDate
                 }
             );
         }
     }
-    }
-
+}
