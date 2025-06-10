@@ -3,3 +3,6 @@ C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizMana
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.AssemblyInfo.cs
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.csproj.CoreCompileInputs.cache
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.sourcelink.json
+C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.dll
+C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\refint\QuizManagement.Domain.dll
+C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.pdb
