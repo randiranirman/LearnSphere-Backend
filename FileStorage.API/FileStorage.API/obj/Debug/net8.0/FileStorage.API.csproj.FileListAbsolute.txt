@@ -359,3 +359,4 @@ C:\project\FileStorage.API\FileStorage.API\obj\Debug\net8.0\FileStorage.API.pdb
 C:\project\FileStorage.API\FileStorage.API\obj\Debug\net8.0\FileStorage.API.genruntimeconfig.cache
 C:\project\FileStorage.API\FileStorage.API\obj\Debug\net8.0\ref\FileStorage.API.dll
 C:\project\FileStorage.API\FileStorage.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\project\FileStorage.API\FileStorage.API\bin\Debug\net8.0\AutoMapper.dll

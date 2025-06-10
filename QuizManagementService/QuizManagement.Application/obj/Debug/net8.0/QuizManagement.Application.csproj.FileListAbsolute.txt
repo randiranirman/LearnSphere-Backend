@@ -4,3 +4,15 @@ C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\Qui
 C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\QuizManagement.Application.AssemblyInfo.cs
 C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\QuizManagement.Application.csproj.CoreCompileInputs.cache
 C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\QuizManagement.Application.sourcelink.json
+C:\project\QuizManagementService\QuizManagement.Application\bin\Debug\net8.0\QuizManagement.Application.deps.json
+C:\project\QuizManagementService\QuizManagement.Application\bin\Debug\net8.0\QuizManagement.Application.dll
+C:\project\QuizManagementService\QuizManagement.Application\bin\Debug\net8.0\QuizManagement.Application.pdb
+C:\project\QuizManagementService\QuizManagement.Application\bin\Debug\net8.0\QuizManagement.Domain.dll
+C:\project\QuizManagementService\QuizManagement.Application\bin\Debug\net8.0\QuizManagement.Infrastructure.dll
+C:\project\QuizManagementService\QuizManagement.Application\bin\Debug\net8.0\QuizManagement.Domain.pdb
+C:\project\QuizManagementService\QuizManagement.Application\bin\Debug\net8.0\QuizManagement.Infrastructure.pdb
+C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\QuizMana.60E81304.Up2Date
+C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\QuizManagement.Application.dll
+C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\refint\QuizManagement.Application.dll
+C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\QuizManagement.Application.pdb
+C:\project\QuizManagementService\QuizManagement.Application\obj\Debug\net8.0\ref\QuizManagement.Application.dll

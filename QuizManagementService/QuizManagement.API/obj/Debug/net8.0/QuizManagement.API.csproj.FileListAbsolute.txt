@@ -5,3 +5,7 @@ C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagem
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.csproj.CoreCompileInputs.cache
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cache
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.sourcelink.json
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cs
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.dll
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\refint\QuizManagement.API.dll
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.pdb
