@@ -7,10 +7,12 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using CsvHelper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.VisualBasic;
 using UserManagement.Application.Dtos;
 using UserManagement.Application.Repositories;
 using UserManagement.Domain.Domain;
@@ -290,6 +292,27 @@ namespace UserManagement.Infrastructure.Services
 
         }
 
+        public async Task<bool> RequsetPasswordReset( ResetPasswordRequestDto request)
+        {
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Email == request.Email);
+
+            if( user is null)
+            {
+                return false;
+            }
+            var token = GenerateRefershToken();
+            user.PasswordResetToken = token;
+            user.PasswordResetTokenExpiryTime = DateTime.UtcNow.AddHours(1); // Token expires in 1 hour
+            
+            context.Users.Update(user);
+            await context.SaveChangesAsync();
+            
+            // Send password reset email with token
+            await emailService.SendEmailToUserAsync(user.Email, "Password Reset Request", 
+                $"Your password reset token is: {token}. This token will expire in 1 hour.");
+            
+            return true;
+        }
         public async Task<bool> UpdateFirstLoginStatus(UserDto request)
         {
             var user = await context.Users.FirstOrDefaultAsync(u => u.Username == request.Username);

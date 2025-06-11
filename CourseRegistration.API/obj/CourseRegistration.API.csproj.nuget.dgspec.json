@@ -136,6 +136,9 @@
             "projectReferences": {
               "C:\\project\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj": {
                 "projectPath": "C:\\project\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj"
+              },
+              "C:\\project\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj": {
+                "projectPath": "C:\\project\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj"
               }
             }
           }
@@ -296,9 +299,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\project\\CourseRegistration.Application\\CourseRegistration.Application.csproj": {
-                "projectPath": "C:\\project\\CourseRegistration.Application\\CourseRegistration.Application.csproj"
-              },
               "C:\\project\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj": {
                 "projectPath": "C:\\project\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj"
               }
