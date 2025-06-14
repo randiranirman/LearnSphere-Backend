@@ -183,3 +183,4 @@ C:\project\UserService\UserManagement.API\obj\Debug\net8.0\refint\UserManagement
 C:\project\UserService\UserManagement.API\obj\Debug\net8.0\UserManagement.API.pdb
 C:\project\UserService\UserManagement.API\obj\Debug\net8.0\UserManagement.API.genruntimeconfig.cache
 C:\project\UserService\UserManagement.API\obj\Debug\net8.0\ref\UserManagement.API.dll
+C:\project\UserService\UserManagement.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
