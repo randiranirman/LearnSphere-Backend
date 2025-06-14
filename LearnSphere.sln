@@ -27,15 +27,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.Domain", "FileS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.Infrastructure", "FileStorage.API\FileStorage.Infrastructure\FileStorage.Infrastructure.csproj", "{3F5FC7C8-B5AB-48AC-88D4-5FC5D7C6FC78}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CourseRegistration", "CourseRegistration", "{F1C01F06-8DA9-4679-9ADF-A404EC616747}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CourseRegistrationService", "CourseRegistrationService", "{F1C01F06-8DA9-4679-9ADF-A404EC616747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseRegistration.Domain", "CourseRegistration.Domain\CourseRegistration.Domain.csproj", "{3A5D2240-EF94-4857-9242-4059C3F53294}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseRegistration.Domain", "CourseRegistrationService\CourseRegistration.Domain\CourseRegistration.Domain.csproj", "{3A5D2240-EF94-4857-9242-4059C3F53294}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseRegistration.Infrastructure", "CourseRegistration.Infrastructure\CourseRegistration.Infrastructure.csproj", "{7483161C-1A04-4DF9-9906-973842287D9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseRegistration.Infrastructure", "CourseRegistrationService\CourseRegistration.Infrastructure\CourseRegistration.Infrastructure.csproj", "{7483161C-1A04-4DF9-9906-973842287D9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseRegistration.API", "CourseRegistration.API\CourseRegistration.API.csproj", "{39BEB753-849B-494E-AD85-247BCC785C27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseRegistration.API", "CourseRegistrationService\CourseRegistration.API\CourseRegistration.API.csproj", "{39BEB753-849B-494E-AD85-247BCC785C27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseRegistration.Application", "CourseRegistration.Application\CourseRegistration.Application.csproj", "{DE5A4B99-7FC8-465C-AABD-E8C970332170}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseRegistration.Application", "CourseRegistrationService\CourseRegistration.Application\CourseRegistration.Application.csproj", "{DE5A4B99-7FC8-465C-AABD-E8C970332170}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -168,7 +168,7 @@
               "RelativeDocumentMoniker": "UserService\\UserManagement.API\\Program.cs",
               "ToolTip": "C:\\project\\UserService\\UserManagement.API\\Program.cs",
               "RelativeToolTip": "UserService\\UserManagement.API\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T19:49:04.789Z",
               "EditorCaption": ""
@@ -231,8 +231,7 @@
               "RelativeToolTip": "CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAwwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T05:09:57.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T05:09:57.376Z"
             },
             {
               "$type": "Document",
@@ -280,8 +279,7 @@
               "RelativeToolTip": "UserService\\UserManagement.Domain\\Domain\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T06:44:22.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T06:44:22.051Z"
             },
             {
               "$type": "Document",
