@@ -16,6 +16,7 @@ namespace CourseRegistration.Domain.Models
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         // Navigation properties
         public virtual ICollection<StudentSubject> StudentSubjects { get; set; } = new List<StudentSubject>();
+        public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; } = new List<TeacherSubject>();
         public virtual ICollection<TeacherClassRegistration> TeacherClassRegistrations { get; set; } = new List<TeacherClassRegistration>();
         public ICollection<Class> Classes { get; set; } = new List<Class>();
 
