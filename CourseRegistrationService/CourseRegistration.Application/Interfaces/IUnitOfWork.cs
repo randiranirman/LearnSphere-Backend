@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseRegistration.Application.Repositories
 {
-    public  interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         ISubjectRepository Subjects { get; }
         IClassRepository Classes { get; }

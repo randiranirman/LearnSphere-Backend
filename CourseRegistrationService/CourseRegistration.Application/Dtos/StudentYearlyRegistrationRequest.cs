@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UserManagement.Domain.Domain
+namespace CourseRegistration.Application.Dtos
 {
-    public class Teacher
+    public class StudentYearlyRegistrationRequest
     {
-        public int Id { get; set; }
-
         [Required]
         [MaxLength(50)]
         public string FirstName { get; set; } = string.Empty;
@@ -18,6 +16,10 @@ namespace UserManagement.Domain.Domain
         [Required]
         [MaxLength(50)]
         public string LastName { get; set; } = string.Empty;
+
+        [Required]
+        [MaxLength(20)]
+        public string IndexNumber { get; set; } = string.Empty;
 
         [Required]
         [EmailAddress]
@@ -32,19 +34,25 @@ namespace UserManagement.Domain.Domain
         [MaxLength(200)]
         public string Address { get; set; } = string.Empty;
 
+        [Required]
         public DateTime DateOfBirth { get; set; }
 
-        [MaxLength(50)]
-        public string? EmployeeId { get; set; } // Teacher's employee ID
+        [MaxLength(15)]
+        public string? ParentContactNumber { get; set; }
 
         [MaxLength(100)]
-        public string? Qualification { get; set; } // Teaching qualification
+        public string? ParentName { get; set; }
 
-        public DateTime HireDate { get; set; }
+        [Required]
+        public int Grade { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        [Required]
+        public int ClassId { get; set; } // Student selects ONE class
 
-        public string FullName => $"{FirstName} {LastName}";
+        [Required]
+        public List<int> SubjectIds { get; set; } = new List<int>(); // Student selects subjects
+
+        public int? ExistingStudentId { get; set; } // For returning students
     }
 }
+
