@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using CourseRegistration.Domain.Models;
+using UserManagement.Domain.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Tokens;
@@ -17,6 +18,11 @@ namespace CourseRegistration.Infrastructure.Data
         {
         }
 
+        // Shared tables from UserManagement
+        public DbSet<Student> Students { get; set; } = null!;
+        public DbSet<Teacher> Teachers { get; set; } = null!;
+        
+        // CourseRegistration specific tables
         public DbSet<Subject> Subjects { get; set; } = null!;
         public DbSet<Class> Classes { get; set; } = null!;
         public DbSet<TeacherSubject> TeacherSubjects { get; set; } = null!;
@@ -73,17 +79,65 @@ namespace CourseRegistration.Infrastructure.Data
                     .OnDelete(DeleteBehavior.Cascade);
             });
 
+            // Student configuration
+            modelBuilder.Entity<Student>(entity =>
+            {
+                entity.ToTable("Students");
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.FirstName).HasMaxLength(50).IsRequired();
+                entity.Property(e => e.LastName).HasMaxLength(50).IsRequired();
+                entity.Property(e => e.IndexNumber).HasMaxLength(20).IsRequired();
+                entity.Property(e => e.Email).HasMaxLength(100).IsRequired();
+                entity.Property(e => e.ContactNumber).HasMaxLength(15).IsRequired();
+                entity.Property(e => e.Address).HasMaxLength(200).IsRequired();
+                entity.Property(e => e.ParentContactNumber).HasMaxLength(15);
+                entity.Property(e => e.ParentName).HasMaxLength(100);
+                
+                // Unique constraints
+                entity.HasIndex(e => e.IndexNumber).IsUnique();
+                entity.HasIndex(e => e.Email).IsUnique();
+            });
+
+            // Teacher configuration
+            modelBuilder.Entity<Teacher>(entity =>
+            {
+                entity.ToTable("Teachers");
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.FirstName).HasMaxLength(50).IsRequired();
+                entity.Property(e => e.LastName).HasMaxLength(50).IsRequired();
+                entity.Property(e => e.Email).HasMaxLength(100).IsRequired();
+                entity.Property(e => e.ContactNumber).HasMaxLength(15).IsRequired();
+                entity.Property(e => e.Address).HasMaxLength(200).IsRequired();
+                entity.Property(e => e.EmployeeId).HasMaxLength(50);
+                entity.Property(e => e.Qualification).HasMaxLength(100);
+                
+                // Unique constraints
+                entity.HasIndex(e => e.Email).IsUnique();
+                entity.HasIndex(e => e.EmployeeId).IsUnique().HasFilter("[EmployeeId] IS NOT NULL");
+            });
+
             // TeacherSubject configuration  
             modelBuilder.Entity<TeacherSubject>(entity =>
             {
                 entity.ToTable("TeacherSubjects");
                 entity.HasKey(e => e.Id);
-                entity.Property(e => e.TeacherID).IsRequired();
-                entity.Property(e => e.SubjectID).IsRequired();
+                entity.Property(e => e.TeacherId).IsRequired();
+                entity.Property(e => e.SubjectId).IsRequired();
                 entity.Property(e => e.IsActive).IsRequired();
 
+                // Configure relationships
+                entity.HasOne(ts => ts.Teacher)
+                    .WithMany()
+                    .HasForeignKey(ts => ts.TeacherId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(ts => ts.Subject)
+                    .WithMany(s => s.TeacherSubjects)
+                    .HasForeignKey(ts => ts.SubjectId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
                 // Create composite unique index to prevent duplicate assignments  
-                entity.HasIndex(e => new { e.TeacherID, e.SubjectID }).IsUnique()
+                entity.HasIndex(e => new { e.TeacherId, e.SubjectId }).IsUnique()
                     .HasDatabaseName("IX_TeacherSubject_UniqueAssignment");
             });
 
@@ -95,6 +149,17 @@ namespace CourseRegistration.Infrastructure.Data
                 entity.Property(e => e.StudentId).IsRequired();
                 entity.Property(e => e.SubjectId).IsRequired();
                 entity.Property(e => e.IsActive).HasDefaultValue(true);
+
+                // Configure relationships
+                entity.HasOne(ss => ss.Student)
+                    .WithMany()
+                    .HasForeignKey(ss => ss.StudentId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(ss => ss.Subject)
+                    .WithMany(s => s.StudentSubjects)
+                    .HasForeignKey(ss => ss.SubjectId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
                 // Create composite unique index to prevent duplicate enrollment  
                 entity.HasIndex(e => new { e.StudentId, e.SubjectId }).IsUnique()
@@ -108,8 +173,26 @@ namespace CourseRegistration.Infrastructure.Data
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.StudentId).IsRequired();
                 entity.Property(e => e.ClassId).IsRequired();
+                entity.Property(e => e.SubjectId).IsRequired();
+                entity.Property(e => e.IndexNumber).HasMaxLength(20).IsRequired();
                 entity.Property(e => e.Status).HasConversion<int>().HasDefaultValue(RegistrationStatus.Pending);
                 entity.Property(e => e.Remarks).HasMaxLength(500);
+
+                // Configure relationships
+                entity.HasOne(scr => scr.Student)
+                    .WithMany()
+                    .HasForeignKey(scr => scr.StudentId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(scr => scr.Class)
+                    .WithMany(c => c.StudentRegistrations)
+                    .HasForeignKey(scr => scr.ClassId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(scr => scr.Subject)
+                    .WithMany()
+                    .HasForeignKey(scr => scr.SubjectId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
                 // Create composite unique index to prevent duplicate registrations
                 entity.HasIndex(e => new { e.StudentId, e.ClassId })
@@ -124,8 +207,26 @@ namespace CourseRegistration.Infrastructure.Data
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.TeacherId).IsRequired();
                 entity.Property(e => e.ClassId).IsRequired();
+                entity.Property(e => e.SubjectId).IsRequired();
+                entity.Property(e => e.EmployeeId).HasMaxLength(50).IsRequired();
                 entity.Property(e => e.Status).HasConversion<int>().HasDefaultValue(RegistrationStatus.Pending);
                 entity.Property(e => e.Remarks).HasMaxLength(500);
+
+                // Configure relationships
+                entity.HasOne(tcr => tcr.Teacher)
+                    .WithMany()
+                    .HasForeignKey(tcr => tcr.TeacherId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(tcr => tcr.Class)
+                    .WithMany(c => c.TeacherRegistrations)
+                    .HasForeignKey(tcr => tcr.ClassId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(tcr => tcr.Subject)
+                    .WithMany(s => s.TeacherClassRegistrations)
+                    .HasForeignKey(tcr => tcr.SubjectId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
                 // Create composite unique index to prevent duplicate registrations  
                 entity.HasIndex(e => new { e.TeacherId, e.ClassId })

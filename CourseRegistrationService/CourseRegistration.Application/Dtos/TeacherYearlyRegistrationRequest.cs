@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UserManagement.Domain.Domain
+namespace CourseRegistration.Application.Dtos
 {
-    public class Teacher
+    public class TeacherYearlyRegistrationRequest
     {
-        public int Id { get; set; }
-
         [Required]
         [MaxLength(50)]
         public string FirstName { get; set; } = string.Empty;
@@ -32,19 +30,24 @@ namespace UserManagement.Domain.Domain
         [MaxLength(200)]
         public string Address { get; set; } = string.Empty;
 
+        [Required]
         public DateTime DateOfBirth { get; set; }
 
         [MaxLength(50)]
-        public string? EmployeeId { get; set; } // Teacher's employee ID
+        public string? EmployeeId { get; set; }
 
         [MaxLength(100)]
-        public string? Qualification { get; set; } // Teaching qualification
+        public string? Qualification { get; set; }
 
         public DateTime HireDate { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        [Required]
+        public List<int> ClassIds { get; set; } = new List<int>(); // Teacher can register for multiple classes
 
-        public string FullName => $"{FirstName} {LastName}";
+        [Required]
+        public List<int> SubjectIds { get; set; } = new List<int>(); // Teacher selects subjects they can teach
+
+        public int? ExistingTeacherId { get; set; } // For returning teachers
     }
 }
+

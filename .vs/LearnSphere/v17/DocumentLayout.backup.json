@@ -3,16 +3,84 @@
   "WorkspaceRootPath": "C:\\project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5790DA18-1F47-405C-B597-D0642F7EAC82}|UserService\\UserManagement.Domain\\UserManagement.Domain.csproj|c:\\project\\userservice\\usermanagement.domain\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5790DA18-1F47-405C-B597-D0642F7EAC82}|UserService\\UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:userservice\\usermanagement.domain\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5790DA18-1F47-405C-B597-D0642F7EAC82}|UserService\\UserManagement.Domain\\UserManagement.Domain.csproj|c:\\project\\userservice\\usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5790DA18-1F47-405C-B597-D0642F7EAC82}|UserService\\UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:userservice\\usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\teachersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\teachersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|c:\\project\\courseregistrationservice\\courseregistration.infrastructure\\repositories\\classrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|solutionrelative:courseregistrationservice\\courseregistration.infrastructure\\repositories\\classrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|c:\\project\\courseregistrationservice\\courseregistration.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|solutionrelative:courseregistrationservice\\courseregistration.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\interfaces\\iclassrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\iclassrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|c:\\project\\courseregistrationservice\\courseregistration.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|solutionrelative:courseregistrationservice\\courseregistration.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\dtos\\registrationapprovalrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\dtos\\registrationapprovalrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\dtos\\createsubjectrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\dtos\\createsubjectrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\dtos\\createclassrequset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\dtos\\createclassrequset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\classstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\classstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|c:\\project\\courseregistrationservice\\courseregistration.infrastructure\\data\\courseregistrationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|solutionrelative:courseregistrationservice\\courseregistration.infrastructure\\data\\courseregistrationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\teacherclassregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\teacherclassregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\studentclassregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\studentclassregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\studentsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\studentsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\interfaces\\istudentclassregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\istudentclassregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\interfaces\\istudentsubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\istudentsubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\interfaces\\iteacherclassregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\iteacherclassregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|c:\\project\\courseregistrationservice\\courseregistration.infrastructure\\repositories\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,44 +99,12 @@
       "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\isubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\dtos\\registrationapprovalrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\dtos\\registrationapprovalrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\dtos\\createsubjectrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\dtos\\createsubjectrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\dtos\\createclassrequset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\dtos\\createclassrequset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\teachersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\teachersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|c:\\project\\courseregistrationservice\\courseregistration.infrastructure\\data\\courseregistrationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|solutionrelative:courseregistrationservice\\courseregistration.infrastructure\\data\\courseregistrationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|c:\\project\\courseregistrationservice\\courseregistration.domain\\models\\registrationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A5D2240-EF94-4857-9242-4059C3F53294}|CourseRegistrationService\\CourseRegistration.Domain\\CourseRegistration.Domain.csproj|solutionrelative:courseregistrationservice\\courseregistration.domain\\models\\registrationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|c:\\project\\courseregistrationservice\\courseregistration.infrastructure\\data\\courseregistrationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7483161C-1A04-4DF9-9906-973842287D9D}|CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj|solutionrelative:courseregistrationservice\\courseregistration.infrastructure\\data\\courseregistrationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\interfaces\\istudentclassregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\istudentclassregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|c:\\project\\courseregistrationservice\\courseregistration.application\\courseregistration.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -90,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,106 +146,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClassRepository.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\ClassRepository.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\ClassRepository.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\ClassRepository.cs*",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\ClassRepository.cs*",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwCIAAACQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:04:45.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IClassRepository.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IClassRepository.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IClassRepository.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IClassRepository.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IClassRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:02:37.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ISubjectRepository.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
+              "RelativeDocumentMoniker": "UserService\\UserManagement.Domain\\Domain\\Student.cs",
+              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
+              "RelativeToolTip": "UserService\\UserManagement.Domain\\Domain\\Student.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T22:59:48.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ITeacherSubjectRepository.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T22:59:52.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IUnitOfWork.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IUnitOfWork.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IUnitOfWork.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T22:59:51.55Z",
+              "WhenOpened": "2025-06-16T09:43:19.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\BaseRepository.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\BaseRepository.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA0AAAARAAAAAAAAAA==",
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
+              "RelativeDocumentMoniker": "UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
+              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
+              "RelativeToolTip": "UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:00:07.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SubjectRepository.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:16:08.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IRepository.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T22:59:54.538Z",
+              "WhenOpened": "2025-06-16T09:43:15.468Z",
               "EditorCaption": ""
             },
             {
@@ -222,7 +180,56 @@
               "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Dtos\\RegistrationApprovalRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T22:59:58.099Z",
+              "WhenOpened": "2025-06-14T22:59:58.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IClassRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IClassRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IClassRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IClassRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IClassRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:02:37.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\BaseRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\BaseRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T23:00:07.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClassRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\ClassRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\ClassRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\ClassRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\ClassRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:04:45.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\Subject.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\Subject.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\Subject.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\Subject.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA9wBAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T23:29:52.154Z",
               "EditorCaption": ""
             },
             {
@@ -235,7 +242,19 @@
               "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Dtos\\CreateSubjectRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T22:59:57.375Z",
+              "WhenOpened": "2025-06-14T22:59:57.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TeacherSubject.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T23:39:58.03Z",
               "EditorCaption": ""
             },
             {
@@ -248,20 +267,43 @@
               "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Dtos\\CreateClassRequset.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T22:59:56.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-14T22:59:56.65Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CourseRegistrationDbContextFactory.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
+              "DocumentIndex": 6,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:59:54.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ClassStatus.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\ClassStatus.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\ClassStatus.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\ClassStatus.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\ClassStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:01:26.526Z"
+              "WhenOpened": "2025-06-16T08:23:52.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Class.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\Class.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\Class.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\Class.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\Class.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:09:06.691Z"
             },
             {
               "$type": "Document",
@@ -271,49 +313,49 @@
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbcontext.cs",
               "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbcontext.cs",
               "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbcontext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwCsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T23:03:27.28Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "RegistrationStatus.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TeacherClassRegistration.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherClassRegistration.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherClassRegistration.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherClassRegistration.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherClassRegistration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:10:05.7Z"
+              "WhenOpened": "2025-06-16T08:24:10.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\Subject.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\Subject.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\Subject.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "StudentClassRegistration.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentClassRegistration.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentClassRegistration.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentClassRegistration.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentClassRegistration.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:29:52.154Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TeacherSubject.cs",
-              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
-              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:39:58.03Z"
+              "WhenOpened": "2025-06-16T08:24:13.252Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "StudentSubject.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentSubject.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentSubject.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentSubject.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentSubject.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:23:56.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "IStudentClassRegistrationRepository.cs",
               "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentClassRegistrationRepository.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentClassRegistrationRepository.cs",
@@ -325,7 +367,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
+              "Title": "IStudentSubjectRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentSubjectRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentSubjectRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentSubjectRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentSubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:38:49.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ITeacherClassRegistrationRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherClassRegistrationRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherClassRegistrationRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherClassRegistrationRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherClassRegistrationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:30:05.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ITeacherSubjectRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:59:52.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:59:51.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ISubjectRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:59:48.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SubjectRepository.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T23:16:08.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CourseRegistrationDbContextFactory.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Data\\CourseRegistrationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T23:01:26.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RegistrationStatus.cs",
+              "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
+              "ToolTip": "C:\\project\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\RegistrationStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T23:10:05.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "CourseRegistration.Application.csproj",
               "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj",
@@ -337,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "CourseRegistration.Infrastructure.csproj",
               "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\CourseRegistration.Infrastructure.csproj",
@@ -349,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 28,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\project\\CourseRegistrationService\\CourseRegistration.API\\Program.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.API\\Program.cs",

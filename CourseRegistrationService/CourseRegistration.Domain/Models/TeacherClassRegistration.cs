@@ -1,13 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UserManagement.Domain.Domain;
 
 namespace CourseRegistration.Domain.Models
 {
-    public  class TeacherClassRegistration
+    public class TeacherClassRegistration
     {
         public int Id { get; set; }
 
@@ -16,6 +17,13 @@ namespace CourseRegistration.Domain.Models
 
         [Required]
         public int ClassId { get; set; }
+
+        [Required]
+        public int SubjectId { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string EmployeeId { get; set; } = string.Empty;
 
         public RegistrationStatus Status { get; set; } = RegistrationStatus.Pending;
 
@@ -29,6 +37,8 @@ namespace CourseRegistration.Domain.Models
         public string? Remarks { get; set; }
 
         // Navigation properties
+        public virtual Teacher Teacher { get; set; } = null!;
         public virtual Class Class { get; set; } = null!;
+        public virtual Subject Subject { get; set; } = null!;
     }
 }
