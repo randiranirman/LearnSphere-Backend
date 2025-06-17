@@ -42,6 +42,7 @@ namespace UserManagement.Infrastructure.Services
             {
                 return false;
             }
+            Console.WriteLine("credential has been changed ");
             user.hashedPassword = hasher.HashPassword(user, request.NewPassword);
             user.IsFirstLogin = false;
             context.Users.Update(user);
