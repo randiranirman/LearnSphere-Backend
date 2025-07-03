@@ -1,0 +1,159 @@
+[
+  {
+    "ContainingType": "CourseManagementService.Controllers.SubjectsController",
+    "Method": "GetAllSubjects",
+    "RelativePath": "api/Subjects",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.SubjectsController",
+    "Method": "CreateSubject",
+    "RelativePath": "api/Subjects",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addSubjectRequestDTO",
+        "Type": "CourseManagementService.Models.DTOs.AddSubjectRequestDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "assignTeacherId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.SubjectsController",
+    "Method": "GetSubjectById",
+    "RelativePath": "api/Subjects/{Code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Code",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.SubjectsController",
+    "Method": "DeleteSubject",
+    "RelativePath": "api/Subjects/{Code}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Code",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.SubjectsController",
+    "Method": "UpdateSubjectAsync",
+    "RelativePath": "api/Subjects/{Code}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Code",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateSubjectRequestDTO",
+        "Type": "CourseManagementService.Models.DTOs.UpdateSubjectRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.TeachersController",
+    "Method": "GetAllTeachers",
+    "RelativePath": "api/Teachers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.TeachersController",
+    "Method": "CreateTeacher",
+    "RelativePath": "api/Teachers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addTeacherRequestDTO",
+        "Type": "CourseManagementService.Models.DTOs.AddTeacherRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.TeachersController",
+    "Method": "UpdateTeacher",
+    "RelativePath": "api/Teachers/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateTeacherRequestDTO",
+        "Type": "CourseManagementService.Models.DTOs.UpdateTeacherRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.TeachersController",
+    "Method": "DeleteTeacher",
+    "RelativePath": "api/Teachers/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementService.Controllers.TeacherSubjectController",
+    "Method": "GetAllTeacherSubjects",
+    "RelativePath": "api/TeacherSubject",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

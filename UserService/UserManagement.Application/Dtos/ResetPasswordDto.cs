@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace UserManagement.Application.Dtos
 {
-    public  class  ResetPasswordDto
+    public class ResetPasswordDto
     {
         public string? Email { get; set; }
-      
         public string? Token { get; set; }
-        public string? NewPassword { get; set; }
-        public string? ConfirmPassword { get; set; }
+        public string TemporaryPassword { get; set; } = string.Empty;
+        public string NewPassword { get; set; } = string.Empty;
+        public string ConfirmPassword { get; set; } = string.Empty;
     }
 }

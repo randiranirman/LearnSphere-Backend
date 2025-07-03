@@ -707,11 +707,19 @@
             "format": "date-time",
             "nullable": true
           },
+<<<<<<< HEAD
           "resetToken": {
             "type": "string",
             "nullable": true
           },
           "resetTokenExpiryTime": {
+=======
+          "passwordResetToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordResetTokenExpiryTime": {
+>>>>>>> 42fa1e49130d9dde32eebea3f2251c72fea415c4
             "type": "string",
             "format": "date-time",
             "nullable": true

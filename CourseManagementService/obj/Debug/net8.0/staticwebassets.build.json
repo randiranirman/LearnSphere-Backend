@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "QjcxJlTYPjRdVYDAuNNRYr3rhiLHlYeaZ65NjJUiUlM=",
+  "Source": "CourseManagementService",
+  "BasePath": "_content/CourseManagementService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

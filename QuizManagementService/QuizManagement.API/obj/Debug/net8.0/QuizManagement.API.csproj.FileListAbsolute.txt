@@ -22,6 +22,7 @@ C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagem
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cs
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cache
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.sourcelink.json
+<<<<<<< HEAD
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\scopedcss\bundle\QuizManagement.API.styles.css
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\staticwebassets.development.json
@@ -43,3 +44,9 @@ C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\ref\QuizMan
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cache
 C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.sourcelink.json
 >>>>>>> ab4b7b58516759e26d29ff75f8f008a3c9655d47
+=======
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.MvcApplicationPartsAssemblyInfo.cs
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.dll
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\refint\QuizManagement.API.dll
+C:\project\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.pdb
+>>>>>>> 42fa1e49130d9dde32eebea3f2251c72fea415c4
