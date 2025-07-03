@@ -4909,17 +4909,6 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-<<<<<<< HEAD
-            "version": "[8.0.16, 8.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
-=======
             "version": "[8.0.17, 8.0.17]"
           },
           {
@@ -4929,7 +4918,6 @@
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
             "version": "[8.0.17, 8.0.17]"
->>>>>>> 42fa1e49130d9dde32eebea3f2251c72fea415c4
           }
         ],
         "frameworkReferences": {
@@ -4937,12 +4925,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.106/PortableRuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
->>>>>>> 42fa1e49130d9dde32eebea3f2251c72fea415c4
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\project\\FileStorage.API\\FileStorage.Infrastructure\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
