@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "T8bI4Zma6mlJS8quvfG2xfX3rDlTWiLQ75sOWUmywSM=",
+  "Source": "QuizManagement.API",
+  "BasePath": "_content/QuizManagement.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

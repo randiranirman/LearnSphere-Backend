@@ -1,5 +1,13 @@
 is_global = true
 build_property.TargetFramework = net8.0
+<<<<<<< HEAD
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+=======
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
@@ -14,6 +22,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
+>>>>>>> 42fa1e49130d9dde32eebea3f2251c72fea415c4
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FileStorage.API
 build_property.RootNamespace = FileStorage.API

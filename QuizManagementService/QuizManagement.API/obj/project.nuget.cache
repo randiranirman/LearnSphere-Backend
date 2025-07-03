@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "ItvNLG5o44k=",
+=======
   "dgSpecHash": "iAP6ws/qw/8=",
+>>>>>>> 42fa1e49130d9dde32eebea3f2251c72fea415c4
   "success": true,
   "projectFilePath": "C:\\project\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
   "expectedPackageFiles": [
@@ -75,5 +79,12 @@
     "C:\\Users\\binad\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.17\\microsoft.aspnetcore.app.ref.8.0.17.nupkg.sha512",
     "C:\\Users\\binad\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.17\\microsoft.netcore.app.host.win-x64.8.0.17.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\project\\QuizManagementService\\QuizManagement.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
