@@ -172,6 +172,38 @@
   },
   {
     "ContainingType": "UserManagement.API.Controllers.AuthController",
+    "Method": "RequestPasswordReset",
+    "RelativePath": "api/auth/request-password-reset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requsetDto",
+        "Type": "UserManagement.Application.Dtos.PasswordResetRequsetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserManagement.API.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "UserManagement.Application.Dtos.ResetPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserManagement.API.Controllers.AuthController",
     "Method": "UpdateCredentials",
     "RelativePath": "api/auth/update-credentials/{username}",
     "HttpMethod": "POST",

@@ -347,6 +347,68 @@
         }
       }
     },
+    "/api/auth/request-password-reset": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordResetRequsetDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordResetRequsetDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordResetRequsetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/reset-password": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/email/send": {
       "post": {
         "tags": [
@@ -539,6 +601,16 @@
         },
         "additionalProperties": false
       },
+      "PasswordResetRequsetDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "RefreshTokenRequestDto": {
         "required": [
           "refreshToken"
@@ -550,6 +622,28 @@
             "format": "int32"
           },
           "refreshToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResetPasswordDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "confirmPassword": {
             "type": "string",
             "nullable": true
           }
@@ -613,11 +707,19 @@
             "format": "date-time",
             "nullable": true
           },
+<<<<<<< HEAD
+          "resetToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "resetTokenExpiryTime": {
+=======
           "passwordResetToken": {
             "type": "string",
             "nullable": true
           },
           "passwordResetTokenExpiryTime": {
+>>>>>>> 42fa1e49130d9dde32eebea3f2251c72fea415c4
             "type": "string",
             "format": "date-time",
             "nullable": true
