@@ -19,8 +19,6 @@ namespace UserManagement.Domain.Domain
         public string? RefreshToken { get; set; }
         public bool IsFirstLogin { get; set; }
         public DateTime? RefreshTokenExpiryTime { get; set; }
-        public string? ResetToken { get; set; }
-        public DateTime? ResetTokenExpiryTime { get; set; }
         public string? PasswordResetToken { get; set; }
         public DateTime? PasswordResetTokenExpiryTime { get; set; }
     }
