@@ -362,8 +362,8 @@ namespace UserManagement.Infrastructure.Services
 
             // generate a  reset token 
             var resetToken = GenerateRefershToken();
-            user.ResetToken = resetToken;
-            user.ResetTokenExpiryTime= DateTime.UtcNow.AddHours(1); // Set expiry time to 1 hour from now
+            user.PasswordResetToken = resetToken;
+            user.PasswordResetTokenExpiryTime = DateTime.UtcNow.AddHours(1); // Set expiry time to 1 hour from now
             context.Users.Update(user);
             await context.SaveChangesAsync();
             // send the reset token to the  user email 
@@ -376,9 +376,9 @@ namespace UserManagement.Infrastructure.Services
         public async Task<bool> ResetPassword(ResetPasswordDto request)
         {
             var user = await context.Users.FirstOrDefaultAsync(u => u.Email == request.Email &&
-            u.ResetToken == request.Token &&
+            u.PasswordResetToken == request.Token &&
 
-            u.ResetTokenExpiryTime > DateTime.UtcNow
+            u.PasswordResetTokenExpiryTime > DateTime.UtcNow
             );
 
             if( user is null)
@@ -394,8 +394,8 @@ namespace UserManagement.Infrastructure.Services
             user.hashedPassword = hasher.HashPassword(user, request.NewPassword);
             // invalidate token 
 
-            user.ResetToken = null;
-            user.ResetTokenExpiryTime = null;
+            user.PasswordResetToken = null;
+            user.PasswordResetTokenExpiryTime = null;
             context.Users.Update(user);
             await context.SaveChangesAsync();
             return true;
