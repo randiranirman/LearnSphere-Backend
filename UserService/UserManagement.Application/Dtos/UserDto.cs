@@ -16,5 +16,6 @@ namespace UserManagement.Application.Dtos
 
         public string Role { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
+
     }
 }
