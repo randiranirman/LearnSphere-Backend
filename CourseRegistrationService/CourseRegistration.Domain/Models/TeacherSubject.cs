@@ -18,7 +18,20 @@ namespace CourseRegistration.Domain.Models
         [Required]
         public int SubjectId { get; set; }
 
-        public DateTime AssignedAt { get; set; } = DateTime.UtcNow;
+        [Required]
+        [MaxLength(50)]
+        public string EmployeeId { get; set; } = string.Empty;
+
+        public RegistrationStatus Status { get; set; } = RegistrationStatus.Pending;
+
+        public DateTime RegisteredAt { get; set; } = DateTime.UtcNow;
+
+        public DateTime? ApprovedAt { get; set; }
+
+        public int? ApprovedByAdminId { get; set; }
+
+        [MaxLength(500)]
+        public string? Remarks { get; set; }
         
         public bool IsActive { get; set; } = true;
         
