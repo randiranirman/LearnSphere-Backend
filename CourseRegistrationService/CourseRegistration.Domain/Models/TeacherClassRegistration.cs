@@ -4,13 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UserManagement.Domain.Domain;
 
 namespace CourseRegistration.Domain.Models
 {
     public class TeacherClassRegistration
     {
-        public int Id { get; set; }
+        public int TeacherRegistrationId { get; set; }
 
         [Required]
         public int TeacherId { get; set; }
@@ -37,7 +36,6 @@ namespace CourseRegistration.Domain.Models
         public string? Remarks { get; set; }
 
         // Navigation properties
-        public virtual Teacher Teacher { get; set; } = null!;
         public virtual Class Class { get; set; } = null!;
         public virtual Subject Subject { get; set; } = null!;
     }
