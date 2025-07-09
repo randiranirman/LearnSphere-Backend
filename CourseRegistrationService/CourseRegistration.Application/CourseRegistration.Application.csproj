@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\UserService\UserManagement.Domain\UserManagement.Domain.csproj" />
-    <ProjectReference Include="..\CourseRegistration.Domain\CourseRegistration.Domain.csproj" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\..\UserService\UserManagement.Domain\UserManagement.Domain.csproj" />
+    <ProjectReference Include="..\CourseRegistration.Domain\CourseRegistration.Domain.csproj" />
   </ItemGroup>
 
 </Project>

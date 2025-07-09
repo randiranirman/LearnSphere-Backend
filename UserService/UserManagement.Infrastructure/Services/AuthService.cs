@@ -20,7 +20,6 @@ using UserManagement.Domain.Domain;
 using UserManagement.Domain.Repositories;
 using UserManagement.Infrastructure.Data;
 
-
 namespace UserManagement.Infrastructure.Services
 {
     public class AuthService(UserDbContext context, IConfiguration configuration, IEmailService emailService) : IAuthService
@@ -265,6 +264,8 @@ namespace UserManagement.Infrastructure.Services
                 };
 
                 context.Entry(teacher).State = EntityState.Modified;
+                context.Teachers.Add(teacher);
+                await context.SaveChangesAsync();
 
             }
             else if (request.Role.ToLower() == "student")
@@ -274,8 +275,11 @@ namespace UserManagement.Infrastructure.Services
                     Id = user.Id,
                     FirstName = user.Name,
                 };
+                context.Students.Add(student);
+                await context.SaveChangesAsync();
 
             }
+            await context.SaveChangesAsync();
            // sending the email to the particular user
             await emailService.SendEmailToUserAsync(user.Email, EmailTemplates.WelcomeSubject, EmailTemplates.WelcomeBody(user.Name, user.Username, request.Password));
 
