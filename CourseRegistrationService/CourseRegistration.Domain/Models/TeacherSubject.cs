@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UserManagement.Domain.Domain;
 
 namespace CourseRegistration.Domain.Models
 {
@@ -34,9 +33,7 @@ namespace CourseRegistration.Domain.Models
         public string? Remarks { get; set; }
         
         public bool IsActive { get; set; } = true;
-        
-        // Navigation properties
-        public virtual Teacher Teacher { get; set; } = null!;
-        public virtual Subject Subject { get; set; } = null!;
+
+
     }
 }
