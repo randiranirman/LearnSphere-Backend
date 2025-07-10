@@ -14,3 +14,19 @@ C:\project\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagemen
 C:\project\UserService\UserManagement.Application\obj\Debug\net8.0\refint\UserManagement.Application.dll
 C:\project\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.pdb
 C:\project\UserService\UserManagement.Application\obj\Debug\net8.0\ref\UserManagement.Application.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Application.deps.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Application.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Application.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.csproj.AssemblyReference.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.AssemblyInfoInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.AssemblyInfo.cs
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.csproj.CoreCompileInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.sourcelink.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserMana.22515BBA.Up2Date
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\refint\UserManagement.Application.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Application\obj\Debug\net8.0\ref\UserManagement.Application.dll

@@ -10,3 +10,15 @@ C:\project\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Dom
 C:\project\UserService\UserManagement.Domain\obj\Debug\net8.0\refint\UserManagement.Domain.dll
 C:\project\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.pdb
 C:\project\UserService\UserManagement.Domain\obj\Debug\net8.0\ref\UserManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\bin\Debug\net8.0\UserManagement.Domain.deps.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\bin\Debug\net8.0\UserManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\bin\Debug\net8.0\UserManagement.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.AssemblyInfoInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.AssemblyInfo.cs
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.csproj.CoreCompileInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.sourcelink.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\refint\UserManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.Domain\obj\Debug\net8.0\ref\UserManagement.Domain.dll

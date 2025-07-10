@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\project\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj": {}
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj": {}
   },
   "projects": {
-    "C:\\project\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj": {
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
+        "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
         "projectName": "QuizManagement.API",
-        "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
-        "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\QuizManagementService\\QuizManagement.API\\obj\\",
+        "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,23 +26,24 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\project\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj": {
-                "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj"
               },
-              "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
-                "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj"
               },
-              "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj": {
-                "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj"
               },
-              "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.csproj": {
-                "projectPath": "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\UserManagement.API.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\UserManagement.API.csproj"
               }
             }
           }
@@ -55,9 +56,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -79,24 +80,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -105,24 +88,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\project\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj": {
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj",
+        "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj",
         "projectName": "QuizManagement.Application",
-        "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj",
-        "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\QuizManagementService\\QuizManagement.Application\\obj\\",
+        "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -131,17 +114,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
-                "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj"
               },
-              "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj": {
-                "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj"
               }
             }
           }
@@ -154,9 +138,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -172,43 +156,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj",
+        "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj",
         "projectName": "QuizManagement.Domain",
-        "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj",
-        "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\obj\\",
+        "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -217,6 +187,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -233,9 +204,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -251,43 +222,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj": {
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj",
+        "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj",
         "projectName": "QuizManagement.Infrastructure",
-        "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\obj\\",
+        "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -296,14 +253,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
-                "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj"
               }
             }
           }
@@ -316,9 +274,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -340,43 +298,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.csproj": {
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\UserManagement.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.csproj",
+        "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\UserManagement.API.csproj",
         "projectName": "UserManagement.API",
-        "projectPath": "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.csproj",
-        "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\UserService\\UserManagement.API\\obj\\",
+        "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\UserManagement.API.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -385,20 +329,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\project\\UserService\\UserManagement.Application\\UserManagement.Application.csproj": {
-                "projectPath": "C:\\project\\UserService\\UserManagement.Application\\UserManagement.Application.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\UserManagement.Application.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\UserManagement.Application.csproj"
               },
-              "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj": {
-                "projectPath": "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj"
               },
-              "C:\\project\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj": {
-                "projectPath": "C:\\project\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj"
               }
             }
           }
@@ -411,9 +356,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -445,24 +390,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -471,24 +398,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\project\\UserService\\UserManagement.Application\\UserManagement.Application.csproj": {
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\UserManagement.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\UserService\\UserManagement.Application\\UserManagement.Application.csproj",
+        "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\UserManagement.Application.csproj",
         "projectName": "UserManagement.Application",
-        "projectPath": "C:\\project\\UserService\\UserManagement.Application\\UserManagement.Application.csproj",
-        "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\UserService\\UserManagement.Application\\obj\\",
+        "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\UserManagement.Application.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -497,14 +424,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj": {
-                "projectPath": "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj"
               }
             }
           }
@@ -517,9 +445,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -541,43 +469,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj": {
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj",
+        "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj",
         "projectName": "UserManagement.Domain",
-        "projectPath": "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj",
-        "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\UserService\\UserManagement.Domain\\obj\\",
+        "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -586,6 +500,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -602,9 +517,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -620,43 +535,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\project\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj": {
+    "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj",
+        "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj",
         "projectName": "UserManagement.Infrastructure",
-        "projectPath": "C:\\project\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\UserService\\UserManagement.Infrastructure\\obj\\",
+        "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -665,17 +566,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\project\\UserService\\UserManagement.Application\\UserManagement.Application.csproj": {
-                "projectPath": "C:\\project\\UserService\\UserManagement.Application\\UserManagement.Application.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\UserManagement.Application.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\UserManagement.Application.csproj"
               },
-              "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj": {
-                "projectPath": "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj"
+              "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj": {
+                "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj"
               }
             }
           }
@@ -688,9 +590,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -748,26 +650,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

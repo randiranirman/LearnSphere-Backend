@@ -6,3 +6,8 @@ C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizMana
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.dll
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\refint\QuizManagement.Domain.dll
 C:\project\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.AssemblyInfoInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.AssemblyInfo.cs
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.csproj.CoreCompileInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.sourcelink.json
