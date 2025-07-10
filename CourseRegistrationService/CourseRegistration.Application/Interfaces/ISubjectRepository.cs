@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CourseRegistration.Application.Dtos;
 using CourseRegistration.Domain.Models;
 
 namespace CourseRegistration.Application.Repositories

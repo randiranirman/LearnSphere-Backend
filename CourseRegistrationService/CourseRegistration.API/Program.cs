@@ -1,4 +1,8 @@
+using CourseRegistration.Application.Interfaces;
+using CourseRegistration.Application.Repositories;
+using CourseRegistration.Application.Services;
 using CourseRegistration.Infrastructure.Data;
+using CourseRegistration.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +14,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
+
+// Register Repositories
+builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
+
+// Register Services
+builder.Services.AddScoped<ISubjectService, SubjectService>();
 
 var app = builder.Build();
 
