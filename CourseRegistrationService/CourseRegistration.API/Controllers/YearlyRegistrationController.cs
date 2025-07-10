@@ -6,7 +6,7 @@ using CourseRegistration.Domain.Models;
 namespace CourseRegistration.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("registrations/[controller]")]
     public class YearlyRegistrationController : ControllerBase
     {
         private readonly IYearlyRegistrationService _registrationService;
