@@ -17,6 +17,8 @@ namespace UserManagement.Application.Repositories
         Task<bool> DeleteUserByIdAsync(int id);
 
         Task<StudentDto> GetStudentByID(int id);
+        Task<TeacherDto> GetTeacherByID(int id);
+        
         
 
     }

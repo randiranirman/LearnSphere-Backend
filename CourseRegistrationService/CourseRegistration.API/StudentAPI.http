@@ -1,0 +1,28 @@
+### Test Student HTTP Service - Course Registration Service
+
+### Get student by ID from User Management Service
+GET https://localhost:7293/api/student/1
+Accept: application/json
+
+### Check if student exists
+GET https://localhost:7293/api/student/1/exists
+Accept: application/json
+
+### Get multiple students by IDs
+POST https://localhost:7293/api/student/batch
+Content-Type: application/json
+
+[1, 2, 3]
+
+### Register student for course using existing student ID
+POST https://localhost:7293/api/student/1/register
+Content-Type: application/json
+
+{
+  "classId": 1,
+  "subjectIds": [1, 2, 3]
+}
+
+### Test User Management Service directly (for comparison)
+GET https://localhost:7033/user/students/1
+Accept: application/json
