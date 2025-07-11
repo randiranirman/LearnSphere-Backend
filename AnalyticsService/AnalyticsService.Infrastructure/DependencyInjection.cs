@@ -1,6 +1,6 @@
-﻿using AnalyticsService.Application;
-using AnalyticsService.Domain;
+﻿using AnalyticsService.Application.Interfaces;
 using AnalyticsService.Infrastructure.Data;
+using AnalyticsService.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,7 +14,9 @@ namespace AnalyticsService.Infrastructure
             {
                 options.UseSqlServer("Data Source=localhost\\MSSQLSERVER02;Initial Catalog=AnalyticsDB;Integrated Security=True;Trust Server Certificate=True");
             });
-            services.AddDomainDI().AddApplicationDI();
+
+            services.AddScoped<IStudentMarksAnalyticsRepository, StudentMarksAnalyticsRepository>();
+
             return services;
         }
     }
