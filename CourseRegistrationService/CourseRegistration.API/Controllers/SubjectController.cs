@@ -37,7 +37,6 @@ namespace CourseRegistration.API.Controllers
 
 
         }
-        [Authorize(Roles ="admin")]
         [HttpGet("getAllSubjects")]
         public async Task<IActionResult> GetAllSubjectsAsync()
 
