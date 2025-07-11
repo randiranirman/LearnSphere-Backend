@@ -22,17 +22,21 @@ namespace AnalyticsService.Infrastructure.Repositories
                 .ToListAsync();
             return studentDomainModel;
         }
-        public async Task<IEnumerable<AllMarksByStudentIdDTO>> GetAllMarksByStudentIdAsync(int studentId)
+        public async Task<IEnumerable<AllMarksByStudentIdDTO>> GetAllMarksByStudentIdAsync(int subjectId, int studentId)
         {
-            return await analyticsDbContext.StudentMarks
-                .Where(sm => sm.StudentId == studentId)
-                .Select(sm => new AllMarksByStudentIdDTO
-                {
-                    AssignmentId = sm.AssignmentId,
-                    AssignmentTitle = sm.Assignment.Title,
-                    Marks = sm.Marks
-                })
-                .ToListAsync();
+            var result = await (from sm in analyticsDbContext.StudentMarks
+                                join a in analyticsDbContext.Assignments
+                                    on sm.AssignmentId equals a.Id
+                                where sm.StudentId == studentId && a.SubjectId == subjectId
+                                select new AllMarksByStudentIdDTO
+                                {
+                                    AssignmentId = a.Id,
+                                    AssignmentTitle = a.Title,
+                                    Marks = sm.Marks
+                                }).ToListAsync();
+
+            return result;
+
         }
     }
 }

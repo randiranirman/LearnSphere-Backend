@@ -23,9 +23,13 @@ namespace AnalyticsService.API.Controllers
 
         // get all the marks for each assignment for a particular student
         [HttpGet]
-        public async Task<IActionResult> GetAllMarksByStudentId([FromQuery] int studentId)
+        public async Task<IActionResult> GetAllMarksByStudentId([FromQuery] int subjectId, [FromQuery] int studentId)
         {
-            var result = await sender.Send(new GetAllMarksByStudentIdQuerry(studentId));
+            var result = await sender.Send(new GetAllMarksByStudentIdQuerry(subjectId, studentId));
+            if (result is null || !result.Any())
+            {
+                return NotFound($"No assignment under the student Id {studentId}");
+            }
             return Ok(result);
         }
     }

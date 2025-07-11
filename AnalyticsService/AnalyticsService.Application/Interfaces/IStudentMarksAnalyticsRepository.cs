@@ -5,6 +5,6 @@ namespace AnalyticsService.Application.Interfaces
     public interface IStudentMarksAnalyticsRepository
     {
         public Task<IEnumerable<StudentDTO>> GetAllStudentsAsync(int subjectId);
-        public Task<IEnumerable<AllMarksByStudentIdDTO>> GetAllMarksByStudentIdAsync(int studentId);
+        public Task<IEnumerable<AllMarksByStudentIdDTO>> GetAllMarksByStudentIdAsync(int subjectId, int studentId);
     }
 }
