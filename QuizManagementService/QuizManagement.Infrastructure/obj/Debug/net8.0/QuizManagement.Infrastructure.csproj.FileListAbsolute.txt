@@ -14,3 +14,9 @@ C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\
 C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\refint\QuizManagement.Infrastructure.dll
 C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.pdb
 C:\project\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\ref\QuizManagement.Infrastructure.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.csproj.AssemblyReference.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.AssemblyInfoInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.AssemblyInfo.cs
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.csproj.CoreCompileInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.sourcelink.json

@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\emailtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\emailtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,25 +39,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EmailTemplate.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\EmailTemplate.cs",
-              "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\EmailTemplate.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\EmailTemplate.cs",
-              "RelativeToolTip": "UserManagement.Domain\\Domain\\EmailTemplate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T08:12:58.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Student.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
               "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\Student.cs",
               "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
               "RelativeToolTip": "UserManagement.Domain\\Domain\\Student.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA9wAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADMAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T08:08:35.975Z",
               "EditorCaption": ""
@@ -74,26 +57,27 @@
               "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\Teacher.cs",
               "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
               "RelativeToolTip": "UserManagement.Domain\\Domain\\Teacher.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA9wDIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T17:55:00.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\User.cs",
               "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\User.cs",
               "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\User.cs",
               "RelativeToolTip": "UserManagement.Domain\\Domain\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T17:51:54.96Z"
+              "WhenOpened": "2025-07-09T17:51:54.96Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Admin.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Admin.cs",
               "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\Admin.cs",
@@ -106,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "UserDbContext.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
               "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Data\\UserDbContext.cs",

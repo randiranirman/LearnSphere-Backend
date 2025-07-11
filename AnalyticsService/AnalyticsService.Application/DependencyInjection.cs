@@ -1,5 +1,4 @@
-﻿using AnalyticsService.Domain;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace AnalyticsService.Application
 {
@@ -7,7 +6,6 @@ namespace AnalyticsService.Application
     {
         public static IServiceCollection AddApplicationDI(this IServiceCollection services)
         {
-            services.AddDomainDI();
             return services;
         }
     }

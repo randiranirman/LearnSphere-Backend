@@ -369,3 +369,4 @@ D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\U
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\obj\Debug\net8.0\UserManagement.API.pdb
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\obj\Debug\net8.0\UserManagement.API.genruntimeconfig.cache
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\obj\Debug\net8.0\ref\UserManagement.API.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
