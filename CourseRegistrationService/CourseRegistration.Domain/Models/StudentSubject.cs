@@ -12,7 +12,7 @@ namespace CourseRegistration.Domain.Models
         public int Id { get; set; }
 
         [Required]
-        public int StudentId { get; set; }
+        public int StudentId { get; set; }//  this is coming   from student  model in user management
 
         [Required]
         public int SubjectId { get; set; }

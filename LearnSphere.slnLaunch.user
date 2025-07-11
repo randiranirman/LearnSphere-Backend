@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "CourseRegistration.API\\CourseRegistration.API.csproj",
+        "Path": "CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj",
         "Action": "Start"
       }
     ]
