@@ -33,7 +33,20 @@ builder.Services.AddScoped<IClassRepository, ClassRepository>();
 builder.Services.AddScoped<ISubjectService, SubjectService>();
 builder.Services.AddScoped<IStudentHttpService, StudentHttpService>();
 builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationService>();
-builder.Services.AddScoped<IClassService, ClassService>();
+// Add CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost",
+        policy => policy.WithOrigins("http://localhost:5173", "https://localhost:5173", "http://localhost:3000", "https://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials());
+    
+    options.AddPolicy("AllowAll",
+        policy => policy.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+});
 
 var app = builder.Build();
 
@@ -42,6 +55,13 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    // Use permissive CORS in development
+    app.UseCors("AllowAll");
+}
+else
+{
+    // Use restrictive CORS in production
+    app.UseCors("AllowLocalhost");
 }
 
 app.UseHttpsRedirection();
