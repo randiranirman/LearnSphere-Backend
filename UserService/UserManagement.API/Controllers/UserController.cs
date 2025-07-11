@@ -80,10 +80,10 @@ namespace UserManagement.API.Controllers
             return Ok(result);
         }
         [HttpGet("students/{id}")]
-        public async Task<ActionResult<StudentDto>> GetStudentByID( int id )
+        public async Task<ActionResult<StudentDto>> GetStudentByID(int id)
         {
             var result = await _userService.GetStudentByID(id);
-            if( result == null)
+            if (result == null)
             {
                 return NotFound("student is not found ");
 
@@ -92,8 +92,20 @@ namespace UserManagement.API.Controllers
             return result;
         }
 
+        [HttpGet("teachers/{id}")]
+        public async Task<ActionResult<TeacherDto>> GetTeacherByID(int id)
+        {
+            var result = await _userService.GetTeacherByID(id);
+            if (result == null)
+            {
+                return NotFound("teacher is not found ");
+            }
+            return result;
 
 
+
+
+        }
 
     }
 

@@ -124,5 +124,23 @@ namespace UserManagement.Infrastructure.Services
             };
 
         }
+
+        public async Task<TeacherDto> GetTeacherByID(int id)
+        {
+            var teacher = await _context.Teachers.FirstOrDefaultAsync(t => t.Id == id);
+
+            if( teacher  ==  null)
+            {
+                return null
+                    ;
+            }
+
+            return new TeacherDto
+            {
+                TeacherID = teacher.Id,
+                TeacherName= teacher.FullName,
+                email = teacher.Email,
+            };
+        }
     }
 }
