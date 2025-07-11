@@ -1,0 +1,45 @@
+### Course Registration Service API Tests
+
+### 1. Register a student for a class with multiple subjects
+POST https://localhost:7293/api/studentregistration/register
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "classId": 1,
+  "subjectIds": [1, 2, 3],
+  "indexNumber": "STU001"
+}
+
+### 2. Get all registrations for a specific student
+GET https://localhost:7293/api/studentregistration/student/1
+Accept: application/json
+
+### 3. Get all pending registrations (for admins)
+GET https://localhost:7293/api/studentregistration/pending
+Accept: application/json
+
+### 4. Get a specific registration by ID
+GET https://localhost:7293/api/studentregistration/1
+Accept: application/json
+
+### 5. Approve a registration (admin action)
+POST https://localhost:7293/api/studentregistration/1/approve?adminId=1
+Content-Type: application/json
+
+### 6. Reject a registration (admin action)
+POST https://localhost:7293/api/studentregistration/2/reject?adminId=1
+Content-Type: application/json
+
+"Subject not available for this semester"
+
+### 7. Register another student
+POST https://localhost:7293/api/studentregistration/register
+Content-Type: application/json
+
+{
+  "studentId": 2,
+  "classId": 1,
+  "subjectIds": [1, 4],
+  "indexNumber": "STU002"
+}
