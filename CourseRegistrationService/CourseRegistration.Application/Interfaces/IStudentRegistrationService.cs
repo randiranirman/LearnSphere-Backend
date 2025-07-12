@@ -11,5 +11,6 @@ namespace CourseRegistration.Application.Interfaces
         Task<IEnumerable<StudentRegistrationDto>> GetStudentRegistrationsAsync(int studentId);
         Task<IEnumerable<StudentRegistrationDto>> GetPendingRegistrationsAsync();
         Task<StudentRegistrationDto?> GetRegistrationByIdAsync(int registrationId);
+        Task<IEnumerable<SubjectDto>> GetStudentSubjectsAsync(int studentId);
     }
 }
