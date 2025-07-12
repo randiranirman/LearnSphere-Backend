@@ -86,13 +86,10 @@ namespace CourseRegistration.Application.Services
         {
             var subjects = await _subjectRepository.GetSubjectByStudentIdAsync(studentId);
 
-
-            if( subjects == null)
+            if (subjects == null)
             {
-                return null;
-
+                return new List<Subject>();
             }
-
 
             return subjects;
         }
@@ -100,11 +97,10 @@ namespace CourseRegistration.Application.Services
         public async Task<IEnumerable<Subject>> GetSubjectsByTeacherIdAsync(int teacherId)
         {
             var subjects = await _subjectRepository.GetSubjectsByTeacherIdAsync(teacherId);
-            if( subjects == null)
+            if (subjects == null)
             {
-                return null;
+                return new List<Subject>();
             }
-
 
             return subjects;
         }

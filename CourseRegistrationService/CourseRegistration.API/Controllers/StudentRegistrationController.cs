@@ -62,6 +62,25 @@ namespace CourseRegistration.API.Controllers
         }
 
         /// <summary>
+        /// Get all subjects that a specific student is enrolled in
+        /// </summary>
+        /// <param name="studentId">Student ID</param>
+        /// <returns>List of subjects the student is enrolled in</returns>
+        [HttpGet("student/{studentId}/subjects")]
+        public async Task<IActionResult> GetStudentSubjects(int studentId)
+        {
+            try
+            {
+                var subjects = await _registrationService.GetStudentSubjectsAsync(studentId);
+                return Ok(subjects);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Error = "Failed to retrieve student subjects", Details = ex.Message });
+            }
+        }
+
+        /// <summary>
         /// Get all pending registrations (for admins)
         /// </summary>
         /// <returns>List of pending registrations</returns>
