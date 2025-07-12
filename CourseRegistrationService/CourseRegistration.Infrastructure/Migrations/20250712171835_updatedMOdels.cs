@@ -19,6 +19,15 @@ namespace CourseRegistration.Infrastructure.Migrations
                 name: "IX_StudentClassRegistrations_SubjectId",
                 table: "StudentClassRegistrations");
 
+            // Drop foreign key constraint and index for TeacherSubjects table first
+            migrationBuilder.DropForeignKey(
+                name: "FK_TeacherSubjects_Subjects_SubjectId",
+                table: "TeacherSubjects");
+
+            migrationBuilder.DropIndex(
+                name: "IX_TeacherSubjects_SubjectId",
+                table: "TeacherSubjects");
+
             migrationBuilder.DropColumn(
                 name: "SubjectID",
                 table: "TeacherSubjects");
@@ -90,10 +99,23 @@ namespace CourseRegistration.Infrastructure.Migrations
                 table: "StudentClassRegistrations",
                 column: "SubjectId");
 
+            migrationBuilder.CreateIndex(
+                name: "IX_TeacherSubjects_SubjectId",
+                table: "TeacherSubjects",
+                column: "SubjectID");
+
             migrationBuilder.AddForeignKey(
                 name: "FK_StudentClassRegistrations_Subjects_SubjectId",
                 table: "StudentClassRegistrations",
                 column: "SubjectId",
+                principalTable: "Subjects",
+                principalColumn: "SubjectId",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_TeacherSubjects_Subjects_SubjectId",
+                table: "TeacherSubjects",
+                column: "SubjectID",
                 principalTable: "Subjects",
                 principalColumn: "SubjectId",
                 onDelete: ReferentialAction.Restrict);

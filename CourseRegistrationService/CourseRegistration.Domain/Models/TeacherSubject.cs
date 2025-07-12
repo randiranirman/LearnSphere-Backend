@@ -16,7 +16,7 @@ namespace CourseRegistration.Domain.Models
 
         [Required]
         public int SubjectId { get; set; }
-
+        
         [Required]
         [MaxLength(50)]
         public string EmployeeId { get; set; } = string.Empty;
@@ -34,7 +34,7 @@ namespace CourseRegistration.Domain.Models
         
         public bool IsActive { get; set; } = true;
 
-        public Subject Subject { get; set; } = null;
+        public Subject Subject { get; set; } = null!;
 
 
     }
