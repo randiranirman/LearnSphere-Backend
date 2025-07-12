@@ -14,12 +14,37 @@ namespace AnalyticsService.Infrastructure.Data
         public DbSet<Metirial> Metirials { get; set; }
         public DbSet<Assignment> Assignments { get; set; }
         public DbSet<StudentMarks> StudentMarks { get; set; }
+        public DbSet<Submission> Submissions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configure composite primary key for StudentMarks
             modelBuilder.Entity<StudentMarks>()
                 .HasKey(sm => new { sm.AssignmentId, sm.StudentId });
+
+            // Configure Submission entity relationships
+            modelBuilder.Entity<Submission>()
+                .HasOne(s => s.Assignment)
+                .WithMany(a => a.Submissions)
+                .HasForeignKey(s => s.AssignmentId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Submission>()
+                .HasOne(s => s.Student)
+                .WithMany(st => st.Submissions)
+                .HasForeignKey(s => s.StudentId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Configure properties for Submission
+            modelBuilder.Entity<Submission>()
+                .Property(s => s.UploadLink)
+                .IsRequired()
+                .HasMaxLength(500);
+
+            modelBuilder.Entity<Submission>()
+                .Property(s => s.SubmissionName)
+                .IsRequired()
+                .HasMaxLength(255);
 
             base.OnModelCreating(modelBuilder);
         }

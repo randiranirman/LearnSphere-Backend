@@ -14,12 +14,11 @@ namespace AnalyticsService.Domain.Entities
         [NotMapped]
         public string Status => DateTime.UtcNow > DueTime ? "complete" : "incomplete";
 
-        [ForeignKey("Subject")]
-        public int SubjectId { get; set; }
-
         public int Grade { get; set; }
 
+        public int SubjectId { get; set; }
         public Subject Subject { get; set; }
+        public ICollection<Submission> Submissions { get; set; }
 
     }
 }

@@ -4,6 +4,7 @@ using AnalyticsService.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnalyticsService.Infrastructure.Migrations
 {
     [DbContext(typeof(AnalyticsDbContext))]
-    partial class AnalyticsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250712101110_AddSubmissionEntity")]
+    partial class AddSubmissionEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,6 +72,9 @@ namespace AnalyticsService.Infrastructure.Migrations
                     b.Property<int>("Grade")
                         .HasColumnType("int");
 
+                    b.Property<int?>("StudentId")
+                        .HasColumnType("int");
+
                     b.Property<int>("SubjectId")
                         .HasColumnType("int");
 
@@ -77,6 +83,8 @@ namespace AnalyticsService.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("StudentId");
 
                     b.HasIndex("SubjectId");
 
@@ -405,6 +413,10 @@ namespace AnalyticsService.Infrastructure.Migrations
 
             modelBuilder.Entity("AnalyticsService.Domain.Entities.Assignment", b =>
                 {
+                    b.HasOne("AnalyticsService.Domain.Entities.Student", null)
+                        .WithMany("Assignments")
+                        .HasForeignKey("StudentId");
+
                     b.HasOne("AnalyticsService.Domain.Entities.Subject", "Subject")
                         .WithMany("Assignments")
                         .HasForeignKey("SubjectId")
@@ -507,6 +519,8 @@ namespace AnalyticsService.Infrastructure.Migrations
 
             modelBuilder.Entity("AnalyticsService.Domain.Entities.Student", b =>
                 {
+                    b.Navigation("Assignments");
+
                     b.Navigation("Submissions");
                 });
 

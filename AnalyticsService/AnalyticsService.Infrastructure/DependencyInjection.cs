@@ -17,6 +17,8 @@ namespace AnalyticsService.Infrastructure
 
             services.AddScoped<IStudentMarksAnalyticsRepository, StudentMarksAnalyticsRepository>();
 
+            services.AddScoped<IAssignmentsRepository, AssignmentsRepository>();
+
             return services;
         }
     }

@@ -48,6 +48,6 @@ namespace AnalyticsService.Domain.Entities
         public string FullName => $"{FirstName} {LastName}";
 
         public ICollection<Subject?> Subjects { get; set; }
-        public ICollection<Assignment?> Assignments { get; set; }
+        public ICollection<Submission> Submissions { get; set; }
     }
 }
