@@ -14,5 +14,6 @@ namespace CourseRegistration.Application.Repositories
         Task<IEnumerable<StudentSubject>> GetBySubjectIdAsync(int subjectId);
         Task<StudentSubject?> GetByStudentAndSubjectAsync(int studentId, int subjectId);
         Task<bool> IsStudentEnrolledInSubjectAsync(int studentId, int subjectId);
+
     }
 }

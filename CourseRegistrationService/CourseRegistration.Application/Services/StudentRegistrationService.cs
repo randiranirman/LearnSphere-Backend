@@ -334,5 +334,38 @@ namespace CourseRegistration.Application.Services
                 Remarks = registration.Remarks
             };
         }
+
+        public async Task<IEnumerable<SubjectDto>> GetStudentSubjectsAsync(int studentId)
+        {
+            try
+            {
+                // Get all active student-subject relationships for this student
+                var studentSubjects = await _studentSubjectRepository.GetByStudentIdAsync(studentId);
+                
+                if (studentSubjects == null || !studentSubjects.Any())
+                {
+                    return new List<SubjectDto>();
+                }
+
+                // Filter for active enrollments and map to DTOs
+                var subjectDtos = studentSubjects
+                    .Where(ss => ss.IsActive && ss.Subject != null)
+                    .Select(ss => new SubjectDto
+                    {
+                        SubjectId = ss.SubjectId,
+                        SubjectName = ss.Subject.Name
+                    })
+                    .Distinct() // Remove duplicates if any
+                    .ToList();
+
+                return subjectDtos;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception if you have logging configured
+                Console.WriteLine($"Error getting student subjects: {ex.Message}");
+                return new List<SubjectDto>();
+            }
+        }
     }
 }
