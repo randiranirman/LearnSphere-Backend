@@ -20,6 +20,7 @@ namespace CourseRegistration.Infrastructure.Data
         public DbSet<ClassSubject>? ClassSubjects { get; set; }
         public DbSet<StudentClassRegistration>? StudentClassRegistrations { get; set; }
         public DbSet<TeacherClassRegistration>? TeacherClassRegistrations { get; set; }
+        public DbSet<StudentRegistrationSubject>? StudentRegistrationSubjects { get; set; }
         public DbSet<StudentSubject>? StudentSubjects { get; set; }
         public DbSet<TeacherSubject>? TeacherSubjects { get; set; }
 
@@ -92,8 +93,6 @@ namespace CourseRegistration.Infrastructure.Data
                     .IsRequired();
                 entity.Property(e => e.ClassId)
                     .IsRequired();
-                entity.Property(e => e.SubjectId)
-                    .IsRequired();
                 entity.Property(e => e.IndexNumber)
                     .IsRequired()
                     .HasMaxLength(20);
@@ -109,10 +108,28 @@ namespace CourseRegistration.Infrastructure.Data
                     .WithMany(c => c.StudentRegistrations)
                     .HasForeignKey(sc => sc.ClassId)
                     .OnDelete(DeleteBehavior.Cascade);
+            });
 
-                entity.HasOne(sc => sc.Subject)
+            // StudentRegistrationSubject entity configuration
+            modelBuilder.Entity<StudentRegistrationSubject>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.StudentRegistrationId)
+                    .IsRequired();
+                entity.Property(e => e.SubjectId)
+                    .IsRequired();
+                entity.Property(e => e.AddedAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
+
+                // Relationships
+                entity.HasOne(srs => srs.StudentRegistration)
+                    .WithMany(sr => sr.RegistrationSubjects)
+                    .HasForeignKey(srs => srs.StudentRegistrationId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(srs => srs.Subject)
                     .WithMany()
-                    .HasForeignKey(sc => sc.SubjectId)
+                    .HasForeignKey(srs => srs.SubjectId)
                     .OnDelete(DeleteBehavior.Restrict);
             });
 

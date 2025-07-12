@@ -10,6 +10,7 @@ namespace CourseRegistration.Application.Services
     {
         private readonly IStudentClassRegistrationRepository _registrationRepository;
         private readonly IStudentSubjectRepository _studentSubjectRepository;
+        private readonly IStudentRegistrationSubjectRepository _studentRegistrationSubjectRepository;
         private readonly IClassRepository _classRepository;
         private readonly ISubjectRepository _subjectRepository;
         private readonly IHubContext<RegistrationHub> _hubContext;
@@ -17,12 +18,14 @@ namespace CourseRegistration.Application.Services
         public StudentRegistrationService(
             IStudentClassRegistrationRepository registrationRepository,
             IStudentSubjectRepository studentSubjectRepository,
+            IStudentRegistrationSubjectRepository studentRegistrationSubjectRepository,
             IClassRepository classRepository,
             ISubjectRepository subjectRepository,
             IHubContext<RegistrationHub> hubContext)
         {
             _registrationRepository = registrationRepository;
             _studentSubjectRepository = studentSubjectRepository;
+            _studentRegistrationSubjectRepository = studentRegistrationSubjectRepository;
             _classRepository = classRepository;
             _subjectRepository = subjectRepository;
             _hubContext = hubContext;
@@ -32,8 +35,11 @@ namespace CourseRegistration.Application.Services
         {
             var response = new StudentRegistrationResponseDto
             {
+
+                
                 StudentId = request.StudentId,
                 ClassId = request.ClassId
+                
             };
 
             try
@@ -65,21 +71,30 @@ namespace CourseRegistration.Application.Services
                     return response;
                 }
 
-                // Create registrations for each subject
+                // Create single registration with multiple subjects
+                var registration = new StudentClassRegistration
+                {
+                    StudentId = request.StudentId,
+                    ClassId = request.ClassId,
+                    IndexNumber = request.IndexNumber,
+                    Status = RegistrationStatus.Pending,
+                    RegisteredAt = DateTime.UtcNow
+                };
+
+                var savedRegistration = await _registrationRepository.AddAsync(registration);
+                response.RegistrationIds.Add(savedRegistration.StudentRegistrationId);
+
+                // Add subjects to the registration
                 foreach (var subjectId in request.SubjectIds)
                 {
-                    var registration = new StudentClassRegistration
+                    var registrationSubject = new StudentRegistrationSubject
                     {
-                        StudentId = request.StudentId,
-                        ClassId = request.ClassId,
+                        StudentRegistrationId = savedRegistration.StudentRegistrationId,
                         SubjectId = subjectId,
-                        IndexNumber = request.IndexNumber,
-                        Status = RegistrationStatus.Pending,
-                        RegisteredAt = DateTime.UtcNow
+                        AddedAt = DateTime.UtcNow
                     };
 
-                    var savedRegistration = await _registrationRepository.AddAsync(registration);
-                    response.RegistrationIds.Add(savedRegistration.StudentRegistrationId);
+                    await _studentRegistrationSubjectRepository.AddAsync(registrationSubject);
                 }
 
                 // Create student-subject mappings
@@ -132,19 +147,26 @@ namespace CourseRegistration.Application.Services
 
                 await _registrationRepository.UpdateAsync(registration);
 
-                // Activate student-subject mapping
+                // Activate student-subject mapping for all subjects in this registration
+                var registrationSubjects = await _studentRegistrationSubjectRepository.GetByRegistrationIdAsync(registrationId);
                 var studentSubjects = await _studentSubjectRepository.GetByStudentIdAsync(registration.StudentId);
-                foreach (var studentSubject in studentSubjects.Where(ss => ss.SubjectId == registration.SubjectId))
+                
+                foreach (var regSubject in registrationSubjects)
                 {
-                    studentSubject.IsActive = true;
-                    await _studentSubjectRepository.UpdateAsync(studentSubject);
+                    var studentSubject = studentSubjects.FirstOrDefault(ss => ss.SubjectId == regSubject.SubjectId);
+                    if (studentSubject != null)
+                    {
+                        studentSubject.IsActive = true;
+                        await _studentSubjectRepository.UpdateAsync(studentSubject);
+                    }
                 }
 
                 // Notify student about approval via SignalR
+                var subjectNames = registrationSubjects.Select(rs => rs.Subject.Name).ToList();
                 await _hubContext.Clients.Group($"Student_{registration.StudentId}").SendAsync("RegistrationApproved", new
                 {
                     RegistrationId = registrationId,
-                    SubjectName = registration.Subject.Name,
+                    SubjectNames = subjectNames,
                     ClassName = registration.Class.Name,
                     ApprovedAt = DateTime.UtcNow
                 });
@@ -172,10 +194,12 @@ namespace CourseRegistration.Application.Services
                 await _registrationRepository.UpdateAsync(registration);
 
                 // Notify student about rejection via SignalR
+                var registrationSubjects = await _studentRegistrationSubjectRepository.GetByRegistrationIdAsync(registrationId);
+                var subjectNames = registrationSubjects.Select(rs => rs.Subject.Name).ToList();
                 await _hubContext.Clients.Group($"Student_{registration.StudentId}").SendAsync("RegistrationRejected", new
                 {
                     RegistrationId = registrationId,
-                    SubjectName = registration.Subject.Name,
+                    SubjectNames = subjectNames,
                     ClassName = registration.Class.Name,
                     Reason = reason
                 });
@@ -197,8 +221,11 @@ namespace CourseRegistration.Application.Services
                 StudentId = r.StudentId,
                 ClassId = r.ClassId,
                 ClassName = r.Class.Name,
-                SubjectId = r.SubjectId,
-                SubjectName = r.Subject.Name,
+                Subjects = r.RegistrationSubjects.Select(rs => new SubjectDto
+                {
+                    SubjectId = rs.SubjectId,
+                    SubjectName = rs.Subject.Name
+                }).ToList(),
                 IndexNumber = r.IndexNumber,
                 Status = r.Status,
                 RegisteredAt = r.RegisteredAt,
@@ -217,8 +244,11 @@ namespace CourseRegistration.Application.Services
                 StudentId = r.StudentId,
                 ClassId = r.ClassId,
                 ClassName = r.Class.Name,
-                SubjectId = r.SubjectId,
-                SubjectName = r.Subject.Name,
+                Subjects = r.RegistrationSubjects.Select(rs => new SubjectDto
+                {
+                    SubjectId = rs.SubjectId,
+                    SubjectName = rs.Subject.Name
+                }).ToList(),
                 IndexNumber = r.IndexNumber,
                 Status = r.Status,
                 RegisteredAt = r.RegisteredAt,
@@ -240,8 +270,11 @@ namespace CourseRegistration.Application.Services
                 StudentId = registration.StudentId,
                 ClassId = registration.ClassId,
                 ClassName = registration.Class.Name,
-                SubjectId = registration.SubjectId,
-                SubjectName = registration.Subject.Name,
+                Subjects = registration.RegistrationSubjects.Select(rs => new SubjectDto
+                {
+                    SubjectId = rs.SubjectId,
+                    SubjectName = rs.Subject.Name
+                }).ToList(),
                 IndexNumber = registration.IndexNumber,
                 Status = registration.Status,
                 RegisteredAt = registration.RegisteredAt,

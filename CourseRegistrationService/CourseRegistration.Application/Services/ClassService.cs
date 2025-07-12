@@ -36,14 +36,29 @@ namespace CourseRegistration.Application.Services
 
         public Task<bool> DeleteClassAsync(int classId)
         {
-            throw new NotImplementedException();
+
+            throw new Exception("Not implemented yet. Please implement the DeleteClassAsync method in ClassService.");
+
         }
 
-        public Task<IEnumerable<CreateClassRequset>> GetAllClassesAsync()
+        public async Task<IEnumerable<ClassDto>> GetAllClassesAsync()
         {
-            throw new NotImplementedException();
-        }
+            var classes = await _classRepository.GetAllAsync();
 
+            if (classes == null || !classes.Any())
+            {
+                throw new Exception("No classes found.");
+            }
+
+            var classDtos = classes.Select(c => new ClassDto
+            {
+                Id = c.ClassId,
+                Name = c.Name,
+                Description = c.Description,
+            });
+
+            return classDtos;
+        }
         public Task<Class> GetClassByIdAsync(int classId)
         {
             throw new NotImplementedException();
