@@ -113,6 +113,7 @@ namespace CourseRegistration.Infrastructure.Data
             // StudentRegistrationSubject entity configuration
             modelBuilder.Entity<StudentRegistrationSubject>(entity =>
             {
+                entity.ToTable("StudentRegistrationSubject");
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.StudentRegistrationId)
                     .IsRequired();

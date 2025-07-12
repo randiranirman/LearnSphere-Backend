@@ -4,6 +4,7 @@ using CourseRegistration.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CourseRegistration.Infrastructure.Migrations
 {
     [DbContext(typeof(CourseRegistrationDbcontext))]
-    partial class CourseRegistrationDbcontextModelSnapshot : ModelSnapshot
+    [Migration("20250712183036_UpdatedModelsFixed")]
+    partial class UpdatedModelsFixed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -159,7 +162,7 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasIndex("SubjectId");
 
-                    b.ToTable("StudentRegistrationSubject", (string)null);
+                    b.ToTable("StudentRegistrationSubjects");
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.StudentSubject", b =>

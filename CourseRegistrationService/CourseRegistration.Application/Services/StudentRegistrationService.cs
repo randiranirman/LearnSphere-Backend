@@ -35,15 +35,30 @@ namespace CourseRegistration.Application.Services
         {
             var response = new StudentRegistrationResponseDto
             {
-
-                
                 StudentId = request.StudentId,
                 ClassId = request.ClassId
-                
             };
 
             try
             {
+                // Add logging to track the registration request
+                Console.WriteLine($"Registration Request - StudentId: {request.StudentId}, ClassId: {request.ClassId}, Subjects: [{string.Join(",", request.SubjectIds)}]");
+
+                // Validate input
+                if (request.SubjectIds == null || !request.SubjectIds.Any())
+                {
+                    response.Errors.Add("At least one subject must be selected");
+                    return response;
+                }
+
+                // Remove duplicate subject IDs if any
+                var uniqueSubjectIds = request.SubjectIds.Distinct().ToList();
+                if (uniqueSubjectIds.Count != request.SubjectIds.Count)
+                {
+                    Console.WriteLine($"Duplicate subject IDs found, using unique list: [{string.Join(",", uniqueSubjectIds)}]");
+                    request.SubjectIds = uniqueSubjectIds;
+                }
+
                 // Validate class exists
                 var classExists = await _classRepository.ExistAsync(request.ClassId);
                 if (!classExists)
@@ -67,7 +82,43 @@ namespace CourseRegistration.Application.Services
                 var existingRegistration = await _registrationRepository.GetByStudentAndClassAsync(request.StudentId, request.ClassId);
                 if (existingRegistration != null)
                 {
-                    response.Errors.Add("Student is already registered for this class");
+                    // Check if we're trying to register for the same subjects
+                    var existingSubjectIds = existingRegistration.RegistrationSubjects.Select(rs => rs.SubjectId).ToList();
+                    var newSubjectIds = request.SubjectIds.Except(existingSubjectIds).ToList();
+                    
+                    if (!newSubjectIds.Any())
+                    {
+                        response.Errors.Add("Student is already registered for this class with these subjects");
+                        return response;
+                    }
+                    
+                    // If there are new subjects, add them to existing registration
+                    Console.WriteLine($"Adding new subjects to existing registration: [{string.Join(",", newSubjectIds)}]");
+                    
+                    foreach (var subjectId in newSubjectIds)
+                    {
+                        var registrationSubject = new StudentRegistrationSubject
+                        {
+                            StudentRegistrationId = existingRegistration.StudentRegistrationId,
+                            SubjectId = subjectId,
+                            AddedAt = DateTime.UtcNow
+                        };
+                        await _studentRegistrationSubjectRepository.AddAsync(registrationSubject);
+                        
+                        // Add to StudentSubject table as well
+                        var studentSubject = new StudentSubject
+                        {
+                            StudentId = request.StudentId,
+                            SubjectId = subjectId,
+                            EnrolledAt = DateTime.UtcNow,
+                            IsActive = false
+                        };
+                        await _studentSubjectRepository.AddAsync(studentSubject);
+                    }
+                    
+                    response.RegistrationIds.Add(existingRegistration.StudentRegistrationId);
+                    response.IsSuccess = true;
+                    response.Message = "New subjects added to existing registration successfully. Awaiting admin approval.";
                     return response;
                 }
 
