@@ -89,7 +89,7 @@ namespace CourseRegistration.API.Controllers
         /// <param name="studentId">Student ID from User Management Service</param>
         /// <param name="registrationRequest">Registration details</param>
         /// <returns>Registration result</returns>
-        [HttpPost("{studentId}/register")]
+        [HttpPost("/register/{studentId}")]
         public async Task<IActionResult> RegisterStudentForCourse(int studentId, [FromBody] StudentCourseRegistrationRequest registrationRequest)
         {
             try

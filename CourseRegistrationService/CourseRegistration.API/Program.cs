@@ -26,6 +26,7 @@ builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
 // Register Repositories
 builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
 builder.Services.AddScoped<IStudentClassRegistrationRepository, StudentClassRegistrationRepository>();
+builder.Services.AddScoped<IStudentRegistrationSubjectRepository, StudentRegistrationSubjectRepository>();
 builder.Services.AddScoped<IStudentSubjectRepository, StudentSubjectRepository>();
 builder.Services.AddScoped<IClassRepository, ClassRepository>();
 

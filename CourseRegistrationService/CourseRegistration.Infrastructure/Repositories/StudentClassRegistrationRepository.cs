@@ -40,7 +40,8 @@ namespace CourseRegistration.Infrastructure.Repositories
         {
             return await _context.StudentClassRegistrations
                 .Include(x => x.Class)
-                .Include(x => x.Subject)
+                .Include(x => x.RegistrationSubjects)
+                    .ThenInclude(rs => rs.Subject)
                 .ToListAsync();
         }
 
@@ -48,7 +49,8 @@ namespace CourseRegistration.Infrastructure.Repositories
         {
             return await _context.StudentClassRegistrations
                 .Include(x => x.Class)
-                .Include(x => x.Subject)
+                .Include(x => x.RegistrationSubjects)
+                    .ThenInclude(rs => rs.Subject)
                 .FirstOrDefaultAsync(x => x.StudentRegistrationId == id);
         }
 
@@ -56,7 +58,8 @@ namespace CourseRegistration.Infrastructure.Repositories
         {
             return await _context.StudentClassRegistrations
                 .Include(x => x.Class)
-                .Include(x => x.Subject)
+                .Include(x => x.RegistrationSubjects)
+                    .ThenInclude(rs => rs.Subject)
                 .Where(x => x.StudentId == studentId)
                 .ToListAsync();
         }
@@ -65,7 +68,8 @@ namespace CourseRegistration.Infrastructure.Repositories
         {
             return await _context.StudentClassRegistrations
                 .Include(x => x.Class)
-                .Include(x => x.Subject)
+                .Include(x => x.RegistrationSubjects)
+                    .ThenInclude(rs => rs.Subject)
                 .Where(x => x.ClassId == classId)
                 .ToListAsync();
         }
@@ -74,7 +78,8 @@ namespace CourseRegistration.Infrastructure.Repositories
         {
             return await _context.StudentClassRegistrations
                 .Include(x => x.Class)
-                .Include(x => x.Subject)
+                .Include(x => x.RegistrationSubjects)
+                    .ThenInclude(rs => rs.Subject)
                 .Where(x => x.Status == status)
                 .ToListAsync();
         }
@@ -83,7 +88,8 @@ namespace CourseRegistration.Infrastructure.Repositories
         {
             return await _context.StudentClassRegistrations
                 .Include(x => x.Class)
-                .Include(x => x.Subject)
+                .Include(x => x.RegistrationSubjects)
+                    .ThenInclude(rs => rs.Subject)
                 .FirstOrDefaultAsync(x => x.StudentId == studentId && x.ClassId == classId);
         }
 
@@ -91,7 +97,8 @@ namespace CourseRegistration.Infrastructure.Repositories
         {
             return await _context.StudentClassRegistrations
                 .Include(x => x.Class)
-                .Include(x => x.Subject)
+                .Include(x => x.RegistrationSubjects)
+                    .ThenInclude(rs => rs.Subject)
                 .Where(x => x.Status == RegistrationStatus.Pending)
                 .ToListAsync();
         }
