@@ -23,5 +23,19 @@ namespace AnalyticsService.Infrastructure.Repositories
             return result;
         }
 
+        public async Task<IEnumerable<StudentsByAssignmentIdResponseDTO>> GetAllStudentsByAssignmentIdAsync(int assignmentId)
+        {
+            var result = await analyticsDbContext.StudentMarks
+                .Where(sm => sm.AssignmentId == assignmentId)
+                .Select(sm => new StudentsByAssignmentIdResponseDTO
+                {
+                    StudentId = sm.Student.Id,
+                    FullName = sm.Student.FullName,
+                    Marks = sm.Marks
+                })
+                .ToListAsync();
+
+            return result;
+        }
     }
 }

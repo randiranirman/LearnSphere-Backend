@@ -15,5 +15,13 @@ namespace AnalyticsService.API.Controllers
             var result = await sender.Send(new GetAllAssignmentsBySubjectQuerry(subjectId));
             return Ok(result);
         }
+
+        // assignmentId -> all the students that submit answers for a given assignment
+        [HttpGet]
+        public async Task<IActionResult> GetAllStudentsByAssignmentId([FromQuery] int assignmentId)
+        {
+            var result = await sender.Send(new GetAllStudentsByAssignmentIdQuery(assignmentId));
+            return Ok(result);
+        }
     }
 }
