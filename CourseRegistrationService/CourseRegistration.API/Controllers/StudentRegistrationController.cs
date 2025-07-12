@@ -21,11 +21,13 @@ namespace CourseRegistration.API.Controllers
         /// <param name="request">Registration request</param>
         /// <returns>Registration response</returns>
         [HttpPost("register")]
-        public async Task<IActionResult> RegisterStudent([FromBody] StudentRegistrationRequestDto request)
+        public async Task<IActionResult> RegisterStudent(StudentRegistrationRequestDto request)
         {
             try
             {
+                Console.WriteLine(request);
                 var result = await _registrationService.RegisterStudentAsync(request);
+                Console.WriteLine(result);
                 
                 if (result.IsSuccess)
                 {

@@ -14,7 +14,7 @@ namespace CourseRegistration.API.Controllers
         {
 
             _classService = classService;
-            
+
         }
 
         [HttpPost("create-class")]
@@ -26,5 +26,22 @@ namespace CourseRegistration.API.Controllers
             var createdClass = await _classService.CreateClassAsync(request);
             return Ok(createdClass);
         }
+
+
+        [HttpGet("getAllClasses")]
+        public async Task<IActionResult> GetAllClassesAsync()
+        {
+            var classes = await _classService.GetAllClassesAsync();
+
+            if (classes == null)
+            {
+                return NotFound("No classes found.");
+            }
+
+            return Ok(classes);
+
+        }
+
+
     }
 }

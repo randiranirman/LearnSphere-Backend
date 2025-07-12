@@ -4,6 +4,10 @@ namespace CourseRegistration.Application.Dtos
 {
     public class StudentRegistrationRequestDto
     {
+
+        [Required]
+        [MaxLength(20)]
+        public string Name { get; set; } = string.Empty;
         [Required]
         public int StudentId { get; set; }
         
