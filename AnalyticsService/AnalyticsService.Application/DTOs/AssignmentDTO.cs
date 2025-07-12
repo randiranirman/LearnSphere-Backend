@@ -1,5 +1,3 @@
-using AnalyticsService.Domain.Entities;
-
 namespace AnalyticsService.Application.DTOs
 {
     public class AssignmentDTO
