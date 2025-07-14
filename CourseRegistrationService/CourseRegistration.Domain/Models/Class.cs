@@ -9,17 +9,14 @@ namespace CourseRegistration.Domain.Models
 {
     public  class Class
     {
-        public int Id { get; set; }
+        public int ClassId { get; set; }
 
         [Required]
         [MaxLength(100)]
         public string Name { get; set; } = string.Empty;
 
         [Required]
-        public int SubjectId { get; set; }
-
-        [Required]
-        public int Grade { get; set; } // Grade level (1-12)
+        public int Grade { get; set; } // Grade level (6-12)
 
         [MaxLength(500)]
         public string? Description { get; set; }
@@ -34,7 +31,7 @@ namespace CourseRegistration.Domain.Models
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation properties
-        public virtual Subject Subject { get; set; } = null!;
+        public virtual ICollection<ClassSubject> Subjects { get; set; } = new List<ClassSubject>();
         public virtual ICollection<StudentClassRegistration> StudentRegistrations { get; set; } = new List<StudentClassRegistration>();
         public virtual ICollection<TeacherClassRegistration> TeacherRegistrations { get; set; } = new List<TeacherClassRegistration>();
     }

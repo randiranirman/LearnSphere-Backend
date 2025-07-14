@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UserManagement.Domain.Domain;
 
 namespace CourseRegistration.Domain.Models
 {
@@ -13,7 +12,7 @@ namespace CourseRegistration.Domain.Models
         public int Id { get; set; }
 
         [Required]
-        public int StudentId { get; set; }
+        public int StudentId { get; set; }//  this is coming   from student  model in user management
 
         [Required]
         public int SubjectId { get; set; }
@@ -23,7 +22,6 @@ namespace CourseRegistration.Domain.Models
         public bool IsActive { get; set; } = true;
 
         // Navigation properties
-        public virtual Student Student { get; set; } = null!;
-        public virtual Subject Subject { get; set; } = null!;
+        public  Subject Subject { get; set; } = null!;
     }
 }

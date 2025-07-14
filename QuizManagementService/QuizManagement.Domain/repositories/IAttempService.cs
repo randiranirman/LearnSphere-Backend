@@ -15,7 +15,7 @@ namespace QuizManagement.Domain.repositories
         Task<QuizAttempt> GetAttemptByIdAsync(int attemptId);
         Task<List<QuizAttempt>> GetAttemptsByStudentIdAsync(int studentId);
         Task<List<QuizAttempt>> GetAttemptsByQuizIdAsync(int quizId);
-        Task<QuestionResponseResult> SaveResponseAsync(int studentId, int quizId, int questionId, string answer, int? optionId);
+        Task<QuestionResponse> SaveResponseAsync(int studentId, int quizId, int questionId, string answer, int? optionId);
         Task<int> CompleteAttemptAsync(int studentId, int quizId);
         Task<List<QuizAttemptSummary>> GetQuizResultsAsync(int quizId);
     }

@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using UserManagement.Application.Dtos;
 using UserManagement.Application.Repositories;
 using UserManagement.Domain.Domain;
 
@@ -69,6 +70,7 @@ namespace UserManagement.API.Controllers
 
         public async Task<ActionResult> DeletUserByIdController(int id)
         {
+
             var result = await _userService.DeleteUserByIdAsync(id);
             if (!result)
             {
@@ -77,9 +79,37 @@ namespace UserManagement.API.Controllers
 
             return Ok(result);
         }
+        [HttpGet("students/{id}")]
+        public async Task<ActionResult<StudentDto>> GetStudentByID(int id)
+        {
+            var result = await _userService.GetStudentByID(id);
+            if (result == null)
+            {
+                return NotFound("student is not found ");
 
+            }
+
+            return result;
+        }
+
+        [HttpGet("teachers/{id}")]
+        public async Task<ActionResult<TeacherDto>> GetTeacherByID(int id)
+        {
+            var result = await _userService.GetTeacherByID(id);
+            if (result == null)
+            {
+                return NotFound("teacher is not found ");
+            }
+            return result;
+
+
+
+
+        }
 
     }
+
+
 
 
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CourseRegistration.Application.Dtos;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
 using CourseRegistration.Infrastructure.Data;
@@ -10,46 +11,106 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CourseRegistration.Infrastructure.Repositories
 {
-    public class SubjectRepository<T> : BaseRepository<Subject>, ISubjectRepository
+    public class SubjectRepository: ISubjectRepository
     {
-        public SubjectRepository(CourseRegistrationDbcontext context) : base(context)
+
+        private readonly CourseRegistrationDbcontext _context;
+        public SubjectRepository(CourseRegistrationDbcontext context)
         {
+            _context = context;
         }
 
+        public async Task<Subject> AddAsync(Subject subject)
+        {
+            await _context.Subjects.AddAsync(subject);
+            await _context.SaveChangesAsync();
+            return subject;
+
+            
+
+
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var subject =await  _context.Subjects.FindAsync(id);
+            if( subject != null)
+            {
+                _context.Subjects.Remove(subject);
+                await _context.SaveChangesAsync();
+            }
+
+
+
+        }
+
+        public async Task<bool> ExistAsync(int id)
+        {
+            return await _context.Subjects.AnyAsync(s => s.SubjectId == id);
+        }
+
+        public async Task<IEnumerable<Subject>> GetAllAsync()
+        {
+            return await _context.Subjects.ToListAsync();
+        }
 
         public async Task<Subject?> GetByCodeAsync(string code)
         {
-            return await _set.FirstOrDefaultAsync(s => s.Code == code);
+            return await _context.Subjects.FirstOrDefaultAsync(s => s.Code == code);
+        }
+
+        public async Task<Subject?> GetByIdAsync(int id)
+        {
+            return await _context.Subjects.FirstOrDefaultAsync(s => s.SubjectId == id);
         }
 
         public async Task<IEnumerable<Subject>> GetSubjectByStudentIdAsync(int studentId)
         {
-            return await _context.StudentSubjects.Where(ss => ss.StudentId == studentId && ss.IsActive).Include(ss => ss.Subject).Select(ss => ss.Subject)
-                  .ToListAsync();
+            var subjects = await _context.StudentSubjects
+                .Where(ss => ss.StudentId == studentId && ss.IsActive)
+                .Include(ss => ss.Subject)
+                .Select(ss => ss.Subject)
+                .ToListAsync();
+            return subjects;
         }
 
-        public async Task<IEnumerable<Subject>> GetSubjectsByGradeIdAsync(int grade)
+        public Task<IEnumerable<Subject>> GetSubjectsByGradeIdAsync(int grade)
         {
-            return await _context.Classes.Where(c => c.Grade == grade).Include
-                (c => c.Subject).Select(c => c.Subject).Distinct().ToListAsync();
+            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<Subject>> GetSubjectsByTeacherIdAsync(int teacherId)
         {
-            return await _context.TeacherSubjects
-                .Where(ts => ts.TeacherID == teacherId && ts.IsActive)
-                .Include(ts => ts.Subject)
-                .Select(ts => ts.Subject!) // Use null-forgiving operator to ensure Subject is not null  
-                .ToListAsync();
+            var subjects = await _context.TeacherSubjects.Where(ss => ss.TeacherId == teacherId).Include(ss => ss.Subject).Select(ss => ss.Subject).ToListAsync();
+            return subjects;
         }
 
-        public override async  Task<Subject?> GetByIdAsync(int id)
+        public async Task<Subject> UpdateAsync(Subject entity)
         {
-            return await _set
-               .Include(s => s.TeacherSubjects)
-               .Include(s => s.StudentSubjects)
-               .Include(s => s.Classes)
-               .FirstOrDefaultAsync(s => s.Id == id);
+            var existingSubject = await _context.Subjects.FirstOrDefaultAsync(s => s.SubjectId == entity.SubjectId);
+
+
+            if( existingSubject == null)
+            {
+                throw new Exception("Invalid Id");
+            }
+
+            // Update the properties
+            existingSubject.Name = entity.Name;
+            existingSubject.Code = entity.Code;
+            existingSubject.Description = entity.Description;
+            existingSubject.TeacherSubjects = entity.TeacherSubjects;
+            existingSubject.StudentSubjects= entity.StudentSubjects;
+            existingSubject.Classes
+                = entity.Classes;
+
+            _context.Subjects.Update(existingSubject);
+            await _context.SaveChangesAsync();
+
+            return existingSubject;
+
+
+
         }
     }
 }

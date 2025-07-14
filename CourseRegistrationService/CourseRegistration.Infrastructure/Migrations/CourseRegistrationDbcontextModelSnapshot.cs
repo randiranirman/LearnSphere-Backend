@@ -24,14 +24,16 @@ namespace CourseRegistration.Infrastructure.Migrations
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.Class", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ClassId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClassId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -44,7 +46,9 @@ namespace CourseRegistration.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("MaxStudents")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(30);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -55,25 +59,42 @@ namespace CourseRegistration.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.HasKey("ClassId");
+
+                    b.ToTable("Classes");
+                });
+
+            modelBuilder.Entity("CourseRegistration.Domain.Models.ClassSubject", b =>
+                {
+                    b.Property<int>("ClassId")
                         .HasColumnType("int");
 
                     b.Property<int>("SubjectId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<DateTime>("AssociatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.HasKey("ClassId", "SubjectId");
 
                     b.HasIndex("SubjectId");
 
-                    b.ToTable("Classes", (string)null);
+                    b.ToTable("ClassSubjects");
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.StudentClassRegistration", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("StudentRegistrationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentRegistrationId"));
 
                     b.Property<DateTime?>("ApprovedAt")
                         .HasColumnType("datetime2");
@@ -84,8 +105,15 @@ namespace CourseRegistration.Infrastructure.Migrations
                     b.Property<int>("ClassId")
                         .HasColumnType("int");
 
+                    b.Property<string>("IndexNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<DateTime>("RegisteredAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Remarks")
                         .HasMaxLength(500)
@@ -99,15 +127,39 @@ namespace CourseRegistration.Infrastructure.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("StudentRegistrationId");
 
                     b.HasIndex("ClassId");
 
-                    b.HasIndex("StudentId", "ClassId")
-                        .IsUnique()
-                        .HasDatabaseName("IX_StudentClassRegistrations_StudentId_ClassId");
+                    b.ToTable("StudentClassRegistrations");
+                });
 
-                    b.ToTable("StudentClassRegistrations", (string)null);
+            modelBuilder.Entity("CourseRegistration.Domain.Models.StudentRegistrationSubject", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("AddedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<int>("StudentRegistrationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SubjectId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StudentRegistrationId");
+
+                    b.HasIndex("SubjectId");
+
+                    b.ToTable("StudentRegistrationSubject", (string)null);
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.StudentSubject", b =>
@@ -119,7 +171,9 @@ namespace CourseRegistration.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("EnrolledAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<bool>("IsActive")
                         .ValueGeneratedOnAdd()
@@ -136,74 +190,91 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasIndex("SubjectId");
 
-                    b.HasIndex("StudentId", "SubjectId")
-                        .IsUnique()
-                        .HasDatabaseName("IX_StudentSubjects_StudentId_SubjectId");
-
-                    b.ToTable("StudentSubjects", (string)null);
+                    b.ToTable("StudentSubjects");
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.Subject", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("SubjectId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubjectId"));
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("SubjectId");
 
-                    b.HasIndex("Code")
-                        .IsUnique();
-
-                    b.ToTable("Subjects", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "MATH101",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Basic Mathematics",
-                            Name = "Mathematics"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "SCI101",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Basic Science",
-                            Name = "Science"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "HIST101",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "World History",
-                            Name = "History"
-                        });
+                    b.ToTable("Subjects");
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.TeacherClassRegistration", b =>
+                {
+                    b.Property<int>("TeacherRegistrationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TeacherRegistrationId"));
+
+                    b.Property<DateTime?>("ApprovedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("ApprovedByAdminId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ClassId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EmployeeId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("RegisteredAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<string>("Remarks")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<int>("SubjectId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TeacherRegistrationId");
+
+                    b.HasIndex("ClassId");
+
+                    b.HasIndex("SubjectId");
+
+                    b.ToTable("TeacherClassRegistrations");
+                });
+
+            modelBuilder.Entity("CourseRegistration.Domain.Models.TeacherSubject", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -217,11 +288,20 @@ namespace CourseRegistration.Infrastructure.Migrations
                     b.Property<int?>("ApprovedByAdminId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
+                    b.Property<string>("EmployeeId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<DateTime>("RegisteredAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Remarks")
                         .HasMaxLength(500)
@@ -232,7 +312,7 @@ namespace CourseRegistration.Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(0);
 
-                    b.Property<int?>("SubjectId")
+                    b.Property<int>("SubjectId")
                         .HasColumnType("int");
 
                     b.Property<int>("TeacherId")
@@ -240,55 +320,26 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassId");
-
                     b.HasIndex("SubjectId");
 
-                    b.HasIndex("TeacherId", "ClassId")
-                        .IsUnique()
-                        .HasDatabaseName("IX_TeacherClassRegistrations_TeacherId_ClassId");
-
-                    b.ToTable("TeacherClassRegistrations", (string)null);
+                    b.ToTable("TeacherSubjects");
                 });
 
-            modelBuilder.Entity("CourseRegistration.Domain.Models.TeacherSubject", b =>
+            modelBuilder.Entity("CourseRegistration.Domain.Models.ClassSubject", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.HasOne("CourseRegistration.Domain.Models.Class", "Class")
+                        .WithMany("Subjects")
+                        .HasForeignKey("ClassId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("AssignedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("SubjectID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TeacherID")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SubjectID");
-
-                    b.HasIndex("TeacherID", "SubjectID")
-                        .IsUnique()
-                        .HasDatabaseName("IX_TeacherSubject_UniqueAssignment");
-
-                    b.ToTable("TeacherSubjects", (string)null);
-                });
-
-            modelBuilder.Entity("CourseRegistration.Domain.Models.Class", b =>
-                {
                     b.HasOne("CourseRegistration.Domain.Models.Subject", "Subject")
                         .WithMany("Classes")
                         .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Class");
 
                     b.Navigation("Subject");
                 });
@@ -304,12 +355,31 @@ namespace CourseRegistration.Infrastructure.Migrations
                     b.Navigation("Class");
                 });
 
+            modelBuilder.Entity("CourseRegistration.Domain.Models.StudentRegistrationSubject", b =>
+                {
+                    b.HasOne("CourseRegistration.Domain.Models.StudentClassRegistration", "StudentRegistration")
+                        .WithMany("RegistrationSubjects")
+                        .HasForeignKey("StudentRegistrationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CourseRegistration.Domain.Models.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("SubjectId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("StudentRegistration");
+
+                    b.Navigation("Subject");
+                });
+
             modelBuilder.Entity("CourseRegistration.Domain.Models.StudentSubject", b =>
                 {
                     b.HasOne("CourseRegistration.Domain.Models.Subject", "Subject")
                         .WithMany("StudentSubjects")
                         .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Subject");
@@ -323,19 +393,23 @@ namespace CourseRegistration.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CourseRegistration.Domain.Models.Subject", null)
-                        .WithMany("TeacherClassRegistrations")
-                        .HasForeignKey("SubjectId");
+                    b.HasOne("CourseRegistration.Domain.Models.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("SubjectId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("Class");
+
+                    b.Navigation("Subject");
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.TeacherSubject", b =>
                 {
                     b.HasOne("CourseRegistration.Domain.Models.Subject", "Subject")
                         .WithMany("TeacherSubjects")
-                        .HasForeignKey("SubjectID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("SubjectId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Subject");
@@ -345,7 +419,14 @@ namespace CourseRegistration.Infrastructure.Migrations
                 {
                     b.Navigation("StudentRegistrations");
 
+                    b.Navigation("Subjects");
+
                     b.Navigation("TeacherRegistrations");
+                });
+
+            modelBuilder.Entity("CourseRegistration.Domain.Models.StudentClassRegistration", b =>
+                {
+                    b.Navigation("RegistrationSubjects");
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.Subject", b =>
@@ -353,8 +434,6 @@ namespace CourseRegistration.Infrastructure.Migrations
                     b.Navigation("Classes");
 
                     b.Navigation("StudentSubjects");
-
-                    b.Navigation("TeacherClassRegistrations");
 
                     b.Navigation("TeacherSubjects");
                 });

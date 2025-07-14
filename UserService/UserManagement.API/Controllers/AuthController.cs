@@ -15,15 +15,15 @@ namespace UserManagement.API.Controllers
 
 
         [HttpPost("register")]
-        public async  Task<ActionResult<UserDto>> Register( UserDto request)
+        public async Task<ActionResult<UserDto>> Register(UserDto request)
         {
-            var user = await authService.RegisterAsync( request);
+            var user = await authService.RegisterAsync(request);
             if (user is null)
             {
                 return BadRequest(new { message = "Username already exits" });
             }
 
-            
+
             return Ok(
                 new
                 {
@@ -37,7 +37,7 @@ namespace UserManagement.API.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<TokenResponseDto>>  Login( UserDto request)
+        public async Task<ActionResult<TokenResponseDto>> Login(UserDto request)
         {
             var result = await authService.LoginAsync(request);
             if (result is null)
@@ -59,7 +59,7 @@ namespace UserManagement.API.Controllers
         }
 
         [HttpPost("refreshToken")]
-        public async Task<ActionResult<TokenResponseDto>> RefreshToken( RefreshTokenRequestDto request)
+        public async Task<ActionResult<TokenResponseDto>> RefreshToken(RefreshTokenRequestDto request)
         {
             var result = await authService.RefreshTokenAsync(request);
             if (result is null || result.AccessToken is null || result.RefreshToken is null)
@@ -110,6 +110,37 @@ namespace UserManagement.API.Controllers
 
         }
 
+
+        [HttpPost("request-password-reset")]
+
+        public async Task<IActionResult> RequestPasswordReset([FromBody] PasswordResetRequsetDto requsetDto)
+        {
+            var result = await authService.RequsetPasswordReset( requsetDto.Email);
+            if (!result)
+            {
+                return BadRequest("Failed to request password reset. Please check your email.");
+            }
+
+            return Ok(new { message = "Password reset link has been sent to your email." });
+
+
+        }
+
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordDto request)
+        {
+            if (request is null || string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.NewPassword) || string.IsNullOrEmpty(request.Token))
+            {
+                return BadRequest("Invalid request data.");
+            }
+            var result = await authService.ResetPassword(request);
+            if (!result)
+            {
+                return BadRequest("Failed to reset password. Please check your token and email.");
+            }
+            return Ok(new { message = "Password has been reset successfully." });
+        }
 
     }
 }

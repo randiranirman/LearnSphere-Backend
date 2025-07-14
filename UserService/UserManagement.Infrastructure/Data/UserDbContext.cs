@@ -10,15 +10,15 @@ using UserManagement.Domain.Domain;
 
 namespace UserManagement.Infrastructure.Data
 {
-    public  class UserDbContext(DbContextOptions<UserDbContext> options): DbContext(options)
-   
+    public class UserDbContext(DbContextOptions<UserDbContext> options) : DbContext(options)
+
     {
-        
+
 
         public DbSet<User>? Users { get; set; }
         public DbSet<Admin>? Admins { get; set; }
-       public DbSet<Teacher>? Teachers { get; set; }
-        
+        public DbSet<Teacher>? Teachers { get; set; }
+
 
         public DbSet<Student>? Students { get; set; }
 

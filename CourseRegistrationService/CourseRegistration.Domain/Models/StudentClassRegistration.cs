@@ -4,13 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UserManagement.Domain.Domain;
 
 namespace CourseRegistration.Domain.Models
 {
     public class StudentClassRegistration
     {
-        public int Id { get; set; }
+        public int StudentRegistrationId { get; set; }
 
         [Required]
         public int StudentId { get; set; }
@@ -18,8 +17,6 @@ namespace CourseRegistration.Domain.Models
         [Required]
         public int ClassId { get; set; }
 
-        [Required]
-        public int SubjectId { get; set; }
 
         [Required]
         [MaxLength(20)]
@@ -37,8 +34,7 @@ namespace CourseRegistration.Domain.Models
         public string? Remarks { get; set; }
 
         // Navigation properties
-        public virtual Student Student { get; set; } = null!;
         public virtual Class Class { get; set; } = null!;
-        public virtual Subject Subject { get; set; } = null!;
+        public virtual ICollection<StudentRegistrationSubject> RegistrationSubjects { get; set; } = new List<StudentRegistrationSubject>();
     }
 }

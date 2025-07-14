@@ -7,16 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+   <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+   <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
+     <PrivateAssets>all</PrivateAssets>
+     <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+   </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CourseRegistration.Application\CourseRegistration.Application.csproj" />
-    <ProjectReference Include="..\CourseRegistration.Domain\CourseRegistration.Domain.csproj" />
     <ProjectReference Include="..\CourseRegistration.Infrastructure\CourseRegistration.Infrastructure.csproj" />
   </ItemGroup>
 

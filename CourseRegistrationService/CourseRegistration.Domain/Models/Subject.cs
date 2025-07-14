@@ -8,18 +8,17 @@ namespace CourseRegistration.Domain.Models
 {
     public  class Subject 
     {
-        public int Id { get; set; }
+        public int SubjectId { get; set; }
+
         public string Name { get; set; } = string.Empty;
         public string Code { get; set; } = string.Empty;
-      
         public string Description { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
         // Navigation properties
         public virtual ICollection<StudentSubject> StudentSubjects { get; set; } = new List<StudentSubject>();
         public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; } = new List<TeacherSubject>();
-        public virtual ICollection<TeacherClassRegistration> TeacherClassRegistrations { get; set; } = new List<TeacherClassRegistration>();
-        public ICollection<Class> Classes { get; set; } = new List<Class>();
-
+        public virtual ICollection<ClassSubject> Classes { get; set; } = new List<ClassSubject>();
 
     }
 }

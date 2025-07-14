@@ -1,14 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using CourseRegistration.Domain.Models;
-using UserManagement.Domain.Domain;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
-using Microsoft.IdentityModel.Tokens;
 
 namespace CourseRegistration.Infrastructure.Data
 {
@@ -18,257 +14,208 @@ namespace CourseRegistration.Infrastructure.Data
         {
         }
 
-        // Shared tables from UserManagement
-        public DbSet<Student> Students { get; set; } = null!;
-        public DbSet<Teacher> Teachers { get; set; } = null!;
-        
         // CourseRegistration specific tables
-        public DbSet<Subject> Subjects { get; set; } = null!;
-        public DbSet<Class> Classes { get; set; } = null!;
-        public DbSet<TeacherSubject> TeacherSubjects { get; set; } = null!;
-        public DbSet<StudentSubject> StudentSubjects { get; set; } = null!;
-        public DbSet<StudentClassRegistration> StudentClassRegistrations { get; set; } = null!;
-        public DbSet<TeacherClassRegistration> TeacherClassRegistrations { get; set; } = null!;
+        public DbSet<Class>? Classes { get; set; }
+        public DbSet<Subject>? Subjects { get; set; }
+        public DbSet<ClassSubject>? ClassSubjects { get; set; }
+        public DbSet<StudentClassRegistration>? StudentClassRegistrations { get; set; }
+        public DbSet<TeacherClassRegistration>? TeacherClassRegistrations { get; set; }
+        public DbSet<StudentRegistrationSubject>? StudentRegistrationSubjects { get; set; }
+        public DbSet<StudentSubject>? StudentSubjects { get; set; }
+        public DbSet<TeacherSubject>? TeacherSubjects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Subject configuration  
-            modelBuilder.Entity<Subject>(entity =>
-            {
-                entity.ToTable("Subjects");
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.Name).HasMaxLength(100).IsRequired();
-                entity.Property(e => e.Code).HasMaxLength(20).IsRequired();
-                entity.Property(e => e.Description).HasMaxLength(500);
-                entity.HasIndex(e => e.Code).IsUnique();
-
-                // Configure relationships
-                entity.HasMany(s => s.Classes)
-                    .WithOne(c => c.Subject)
-                    .HasForeignKey(c => c.SubjectId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasMany(s => s.StudentSubjects)
-                    .WithOne(ss => ss.Subject)
-                    .HasForeignKey(ss => ss.SubjectId)
-                    .OnDelete(DeleteBehavior.Cascade);
-            });
-
-            // Class configuration  
+            // Class entity configuration
             modelBuilder.Entity<Class>(entity =>
             {
-                entity.ToTable("Classes");
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.Name).HasMaxLength(100).IsRequired();
-                entity.Property(e => e.Description).HasMaxLength(500);
-                entity.Property(e => e.Grade).IsRequired();
-                entity.Property(e => e.MaxStudents).IsRequired();
-                entity.Property(e => e.Status).IsRequired();
+                entity.HasKey(e => e.ClassId);
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(100);
+                entity.Property(e => e.Grade)
+                    .IsRequired();
+                entity.Property(e => e.Description)
+                    .HasMaxLength(500);
+                entity.Property(e => e.MaxStudents)
+                    .HasDefaultValue(30);
+                entity.Property(e => e.StartDate)
+                    .IsRequired();
+                entity.Property(e => e.EndDate)
+                    .IsRequired();
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
+                entity.Property(e => e.Status)
+                    .HasDefaultValue(ClassStatus.Draft);
+            });
 
-                // Configure navigation properties  
-                entity.HasMany(c => c.StudentRegistrations)
-                    .WithOne(sr => sr.Class)
-                    .HasForeignKey(sr => sr.ClassId)
+            // Subject entity configuration
+            modelBuilder.Entity<Subject>(entity =>
+            {
+                entity.HasKey(e => e.SubjectId);
+                entity.Property(e => e.Name)
+                    .IsRequired();
+                entity.Property(e => e.Code)
+                    .IsRequired();
+                entity.Property(e => e.Description)
+                    .IsRequired();
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
+            });
+
+            // ClassSubject entity configuration (many-to-many join table)
+            modelBuilder.Entity<ClassSubject>(entity =>
+            {
+                entity.HasKey(cs => new { cs.ClassId, cs.SubjectId });
+
+                entity.Property(cs => cs.AssociatedAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
+
+                // Relationships
+                entity.HasOne(cs => cs.Class)
+                    .WithMany(c => c.Subjects)
+                    .HasForeignKey(cs => cs.ClassId)
                     .OnDelete(DeleteBehavior.Cascade);
 
-                entity.HasMany(c => c.TeacherRegistrations)
-                    .WithOne(tr => tr.Class)
-                    .HasForeignKey(tr => tr.ClassId)
+                entity.HasOne(cs => cs.Subject)
+                    .WithMany(s => s.Classes)
+                    .HasForeignKey(cs => cs.SubjectId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
 
-            // Student configuration
-            modelBuilder.Entity<Student>(entity =>
+            // StudentClassRegistration entity configuration
+            modelBuilder.Entity<StudentClassRegistration>(entity =>
             {
-                entity.ToTable("Students");
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.FirstName).HasMaxLength(50).IsRequired();
-                entity.Property(e => e.LastName).HasMaxLength(50).IsRequired();
-                entity.Property(e => e.IndexNumber).HasMaxLength(20).IsRequired();
-                entity.Property(e => e.Email).HasMaxLength(100).IsRequired();
-                entity.Property(e => e.ContactNumber).HasMaxLength(15).IsRequired();
-                entity.Property(e => e.Address).HasMaxLength(200).IsRequired();
-                entity.Property(e => e.ParentContactNumber).HasMaxLength(15);
-                entity.Property(e => e.ParentName).HasMaxLength(100);
-                
-                // Unique constraints
-                entity.HasIndex(e => e.IndexNumber).IsUnique();
-                entity.HasIndex(e => e.Email).IsUnique();
+                entity.HasKey(e => e.StudentRegistrationId);
+                entity.Property(e => e.StudentId)
+                    .IsRequired();
+                entity.Property(e => e.ClassId)
+                    .IsRequired();
+                entity.Property(e => e.IndexNumber)
+                    .IsRequired()
+                    .HasMaxLength(20);
+                entity.Property(e => e.Status)
+                    .HasDefaultValue(RegistrationStatus.Pending);
+                entity.Property(e => e.RegisteredAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
+                entity.Property(e => e.Remarks)
+                    .HasMaxLength(500);
+
+                // Relationships
+                entity.HasOne(sc => sc.Class)
+                    .WithMany(c => c.StudentRegistrations)
+                    .HasForeignKey(sc => sc.ClassId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
-            // Teacher configuration
-            modelBuilder.Entity<Teacher>(entity =>
+            // StudentRegistrationSubject entity configuration
+            modelBuilder.Entity<StudentRegistrationSubject>(entity =>
             {
-                entity.ToTable("Teachers");
+                entity.ToTable("StudentRegistrationSubject");
                 entity.HasKey(e => e.Id);
-                entity.Property(e => e.FirstName).HasMaxLength(50).IsRequired();
-                entity.Property(e => e.LastName).HasMaxLength(50).IsRequired();
-                entity.Property(e => e.Email).HasMaxLength(100).IsRequired();
-                entity.Property(e => e.ContactNumber).HasMaxLength(15).IsRequired();
-                entity.Property(e => e.Address).HasMaxLength(200).IsRequired();
-                entity.Property(e => e.EmployeeId).HasMaxLength(50);
-                entity.Property(e => e.Qualification).HasMaxLength(100);
-                
-                // Unique constraints
-                entity.HasIndex(e => e.Email).IsUnique();
-                entity.HasIndex(e => e.EmployeeId).IsUnique().HasFilter("[EmployeeId] IS NOT NULL");
-            });
+                entity.Property(e => e.StudentRegistrationId)
+                    .IsRequired();
+                entity.Property(e => e.SubjectId)
+                    .IsRequired();
+                entity.Property(e => e.AddedAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
 
-            // TeacherSubject configuration  
-            modelBuilder.Entity<TeacherSubject>(entity =>
-            {
-                entity.ToTable("TeacherSubjects");
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.TeacherId).IsRequired();
-                entity.Property(e => e.SubjectId).IsRequired();
-                entity.Property(e => e.IsActive).IsRequired();
+                // Relationships
+                entity.HasOne(srs => srs.StudentRegistration)
+                    .WithMany(sr => sr.RegistrationSubjects)
+                    .HasForeignKey(srs => srs.StudentRegistrationId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
-                // Configure relationships
-                entity.HasOne(ts => ts.Teacher)
+                entity.HasOne(srs => srs.Subject)
                     .WithMany()
-                    .HasForeignKey(ts => ts.TeacherId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(ts => ts.Subject)
-                    .WithMany(s => s.TeacherSubjects)
-                    .HasForeignKey(ts => ts.SubjectId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
-                // Create composite unique index to prevent duplicate assignments  
-                entity.HasIndex(e => new { e.TeacherId, e.SubjectId }).IsUnique()
-                    .HasDatabaseName("IX_TeacherSubject_UniqueAssignment");
+                    .HasForeignKey(srs => srs.SubjectId)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
 
-            // StudentSubject configuration  
+            // TeacherClassRegistration entity configuration
+            modelBuilder.Entity<TeacherClassRegistration>(entity =>
+            {
+                entity.HasKey(e => e.TeacherRegistrationId);
+                entity.Property(e => e.TeacherId)
+                    .IsRequired();
+                entity.Property(e => e.ClassId)
+                    .IsRequired();
+                entity.Property(e => e.SubjectId)
+                    .IsRequired();
+                entity.Property(e => e.EmployeeId)
+                    .IsRequired()
+                    .HasMaxLength(50);
+                entity.Property(e => e.Status)
+                    .HasDefaultValue(RegistrationStatus.Pending);
+                entity.Property(e => e.RegisteredAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
+                entity.Property(e => e.Remarks)
+                    .HasMaxLength(500);
+
+                // Relationships
+                entity.HasOne(tc => tc.Class)
+                    .WithMany(c => c.TeacherRegistrations)
+                    .HasForeignKey(tc => tc.ClassId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(tc => tc.Subject)
+                    .WithMany()
+                    .HasForeignKey(tc => tc.SubjectId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // StudentSubject entity configuration
             modelBuilder.Entity<StudentSubject>(entity =>
             {
-                entity.ToTable("StudentSubjects");
                 entity.HasKey(e => e.Id);
-                entity.Property(e => e.StudentId).IsRequired();
-                entity.Property(e => e.SubjectId).IsRequired();
-                entity.Property(e => e.IsActive).HasDefaultValue(true);
+                entity.Property(e => e.StudentId)
+                    .IsRequired();
+                entity.Property(e => e.SubjectId)
+                    .IsRequired();
+                entity.Property(e => e.EnrolledAt)
+                            .HasDefaultValueSql("GETUTCDATE()");
+                entity.Property(e => e.IsActive)
+                    .HasDefaultValue(true);
 
-                // Configure relationships
-                entity.HasOne(ss => ss.Student)
-                    .WithMany()
-                    .HasForeignKey(ss => ss.StudentId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
+                // Relationship
                 entity.HasOne(ss => ss.Subject)
                     .WithMany(s => s.StudentSubjects)
                     .HasForeignKey(ss => ss.SubjectId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
-                // Create composite unique index to prevent duplicate enrollment  
-                entity.HasIndex(e => new { e.StudentId, e.SubjectId }).IsUnique()
-                    .HasDatabaseName("IX_StudentSubjects_StudentId_SubjectId");
-            });
-
-            // StudentClassRegistration configuration
-            modelBuilder.Entity<StudentClassRegistration>(entity =>
-            {
-                entity.ToTable("StudentClassRegistrations");
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.StudentId).IsRequired();
-                entity.Property(e => e.ClassId).IsRequired();
-                entity.Property(e => e.SubjectId).IsRequired();
-                entity.Property(e => e.IndexNumber).HasMaxLength(20).IsRequired();
-                entity.Property(e => e.Status).HasConversion<int>().HasDefaultValue(RegistrationStatus.Pending);
-                entity.Property(e => e.Remarks).HasMaxLength(500);
-
-                // Configure relationships
-                entity.HasOne(scr => scr.Student)
-                    .WithMany()
-                    .HasForeignKey(scr => scr.StudentId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(scr => scr.Class)
-                    .WithMany(c => c.StudentRegistrations)
-                    .HasForeignKey(scr => scr.ClassId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(scr => scr.Subject)
-                    .WithMany()
-                    .HasForeignKey(scr => scr.SubjectId)
                     .OnDelete(DeleteBehavior.Restrict);
-
-                // Create composite unique index to prevent duplicate registrations
-                entity.HasIndex(e => new { e.StudentId, e.ClassId })
-                    .IsUnique()
-                    .HasDatabaseName("IX_StudentClassRegistrations_StudentId_ClassId");
             });
 
-            // TeacherClassRegistration configuration  
-            modelBuilder.Entity<TeacherClassRegistration>(entity =>
+            // TeacherSubject entity configuration
+            modelBuilder.Entity<TeacherSubject>(entity =>
             {
-                entity.ToTable("TeacherClassRegistrations");
                 entity.HasKey(e => e.Id);
-                entity.Property(e => e.TeacherId).IsRequired();
-                entity.Property(e => e.ClassId).IsRequired();
-                entity.Property(e => e.SubjectId).IsRequired();
-                entity.Property(e => e.EmployeeId).HasMaxLength(50).IsRequired();
-                entity.Property(e => e.Status).HasConversion<int>().HasDefaultValue(RegistrationStatus.Pending);
-                entity.Property(e => e.Remarks).HasMaxLength(500);
+                entity.Property(e => e.TeacherId)
+                    .IsRequired();
+                entity.Property(e => e.SubjectId)
+                    .IsRequired();
+                entity.Property(e => e.EmployeeId)
+                    .IsRequired()
+                    .HasMaxLength(50);
+                entity.Property(e => e.Status)
+                    .HasDefaultValue(RegistrationStatus.Pending);
+                entity.Property(e => e.RegisteredAt)
+                    .HasDefaultValueSql("GETUTCDATE()");
+                entity.Property(e => e.Remarks)
+                    .HasMaxLength(500);
+                entity.Property(e => e.IsActive)
+                    .HasDefaultValue(true);
 
-                // Configure relationships
-                entity.HasOne(tcr => tcr.Teacher)
-                    .WithMany()
-                    .HasForeignKey(tcr => tcr.TeacherId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(tcr => tcr.Class)
-                    .WithMany(c => c.TeacherRegistrations)
-                    .HasForeignKey(tcr => tcr.ClassId)
-                    .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(tcr => tcr.Subject)
-                    .WithMany(s => s.TeacherClassRegistrations)
-                    .HasForeignKey(tcr => tcr.SubjectId)
+                // Relationship
+                entity.HasOne(ts => ts.Subject)
+                    .WithMany(s => s.TeacherSubjects)
+                    .HasForeignKey(ts => ts.SubjectId)
                     .OnDelete(DeleteBehavior.Restrict);
-
-                // Create composite unique index to prevent duplicate registrations  
-                entity.HasIndex(e => new { e.TeacherId, e.ClassId })
-                    .IsUnique()
-                    .HasDatabaseName("IX_TeacherClassRegistrations_TeacherId_ClassId");
             });
-
-            // Seed data
-            SeedData(modelBuilder);
         }
 
-        private void SeedData(ModelBuilder modelBuilder)
-        {
-            // Use fixed DateTime values instead of DateTime.UtcNow for seeding
-            var seedDate = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
-            modelBuilder.Entity<Subject>().HasData(
-                new Subject
-                {
-                    Id = 1,
-                    Name = "Mathematics",
-                    Code = "MATH101",
-                    Description = "Basic Mathematics",
-                    CreatedAt = seedDate
-                },
-                new Subject
-                {
-                    Id = 2,
-                    Name = "Science",
-                    Code = "SCI101",
-                    Description = "Basic Science",
-                    CreatedAt = seedDate
-                },
-                new Subject
-                {
-                    Id = 3,
-                    Name = "History",
-                    Code = "HIST101",
-                    Description = "World History",
-                    CreatedAt = seedDate
-                }
-            );
-        }
     }
-}
+
+    }
+

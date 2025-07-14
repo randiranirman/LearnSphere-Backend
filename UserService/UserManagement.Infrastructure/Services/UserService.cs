@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UserManagement.Application.Dtos;
 using UserManagement.Application.Repositories;
@@ -106,5 +107,40 @@ namespace UserManagement.Infrastructure.Services
 
         }
 
+        public async Task<StudentDto> GetStudentByID(int id)
+        {
+           var student = await _context.Students.FirstOrDefaultAsync(s => s.Id == id);
+
+            if ( student ==  null)
+            {
+                return null;
+            }
+
+            return new StudentDto
+            {
+                StudentID = student.Id,
+                StudentName = student.FirstName,
+                Email= student.Email
+            };
+
+        }
+
+        public async Task<TeacherDto> GetTeacherByID(int id)
+        {
+            var teacher = await _context.Teachers.FirstOrDefaultAsync(t => t.Id == id);
+
+            if( teacher  ==  null)
+            {
+                return null
+                    ;
+            }
+
+            return new TeacherDto
+            {
+                TeacherID = teacher.Id,
+                TeacherName= teacher.FullName,
+                email = teacher.Email,
+            };
+        }
     }
 }
