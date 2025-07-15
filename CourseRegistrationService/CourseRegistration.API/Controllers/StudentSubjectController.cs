@@ -5,7 +5,7 @@ using CourseRegistration.Application.Dtos;
 namespace CourseRegistration.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("studentSubjects/[controller]")]
     public class StudentSubjectController : ControllerBase
     {
         private readonly IStudentRegistrationService _registrationService;
@@ -20,7 +20,7 @@ namespace CourseRegistration.API.Controllers
         /// </summary>
         /// <param name="studentId">Student ID</param>
         /// <returns>List of subjects the student is enrolled in</returns>
-        [HttpGet("student/{studentId}")]
+        [HttpGet("subject/{studentId}")]
         public async Task<IActionResult> GetStudentSubjects(int studentId)
         {
             try
