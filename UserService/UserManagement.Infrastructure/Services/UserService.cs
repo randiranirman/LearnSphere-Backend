@@ -34,6 +34,8 @@ namespace UserManagement.Infrastructure.Services
 
              if( cachedUsers != null)
             {
+
+                Console.WriteLine("returning cached usesr");
                 return cachedUsers;
             }
             var users = await _context.Users.ToListAsync();
@@ -56,20 +58,31 @@ namespace UserManagement.Infrastructure.Services
 
         public async Task<UserDto> GetUserByIdAsync(int id)
         {
+            string cacheKey = $"User_{id}";
+            var cachedUser = await _cache.GetAsync<UserDto>(cacheKey);
+            if(cachedUser != null)
+            {
+                return cachedUser;
+            }
+
+
             var user = await _context.Users.FindAsync(id);
+
 
             if (user == null)
             {
                 return null; ;
             }
-
-            return new UserDto
+            var userDto = new UserDto
             {
                 Name = user.Name,
                 Username = user.Username,
                 Email = user.Email,
                 Role = user.Role
             };
+            await _cache.SetAsync(cacheKey, userDto, TimeSpan.FromMinutes(30));
+
+            return userDto;
         }
 
 
