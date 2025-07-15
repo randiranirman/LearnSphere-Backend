@@ -30,12 +30,15 @@ builder.Services.AddScoped<IStudentClassRegistrationRepository, StudentClassRegi
 builder.Services.AddScoped<IStudentRegistrationSubjectRepository, StudentRegistrationSubjectRepository>();
 builder.Services.AddScoped<IStudentSubjectRepository, StudentSubjectRepository>();
 builder.Services.AddScoped<IClassRepository, ClassRepository>();
+builder.Services.AddScoped<ITeacherClassRegistrationRepository, TeacherClassRegistrationRepository>();
+builder.Services.AddScoped<ITeacherSubjectRepository, TeacherSubjectRepository>();
 
 // Register Services
 builder.Services.AddScoped<ISubjectService, SubjectService>();
 builder.Services.AddScoped<IStudentHttpService, StudentHttpService>();
 builder.Services.AddScoped<ITeacherHttpService, TeacherHttpService>();
 builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationService>();
+builder.Services.AddScoped<ITeacherRegistrationService, TeacherRegistrationService>();
 
 builder.Services.AddScoped<IClassService,ClassService>();
 // Add CORS

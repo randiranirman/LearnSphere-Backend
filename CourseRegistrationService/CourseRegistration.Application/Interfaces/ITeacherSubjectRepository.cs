@@ -13,5 +13,6 @@ namespace CourseRegistration.Application.Repositories
         Task<IEnumerable<TeacherSubject>> GetBySubjectIdAsync(int subjectId);
         Task<TeacherSubject?> GetByTeacherAndSubjectAsync(int teacherId, int subjectId);
         Task<bool> IsTeacherAssignedToSubjectAsync(int teacherId, int subjectId);
+        Task<IEnumerable<TeacherSubject>> GetByStatusAsync(RegistrationStatus status);
     }
 }
