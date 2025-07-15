@@ -19,6 +19,7 @@ builder.Services.AddSignalR();
 
 // Add HttpClient for external service calls
 builder.Services.AddHttpClient<IStudentHttpService, StudentHttpService>();
+builder.Services.AddHttpClient<ITeacherHttpService, TeacherHttpService>();
 
 builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
@@ -33,6 +34,7 @@ builder.Services.AddScoped<IClassRepository, ClassRepository>();
 // Register Services
 builder.Services.AddScoped<ISubjectService, SubjectService>();
 builder.Services.AddScoped<IStudentHttpService, StudentHttpService>();
+builder.Services.AddScoped<ITeacherHttpService, TeacherHttpService>();
 builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationService>();
 
 builder.Services.AddScoped<IClassService,ClassService>();
