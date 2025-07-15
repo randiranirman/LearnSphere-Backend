@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UserManagement.Application.Dtos;
 using UserManagement.Application.Repositories;
+using UserManagement.Domain.Domain;
 using UserManagement.Infrastructure.Data;
 
 namespace UserManagement.Infrastructure.Services
@@ -15,24 +16,41 @@ namespace UserManagement.Infrastructure.Services
 
     {
         private readonly UserDbContext _context;
-        public UserService( UserDbContext context)
+        private readonly RedisCacheService _cache;
+
+
+        private const string userCacheKey = "AllUsers";
+        public UserService( UserDbContext context, RedisCacheService cache)
         {
             _context = context;
+            _cache = cache;
 
 
         }
 
         public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
         {
-            var users = await _context.Users.ToListAsync();
+            var cachedUsers = await _cache.GetAsync<List<UserDto>>(userCacheKey);
 
-            return users.Select(user => new UserDto
+             if( cachedUsers != null)
+            {
+                return cachedUsers;
+            }
+            var users = await _context.Users.ToListAsync();
+            var userDtos = users.Select(user => new UserDto
             {
                 Name = user.Name,
                 Username = user.Username,
                 Email = user.Email,
                 Role = user.Role
             }).ToList();
+
+            await _cache.SetAsync(userCacheKey, userDtos, TimeSpan.FromMinutes(30));
+
+
+
+
+            return userDtos;
         }
 
 
