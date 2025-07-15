@@ -37,7 +37,7 @@ namespace UserManagement.Infrastructure.Data
 
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)
-                .IsUnique()
+                
                 .HasDatabaseName("IX_Users_Email");
 
             modelBuilder.Entity<User>()
