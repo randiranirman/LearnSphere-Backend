@@ -221,81 +221,93 @@ namespace UserManagement.Infrastructure.Services
 
         public async Task<UserDto?> RegisterAsync(UserDto request)
         {
-
-
             if (await context.Users.AnyAsync(u => u.Username == request.Username))
             {
                 return null;
             }
-            request.Password = GenaratERandomPassword();    
-            var user = new User();
-            var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
-            user.IsFirstLogin = true;
-            user.Username = request.Username;
-            user.hashedPassword = hashedPassword;
-            user.Email = request.Email;
-            user.Name = request.Name;
-            user.Role = request.Role;
-
-            context.Users.Add(user);
-            await context.SaveChangesAsync();
-            // Check the role and create the corresponding entity
-            if (request.Role.ToLower() == "admin")
+            
+            request.Password = GenaratERandomPassword();
+            
+            // Use database transaction for better performance and atomicity
+            using var transaction = await context.Database.BeginTransactionAsync();
+            
+            try
             {
+                var user = new User();
+                var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
+                user.IsFirstLogin = true;
+                user.Username = request.Username;
+                user.hashedPassword = hashedPassword;
+                user.Email = request.Email;
+                user.Name = request.Name;
+                user.Role = request.Role;
 
-                var admin = new Admin()
-                {
-                    Id = user.Id,
-                    FirstName = user.Name
-
-                };
-                context.Entry(admin).State = EntityState.Modified;
-                context.Admins.Add(admin);
+                context.Users.Add(user);
+                
+                // Save user first to get the generated ID
                 await context.SaveChangesAsync();
-
-
-            }
-            else if (request.Role.ToLower() == "teacher")
-            {
-                var teacher = new Teacher()
+                
+                // Create role-specific entity in the same transaction
+                if (request.Role.ToLower() == "admin")
                 {
-                    Id = user.Id,
-                    FirstName = user.Name,
-                };
-
-                context.Entry(teacher).State = EntityState.Modified;
-                context.Teachers.Add(teacher);
-                await context.SaveChangesAsync();
-
-            }
-            else if (request.Role.ToLower() == "student")
-            {
-                var student = new Student()
+                    var admin = new Admin()
+                    {
+                        Id = user.Id,
+                        FirstName = user.Name
+                    };
+                    context.Admins.Add(admin);
+                }
+                else if (request.Role.ToLower() == "teacher")
                 {
-                    Id = user.Id,
-                    FirstName = user.Name,
-                };
-                context.Students.Add(student);
+                    var teacher = new Teacher()
+                    {
+                        Id = user.Id,
+                        FirstName = user.Name,
+                    };
+                    context.Teachers.Add(teacher);
+                }
+                else if (request.Role.ToLower() == "student")
+                {
+                    var student = new Student()
+                    {
+                        Id = user.Id,
+                        FirstName = user.Name,
+                    };
+                    context.Students.Add(student);
+                }
+                
+                // Save role-specific entity
                 await context.SaveChangesAsync();
+                await transaction.CommitAsync();
+                
+                // Send email asynchronously without blocking the response
+                _ = Task.Run(async () => 
+                {
+                    try
+                    {
+                        await emailService.SendEmailToUserAsync(user.Email, EmailTemplates.WelcomeSubject, 
+                            EmailTemplates.WelcomeBody(user.Name, user.Username, request.Password));
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log the email sending error but don't fail user creation
+                        Console.WriteLine($"Failed to send welcome email to {user.Email}: {ex.Message}");
+                    }
+                });
 
+                return new UserDto
+                {
+                    Username = request.Username,
+                    Name = request.Name,
+                    Role = request.Role,
+                    Email = request.Email
+                };
             }
-            await context.SaveChangesAsync();
-           // sending the email to the particular user
-            await emailService.SendEmailToUserAsync(user.Email, EmailTemplates.WelcomeSubject, EmailTemplates.WelcomeBody(user.Name, user.Username, request.Password));
-
-
-
-
-            return new UserDto
+            catch (Exception)
             {
-                Username = request.Username,
-                Name = request.Name,
-                Role = request.Role,
-                Email = request.Email
-
-                    
-            };
-
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
         public async Task<bool> RequsetPasswordReset( ResetPasswordRequestDto request)
@@ -309,7 +321,7 @@ namespace UserManagement.Infrastructure.Services
             var token = GenerateRefershToken();
             user.PasswordResetToken = token;
             user.PasswordResetTokenExpiryTime = DateTime.UtcNow.AddHours(1); // Token expires in 1 hour
-            
+
             context.Users.Update(user);
             await context.SaveChangesAsync();
             
