@@ -1,22 +1,46 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AnalyticsService.Application.DTOs;
+using AnalyticsService.Application.Querries;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AnalyticsService.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AnalyticsController : ControllerBase
+    public class AnalyticsController(ISender sender) : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> GetAnalytics()
+        // this is for retrive no of students and no of teachers in the system
+        public async Task<IActionResult> GetNoOfStudentsAndNoOfTeacher()
         {
-            // This is a placeholder for the actual analytics data retrieval logic.
-            var analyticsData = new
+            var response = await sender.Send(new GetNoOfStudentsAndNoOfTeacherQuery());
+            if (response is null)
             {
-                TotalUsers = 1000,
-                ActiveUsers = 250,
-                NewSignupsToday = 50
-            };
-            return Ok(analyticsData);
+                return NotFound("Not data found!");
+            }
+            return Ok(response);
         }
+
+        [HttpGet("/teachers")]
+        public async Task<IActionResult> GetAllTheRegisteredTeachersWithSubjectCount()
+        {
+            var response = await sender.Send(new GetTeachersWithSubjectsCountsQuery());
+            if (response is null)
+            {
+                return NotFound("No teacher has been registered!");
+            }
+            return Ok(response);
+        }
+
+        [HttpGet("/teacher")]
+        public async Task<IActionResult> GetTeacherSubejctsWithStudentCountAsync([FromQuery] int teacherId)
+        {
+            var resposne = await sender.Send(new GetTeacherSubejctsWithStudentCountQuery(teacherId));
+            if (resposne is null)
+            {
+                return NotFound("No subject is assigned to this teacher!");
+            }
+            return Ok(resposne);
+        } 
     }
 }

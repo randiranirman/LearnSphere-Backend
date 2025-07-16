@@ -21,6 +21,8 @@ namespace AnalyticsService.Infrastructure
 
             services.AddScoped<ITeacherRepository, TeacherRepository>();
 
+            services.AddScoped<IAnalyticsRepository, AnalyticsRepository>();
+
             return services;
         }
     }
