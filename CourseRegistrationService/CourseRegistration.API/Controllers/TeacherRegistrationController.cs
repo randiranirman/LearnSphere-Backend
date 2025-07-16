@@ -61,10 +61,41 @@ namespace CourseRegistration.API.Controllers
                 var pendingClassRegistrations = await _teacherClassRegistrationRepository.GetPendingRegistrationsAsync();
                 var pendingSubjectRegistrations = await _teacherSubjectRepository.GetByStatusAsync(RegistrationStatus.Pending);
 
+                var classRegistrationDtos = pendingClassRegistrations.Select(cr => new TeacherClassRegistrationDto
+                {
+                    TeacherRegistrationId = cr.TeacherRegistrationId,
+                    TeacherId = cr.TeacherId,
+                    ClassId = cr.ClassId,
+                    ClassName = cr.Class?.Name ?? "",
+                    SubjectId = cr.SubjectId,
+                    SubjectName = cr.Subject?.Name ?? "",
+                    EmployeeId = cr.EmployeeId,
+                    Status = cr.Status,
+                    RegisteredAt = cr.RegisteredAt,
+                    ApprovedAt = cr.ApprovedAt,
+                    ApprovedByAdminId = cr.ApprovedByAdminId,
+                    Remarks = cr.Remarks
+                });
+
+                var subjectRegistrationDtos = pendingSubjectRegistrations.Select(sr => new TeacherSubjectDto
+                {
+                    Id = sr.Id,
+                    TeacherId = sr.TeacherId,
+                    SubjectId = sr.SubjectId,
+                    SubjectName = sr.Subject?.Name ?? "",
+                    EmployeeId = sr.EmployeeId,
+                    Status = sr.Status,
+                    RegisteredAt = sr.RegisteredAt,
+                    ApprovedAt = sr.ApprovedAt,
+                    ApprovedByAdminId = sr.ApprovedByAdminId,
+                    Remarks = sr.Remarks,
+                    IsActive = sr.IsActive
+                });
+
                 var result = new
                 {
-                    ClassRegistrations = pendingClassRegistrations,
-                    SubjectRegistrations = pendingSubjectRegistrations
+                    ClassRegistrations = classRegistrationDtos,
+                    SubjectRegistrations = subjectRegistrationDtos
                 };
 
                 return Ok(result);
