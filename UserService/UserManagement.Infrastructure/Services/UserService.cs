@@ -30,14 +30,26 @@ namespace UserManagement.Infrastructure.Services
 
         public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
         {
-            var cachedUsers = await _cache.GetAsync<List<UserDto>>(userCacheKey);
+            List<UserDto> cachedUsers = null;
 
-             if( cachedUsers != null)
+            // Try to get from cache (but don't crash if Redis is down)
+            try
             {
+                cachedUsers = await _cache.GetAsync<List<UserDto>>(userCacheKey);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Redis Get] Failed to get from cache: {ex.Message}");
+            }
 
-                Console.WriteLine("returning cached usesr");
+            // If cache hit, return cached data
+            if (cachedUsers != null)
+            {
+                Console.WriteLine("Returning users from Redis cache.");
                 return cachedUsers;
             }
+
+            // If cache miss or Redis failed, go to DB
             var users = await _context.Users.ToListAsync();
             var userDtos = users.Select(user => new UserDto
             {
@@ -47,13 +59,20 @@ namespace UserManagement.Infrastructure.Services
                 Role = user.Role
             }).ToList();
 
-            await _cache.SetAsync(userCacheKey, userDtos, TimeSpan.FromMinutes(30));
-
-
-
+            // Try to cache the result (again, don't crash if Redis is down)
+            try
+            {
+                await _cache.SetAsync(userCacheKey, userDtos, TimeSpan.FromMinutes(30));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Redis Set] Failed to cache data: {ex.Message}");
+            }
 
             return userDtos;
         }
+
+
 
 
         public async Task<UserDto> GetUserByIdAsync(int id)
