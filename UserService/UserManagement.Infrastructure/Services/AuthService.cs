@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -22,7 +23,7 @@ using UserManagement.Infrastructure.Data;
 
 namespace UserManagement.Infrastructure.Services
 {
-    public class AuthService(UserDbContext context, IConfiguration configuration, IEmailService emailService) : IAuthService
+    public class AuthService(UserDbContext context, IConfiguration configuration, IEmailService emailService, RedisCacheService _cache) : IAuthService
     {
         public async Task<bool> ChangeCredentials(string username, ChangeCredentialsDto request)
         {
@@ -279,7 +280,16 @@ namespace UserManagement.Infrastructure.Services
                 // Save role-specific entity
                 await context.SaveChangesAsync();
                 await transaction.CommitAsync();
-                
+                // invalidate the cached user list 
+                try
+                {
+                    await _cache.RemoveAsync("AllUsers");
+
+                }catch(Exception ex)
+                {
+                    Console.WriteLine($"Failed to invalidate cache: {ex.Message}");
+                }
+
                 // Send email asynchronously without blocking the response
                 _ = Task.Run(async () => 
                 {
@@ -308,6 +318,9 @@ namespace UserManagement.Infrastructure.Services
                 await transaction.RollbackAsync();
                 throw;
             }
+
+
+           
         }
 
         public async Task<bool> RequsetPasswordReset( ResetPasswordRequestDto request)
