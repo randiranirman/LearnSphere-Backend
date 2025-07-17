@@ -7,5 +7,6 @@ namespace CourseRegistration.Application.Services
     {
         Task<TeacherRegistrationResponseDto> RegisterTeacherAsync(TeacherRegistrationRequestDto request);
         Task<bool> ApproveRegistration(RegistrationApprovalRequestDto request);
+        Task<bool> DeleteRegistrationAsync(int adminId, int registrationId);
     }
 }
