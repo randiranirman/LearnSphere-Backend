@@ -40,7 +40,7 @@ namespace AnalyticsService.Infrastructure.Repositories
                     EmployeeId = t.EmployeeId,
                     TeacherFullName = t.FullName,
                     TeacherEmail = t.Email,
-                    SubejctCount = t.AssignedSubjects.Count
+                    SubjectCount = t.AssignedSubjects.Count
                 })
                 .ToListAsync();
 
@@ -62,6 +62,34 @@ namespace AnalyticsService.Infrastructure.Repositories
             return response;
         }
 
+        public async Task<IEnumerable<StudentDetailsResponseDTO>> GetAllStudentsRegistered()
+        {
+            var response = await analyticsDbContext.Students
+                .Select(s => new StudentDetailsResponseDTO
+                {
+                    Id = s.Id,
+                    IndexNo = s.IndexNumber,
+                    FullName = s.FullName,
+                    Grade = s.Grade
+                })
+                .ToListAsync();
+            return response;
+        }
 
+        public async Task<StudentDetailsResponseDTO> GetStudentByIndexNo(string IndexNo)
+        {
+            string normalized = IndexNo.ToUpper();
+            var response = await analyticsDbContext.Students
+                .Where(s => s.IndexNumber.ToUpper() == normalized)
+                .Select(s => new StudentDetailsResponseDTO
+                {
+                    Id = s.Id,
+                    IndexNo = s.IndexNumber,
+                    FullName = s.FullName,
+                    Grade = s.Grade
+                })
+                .FirstOrDefaultAsync();
+            return response;
+        }
     }
 }

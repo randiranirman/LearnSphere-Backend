@@ -20,3 +20,13 @@ D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\Q
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.AssemblyInfo.cs
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.csproj.CoreCompileInputs.cache
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.sourcelink.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Infrastructure.deps.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Infrastructure.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Infrastructure.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\bin\Debug\net8.0\QuizManagement.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizMana.9A6EC7CA.Up2Date
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\refint\QuizManagement.Infrastructure.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\QuizManagement.Infrastructure.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Infrastructure\obj\Debug\net8.0\ref\QuizManagement.Infrastructure.dll

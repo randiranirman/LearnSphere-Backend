@@ -11,3 +11,10 @@ D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\Q
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.AssemblyInfo.cs
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.csproj.CoreCompileInputs.cache
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.sourcelink.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\bin\Debug\net8.0\QuizManagement.Domain.deps.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\bin\Debug\net8.0\QuizManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\bin\Debug\net8.0\QuizManagement.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\refint\QuizManagement.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\QuizManagement.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.Domain\obj\Debug\net8.0\ref\QuizManagement.Domain.dll

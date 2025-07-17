@@ -21,7 +21,7 @@ namespace AnalyticsService.API.Controllers
             return Ok(response);
         }
 
-        [HttpGet("/teachers")]
+        [HttpGet("teachers")]
         public async Task<IActionResult> GetAllTheRegisteredTeachersWithSubjectCount()
         {
             var response = await sender.Send(new GetTeachersWithSubjectsCountsQuery());
@@ -32,7 +32,7 @@ namespace AnalyticsService.API.Controllers
             return Ok(response);
         }
 
-        [HttpGet("/teacher")]
+        [HttpGet("teacher")]
         public async Task<IActionResult> GetTeacherSubejctsWithStudentCountAsync([FromQuery] int teacherId)
         {
             var resposne = await sender.Send(new GetTeacherSubejctsWithStudentCountQuery(teacherId));
@@ -41,6 +41,28 @@ namespace AnalyticsService.API.Controllers
                 return NotFound("No subject is assigned to this teacher!");
             }
             return Ok(resposne);
-        } 
+        }
+
+        [HttpGet("students")]
+        public async Task<IActionResult> GetAllStudentsRegistered()
+        {
+            var response = await sender.Send(new GetAllStudentsDetailsQuery());
+            if (response is null)
+            {
+                return NotFound();
+            }
+            return Ok(response);
+        }
+
+        [HttpGet("student")]
+        public async Task<IActionResult> GetStudentDetailsByIndexNo([FromQuery] string IndexNo)
+        {
+            var response = await sender.Send(new GetStudentDetailsByIndexNoQuery(IndexNo));
+            if (response is null)
+            {
+                return NotFound();
+            }
+            return Ok(response);
+        }
     }
 }

@@ -1,40 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D88CBDB3-8F09-4813-A13F-BA464419FAED}|AnalyticsService\\AnalyticsService.API\\AnalyticsService.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\analyticsservice\\analyticsservice.api\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D88CBDB3-8F09-4813-A13F-BA464419FAED}|AnalyticsService\\AnalyticsService.API\\AnalyticsService.API.csproj|solutionrelative:analyticsservice\\analyticsservice.api\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\analyticsservice\\analyticsservice.application\\querries\\getteachersubejctswithstudentcountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|solutionrelative:analyticsservice\\analyticsservice.application\\querries\\getteachersubejctswithstudentcountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\analyticsservice\\analyticsservice.application\\dtos\\subejctswithregisteredstudentscountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|solutionrelative:analyticsservice\\analyticsservice.application\\dtos\\subejctswithregisteredstudentscountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7A6EC53-AAB6-4B63-B8C0-10AB524EE1A5}|AnalyticsService\\AnalyticsService.Infrastructure\\AnalyticsService.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\analyticsservice\\analyticsservice.infrastructure\\repositories\\analyticsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7A6EC53-AAB6-4B63-B8C0-10AB524EE1A5}|AnalyticsService\\AnalyticsService.Infrastructure\\AnalyticsService.Infrastructure.csproj|solutionrelative:analyticsservice\\analyticsservice.infrastructure\\repositories\\analyticsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\analyticsservice\\analyticsservice.application\\interfaces\\ianalyticsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|solutionrelative:analyticsservice\\analyticsservice.application\\interfaces\\ianalyticsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C03C0C-766B-43EE-8E70-4D48A3973878}|AnalyticsService\\AnalyticsService.Domain\\AnalyticsService.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\analyticsservice\\analyticsservice.domain\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C03C0C-766B-43EE-8E70-4D48A3973878}|AnalyticsService\\AnalyticsService.Domain\\AnalyticsService.Domain.csproj|solutionrelative:analyticsservice\\analyticsservice.domain\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\analyticsservice\\analyticsservice.application\\dtos\\teacherswithsubjectscountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|solutionrelative:analyticsservice\\analyticsservice.application\\dtos\\teacherswithsubjectscountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\analyticsservice\\analyticsservice.application\\querries\\getteacherswithsubjectscountsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5101260-8E14-45DC-BDDD-E4E0E8AAFCCF}|AnalyticsService\\AnalyticsService.Application\\AnalyticsService.Application.csproj|solutionrelative:analyticsservice\\analyticsservice.application\\querries\\getteacherswithsubjectscountsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -42,115 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetTeacherSubejctsWithStudentCountQuery.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\Querries\\GetTeacherSubejctsWithStudentCountQuery.cs",
-              "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Application\\Querries\\GetTeacherSubejctsWithStudentCountQuery.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\Querries\\GetTeacherSubejctsWithStudentCountQuery.cs",
-              "RelativeToolTip": "AnalyticsService\\AnalyticsService.Application\\Querries\\GetTeacherSubejctsWithStudentCountQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T10:30:34.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SubejctsWithRegisteredStudentsCountDTO.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\DTOs\\SubejctsWithRegisteredStudentsCountDTO.cs",
-              "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Application\\DTOs\\SubejctsWithRegisteredStudentsCountDTO.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\DTOs\\SubejctsWithRegisteredStudentsCountDTO.cs",
-              "RelativeToolTip": "AnalyticsService\\AnalyticsService.Application\\DTOs\\SubejctsWithRegisteredStudentsCountDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T10:22:18.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AnalyticsRepository.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\AnalyticsRepository.cs",
-              "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\AnalyticsRepository.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\AnalyticsRepository.cs",
-              "RelativeToolTip": "AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\AnalyticsRepository.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAiwEEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T09:57:32.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IAnalyticsRepository.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\Interfaces\\IAnalyticsRepository.cs",
-              "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Application\\Interfaces\\IAnalyticsRepository.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\Interfaces\\IAnalyticsRepository.cs",
-              "RelativeToolTip": "AnalyticsService\\AnalyticsService.Application\\Interfaces\\IAnalyticsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T09:56:56.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Teacher.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Domain\\Entities\\Teacher.cs",
-              "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Domain\\Entities\\Teacher.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Domain\\Entities\\Teacher.cs",
-              "RelativeToolTip": "AnalyticsService\\AnalyticsService.Domain\\Entities\\Teacher.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAkwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T09:55:49.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AnalyticsController.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.API\\Controllers\\AnalyticsController.cs",
-              "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.API\\Controllers\\AnalyticsController.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.API\\Controllers\\AnalyticsController.cs*",
-              "RelativeToolTip": "AnalyticsService\\AnalyticsService.API\\Controllers\\AnalyticsController.cs*",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T09:49:12.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TeachersWithSubjectsCountDTO.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\DTOs\\TeachersWithSubjectsCountDTO.cs",
-              "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Application\\DTOs\\TeachersWithSubjectsCountDTO.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\DTOs\\TeachersWithSubjectsCountDTO.cs",
-              "RelativeToolTip": "AnalyticsService\\AnalyticsService.Application\\DTOs\\TeachersWithSubjectsCountDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T09:54:45.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetTeachersWithSubjectsCountsQuery.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\Querries\\GetTeachersWithSubjectsCountsQuery.cs",
-              "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Application\\Querries\\GetTeachersWithSubjectsCountsQuery.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\Querries\\GetTeachersWithSubjectsCountsQuery.cs",
-              "RelativeToolTip": "AnalyticsService\\AnalyticsService.Application\\Querries\\GetTeachersWithSubjectsCountsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T10:04:26.044Z",
-              "EditorCaption": ""
             }
           ]
         }
