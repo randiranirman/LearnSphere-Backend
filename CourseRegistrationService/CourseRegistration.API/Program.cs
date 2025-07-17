@@ -15,7 +15,7 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
         options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
     });
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -26,6 +26,7 @@ builder.Services.AddSignalR();
 builder.Services.AddHttpClient<IStudentHttpService, StudentHttpService>();
 builder.Services.AddHttpClient<ITeacherHttpService, TeacherHttpService>();
 
+// Add DbContext
 builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
 
@@ -45,36 +46,36 @@ builder.Services.AddScoped<ITeacherHttpService, TeacherHttpService>();
 builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationService>();
 builder.Services.AddScoped<ITeacherRegistrationService, TeacherRegistrationService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<IClassService, ClassService>();
 
-builder.Services.AddScoped<IClassService,ClassService>();
-// Add CORS
+// CORS Policies
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost",
-        policy => policy.WithOrigins("http://localhost:5173", "https://localhost:5173", "http://localhost:3000", "https://localhost:3000")
+        policy => policy.WithOrigins(
+                            "http://localhost:5173",
+                            "https://localhost:5173",
+                            "http://localhost:3000",
+                            "https://localhost:3000")
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials());
-    
-    options.AddPolicy("AllowAll",
-        policy => policy.AllowAnyOrigin()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod());
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    // Use permissive CORS in development
-    app.UseCors("AllowAll");
+
+    // ? Apply correct CORS policy for development
+    app.UseCors("AllowLocalhost");
 }
 else
 {
-    // Use restrictive CORS in production
+    //  Apply the same policy in production (or a secure one for deployed frontend)
     app.UseCors("AllowLocalhost");
 }
 
@@ -84,7 +85,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Map SignalR hub
+// ? Map your SignalR hub
 app.MapHub<RegistrationHub>("/notificationHub");
 
 app.Run();
