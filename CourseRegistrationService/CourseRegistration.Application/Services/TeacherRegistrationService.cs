@@ -145,9 +145,13 @@ namespace CourseRegistration.Application.Services
                 {
                     TeacherId = request.TeacherId,
                     TeacherName = teacher.FullName,
+                    EmployeeId = request.EmployeeId,
                     ClassCount = request.ClassIds.Count,
                     SubjectCount = request.SubjectIds.Count,
-                    RegisteredAt = DateTime.UtcNow
+                    ClassRegistrationIds = classRegistrationIds,
+                    SubjectRegistrationIds = subjectRegistrationIds,
+                    RegisteredAt = DateTime.UtcNow,
+                    Message = "New teacher registration awaiting approval"
                 });
 
                 response.ClassRegistrationIds = classRegistrationIds;
@@ -184,21 +188,46 @@ namespace CourseRegistration.Application.Services
                     }
 
                     subjectRegistration.Status = request.Status;
+
                     subjectRegistration.ApprovedAt = DateTime.UtcNow;
                     subjectRegistration.ApprovedByAdminId = request.AdminId;
                     subjectRegistration.Remarks = request.Remarks ?? subjectRegistration.Remarks;
 
                     await _teacherSubjectRepository.UpdateAsync(subjectRegistration);
 
-                    // Send SignalR notification to teacher
-                    await _hubContext.Clients.Group($"Teacher_{subjectRegistration.TeacherId}")
-                        .SendAsync("RegistrationStatusUpdated", new
-                        {
-                            RegistrationId = request.RegistrationId,
-                            Status = request.Status.ToString(),
-                            Type = "Subject",
-                            Remarks = request.Remarks
-                        });
+                    // Get subject details for notification
+                    var subjectDetails = await _subjectRepository.GetByIdAsync(subjectRegistration.SubjectId);
+                    
+                    // Send appropriate SignalR notification to teacher
+                    if (request.Status == RegistrationStatus.Approved)
+                    {
+                        await _hubContext.Clients.Group($"Teacher_{subjectRegistration.TeacherId}")
+                            .SendAsync("TeacherRegistrationApproved", new
+                            {
+                                RegistrationId = request.RegistrationId,
+                                Type = "Subject",
+                                SubjectName = subjectDetails?.Name ?? "Unknown Subject",
+                                EmployeeId = subjectRegistration.EmployeeId,
+                                ApprovedAt = DateTime.UtcNow,
+                                ApprovedByAdminId = request.AdminId,
+                                Message = $"Your registration for subject '{subjectDetails?.Name}' has been approved"
+                            });
+                    }
+                    else if (request.Status == RegistrationStatus.Rejected)
+                    {
+                        await _hubContext.Clients.Group($"Teacher_{subjectRegistration.TeacherId}")
+                            .SendAsync("TeacherRegistrationRejected", new
+                            {
+                                RegistrationId = request.RegistrationId,
+                                Type = "Subject",
+                                SubjectName = subjectDetails?.Name ?? "Unknown Subject",
+                                EmployeeId = subjectRegistration.EmployeeId,
+                                RejectedAt = DateTime.UtcNow,
+                                RejectedByAdminId = request.AdminId,
+                                Reason = request.Remarks ?? "No reason provided",
+                                Message = $"Your registration for subject '{subjectDetails?.Name}' has been rejected"
+                            });
+                    }
 
                     return true;
                 }
@@ -210,17 +239,88 @@ namespace CourseRegistration.Application.Services
 
                 await _teacherClassRegistrationRepository.UpdateAsync(registration);
 
-                // Send SignalR notification to teacher
-                await _hubContext.Clients.Group($"Teacher_{registration.TeacherId}")
-                    .SendAsync("RegistrationStatusUpdated", new
-                    {
-                        RegistrationId = request.RegistrationId,
-                        Status = request.Status.ToString(),
-                        Type = "Class",
-                        Remarks = request.Remarks
-                    });
+                // Get class and subject details for notification
+                var classInfo = await _classRepository.GetByIdAsync(registration.ClassId);
+                var subject = await _subjectRepository.GetByIdAsync(registration.SubjectId);
+                
+                // Send appropriate SignalR notification to teacher
+                if (request.Status == RegistrationStatus.Approved)
+                {
+                    await _hubContext.Clients.Group($"Teacher_{registration.TeacherId}")
+                        .SendAsync("TeacherRegistrationApproved", new
+                        {
+                            RegistrationId = request.RegistrationId,
+                            Type = "Class",
+                            ClassName = classInfo?.Name ?? "Unknown Class",
+                            SubjectName = subject?.Name ?? "Unknown Subject",
+                            EmployeeId = registration.EmployeeId,
+                            ApprovedAt = DateTime.UtcNow,
+                            ApprovedByAdminId = request.AdminId,
+                            Message = $"Your registration for class '{classInfo?.Name}' teaching subject '{subject?.Name}' has been approved"
+                        });
+                }
+                else if (request.Status == RegistrationStatus.Rejected)
+                {
+                    await _hubContext.Clients.Group($"Teacher_{registration.TeacherId}")
+                        .SendAsync("TeacherRegistrationRejected", new
+                        {
+                            RegistrationId = request.RegistrationId,
+                            Type = "Class",
+                            ClassName = classInfo?.Name ?? "Unknown Class",
+                            SubjectName = subject?.Name ?? "Unknown Subject",
+                            EmployeeId = registration.EmployeeId,
+                            RejectedAt = DateTime.UtcNow,
+                            RejectedByAdminId = request.AdminId,
+                            Reason = request.Remarks ?? "No reason provided",
+                            Message = $"Your registration for class '{classInfo?.Name}' teaching subject '{subject?.Name}' has been rejected"
+                        });
+                }
 
                 return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteRegistrationAsync(int adminId, int registrationId)
+        {
+            try
+            {
+                // Find the registration in TeacherClassRegistration
+                var classRegistration = await _teacherClassRegistrationRepository.GetByIdAsync(registrationId);
+                
+                if (classRegistration != null)
+                {
+                    // Get class and subject details for notification before deleting
+                    var classInfo = await _classRepository.GetByIdAsync(classRegistration.ClassId);
+                    var subject = await _subjectRepository.GetByIdAsync(classRegistration.SubjectId);
+                    
+                    // Delete the class registration
+                    await _teacherClassRegistrationRepository.DeleteAsync(registrationId);
+                    
+                    // Send SignalR notification to teacher about deletion
+                    await _hubContext.Clients.Group($"Teacher_{classRegistration.TeacherId}")
+                        .SendAsync("TeacherRegistrationDeleted", new
+                        {
+                            RegistrationId = registrationId,
+                            TeacherId = classRegistration.TeacherId,
+                            ClassId = classRegistration.ClassId,
+                            ClassName = classInfo?.Name ?? "Unknown Class",
+                            SubjectId = classRegistration.SubjectId,
+                            SubjectName = subject?.Name ?? "Unknown Subject",
+                            EmployeeId = classRegistration.EmployeeId,
+                            DeletedAt = DateTime.UtcNow,
+                            DeletedByAdminId = adminId,
+                            Message = $"Your registration for class '{classInfo?.Name}' teaching subject '{subject?.Name}' has been deleted by admin"
+                        });
+                    
+                    return true;
+                }
+                
+                // Registration not found
+                return false;
             }
             catch (Exception)
             {
