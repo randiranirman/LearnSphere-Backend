@@ -256,5 +256,42 @@ namespace CourseRegistration.API.Controllers
                 return StatusCode(500, new { Error = "Internal server error", Details = ex.Message });
             }
         }
+        [HttpPost("reject")]
+        public async Task<IActionResult> RejectRegistration([FromBody] RegistrationApprovalRequestDto request)
+        {
+            request.Status = RegistrationStatus.Rejected;
+
+            var result = await _teacherRegistrationService.ApproveRegistration(request);
+            if (!result)
+                return BadRequest("Failed to reject registration");
+
+            return Ok("Registration rejected successfully");
+        }
+
+        /// <summary>
+        /// Delete a teacher class registration (for admin only)
+        /// </summary>
+        /// <param name="adminId">Admin ID performing the deletion</param>
+        /// <param name="registrationId">Class registration ID to delete</param>
+        /// <returns>Success status</returns>
+        [HttpDelete("delete/{adminId}/{registrationId}")]
+        public async Task<IActionResult> DeleteRegistration(int adminId, int registrationId)
+        {
+            try
+            {
+                var result = await _teacherRegistrationService.DeleteRegistrationAsync(adminId, registrationId);
+                
+                if (result)
+                {
+                    return Ok(new { Message = "Registration deleted successfully" });
+                }
+                
+                return NotFound(new { Message = "Registration not found" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Error = "Internal server error", Details = ex.Message });
+            }
+        }
     }
 }

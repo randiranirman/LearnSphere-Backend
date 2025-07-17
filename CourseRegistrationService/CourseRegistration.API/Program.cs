@@ -44,6 +44,7 @@ builder.Services.AddScoped<IStudentHttpService, StudentHttpService>();
 builder.Services.AddScoped<ITeacherHttpService, TeacherHttpService>();
 builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationService>();
 builder.Services.AddScoped<ITeacherRegistrationService, TeacherRegistrationService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
 
 builder.Services.AddScoped<IClassService,ClassService>();
 // Add CORS
@@ -84,6 +85,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Map SignalR hub
-app.MapHub<RegistrationHub>("/registrationHub");
+app.MapHub<RegistrationHub>("/notificationHub");
 
 app.Run();
