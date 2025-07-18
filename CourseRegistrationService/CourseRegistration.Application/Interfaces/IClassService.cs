@@ -14,6 +14,7 @@ namespace CourseRegistration.Application.Interfaces
         Task<Class> CreateClassAsync(CreateClassRequset request);
         Task<bool> UpdateClassAsync(CreateClassRequset request);
         Task<bool> DeleteClassAsync(int classId);
+        Task<bool> DeleteClassByIdAsync(int classId);
         Task<IEnumerable<ClassDto>> GetAllClassesAsync();
         Task<Class?> GetClassByIdAsync(int classId);
     }

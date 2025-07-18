@@ -21,6 +21,10 @@ namespace CourseRegistration.Domain.Models
         [MaxLength(500)]
         public string? Description { get; set; }
 
+        [Required]
+        [MaxLength(20)]
+        public string Code { get; set; } = string.Empty;
+
         public int MaxStudents { get; set; } = 30;
 
         public DateTime StartDate { get; set; }
