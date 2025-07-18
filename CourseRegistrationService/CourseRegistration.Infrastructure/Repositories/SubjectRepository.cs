@@ -22,6 +22,11 @@ namespace CourseRegistration.Infrastructure.Repositories
 
         public async Task<Subject> AddAsync(Subject subject)
         {
+            var existingSubject = await _context.Subjects.FirstOrDefaultAsync(s => s.Code == subject.Code);
+            if(existingSubject != null)
+            {
+                throw new Exception("Subject with this code already exists.");
+            }
             await _context.Subjects.AddAsync(subject);
             await _context.SaveChangesAsync();
             return subject;
@@ -51,7 +56,11 @@ namespace CourseRegistration.Infrastructure.Repositories
 
         public async Task<IEnumerable<Subject>> GetAllAsync()
         {
-            return await _context.Subjects.ToListAsync();
+            return await _context.Subjects
+                .Include(s => s.StudentSubjects)
+                .Include(s => s.TeacherSubjects)
+                .Include(s => s.Classes)
+                .ToListAsync();
         }
 
         public async Task<Subject?> GetByCodeAsync(string code)
@@ -61,7 +70,11 @@ namespace CourseRegistration.Infrastructure.Repositories
 
         public async Task<Subject?> GetByIdAsync(int id)
         {
-            return await _context.Subjects.FirstOrDefaultAsync(s => s.SubjectId == id);
+            return await _context.Subjects
+                .Include(s => s.StudentSubjects)
+                .Include(s => s.TeacherSubjects)
+                .Include(s => s.Classes)
+                .FirstOrDefaultAsync(s => s.SubjectId == id);
         }
 
         public async Task<IEnumerable<Subject>> GetSubjectByStudentIdAsync(int studentId)
