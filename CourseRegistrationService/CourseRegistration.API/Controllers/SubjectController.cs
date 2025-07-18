@@ -67,9 +67,9 @@ namespace CourseRegistration.API.Controllers
              return Ok(subject);
         }
 
-        [Authorize(Roles ="teacher")]
-        [HttpGet("getSubjecstByTeacherId/{teacherId}")]
-        public async Task<IActionResult> GetSubjectByTeahcerIDAsync( int teacherId)
+        
+        [HttpGet("getSubjectsByTeacherId/{teacherId}")]
+        public async Task<IActionResult> GetSubjectByTeacherIDAsync( int teacherId)
         {
             var subjects= await _subjectService.GetSubjectsByTeacherIdAsync(teacherId);
             if( subjects == null)

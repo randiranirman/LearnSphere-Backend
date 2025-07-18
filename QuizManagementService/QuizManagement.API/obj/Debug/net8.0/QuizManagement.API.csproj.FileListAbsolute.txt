@@ -123,7 +123,6 @@ D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\Q
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.QuizManagement.API.props
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.QuizManagement.API.props
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\staticwebassets.pack.json
-D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizMana.74584DB8.Up2Date
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.dll
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\refint\QuizManagement.API.dll

@@ -1,4 +1,7 @@
 using FileStorage.API;
+using FileStorage.Application.Interfaces;
+using FileStorage.Application.Services;
+using FileStorage.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHttpClient<ICourseHttpService, CourseHttpService>();
+builder.Services.AddScoped<ITeacherFilesRepository, TeacherFileRepository>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
@@ -22,7 +28,7 @@ builder.Services.AddCors(options =>
         });
 });
 
-builder.Services.AddAppDI();
+builder.Services.AddAppDI(builder.Configuration);
 
 var app = builder.Build();
 

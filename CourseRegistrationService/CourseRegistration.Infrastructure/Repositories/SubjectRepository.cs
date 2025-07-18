@@ -81,7 +81,11 @@ namespace CourseRegistration.Infrastructure.Repositories
 
         public async Task<IEnumerable<Subject>> GetSubjectsByTeacherIdAsync(int teacherId)
         {
-            var subjects = await _context.TeacherSubjects.Where(ss => ss.TeacherId == teacherId).Include(ss => ss.Subject).Select(ss => ss.Subject).ToListAsync();
+            var subjects = await _context.TeacherSubjects
+                .Where(ss => ss.TeacherId == teacherId)
+                .Include(ss => ss.Subject)
+                .Select(ss => ss.Subject)
+                .ToListAsync();
             return subjects;
         }
 
