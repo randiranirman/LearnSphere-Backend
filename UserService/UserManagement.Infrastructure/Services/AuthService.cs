@@ -364,7 +364,7 @@ namespace UserManagement.Infrastructure.Services
         {
 
             // create a string of characters  , numbres ,  and special character
-            string  validChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?_-";
+            string  validChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy12345";
             Random random = new Random();
             // select one random character from  the string 
             char[] chars = new char[length];
