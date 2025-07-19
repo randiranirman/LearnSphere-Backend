@@ -11,9 +11,12 @@ namespace UserManagement.Application.Dtos
 
          public int TeacherID { get; set; }
         public string TeacherName { get; set; } = string.Empty;
+        public string ContactNumber { get; set; } = string.Empty;
 
 
-        public string email { get; set; } = string.Empty;
+        public string Fullname { get; set; } = string.Empty;
+
+        public string Email { get; set; } = string.Empty;
             
     }
 }
