@@ -48,6 +48,11 @@ namespace UserManagement.Infrastructure.Services
             user.IsFirstLogin = false;
             context.Users.Update(user);
             await context.SaveChangesAsync();
+            
+            // Invalidate user cache after password change
+            await _cache.RemoveMultipleAsync("AllUsers", $"User_{user.Id}");
+            Console.WriteLine($"Cache invalidated after credential change for user: {username}");
+            
             return true;
 
         }
@@ -280,15 +285,9 @@ namespace UserManagement.Infrastructure.Services
                 // Save role-specific entity
                 await context.SaveChangesAsync();
                 await transaction.CommitAsync();
-                // invalidate the cached user list 
-                try
-                {
-                    await _cache.RemoveAsync("AllUsers");
-
-                }catch(Exception ex)
-                {
-                    Console.WriteLine($"Failed to invalidate cache: {ex.Message}");
-                }
+                // Invalidate the cached user list using enhanced method
+                await _cache.TryRemoveAsync("AllUsers");
+                Console.WriteLine($"Cache invalidated after user registration: {user.Username}");
 
                 // Send email asynchronously without blocking the response
                 _ = Task.Run(async () => 

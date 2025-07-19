@@ -28,7 +28,11 @@ builder.Services.AddHttpClient<ITeacherHttpService, TeacherHttpService>();
 
 // Add DbContext
 builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Database"),
+        sqlOptions =>
+        {
+            sqlOptions.CommandTimeout(300);
+        }));
 
 // Register Repositories
 builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();

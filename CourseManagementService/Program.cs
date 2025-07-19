@@ -17,7 +17,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<LmsContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlOptions =>
+        {
+            sqlOptions.CommandTimeout(300);
+        });
 });
 
 builder.Services.AddScoped<ITeacherRepository, SQLTeacherRepository>();

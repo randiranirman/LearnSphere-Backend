@@ -32,6 +32,7 @@ namespace UserManagement.Domain.Domain
         [MaxLength(200)]
         public string Address { get; set; } = string.Empty;
 
+
         public DateTime DateOfBirth { get; set; }
 
         [MaxLength(50)]

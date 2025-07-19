@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UserManagement.Application.Dtos;
+using UserManagement.Domain.Domain;
 
 namespace UserManagement.Application.Repositories
 {
@@ -18,6 +19,8 @@ namespace UserManagement.Application.Repositories
 
         Task<StudentDto> GetStudentByID(int id);
         Task<TeacherDto> GetTeacherByID(int id);
+        Task<TeacherDto> EditTeacherDetailsById(int id  , TeacherDto  requset );
+        Task<StudentDto> EditStudentDetailsByID(int id, StudentDto request); 
         
         
 

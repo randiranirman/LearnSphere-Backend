@@ -26,6 +26,8 @@ namespace CourseRegistration.Application.Services
             {
                 Name = request.Name,
                 Description = request.Description,
+                Code= request.Code,
+                CreatedAt= DateTime.UtcNow,
 
             };
 
