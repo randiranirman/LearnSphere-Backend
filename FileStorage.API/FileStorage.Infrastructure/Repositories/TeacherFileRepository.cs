@@ -17,6 +17,33 @@ namespace FileStorage.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task<AssignmentDTO> CreateAssignmentByTeacher(CreateAssignmentByTeacherRequestDTO createAssignmentByTeacherRequest)
+        {
+            var assignmentDomainModel = new Assignment
+            {
+                Title = createAssignmentByTeacherRequest.AssignmentTitle,
+                DueTime = createAssignmentByTeacherRequest.DueTime,
+                UploadLink = createAssignmentByTeacherRequest.UploadLink,
+                ClassId = createAssignmentByTeacherRequest.ClassId,
+                SubjectId = createAssignmentByTeacherRequest.SubjectId
+            };
+
+            // here I implement this as a minimal requriments but it must be implement with validating  subject and class ids.
+
+            await _dbContext.Assignments.AddAsync(assignmentDomainModel);
+            await _dbContext.SaveChangesAsync();
+
+            return new AssignmentDTO
+            {
+                Id = assignmentDomainModel.Id,
+                Title = assignmentDomainModel.Title,
+                DueTime = assignmentDomainModel.DueTime,
+                UploadLink = assignmentDomainModel.UploadLink,
+                Status = assignmentDomainModel.Status,
+                SubjectId = assignmentDomainModel.SubjectId
+            };
+        }
+
         public async Task<CreateMaterialResponseDTO> CreateMaterialForTopics(int topicId, CreateMaterialRequestDTO createMaterialRequest)
         {
             var materialDomainModel = new Material
@@ -53,6 +80,28 @@ namespace FileStorage.Infrastructure.Repositories
                 Id = subjectTopicDomainModel.Id,
                 TopicName = subjectTopicDomainModel.TopicName,
                 SubjectId = subjectTopicDomainModel.SubjectId
+            };
+        }
+
+        public async Task<AssignmentDTO> DeleteAssignmentByTeacher(int assignmentId)
+        {
+            var existingDomainModel = await _dbContext.Assignments.FirstOrDefaultAsync(a => a.Id == assignmentId);
+
+            if (existingDomainModel is null)
+            {
+                return null;
+            }
+            _dbContext.Assignments.Remove(existingDomainModel);
+            await _dbContext.SaveChangesAsync();
+
+            return new AssignmentDTO
+            {
+                Id = existingDomainModel.Id,
+                Title = existingDomainModel.Title,
+                DueTime = existingDomainModel.DueTime,
+                UploadLink = existingDomainModel.UploadLink,
+                Status = existingDomainModel.Status,
+                SubjectId = existingDomainModel.SubjectId
             };
         }
 
@@ -108,6 +157,7 @@ namespace FileStorage.Infrastructure.Repositories
                     DueTime = a.DueTime,
                     Status = a.Status,
                     SubjectId = a.SubjectId,
+                    UploadLink = a.UploadLink,
                     SubjectName = "" // This will need to be populated from the course service if needed
                 })
                 .ToListAsync();
@@ -150,6 +200,31 @@ namespace FileStorage.Infrastructure.Repositories
                 .ToListAsync();
 
             return response;
+        }
+
+        public async Task<AssignmentDTO?> UpdateAssignmentByTeacher(int assignmentId, UpdateAssignmentByTeacherRequestDTO updateAssignmentByTeacherRequest)
+        {
+            var exisitingDomainModel = await _dbContext.Assignments.FirstOrDefaultAsync(a => a.Id == assignmentId);
+
+            if (exisitingDomainModel is null)
+            {
+                return null;
+            }
+
+            exisitingDomainModel.Title = updateAssignmentByTeacherRequest.AssignmentTitle;
+            exisitingDomainModel.UploadLink = updateAssignmentByTeacherRequest.UploadLink;
+            exisitingDomainModel.DueTime = updateAssignmentByTeacherRequest.DueTime;
+
+            await _dbContext.SaveChangesAsync();
+            return new AssignmentDTO
+            {
+                Id = exisitingDomainModel.Id,
+                Title = exisitingDomainModel.Title,
+                DueTime = exisitingDomainModel.DueTime,
+                UploadLink = exisitingDomainModel.UploadLink,
+                Status = exisitingDomainModel.Status,
+                SubjectId = exisitingDomainModel.SubjectId
+            };
         }
     }
 }

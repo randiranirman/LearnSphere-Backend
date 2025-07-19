@@ -21,6 +21,7 @@ namespace FileStorage.API.Controllers
             return Ok(response);
         }
 
+        // get all assignments by Id
         [HttpGet("assignments")]
         public async Task<IActionResult> GetAllAssignmentsBySubjectId([FromQuery] int subjectId)
         {
@@ -29,6 +30,30 @@ namespace FileStorage.API.Controllers
             {
                 return NotFound("No assignments found for this subject.");
             }
+            return Ok(response);
+        }
+
+        // create an assignment
+        [HttpPost("assignments/create-assignment")]
+        public async Task<IActionResult> CreateAssignment([FromBody] CreateAssignmentByTeacherRequestDTO createAssignmentByTeacherRequest)
+        {
+            var response = await sender.Send(new CreateAssignmentByTeacherCommand(createAssignmentByTeacherRequest));
+            return Ok(response);
+        }
+
+        // edit an assignment using title, uploadLink and duetime
+        [HttpPut("assignments/edit-assignment")]
+        public async Task<IActionResult> UpdateAssignmentByTeacher([FromQuery] int assignmentId, [FromBody] UpdateAssignmentByTeacherRequestDTO updateAssignmentByTeacherRequest)
+        {
+            var response = await sender.Send(new UpdateAssignmentByTeacherCommand(assignmentId, updateAssignmentByTeacherRequest));
+            return Ok(response);
+        }
+
+        // delete an assignment assignment id
+        [HttpDelete("assignments/delete-assignment")]
+        public async Task<IActionResult> DeleteAssignmentByTeacher([FromQuery] int assignmentId)
+        {
+            var response = await sender.Send(new DeleteAssignmentByTeacherCommand(assignmentId));
             return Ok(response);
         }
 

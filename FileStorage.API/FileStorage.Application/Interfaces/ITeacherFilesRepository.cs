@@ -19,5 +19,11 @@ namespace FileStorage.Application.Interfaces
         public Task<SubjectTopicDTO?> EditSubjectTopic(int topicId, string newTopicName);
 
         public Task<MaterialDTO?> DeleteMaterialByMaterialId(int materialId);
+
+        public Task<AssignmentDTO> CreateAssignmentByTeacher(CreateAssignmentByTeacherRequestDTO createAssignmentByTeacherRequest);
+
+        public Task<AssignmentDTO?> UpdateAssignmentByTeacher(int assignmentId, UpdateAssignmentByTeacherRequestDTO updateAssignmentByTeacherRequest);
+
+        public Task<AssignmentDTO> DeleteAssignmentByTeacher(int assignmentId);
     }
 }
