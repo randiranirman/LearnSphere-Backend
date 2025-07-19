@@ -17,7 +17,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<UserDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database"),
-        b => b.MigrationsAssembly("UserManagement.Infrastructure")));
+        sqlOptions =>
+        {
+            sqlOptions.CommandTimeout(300);
+            sqlOptions.MigrationsAssembly("UserManagement.Infrastructure");
+        }));
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAdminService, AdminService>();

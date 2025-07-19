@@ -28,7 +28,7 @@ namespace CourseRegistration.API.Controllers
             
             return Ok(createdClass);
         }
-        [HttpDelete("deleteClassById({id})")]
+        [HttpDelete("deleteClassById/{id}")]
         public async Task<IActionResult> DeleteByIdAsync(int id)
         {
             var result = await _classService.DeleteClassByIdAsync(id);
