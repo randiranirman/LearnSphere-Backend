@@ -13,6 +13,7 @@ namespace CourseRegistration.Domain.Models
 
         [Required]
         public int StudentId { get; set; }
+        
 
         [Required]
         public int ClassId { get; set; }

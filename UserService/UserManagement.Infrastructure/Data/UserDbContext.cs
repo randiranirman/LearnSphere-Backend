@@ -24,11 +24,29 @@ namespace UserManagement.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Admin>().ToTable("Admins");
             modelBuilder.Entity<Teacher>().ToTable("Teachers");
             modelBuilder.Entity<Student>().ToTable("Students");
+
+            // Add indexes for frequently queried fields to improve performance
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Username)
+                .IsUnique()
+                .HasDatabaseName("IX_Users_Username");
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Email)
+                
+                .HasDatabaseName("IX_Users_Email");
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.RefreshToken)
+                .HasDatabaseName("IX_Users_RefreshToken");
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.PasswordResetToken)
+                .HasDatabaseName("IX_Users_PasswordResetToken");
 
             modelBuilder.Entity<Admin>()
                 .HasOne<User>()

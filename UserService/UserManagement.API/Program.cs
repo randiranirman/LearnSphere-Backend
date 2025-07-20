@@ -17,11 +17,21 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<UserDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database"),
-        b => b.MigrationsAssembly("UserManagement.Infrastructure")));
+        sqlOptions =>
+        {
+            sqlOptions.CommandTimeout(300);
+            sqlOptions.MigrationsAssembly("UserManagement.Infrastructure");
+        }));
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddTransient<IEmailService, EmailService>();
+builder.Services.AddSingleton<RedisCacheService>();
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("RedisCache");
+    options.InstanceName = "UserListCache:";
+});
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost",

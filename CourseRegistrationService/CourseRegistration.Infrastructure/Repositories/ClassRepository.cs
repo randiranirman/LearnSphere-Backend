@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
 using CourseRegistration.Infrastructure.Data;
@@ -21,14 +25,17 @@ namespace CourseRegistration.Infrastructure.Repositories
             return entity;
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var entity = await _context.Classes.FindAsync(id);
             if (entity != null)
             {
                 _context.Classes.Remove(entity);
                 await _context.SaveChangesAsync();
+                return true;
             }
+
+            return false;
         }
 
         public async Task<bool> ExistAsync(int id)
@@ -49,6 +56,7 @@ namespace CourseRegistration.Infrastructure.Repositories
         public async Task<IEnumerable<Class>> GetClassesBySubjectIdAsync(int subjectId)
         {
             return await _context.Classes
+                .Include(c => c.Subjects)
                 .Where(c => c.Subjects.Any(cs => cs.SubjectId == subjectId))
                 .ToListAsync();
         }
@@ -77,6 +85,7 @@ namespace CourseRegistration.Infrastructure.Repositories
         public async Task<IEnumerable<Class>> GetClassesByTeacherIdAsync(int teacherId)
         {
             return await _context.Classes
+                .Include(c => c.TeacherRegistrations)
                 .Where(c => c.TeacherRegistrations.Any(tcr => tcr.TeacherId == teacherId))
                 .ToListAsync();
         }
@@ -84,6 +93,7 @@ namespace CourseRegistration.Infrastructure.Repositories
         public async Task<IEnumerable<Class>> GetClassesByStudentIdAsync(int studentId)
         {
             return await _context.Classes
+                .Include(c => c.StudentRegistrations)
                 .Where(c => c.StudentRegistrations.Any(scr => scr.StudentId == studentId))
                 .ToListAsync();
         }
@@ -93,6 +103,16 @@ namespace CourseRegistration.Infrastructure.Repositories
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return entity;
+        }
+
+        async Task IRepository<Class>.DeleteAsync(int id)
+        {
+            var entity = await _context.Classes.FindAsync(id);
+            if (entity != null)
+            {
+                _context.Classes.Remove(entity);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

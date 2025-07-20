@@ -26,16 +26,24 @@ namespace CourseRegistration.Application.Services
         }
         public async Task<Subject> CreatedSubjectAsync(CreateSubjectRequest request)
         {
-            var subject = new Subject
+            try
             {
-                SubjectId = request.Id,
-                Name = request.Name,
-                Code = request.Code,
-                Description = request.Description,
+                var subject = new Subject
+                {
+                    SubjectId = request.Id,
+                    Name = request.Name,
+                    Code = request.Code,
+                    Description = request.Description,
 
-            };
+                };
 
-            return await _subjectRepository.AddAsync(subject);
+                return await _subjectRepository.AddAsync(subject);
+            }catch( Exception ex)
+            {
+
+                // Log the exception or handle it as needed
+                throw new Exception("An error occurred while creating the subject.", ex);
+            }
 
 
 

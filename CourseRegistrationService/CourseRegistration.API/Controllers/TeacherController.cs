@@ -32,5 +32,6 @@ namespace CourseRegistration.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { Error = "Internal server error", Details = ex.Message });
             }
         }
+
     }
 }

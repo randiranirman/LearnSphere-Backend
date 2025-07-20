@@ -39,6 +39,9 @@ namespace CourseRegistration.Infrastructure.Data
                     .IsRequired();
                 entity.Property(e => e.Description)
                     .HasMaxLength(500);
+                entity.Property(e => e.Code)
+                    .IsRequired()
+                    .HasMaxLength(20);
                 entity.Property(e => e.MaxStudents)
                     .HasDefaultValue(30);
                 entity.Property(e => e.StartDate)
@@ -109,6 +112,7 @@ namespace CourseRegistration.Infrastructure.Data
                     .HasForeignKey(sc => sc.ClassId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
+
 
             // StudentRegistrationSubject entity configuration
             modelBuilder.Entity<StudentRegistrationSubject>(entity =>

@@ -2,7 +2,6 @@ using CourseRegistration.Application.Dtos;
 using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
-using Microsoft.AspNetCore.SignalR;
 
 namespace CourseRegistration.Application.Services
 {
@@ -13,7 +12,7 @@ namespace CourseRegistration.Application.Services
         private readonly IStudentRegistrationSubjectRepository _studentRegistrationSubjectRepository;
         private readonly IClassRepository _classRepository;
         private readonly ISubjectRepository _subjectRepository;
-        private readonly IHubContext<RegistrationHub> _hubContext;
+        private readonly INotificationService _notificationService;
 
         public StudentRegistrationService(
             IStudentClassRegistrationRepository registrationRepository,
@@ -21,14 +20,14 @@ namespace CourseRegistration.Application.Services
             IStudentRegistrationSubjectRepository studentRegistrationSubjectRepository,
             IClassRepository classRepository,
             ISubjectRepository subjectRepository,
-            IHubContext<RegistrationHub> hubContext)
+            INotificationService notificationService)
         {
             _registrationRepository = registrationRepository;
             _studentSubjectRepository = studentSubjectRepository;
             _studentRegistrationSubjectRepository = studentRegistrationSubjectRepository;
             _classRepository = classRepository;
             _subjectRepository = subjectRepository;
-            _hubContext = hubContext;
+            _notificationService = notificationService;
         }
 
         public async Task<StudentRegistrationResponseDto> RegisterStudentAsync(StudentRegistrationRequestDto request)
@@ -165,15 +164,30 @@ namespace CourseRegistration.Application.Services
                 response.IsSuccess = true;
                 response.Message = "Registration submitted successfully. Awaiting admin approval.";
 
-                // Notify admins about new registration via SignalR
-                await _hubContext.Clients.Group("Admins").SendAsync("NewRegistration", new
+                // Get subject names for notification
+                var subjectNames = new List<string>();
+                foreach (var subjectId in request.SubjectIds)
                 {
-                    StudentId = request.StudentId,
-                    ClassId = request.ClassId,
-                    SubjectIds = request.SubjectIds,
-                    IndexNumber = request.IndexNumber,
-                    RegisteredAt = DateTime.UtcNow
-                });
+                    var subject = await _subjectRepository.GetByIdAsync(subjectId);
+                    if (subject != null)
+                    {
+                        subjectNames.Add(subject.Name);
+                    }
+                }
+
+                // Get class name for notification
+                var classEntity = await _classRepository.GetByIdAsync(request.ClassId);
+                var className = classEntity?.Name ?? "Unknown Class";
+
+                // Notify admins about new registration via SignalR
+                await _notificationService.NotifyNewRegistrationAsync(
+                    request.StudentId, 
+                    request.ClassId, 
+                    className, 
+                    request.SubjectIds, 
+                    subjectNames, 
+                    request.IndexNumber
+                );
 
                 return response;
             }
@@ -212,15 +226,28 @@ namespace CourseRegistration.Application.Services
                     }
                 }
 
-                // Notify student about approval via SignalR
-                var subjectNames = registrationSubjects.Select(rs => rs.Subject.Name).ToList();
-                await _hubContext.Clients.Group($"Student_{registration.StudentId}").SendAsync("RegistrationApproved", new
+                // Get subject names for notification
+                var subjectNames = new List<string>();
+                foreach (var regSubject in registrationSubjects)
                 {
-                    RegistrationId = registrationId,
-                    SubjectNames = subjectNames,
-                    ClassName = registration.Class.Name,
-                    ApprovedAt = DateTime.UtcNow
-                });
+                    var subject = await _subjectRepository.GetByIdAsync(regSubject.SubjectId);
+                    if (subject != null)
+                    {
+                        subjectNames.Add(subject.Name);
+                    }
+                }
+
+                // Get class name
+                var classEntity = await _classRepository.GetByIdAsync(registration.ClassId);
+                var className = classEntity?.Name ?? "Unknown Class";
+
+                // Notify student about approval via SignalR
+                await _notificationService.NotifyRegistrationApprovedAsync(
+                    registration.StudentId,
+                    registrationId,
+                    className,
+                    subjectNames
+                );
 
                 return true;
             }
@@ -244,16 +271,30 @@ namespace CourseRegistration.Application.Services
 
                 await _registrationRepository.UpdateAsync(registration);
 
-                // Notify student about rejection via SignalR
+                // Get registration subjects and their names for notification
                 var registrationSubjects = await _studentRegistrationSubjectRepository.GetByRegistrationIdAsync(registrationId);
-                var subjectNames = registrationSubjects.Select(rs => rs.Subject.Name).ToList();
-                await _hubContext.Clients.Group($"Student_{registration.StudentId}").SendAsync("RegistrationRejected", new
+                var subjectNames = new List<string>();
+                foreach (var regSubject in registrationSubjects)
                 {
-                    RegistrationId = registrationId,
-                    SubjectNames = subjectNames,
-                    ClassName = registration.Class.Name,
-                    Reason = reason
-                });
+                    var subject = await _subjectRepository.GetByIdAsync(regSubject.SubjectId);
+                    if (subject != null)
+                    {
+                        subjectNames.Add(subject.Name);
+                    }
+                }
+
+                // Get class name
+                var classEntity = await _classRepository.GetByIdAsync(registration.ClassId);
+                var className = classEntity?.Name ?? "Unknown Class";
+
+                // Notify student about rejection via SignalR
+                await _notificationService.NotifyRegistrationRejectedAsync(
+                    registration.StudentId,
+                    registrationId,
+                    className,
+                    subjectNames,
+                    reason
+                );
 
                 return true;
             }

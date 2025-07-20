@@ -106,9 +106,30 @@ namespace UserManagement.API.Controllers
 
 
         }
+        [HttpPut("edit-teacher/{id}")]
+        public async Task<ActionResult<TeacherDto>> EditTeacherDetailsById(int id, TeacherDto request)
+        {
+            var result = await _userService.EditTeacherDetailsById(id, request);
+            if (result == null)
+            {
+                return NotFound("teacher is not found ");
+            }
+            return result;
+
+        }
+        [HttpPut("edit-student/{id}")]
+        public async Task<ActionResult<StudentDto>> EditStudentDetailsByID(int id, StudentDto request)
+        {
+            var result = await _userService.EditStudentDetailsByID(id, request);
+            if (result == null)
+            {
+                return NotFound("student is not found ");
+            }
+            return result;
+        }
+
 
     }
-
 
 
 

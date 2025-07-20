@@ -25,17 +25,27 @@ namespace CourseRegistration.API.Controllers
         }
 
         [HttpPost("create-subjects")]
-        public async Task<IActionResult> CreateSubject( CreateSubjectRequest request)
+        public async Task<IActionResult> CreateSubject([FromBody] CreateSubjectRequest request)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
-            var createdSubject = await _subjectService.CreatedSubjectAsync(request);
-
-
-            return Ok(createdSubject);
-
-
+            try
+            {
+                var subject = await _subjectService.CreatedSubjectAsync(request);
+                return Ok(subject); // or CreatedAtAction if you're returning a 201
+            }
+            catch (ApplicationException ex)
+            {
+                return Conflict(new { message = ex.Message }); // 409 Conflict for duplicate
+            }
+            catch (Exception ex)
+            {
+                // For other unexpected errors
+                return StatusCode(500, new { message = "An error occurred while creating the subject." });
+            }
         }
         [HttpGet("getAllSubjects")]
         public async Task<IActionResult> GetAllSubjectsAsync()

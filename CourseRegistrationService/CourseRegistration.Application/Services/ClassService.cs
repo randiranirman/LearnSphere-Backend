@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using CourseRegistration.Application.Dtos;
@@ -25,7 +26,9 @@ namespace CourseRegistration.Application.Services
             {
                 Name = request.Name,
                 Description = request.Description,
-                
+                Code= request.Code,
+                CreatedAt= DateTime.UtcNow,
+
             };
 
 
@@ -34,11 +37,26 @@ namespace CourseRegistration.Application.Services
             return createdClass;
         }
 
-        public Task<bool> DeleteClassAsync(int classId)
+        public async Task<bool> DeleteClassAsync(int classId)
         {
+            if (classId <= 0)
+            {
+                throw new ArgumentException("Class ID must be greater than 0", nameof(classId));
+            }
 
-            throw new Exception("Not implemented yet. Please implement the DeleteClassAsync method in ClassService.");
+            bool result = await _classRepository.DeleteAsync(classId);
+            return result;
+        }
 
+        public async Task<bool> DeleteClassByIdAsync(int classId)
+        {
+            if (classId <= 0)
+            {
+                throw new ArgumentException("Class ID must be greater than 0", nameof(classId));
+            }
+
+            bool result = await _classRepository.DeleteAsync(classId);
+            return result;
         }
 
         public async Task<IEnumerable<ClassDto>> GetAllClassesAsync()
@@ -55,13 +73,20 @@ namespace CourseRegistration.Application.Services
                 Id = c.ClassId,
                 Name = c.Name,
                 Description = c.Description,
+                Code = c.Code,
             });
 
             return classDtos;
         }
-        public Task<Class> GetClassByIdAsync(int classId)
+        public async Task<Class?> GetClassByIdAsync(int classId)
         {
-            throw new NotImplementedException();
+            var classToGet = await _classRepository.GetByIdAsync(classId);
+            if (classToGet == null)
+            {
+                return null;
+            }
+
+            return classToGet;
         }
 
         public Task<bool> UpdateClassAsync(CreateClassRequset request)
@@ -69,6 +94,6 @@ namespace CourseRegistration.Application.Services
             throw new NotImplementedException();
         }
 
-        
+
     }
 }

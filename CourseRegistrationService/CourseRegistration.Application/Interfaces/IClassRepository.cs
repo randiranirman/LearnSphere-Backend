@@ -9,12 +9,13 @@ namespace CourseRegistration.Application.Repositories
 {
     public  interface IClassRepository: IRepository<Class>
     {
-
+        new Task<bool> DeleteAsync(int id);
         Task<IEnumerable<Class>> GetClassesBySubjectIdAsync(int subjectId);
         Task<IEnumerable<Class>> GetClassesByGradeAsync(int grade);
         Task<IEnumerable<Class>> GetClassesByStatusAsync(ClassStatus status);
         Task<Class?> GetClassWithRegistrationsAsync(int classId);
         Task<IEnumerable<Class>> GetClassesByTeacherIdAsync(int teacherId);
         Task<IEnumerable<Class>> GetClassesByStudentIdAsync(int studentId);
+        
     }
 }

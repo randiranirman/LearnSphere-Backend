@@ -177,7 +177,7 @@ namespace UserManagement.Infrastructure.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("IsFirstLogin")
                         .HasColumnType("bit");
@@ -187,13 +187,13 @@ namespace UserManagement.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordResetToken")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("PasswordResetTokenExpiryTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RefreshToken")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("RefreshTokenExpiryTime")
                         .HasColumnType("datetime2");
@@ -204,13 +204,26 @@ namespace UserManagement.Infrastructure.Migrations
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("hashedPassword")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .HasDatabaseName("IX_Users_Email");
+
+                    b.HasIndex("PasswordResetToken")
+                        .HasDatabaseName("IX_Users_PasswordResetToken");
+
+                    b.HasIndex("RefreshToken")
+                        .HasDatabaseName("IX_Users_RefreshToken");
+
+                    b.HasIndex("Username")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Users_Username");
 
                     b.ToTable("Users", (string)null);
                 });

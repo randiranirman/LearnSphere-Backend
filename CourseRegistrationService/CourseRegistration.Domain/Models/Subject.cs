@@ -22,5 +22,7 @@ namespace CourseRegistration.Domain.Models
         public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; } = new List<TeacherSubject>();
         public virtual ICollection<ClassSubject> Classes { get; set; } = new List<ClassSubject>();
 
+
+
     }
 }

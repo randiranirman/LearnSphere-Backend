@@ -9,8 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+    });
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -19,9 +24,15 @@ builder.Services.AddSignalR();
 
 // Add HttpClient for external service calls
 builder.Services.AddHttpClient<IStudentHttpService, StudentHttpService>();
+builder.Services.AddHttpClient<ITeacherHttpService, TeacherHttpService>();
 
+// Add DbContext
 builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Database"),
+        sqlOptions =>
+        {
+            sqlOptions.CommandTimeout(300);
+        }));
 
 // Register Repositories
 builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
@@ -29,31 +40,35 @@ builder.Services.AddScoped<IStudentClassRegistrationRepository, StudentClassRegi
 builder.Services.AddScoped<IStudentRegistrationSubjectRepository, StudentRegistrationSubjectRepository>();
 builder.Services.AddScoped<IStudentSubjectRepository, StudentSubjectRepository>();
 builder.Services.AddScoped<IClassRepository, ClassRepository>();
+builder.Services.AddScoped<ITeacherClassRegistrationRepository, TeacherClassRegistrationRepository>();
+builder.Services.AddScoped<ITeacherSubjectRepository, TeacherSubjectRepository>();
 
 // Register Services
 builder.Services.AddScoped<ISubjectService, SubjectService>();
 builder.Services.AddScoped<IStudentHttpService, StudentHttpService>();
+builder.Services.AddScoped<ITeacherHttpService, TeacherHttpService>();
 builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationService>();
+builder.Services.AddScoped<ITeacherRegistrationService, TeacherRegistrationService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<IClassService, ClassService>();
 
-builder.Services.AddScoped<IClassService,ClassService>();
-// Add CORS
+// CORS Policies
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost",
-        policy => policy.WithOrigins("http://localhost:5173", "https://localhost:5173", "http://localhost:3000", "https://localhost:3000")
+        policy => policy.WithOrigins(
+                            "http://localhost:5173",
+                            "https://localhost:5173",
+                            "http://localhost:3000",
+                            "https://localhost:3000")
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials());
-    
-    options.AddPolicy("AllowAll",
-        policy => policy.AllowAnyOrigin()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod());
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger(c =>
@@ -61,12 +76,13 @@ if (app.Environment.IsDevelopment())
         c.OpenApiVersion = Microsoft.OpenApi.OpenApiSpecVersion.OpenApi2_0;
     });
     app.UseSwaggerUI();
-    // Use permissive CORS in development
-    app.UseCors("AllowAll");
+
+    // ? Apply correct CORS policy for development
+    app.UseCors("AllowLocalhost");
 }
 else
 {
-    // Use restrictive CORS in production
+    //  Apply the same policy in production (or a secure one for deployed frontend)
     app.UseCors("AllowLocalhost");
 }
 
@@ -76,7 +92,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Map SignalR hub
-app.MapHub<RegistrationHub>("/registrationHub");
+// ? Map your SignalR hub
+app.MapHub<RegistrationHub>("/notificationHub");
 
 app.Run();
