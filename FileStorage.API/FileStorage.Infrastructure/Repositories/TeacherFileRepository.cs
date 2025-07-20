@@ -127,6 +127,26 @@ namespace FileStorage.Infrastructure.Repositories
 
         }
 
+        public async Task<SubjectTopicDTO?> DeleteSubjectTopicByTopicId(int topicId)
+        {
+            var existingDomainModel = await _dbContext.SubjectTopics.FirstOrDefaultAsync(t => t.Id == topicId);
+
+            if (existingDomainModel is null)
+            {
+                return null;
+            }
+
+            _dbContext.Remove(existingDomainModel);
+            await _dbContext.SaveChangesAsync();
+
+            return new SubjectTopicDTO
+            {
+                Id = existingDomainModel.Id,
+                TopicName = existingDomainModel.TopicName,
+                SubjectId = existingDomainModel.SubjectId
+            };
+        }
+
         public async Task<SubjectTopicDTO?> EditSubjectTopic(int topicId, string newTopicName)
         {
             var existingSubjectDomainModel = await _dbContext.SubjectTopics.FirstOrDefaultAsync(t => t.Id == topicId);
@@ -224,6 +244,26 @@ namespace FileStorage.Infrastructure.Repositories
                 UploadLink = exisitingDomainModel.UploadLink,
                 Status = exisitingDomainModel.Status,
                 SubjectId = exisitingDomainModel.SubjectId
+            };
+        }
+
+        public async Task<MaterialDTO?> UpdateMaterialForSubjectTopic(int materialId, UpdateMaterialRequestDTO updateMaterialRequest)
+        {
+            var existingDomainModel = await _dbContext.Materials.FirstOrDefaultAsync(m => m.Id == materialId);
+            if (existingDomainModel is null)
+            {
+                return null;
+            }
+            existingDomainModel.SavedName = updateMaterialRequest.NewMaterialName;
+            existingDomainModel.UploadLink = updateMaterialRequest.UploadLink;
+
+            await _dbContext.SaveChangesAsync();
+            return new MaterialDTO
+            {
+                Id = existingDomainModel.Id,
+                SavedName = existingDomainModel.SavedName,
+                UploadLink = existingDomainModel.UploadLink,
+                TopicId = existingDomainModel.TopicId
             };
         }
     }

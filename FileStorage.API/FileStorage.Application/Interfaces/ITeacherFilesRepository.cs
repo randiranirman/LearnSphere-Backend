@@ -16,7 +16,11 @@ namespace FileStorage.Application.Interfaces
 
         public Task<CreateMaterialResponseDTO> CreateMaterialForTopics(int topicId, CreateMaterialRequestDTO createMaterialRequest);
 
+        public Task<MaterialDTO?> UpdateMaterialForSubjectTopic(int materialId, UpdateMaterialRequestDTO updateMaterialRequest);
+
         public Task<SubjectTopicDTO?> EditSubjectTopic(int topicId, string newTopicName);
+
+        public Task<SubjectTopicDTO?> DeleteSubjectTopicByTopicId(int topicId);
 
         public Task<MaterialDTO?> DeleteMaterialByMaterialId(int materialId);
 

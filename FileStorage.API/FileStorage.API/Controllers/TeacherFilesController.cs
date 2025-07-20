@@ -58,9 +58,9 @@ namespace FileStorage.API.Controllers
         }
 
         [HttpGet("files")]
-        public async Task<IActionResult> GetAllSubjectMaterialsBySubjectId([FromQuery] int subejctId)
+        public async Task<IActionResult> GetAllSubjectMaterialsBySubjectId([FromQuery] int subjectId)
         {
-            var response = await sender.Send(new GetAllSubjectMaterialsBySubjectIdQuery(subejctId));
+            var response = await sender.Send(new GetAllSubjectMaterialsBySubjectIdQuery(subjectId));
             return Ok(response);
         }
 
@@ -87,6 +87,15 @@ namespace FileStorage.API.Controllers
             return Ok(response);
         }
 
+        // delete a subject topic
+        [HttpDelete("files/delete-subject-topic")]
+        public async Task<IActionResult> DeleteSubjectTopicByTopicId([FromQuery] int topicId)
+        {
+            var response = await sender.Send(new DeleteSubjectTopicByTopicIdCommand(topicId));
+            return Ok(response);
+        }
+
+
         // create a material for a specific topic
         [HttpPost("files/create-material")]
         public async Task<IActionResult> CreateNewMaterialForSubjectTopic([FromQuery] int topicId, [FromBody] CreateMaterialRequestDTO createMaterialRequest)
@@ -96,6 +105,14 @@ namespace FileStorage.API.Controllers
             {
                 return NotFound();
             }
+            return Ok(response);
+        }
+
+        // edit a material 
+        [HttpPut("files/edit-material")]
+        public async Task<IActionResult> UpdateMaterialForSubjectTopic([FromQuery] int materialId, [FromBody] UpdateMaterialRequestDTO updateMaterialRequest)
+        {
+            var response = await sender.Send(new UpdateMaterialForSubjectTopicCommand(materialId, updateMaterialRequest));
             return Ok(response);
         }
 
