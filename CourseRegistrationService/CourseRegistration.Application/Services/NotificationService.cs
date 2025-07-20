@@ -17,7 +17,8 @@ namespace CourseRegistration.Application.Services
 
         public async Task NotifyNewRegistrationAsync(int studentId, int classId, string className, List<int> subjectIds, List<string> subjectNames, string indexNumber)
         {
-            await _hubContext.Clients.Group("Admins").SendAsync("NewRegistration", new
+            Console.WriteLine("notification send to admins ");
+            await _hubContext.Clients.Group("Admins").SendAsync("NotifyNewRegistrationAsync", new
             {
                 StudentId = studentId,
                 ClassId = classId,
@@ -30,7 +31,8 @@ namespace CourseRegistration.Application.Services
 
         public async Task NotifyRegistrationApprovedAsync(int studentId, int registrationId, string className, List<string> subjectNames)
         {
-            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("RegistrationApproved", new
+            Console.WriteLine("notification send to admins ");
+            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("NotifyRegistrationApproved", new
             {
                 RegistrationId = registrationId,
                 ClassName = className,
