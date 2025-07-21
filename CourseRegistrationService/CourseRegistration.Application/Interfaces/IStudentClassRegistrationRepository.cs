@@ -15,6 +15,7 @@ namespace CourseRegistration.Application.Repositories
         Task<IEnumerable<StudentClassRegistration>> GetByStatusAsync(RegistrationStatus status);
         Task<StudentClassRegistration?> GetByStudentAndClassAsync(int studentId, int classId);
         Task<IEnumerable<StudentClassRegistration>> GetPendingRegistrationsAsync();
+        Task<IEnumerable<StudentClassRegistration>> GetApprovedRegistrationsAsync();
         Task<int> GetRegisteredStudentCountAsync(int classId);
 
 

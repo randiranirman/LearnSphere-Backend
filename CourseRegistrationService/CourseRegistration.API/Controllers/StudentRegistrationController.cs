@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Dtos;
+using CourseRegistration.Application.BackgroundProcessing;
 
 namespace CourseRegistration.API.Controllers
 {
@@ -9,10 +10,12 @@ namespace CourseRegistration.API.Controllers
     public class StudentRegistrationController : ControllerBase
     {
         private readonly IStudentRegistrationService _registrationService;
+        private readonly StudentRegistrationQueueService _queueService;
 
-        public StudentRegistrationController(IStudentRegistrationService registrationService)
+        public StudentRegistrationController(IStudentRegistrationService registrationService, StudentRegistrationQueueService queueService)
         {
             _registrationService = registrationService;
+            _queueService = queueService;
         }
 
         /// <summary>
@@ -26,7 +29,20 @@ namespace CourseRegistration.API.Controllers
             try
             {
                 Console.WriteLine(request);
-                var result = await _registrationService.RegisterStudentAsync(request);
+                
+                // Create queue item with TaskCompletionSource to wait for result
+                var queueItem = new RegistrationQueueItem
+                {
+                    RequestDto = request,
+                    ResponseTcs = new TaskCompletionSource<StudentRegistrationResponseDto>()
+                };
+                
+                // Enqueue the registration request
+                _queueService.Enqueue(queueItem);
+                
+                // Wait for the queue to process the request and return result
+                var result = await queueItem.ResponseTcs.Task;
+                
                 Console.WriteLine(result);
                 
                 if (result.IsSuccess)
@@ -97,6 +113,20 @@ namespace CourseRegistration.API.Controllers
                 return StatusCode(500, new { Error = "Failed to retrieve pending registrations", Details = ex.Message });
             }
         }
+        [HttpGet("approved")]
+        public async Task<IActionResult> GetApprovedRegistrations()
+        {
+            try
+            {
+                var registrations = await _registrationService.GetApprovedRegistrationsAsync();
+                return Ok(registrations);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Error = "Failed to retrieve approved registrations", Details = ex.Message });
+            }
+        }
+
 
         /// <summary>
         /// Get a specific registration by ID

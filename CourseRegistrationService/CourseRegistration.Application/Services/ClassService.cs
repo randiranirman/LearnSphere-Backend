@@ -69,7 +69,24 @@ namespace CourseRegistration.Application.Services
                 throw new ArgumentException("Class ID must be greater than 0", nameof(classId));
             }
 
+            // Get class before deletion (to access its Code for cache invalidation)
+            var classToDelete = await _classRepository.GetByIdAsync(classId);
+            if (classToDelete == null)
+            {
+                throw new Exception($"Class with ID {classId} not found.");
+            }
+
+            // Perform deletion
             bool result = await _classRepository.DeleteAsync(classId);
+
+            if (result)
+            {
+                // Invalidate related cache entries
+                await _cacheService.RemoveAsync($"{CACHE_KEY_BY_CODE}{classToDelete.Code}");
+                await _cacheService.RemoveAsync(CACHE_KEY_ALL);
+                await _cacheService.RemoveAsync($"{CACHE_KEY_PREFIX}{classId}");
+            }
+
             return result;
         }
 

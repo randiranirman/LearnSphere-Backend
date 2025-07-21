@@ -1,3 +1,4 @@
+using CourseRegistration.Application.BackgroundProcessing;
 using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Application.Services;
@@ -129,6 +130,8 @@ builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationServi
 builder.Services.AddScoped<ITeacherRegistrationService, TeacherRegistrationService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IClassService, ClassService>();
+builder.Services.AddSingleton<StudentRegistrationQueueService>();
+builder.Services.AddHostedService(provider => provider.GetRequiredService<StudentRegistrationQueueService>());
 
 // CORS Policies
 builder.Services.AddCors(options =>
