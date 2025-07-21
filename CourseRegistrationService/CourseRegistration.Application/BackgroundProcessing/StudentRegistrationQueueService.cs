@@ -19,7 +19,7 @@ namespace CourseRegistration.Application.BackgroundProcessing
         private readonly SemaphoreSlim _signal;
         private readonly IServiceProvider _serviceProvider;
         private readonly ILogger<StudentRegistrationQueueService> _logger;
-        private readonly int _maxConcurrentProcessing = 10; // Handle up to 10 registrations simultaneously
+        private readonly int _maxConcurrentProcessing = 100; // Handle up to 10 registrations simultaneously
 
         public StudentRegistrationQueueService(
             IServiceProvider serviceProvider,
