@@ -772,6 +772,20 @@
           }
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/9.0.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Options": "9.0.7",
+          "StackExchange.Redis": "2.7.27"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "9.0.7.0",
+            "fileVersion": "9.0.725.31702"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration.Abstractions/9.0.7": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.7"
@@ -1067,6 +1081,29 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "dependencies": {
+          "System.IO.Pipelines": "9.0.7"
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.8.1080"
+          }
+        }
+      },
+      "StackExchange.Redis/2.7.27": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "runtime": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.7.27.49176"
+          }
+        }
+      },
       "System.Buffers/4.6.0": {},
       "System.ClientModel/1.0.0": {
         "dependencies": {
@@ -1355,6 +1392,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.AspNetCore.Mvc.Core": "2.3.0",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "9.0.7",
           "UserManagement.Domain": "1.0.0"
         },
         "runtime": {
@@ -1674,6 +1712,13 @@
       "path": "microsoft.extensions.caching.memory/9.0.7",
       "hashPath": "microsoft.extensions.caching.memory.9.0.7.nupkg.sha512"
     },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/9.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sZLFm5KOY+wq2kc7RXrnk9NXLTOSKQFYUx55EEgc7hxcJ3lMduSjKbq5WxzjykSTqOT3LTo7dQFeQ7mZfvghXQ==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/9.0.7",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.9.0.7.nupkg.sha512"
+    },
     "Microsoft.Extensions.Configuration.Abstractions/9.0.7": {
       "type": "package",
       "serviceable": true,
@@ -1855,6 +1900,20 @@
       "sha512": "sha512-YqueG52R/Xej4VVbKuRIodjiAhV0HR/XVbLbNrJhCZnzjnSjgMJ/dCdV0akQQxavX6hp/LC6rqLGLcXeQYU7XA==",
       "path": "mono.texttemplating/3.0.0",
       "hashPath": "mono.texttemplating.3.0.0.nupkg.sha512"
+    },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.7.27": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uqc2OQHglqj9/FfGQ6RkKFkZfHySfZlfmbCl+hc+u2I/IqunfelQ7QJi7ZhvAJxUtu80pildVX6NPLdDaUffOw==",
+      "path": "stackexchange.redis/2.7.27",
+      "hashPath": "stackexchange.redis.2.7.27.nupkg.sha512"
     },
     "System.Buffers/4.6.0": {
       "type": "package",

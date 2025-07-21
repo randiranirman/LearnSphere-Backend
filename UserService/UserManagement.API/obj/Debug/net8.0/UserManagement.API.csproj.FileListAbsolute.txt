@@ -371,3 +371,7 @@ D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\U
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

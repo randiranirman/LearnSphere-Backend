@@ -1,4 +1,6 @@
+using FileStorage.Application.Interfaces;
 using FileStorage.Infrastructure.Data;
+using FileStorage.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +16,8 @@ namespace FileStorage.Infrastructure
             {
                 options.UseSqlServer(configuration.GetConnectionString("Database"));
             });
+
+            services.AddScoped<ITeacherFilesRepository, TeacherFileRepository>();
 
             return services;
         }

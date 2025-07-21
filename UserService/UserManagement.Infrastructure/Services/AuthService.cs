@@ -27,20 +27,28 @@ namespace UserManagement.Infrastructure.Services
     {
         public async Task<bool> ChangeCredentials(string username, ChangeCredentialsDto request)
         {
+            Console.WriteLine($"Attempting to change credentials for username: {username}");
             var user = await context.Users.FirstOrDefaultAsync(u => u.Username == username);
+            
             if (user is null)
             {
+                Console.WriteLine($"User not found: {username}");
                 return false;
             }
+            
+            Console.WriteLine($"User found: {user.Name}");
             var hasher = new PasswordHasher<User>();
+            Console.WriteLine($"Temporary Password: '{request.TemporaryPassword}', New Password: '{request.NewPassword}', Confirm Password: '{request.ConfirmPassword}'");
+            
             if (hasher.VerifyHashedPassword(user, user.hashedPassword, request.TemporaryPassword) == PasswordVerificationResult.Failed)
             {
+                Console.WriteLine($"Temporary password verification failed for user: {username}");
                 return false;
-
-
             }
+            
             if (request.NewPassword != request.ConfirmPassword)
             {
+                Console.WriteLine($"Password mismatch: New password and confirm password don't match for user: {username}");
                 return false;
             }
             Console.WriteLine("credential has been changed ");
@@ -50,8 +58,7 @@ namespace UserManagement.Infrastructure.Services
             await context.SaveChangesAsync();
             
             // Invalidate user cache after password change
-            await _cache.RemoveMultipleAsync("AllUsers", $"User_{user.Id}");
-            Console.WriteLine($"Cache invalidated after credential change for user: {username}");
+           
             
             return true;
 
