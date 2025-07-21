@@ -350,6 +350,32 @@ namespace CourseRegistration.Application.Services
             });
         }
 
+
+
+        public async Task<IEnumerable<StudentRegistrationDto>> GetApprovedRegistrationsAsync()
+        {
+            var registrations = await _registrationRepository.GetApprovedRegistrationsAsync();
+            return registrations.Select(r => new StudentRegistrationDto
+            {
+                StudentRegistrationId = r.StudentRegistrationId,
+                StudentId = r.StudentId,
+                ClassId = r.ClassId,
+                ClassName = r.Class.Name,
+                Subjects = r.RegistrationSubjects.Select(rs => new SubjectDto
+                {
+                    SubjectId = rs.SubjectId,
+                    SubjectName = rs.Subject.Name
+                }).ToList(),
+                IndexNumber = r.IndexNumber,
+                Status = r.Status,
+                RegisteredAt = r.RegisteredAt,
+                ApprovedAt = r.ApprovedAt,
+                ApprovedByAdminId = r.ApprovedByAdminId,
+                Remarks = r.Remarks
+            });
+
+        }
+
         public async Task<StudentRegistrationDto?> GetRegistrationByIdAsync(int registrationId)
         {
             var registration = await _registrationRepository.GetByIdAsync(registrationId);
@@ -375,6 +401,8 @@ namespace CourseRegistration.Application.Services
                 Remarks = registration.Remarks
             };
         }
+
+
 
         public async Task<IEnumerable<SubjectDto>> GetStudentSubjectsAsync(int studentId)
         {

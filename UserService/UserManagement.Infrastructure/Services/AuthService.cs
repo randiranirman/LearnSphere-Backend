@@ -20,10 +20,11 @@ using UserManagement.Application.Repositories;
 using UserManagement.Domain.Domain;
 using UserManagement.Domain.Repositories;
 using UserManagement.Infrastructure.Data;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace UserManagement.Infrastructure.Services
 {
-    public class AuthService(UserDbContext context, IConfiguration configuration, IEmailService emailService, RedisCacheService _cache) : IAuthService
+    public class AuthService(UserDbContext context, IConfiguration configuration, IEmailService emailService, RedisCacheService _cache,IMemoryCache _memoryCache) : IAuthService
     {
         public async Task<bool> ChangeCredentials(string username, ChangeCredentialsDto request)
         {
@@ -88,11 +89,27 @@ namespace UserManagement.Infrastructure.Services
 
         public async Task<TokenResponseDto?> LoginAsync(UserDto request)
         {
-            var user = await context.Users.FirstOrDefaultAsync(u => u.Username == request.Username);
-            if (user is null)
+            User user;
+            try
             {
-                Console.WriteLine("this is line got executed");
-                return null;
+                // Use AsNoTracking for read-only operation to improve performance
+                user = await context.Users
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(u => u.Username == request.Username);
+                    
+                if (user is null)
+                {
+                    Console.WriteLine("User not found for username: " + request.Username);
+                    return null;
+                }
+
+                // Re-attach for tracking since we need to update refresh token
+                context.Entry(user).State = EntityState.Unchanged;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Database error during login: {ex.Message}");
+                throw new TimeoutException("Login request timed out. Please try again.", ex);
             }
 
             if (new PasswordHasher<User>().VerifyHashedPassword(user, user.hashedPassword, request.Password) == PasswordVerificationResult.Failed)
@@ -135,6 +152,14 @@ namespace UserManagement.Infrastructure.Services
 
         private string createToken(User user)
         {
+            string cacheKey =$"claims_{user.Id}";
+            // Check if claims are already cached
+            if (_memoryCache.TryGetValue(cacheKey, out List<Claim> cachedClaims))
+            {
+                Console.WriteLine($"Using cached claims for user {user.Username}");
+                return new JwtSecurityTokenHandler().WriteToken(new JwtSecurityToken(claims: cachedClaims));
+            }
+
             var claims = new List<Claim>
             {
 
@@ -193,6 +218,8 @@ namespace UserManagement.Infrastructure.Services
             // setting the refresh token null when user logging out 
             user.RefreshToken = null;
             user.RefreshTokenExpiryTime = null;
+            string cacheKey = $"User_{user.Id}";
+            _memoryCache.Remove(cacheKey); // Remove user-specific cache entry
             context.Users.Update(user);
             await context.SaveChangesAsync();
             return true;
@@ -234,92 +261,95 @@ namespace UserManagement.Infrastructure.Services
             
             request.Password = GenaratERandomPassword();
             
-            // Use database transaction for better performance and atomicity
-            using var transaction = await context.Database.BeginTransactionAsync();
+            // Use execution strategy to handle retries with transactions
+            var strategy = context.Database.CreateExecutionStrategy();
             
-            try
+            return await strategy.ExecuteAsync(async () =>
             {
-                var user = new User();
-                var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
-                user.IsFirstLogin = true;
-                user.Username = request.Username;
-                user.hashedPassword = hashedPassword;
-                user.Email = request.Email;
-                user.Name = request.Name;
-                user.Role = request.Role;
+                using var transaction = await context.Database.BeginTransactionAsync();
+                
+                try
+                {
+                    var user = new User();
+                    var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
+                    user.IsFirstLogin = true;
+                    user.Username = request.Username;
+                    user.hashedPassword = hashedPassword;
+                    user.Email = request.Email;
+                    user.Name = request.Name;
+                    user.Role = request.Role;
 
-                context.Users.Add(user);
-                
-                // Save user first to get the generated ID
-                await context.SaveChangesAsync();
-                
-                // Create role-specific entity in the same transaction
-                if (request.Role.ToLower() == "admin")
-                {
-                    var admin = new Admin()
+                    context.Users.Add(user);
+                    
+                    // Save user first to get the generated ID
+                    await context.SaveChangesAsync();
+                    
+                    // Create role-specific entity in the same transaction
+                    if (request.Role.ToLower() == "admin")
                     {
-                        Id = user.Id,
-                        FirstName = user.Name
-                    };
-                    context.Admins.Add(admin);
-                }
-                else if (request.Role.ToLower() == "teacher")
-                {
-                    var teacher = new Teacher()
-                    {
-                        Id = user.Id,
-                        FirstName = user.Name,
-                    };
-                    context.Teachers.Add(teacher);
-                }
-                else if (request.Role.ToLower() == "student")
-                {
-                    var student = new Student()
-                    {
-                        Id = user.Id,
-                        FirstName = user.Name,
-                    };
-                    context.Students.Add(student);
-                }
-                
-                // Save role-specific entity
-                await context.SaveChangesAsync();
-                await transaction.CommitAsync();
-                // Invalidate the cached user list using enhanced method
-                await _cache.TryRemoveAsync("AllUsers");
-                Console.WriteLine($"Cache invalidated after user registration: {user.Username}");
-
-                // Send email asynchronously without blocking the response
-                _ = Task.Run(async () => 
-                {
-                    try
-                    {
-                        await emailService.SendEmailToUserAsync(user.Email, EmailTemplates.WelcomeSubject, 
-                            EmailTemplates.WelcomeBody(user.Name, user.Username, request.Password));
+                        var admin = new Admin()
+                        {
+                            Id = user.Id,
+                            FirstName = user.Name
+                        };
+                        context.Admins.Add(admin);
                     }
-                    catch (Exception ex)
+                    else if (request.Role.ToLower() == "teacher")
                     {
-                        // Log the email sending error but don't fail user creation
-                        Console.WriteLine($"Failed to send welcome email to {user.Email}: {ex.Message}");
+                        var teacher = new Teacher()
+                        {
+                            Id = user.Id,
+                            FirstName = user.Name,
+                        };
+                        context.Teachers.Add(teacher);
                     }
-                });
+                    else if (request.Role.ToLower() == "student")
+                    {
+                        var student = new Student()
+                        {
+                            Id = user.Id,
+                            FirstName = user.Name,
+                        };
+                        context.Students.Add(student);
+                    }
+                    
+                    // Save role-specific entity
+                    await context.SaveChangesAsync();
+                    await transaction.CommitAsync();
+                    
+                    // Invalidate the cached user list using enhanced method
+                    await _cache.TryRemoveAsync("AllUsers");
+                    Console.WriteLine($"Cache invalidated after user registration: {user.Username}");
 
-                return new UserDto
+                    // Send email asynchronously without blocking the response
+                    _ = Task.Run(async () => 
+                    {
+                        try
+                        {
+                            await emailService.SendEmailToUserAsync(user.Email, EmailTemplates.WelcomeSubject, 
+                                EmailTemplates.WelcomeBody(user.Name, user.Username, request.Password));
+                        }
+                        catch (Exception ex)
+                        {
+                            // Log the email sending error but don't fail user creation
+                            Console.WriteLine($"Failed to send welcome email to {user.Email}: {ex.Message}");
+                        }
+                    });
+
+                    return new UserDto
+                    {
+                        Username = request.Username,
+                        Name = request.Name,
+                        Role = request.Role,
+                        Email = request.Email
+                    };
+                }
+                catch (Exception)
                 {
-                    Username = request.Username,
-                    Name = request.Name,
-                    Role = request.Role,
-                    Email = request.Email
-                };
-            }
-            catch (Exception)
-            {
-                await transaction.RollbackAsync();
-                throw;
-            }
-
-
-           
+                    await transaction.RollbackAsync();
+                    throw;
+                }
+            });
         }
 
         public async Task<bool> RequsetPasswordReset( ResetPasswordRequestDto request)
