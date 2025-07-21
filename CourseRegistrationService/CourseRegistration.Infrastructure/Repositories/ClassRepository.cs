@@ -13,6 +13,8 @@ namespace CourseRegistration.Infrastructure.Repositories
     {
         private readonly CourseRegistrationDbcontext _context;
 
+        public DbContext Context => _context;
+
         public ClassRepository(CourseRegistrationDbcontext context)
         {
             _context = context;

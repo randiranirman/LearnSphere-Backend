@@ -14,6 +14,9 @@ namespace CourseRegistration.Infrastructure.Repositories;
 public class SubjectRepository : ISubjectRepository, IRepository<Subject>
 {
     private readonly CourseRegistrationDbcontext _context;
+
+    public DbContext Context => _context;
+
     public SubjectRepository(CourseRegistrationDbcontext context)
     {
         _context = context;

@@ -3,7 +3,6 @@ using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
 using Microsoft.AspNetCore.SignalR;
-using System.Transactions;
 
 namespace CourseRegistration.Application.Services
 {
@@ -79,10 +78,7 @@ namespace CourseRegistration.Application.Services
                     return response;
                 }
 
-                // Use transaction for atomic operations
-                using var transaction = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
-
-                // Register teacher for classes with subjects
+                // Register teacher for classes and subjects (no transaction needed)
                 var classRegistrationIds = new List<int>();
                 var subjectRegistrationIds = new List<int>();
 
@@ -137,8 +133,6 @@ namespace CourseRegistration.Application.Services
                         subjectRegistrationIds.Add(subjectRegistration.Id);
                     }
                 }
-
-                transaction.Complete();
 
                 // Send SignalR notification to admin
                 await _hubContext.Clients.Group("Admins").SendAsync("NewTeacherRegistration", new
