@@ -10,6 +10,7 @@ namespace CourseRegistration.Application.Interfaces
         Task<bool> RejectRegistrationAsync(int registrationId, int adminId, string reason);
         Task<IEnumerable<StudentRegistrationDto>> GetStudentRegistrationsAsync(int studentId);
         Task<IEnumerable<StudentRegistrationDto>> GetPendingRegistrationsAsync();
+        Task<IEnumerable<StudentRegistrationDto>> GetApprovedRegistrationsAsync();
         Task<StudentRegistrationDto?> GetRegistrationByIdAsync(int registrationId);
         Task<IEnumerable<SubjectDto>> GetStudentSubjectsAsync(int studentId);
     }

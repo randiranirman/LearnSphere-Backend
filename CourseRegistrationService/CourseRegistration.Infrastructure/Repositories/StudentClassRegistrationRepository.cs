@@ -102,6 +102,14 @@ namespace CourseRegistration.Infrastructure.Repositories
                 .Where(x => x.Status == RegistrationStatus.Pending)
                 .ToListAsync();
         }
+        async Task<IEnumerable<StudentClassRegistration>> IStudentClassRegistrationRepository.GetApprovedRegistrationsAsync()
+        {
+            return await _context.StudentClassRegistrations.Include(x => x.Class)
+                .Include(x => x.RegistrationSubjects)
+                .ThenInclude(rs => rs.Subject)  
+                .Where( x => x.Status== RegistrationStatus.Approved)
+                .ToListAsync();
+        }
 
         public async Task<int> GetRegisteredStudentCountAsync(int classId)
         {
@@ -115,5 +123,7 @@ namespace CourseRegistration.Infrastructure.Repositories
             await _context.SaveChangesAsync();
             return entity;
         }
+
+        
     }
 }

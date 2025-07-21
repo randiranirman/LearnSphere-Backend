@@ -19,9 +19,15 @@ builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database"),
         sqlOptions =>
         {
-            sqlOptions.CommandTimeout(300);
+            sqlOptions.CommandTimeout(120); // Reduced from 300 to 120 seconds
             sqlOptions.MigrationsAssembly("UserManagement.Infrastructure");
+            sqlOptions.EnableRetryOnFailure(
+                maxRetryCount: 3,
+                maxRetryDelay: TimeSpan.FromSeconds(10),
+                errorNumbersToAdd: null);
         }));
+
+builder.Services.AddMemoryCache();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
