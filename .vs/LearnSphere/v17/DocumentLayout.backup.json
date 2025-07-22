@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FABF00EB-BAFA-435E-85C9-A0CE16672273}|FileStorage.API\\FileStorage.API\\FileStorage.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FABF00EB-BAFA-435E-85C9-A0CE16672273}|FileStorage.API\\FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\filestorage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FABF00EB-BAFA-435E-85C9-A0CE16672273}|FileStorage.API\\FileStorage.API\\FileStorage.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.api\\controllers\\studentfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FABF00EB-BAFA-435E-85C9-A0CE16672273}|FileStorage.API\\FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\filestorage.api\\controllers\\studentfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10715918-2E06-4011-BF73-81FD5624E30A}|FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\querries\\getsubmissionforspecificstudentandassignmentquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10715918-2E06-4011-BF73-81FD5624E30A}|FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.api\\filestorage.application\\querries\\getsubmissionforspecificstudentandassignmentquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F5FC7C8-B5AB-48AC-88D4-5FC5D7C6FC78}|FileStorage.API\\FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.infrastructure\\repositories\\studentfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F5FC7C8-B5AB-48AC-88D4-5FC5D7C6FC78}|FileStorage.API\\FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|solutionrelative:filestorage.api\\filestorage.infrastructure\\repositories\\studentfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FABF00EB-BAFA-435E-85C9-A0CE16672273}|FileStorage.API\\FileStorage.API\\FileStorage.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FABF00EB-BAFA-435E-85C9-A0CE16672273}|FileStorage.API\\FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\filestorage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FABF00EB-BAFA-435E-85C9-A0CE16672273}|FileStorage.API\\FileStorage.API\\FileStorage.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.api\\controllers\\studentfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FABF00EB-BAFA-435E-85C9-A0CE16672273}|FileStorage.API\\FileStorage.API\\FileStorage.API.csproj|solutionrelative:filestorage.api\\filestorage.api\\controllers\\studentfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F5FC7C8-B5AB-48AC-88D4-5FC5D7C6FC78}|FileStorage.API\\FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.infrastructure\\repositories\\studentfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F5FC7C8-B5AB-48AC-88D4-5FC5D7C6FC78}|FileStorage.API\\FileStorage.Infrastructure\\FileStorage.Infrastructure.csproj|solutionrelative:filestorage.api\\filestorage.infrastructure\\repositories\\studentfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10715918-2E06-4011-BF73-81FD5624E30A}|FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\dtos\\submissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Program.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.API\\Program.cs",
@@ -105,13 +105,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "StudentFilesController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\StudentFilesController.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.API\\Controllers\\StudentFilesController.cs",
               "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\StudentFilesController.cs",
               "RelativeToolTip": "FileStorage.API\\FileStorage.API\\Controllers\\StudentFilesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T10:45:44.936Z",
               "EditorCaption": ""
@@ -131,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StudentFileRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\StudentFileRepository.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.Infrastructure\\Repositories\\StudentFileRepository.cs",

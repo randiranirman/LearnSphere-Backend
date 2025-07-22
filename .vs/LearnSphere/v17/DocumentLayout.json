@@ -74,8 +74,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.API\\Program.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAADwvzUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T14:53:39.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T14:53:39.695Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Application\\Querries\\GetSubmissionForSpecificStudentAndAssignmentQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T13:34:29.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T13:34:29.602Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Application\\Commands\\DeleteSubmissionBySubmissionIdCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T13:17:11.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T13:17:11.618Z"
             },
             {
               "$type": "Document",
@@ -111,7 +108,7 @@
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.API\\Controllers\\StudentFilesController.cs",
               "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\StudentFilesController.cs",
               "RelativeToolTip": "FileStorage.API\\FileStorage.API\\Controllers\\StudentFilesController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBwAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T10:45:44.936Z",
               "EditorCaption": ""
@@ -126,8 +123,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Application\\Interfaces\\IStudentFilesRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T12:29:07.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T12:29:07.773Z"
             },
             {
               "$type": "Document",
@@ -139,8 +135,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Infrastructure\\Repositories\\StudentFileRepository.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAYwDUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T12:48:57.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T12:48:57.178Z"
             },
             {
               "$type": "Document",
@@ -152,8 +147,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Application\\DTOs\\SubmissionDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T12:42:24.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T12:42:24.249Z"
             },
             {
               "$type": "Document",
@@ -165,8 +159,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Application\\Commands\\EditSubmissionForAssignmentCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T13:08:09.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T13:08:09.441Z"
             },
             {
               "$type": "Document",
@@ -178,8 +171,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Infrastructure\\DependencyInjection.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T13:20:52.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T13:20:52.71Z"
             },
             {
               "$type": "Document",
@@ -191,8 +183,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Domain\\Entities\\Submission.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T12:18:14.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T12:18:14.579Z"
             },
             {
               "$type": "Document",
@@ -204,8 +195,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Application\\Commands\\MadeSubmissionForAssignmentCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T12:41:18.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T12:41:18.543Z"
             },
             {
               "$type": "Document",
@@ -217,8 +207,7 @@
               "RelativeToolTip": "FileStorage.API\\FileStorage.Application\\DTOs\\MadeSubmissionByStudentRequestDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T12:23:31.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T12:23:31.31Z"
             }
           ]
         }
