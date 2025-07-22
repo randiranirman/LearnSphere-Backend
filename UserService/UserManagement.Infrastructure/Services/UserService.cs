@@ -200,14 +200,6 @@ namespace UserManagement.Infrastructure.Services
 
             teacher.Email = requset.Email;
             teacher.ContactNumber = requset.ContactNumber;
-            
-            // Update name components if provided - FullName is computed from FirstName + LastName
-            if (!string.IsNullOrEmpty(requset.TeacherName))
-            {
-                var nameParts = requset.TeacherName.Trim().Split(' ', 2);
-                teacher.FirstName = nameParts[0];
-                teacher.LastName = nameParts.Length > 1 ? nameParts[1] : string.Empty;
-            }
 
             _context.Teachers.Update(teacher);
             await _context.SaveChangesAsync();

@@ -14,7 +14,7 @@ namespace CourseRegistration.Infrastructure.Data
         public CourseRegistrationDbcontext CreateDbContext(string[] args)
             
         {
-            string connectionString = "Data Source=RANDIRANIRMAN\\SQLEXPRESS;Initial Catalog=LearnSphereDatabase;Encrypt=False;Trust Server Certificate=True;Authentication=ActiveDirectoryIntegrated";
+            string connectionString = "Data Source=localhost\\MSSQLSERVER02;Initial Catalog=LearnSphereDatabase;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
             var optionsBuilder = new DbContextOptionsBuilder<CourseRegistrationDbcontext>();
             optionsBuilder.UseSqlServer(connectionString);
             return new CourseRegistrationDbcontext(optionsBuilder.Options);

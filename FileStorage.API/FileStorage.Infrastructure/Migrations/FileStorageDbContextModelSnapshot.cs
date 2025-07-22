@@ -22,7 +22,7 @@ namespace FileStorage.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FileStorage.Domain.Entities.MetirialEntity", b =>
+            modelBuilder.Entity("FileStorage.Domain.Entities.Assignment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,9 +30,35 @@ namespace FileStorage.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("FileType")
+                    b.Property<int>("ClassId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DueTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SubjectId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UploadLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Assignment", (string)null);
+                });
+
+            modelBuilder.Entity("FileStorage.Domain.Entities.Material", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("SavedName")
                         .IsRequired()
@@ -49,35 +75,10 @@ namespace FileStorage.Infrastructure.Migrations
 
                     b.HasIndex("TopicId");
 
-                    b.ToTable("MetirialEntities");
+                    b.ToTable("Material", (string)null);
                 });
 
-            modelBuilder.Entity("FileStorage.Domain.Entities.SubjectEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AssignedTeacherId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateOnly>("CreatedDate")
-                        .HasColumnType("date");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AssignedTeacherId");
-
-                    b.ToTable("SubjectEntities");
-                });
-
-            modelBuilder.Entity("FileStorage.Domain.Entities.SubjectTopicEntity", b =>
+            modelBuilder.Entity("FileStorage.Domain.Entities.SubjectTopic", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -89,16 +90,15 @@ namespace FileStorage.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("TopicName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SubjectId");
-
-                    b.ToTable("SubjectTopicEntities");
+                    b.ToTable("SubjectTopic", (string)null);
                 });
 
-            modelBuilder.Entity("FileStorage.Domain.Entities.TeacherEntity", b =>
+            modelBuilder.Entity("FileStorage.Domain.Entities.Submission", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -106,76 +106,63 @@ namespace FileStorage.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Address")
+                    b.Property<DateTime>("AssignmentDueTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("AssignmentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SubmissionName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateOnly>("BirthDay")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("SubmitedTime")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("ContactNo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
+                    b.Property<string>("UploadLink")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TeacherEntities");
+                    b.HasIndex("AssignmentId");
+
+                    b.ToTable("Submission", (string)null);
                 });
 
-            modelBuilder.Entity("FileStorage.Domain.Entities.MetirialEntity", b =>
+            modelBuilder.Entity("FileStorage.Domain.Entities.Material", b =>
                 {
-                    b.HasOne("FileStorage.Domain.Entities.SubjectTopicEntity", "SubjectTopicEntity")
-                        .WithMany("MetirialEntities")
+                    b.HasOne("FileStorage.Domain.Entities.SubjectTopic", "SubjectTopic")
+                        .WithMany("Materials")
                         .HasForeignKey("TopicId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("SubjectTopicEntity");
+                    b.Navigation("SubjectTopic");
                 });
 
-            modelBuilder.Entity("FileStorage.Domain.Entities.SubjectEntity", b =>
+            modelBuilder.Entity("FileStorage.Domain.Entities.Submission", b =>
                 {
-                    b.HasOne("FileStorage.Domain.Entities.TeacherEntity", "TeacherEntity")
-                        .WithMany("SubjectEntities")
-                        .HasForeignKey("AssignedTeacherId")
+                    b.HasOne("FileStorage.Domain.Entities.Assignment", "Assignment")
+                        .WithMany("Submissions")
+                        .HasForeignKey("AssignmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("TeacherEntity");
+                    b.Navigation("Assignment");
                 });
 
-            modelBuilder.Entity("FileStorage.Domain.Entities.SubjectTopicEntity", b =>
+            modelBuilder.Entity("FileStorage.Domain.Entities.Assignment", b =>
                 {
-                    b.HasOne("FileStorage.Domain.Entities.SubjectEntity", "SubjectEntity")
-                        .WithMany("SubjectTopicEntities")
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("SubjectEntity");
+                    b.Navigation("Submissions");
                 });
 
-            modelBuilder.Entity("FileStorage.Domain.Entities.SubjectEntity", b =>
+            modelBuilder.Entity("FileStorage.Domain.Entities.SubjectTopic", b =>
                 {
-                    b.Navigation("SubjectTopicEntities");
-                });
-
-            modelBuilder.Entity("FileStorage.Domain.Entities.SubjectTopicEntity", b =>
-                {
-                    b.Navigation("MetirialEntities");
-                });
-
-            modelBuilder.Entity("FileStorage.Domain.Entities.TeacherEntity", b =>
-                {
-                    b.Navigation("SubjectEntities");
+                    b.Navigation("Materials");
                 });
 #pragma warning restore 612, 618
         }

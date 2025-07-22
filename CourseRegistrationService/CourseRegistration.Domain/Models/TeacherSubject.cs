@@ -34,7 +34,7 @@ namespace CourseRegistration.Domain.Models
         
         public bool IsActive { get; set; } = true;
 
-        public Subject Subject { get; set; } = null!;
+        public Subject Subject { get; set; }
 
 
     }
