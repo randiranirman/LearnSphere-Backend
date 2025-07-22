@@ -1,40 +1,116 @@
+using CourseRegistration.Application.BackgroundProcessing;
 using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Application.Services;
 using CourseRegistration.Infrastructure.Data;
 using CourseRegistration.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// =============================================================================
+// CONFIGURATION SERVICES
+// =============================================================================
 
+// Add controllers with JSON configuration
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
         options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+        options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
     });
 
+// Add API documentation
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo 
+    { 
+        Title = "Course Registration API", 
+        Version = "v1",
+        Description = "API for managing course registrations, subjects, and student-teacher relationships"
+    });
+});
 
-// Add SignalR
-builder.Services.AddSignalR();
+// =============================================================================
+// INFRASTRUCTURE SERVICES
+// =============================================================================
 
-// Add HttpClient for external service calls
-builder.Services.AddHttpClient<IStudentHttpService, StudentHttpService>();
-builder.Services.AddHttpClient<ITeacherHttpService, TeacherHttpService>();
-
-// Add DbContext
+// Add Database Context
 builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
+{
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database"),
         sqlOptions =>
         {
             sqlOptions.CommandTimeout(300);
-        }));
+            sqlOptions.EnableRetryOnFailure(maxRetryCount: 3, maxRetryDelay: TimeSpan.FromSeconds(30), errorNumbersToAdd: null);
+        });
+    
+    // Enable sensitive data logging in development
+    if (builder.Environment.IsDevelopment())
+    {
+        options.EnableSensitiveDataLogging();
+        options.EnableDetailedErrors();
+    }
+});
 
-// Register Repositories
+// Add Redis Caching
+var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
+if (!string.IsNullOrEmpty(redisConnectionString))
+{
+    // Add StackExchange Redis for distributed caching
+    builder.Services.AddStackExchangeRedisCache(options =>
+    {
+        options.Configuration = redisConnectionString;
+        options.InstanceName = "CourseRegistrationService";
+    });
+    
+    // Add Redis Connection Multiplexer for direct Redis operations if needed
+    builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+    {
+        var configuration = ConfigurationOptions.Parse(redisConnectionString, true);
+        configuration.ReconnectRetryPolicy = new ExponentialRetry(5000); // 5 second retry
+        configuration.KeepAlive = 180;
+        return ConnectionMultiplexer.Connect(configuration);
+    });
+    
+    // Register Cache Service
+    builder.Services.AddSingleton<ICacheService, RedisCacheService>();
+}
+else
+{
+    // Fallback to in-memory cache if Redis is not configured
+    builder.Services.AddMemoryCache();
+    // You would need to implement an in-memory cache service here if needed
+    // For now, we'll register the Redis service anyway but it might fail
+    builder.Services.AddSingleton<ICacheService, RedisCacheService>();
+}
+
+// Add SignalR for real-time notifications
+builder.Services.AddSignalR(options =>
+{
+    options.EnableDetailedErrors = builder.Environment.IsDevelopment();
+});
+
+// Add HttpClient for external service calls
+builder.Services.AddHttpClient<IStudentHttpService, StudentHttpService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["ExternalServices:UserManagement:BaseUrl"] ?? "https://localhost:7033");
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
+
+builder.Services.AddHttpClient<ITeacherHttpService, TeacherHttpService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["ExternalServices:UserManagement:BaseUrl"] ?? "https://localhost:7033");
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
+
+// =============================================================================
+// REPOSITORY REGISTRATIONS
+// =============================================================================
+
 builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
 builder.Services.AddScoped<IStudentClassRegistrationRepository, StudentClassRegistrationRepository>();
 builder.Services.AddScoped<IStudentRegistrationSubjectRepository, StudentRegistrationSubjectRepository>();
@@ -43,7 +119,10 @@ builder.Services.AddScoped<IClassRepository, ClassRepository>();
 builder.Services.AddScoped<ITeacherClassRegistrationRepository, TeacherClassRegistrationRepository>();
 builder.Services.AddScoped<ITeacherSubjectRepository, TeacherSubjectRepository>();
 
-// Register Services
+// =============================================================================
+// APPLICATION SERVICE REGISTRATIONS
+// =============================================================================
+
 builder.Services.AddScoped<ISubjectService, SubjectService>();
 builder.Services.AddScoped<IStudentHttpService, StudentHttpService>();
 builder.Services.AddScoped<ITeacherHttpService, TeacherHttpService>();
@@ -51,6 +130,8 @@ builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationServi
 builder.Services.AddScoped<ITeacherRegistrationService, TeacherRegistrationService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IClassService, ClassService>();
+builder.Services.AddSingleton<StudentRegistrationQueueService>();
+builder.Services.AddHostedService(provider => provider.GetRequiredService<StudentRegistrationQueueService>());
 
 // CORS Policies
 builder.Services.AddCors(options =>

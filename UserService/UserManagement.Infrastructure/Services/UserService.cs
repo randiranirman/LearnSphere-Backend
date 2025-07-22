@@ -200,7 +200,6 @@ namespace UserManagement.Infrastructure.Services
 
             teacher.Email = requset.Email;
             teacher.ContactNumber = requset.ContactNumber;
-            teacher.FirstName = requset.TeacherName; // Update name if provided
 
             _context.Teachers.Update(teacher);
             await _context.SaveChangesAsync();

@@ -14,27 +14,41 @@ namespace CourseRegistration.Application.Services
     public class ClassService : IClassService
 
     {
-        IClassRepository _classRepository;
+        private readonly IClassRepository _classRepository;
+        private readonly ICacheService _cacheService;
+        private const string CACHE_KEY_PREFIX = "class_";
+        private const string CACHE_KEY_ALL = "classes_all";
+        private const string CACHE_KEY_BY_CODE = "class_code_";
 
-        public ClassService(IClassRepository classRepository)
+        public ClassService(IClassRepository classRepository, ICacheService cacheService)
         {
             _classRepository = classRepository;
+            _cacheService = cacheService;
         }
         public async Task<Class> CreateClassAsync(CreateClassRequset request)
         {
-            var createdClass = new Class
+            try
             {
-                Name = request.Name,
-                Description = request.Description,
-                Code= request.Code,
-                CreatedAt= DateTime.UtcNow,
+                var createdClass = new Class
+                {
+                    Name = request.Name,
+                    Description = request.Description,
+                    Code = request.Code,
+                    CreatedAt = DateTime.UtcNow,
 
-            };
+                };
+                // clear the cache after creating new class 
+                await _cacheService.RemoveAsync(CACHE_KEY_ALL);
+                await _cacheService.RemoveAsync($"{CACHE_KEY_BY_CODE}{createdClass.Code}");
 
 
-            await _classRepository.AddAsync(createdClass);
+                await _classRepository.AddAsync(createdClass);
 
-            return createdClass;
+                return createdClass;
+            }catch(Exception e )
+            {
+                throw new Exception("An error occured while creating the class", e);
+            }
         }
 
         public async Task<bool> DeleteClassAsync(int classId)
@@ -55,13 +69,37 @@ namespace CourseRegistration.Application.Services
                 throw new ArgumentException("Class ID must be greater than 0", nameof(classId));
             }
 
+            // Get class before deletion (to access its Code for cache invalidation)
+            var classToDelete = await _classRepository.GetByIdAsync(classId);
+            if (classToDelete == null)
+            {
+                throw new Exception($"Class with ID {classId} not found.");
+            }
+
+            // Perform deletion
             bool result = await _classRepository.DeleteAsync(classId);
+
+            if (result)
+            {
+                // Invalidate related cache entries
+                await _cacheService.RemoveAsync($"{CACHE_KEY_BY_CODE}{classToDelete.Code}");
+                await _cacheService.RemoveAsync(CACHE_KEY_ALL);
+                await _cacheService.RemoveAsync($"{CACHE_KEY_PREFIX}{classId}");
+            }
+
             return result;
         }
 
         public async Task<IEnumerable<ClassDto>> GetAllClassesAsync()
         {
+            var cachedClass = await _cacheService.GetAsync<IEnumerable<ClassDto>>(CACHE_KEY_ALL);
+            if (cachedClass != null)
+            {
+                Console.WriteLine("there are the retuned values from cache");
+                return cachedClass;
+            }
             var classes = await _classRepository.GetAllAsync();
+
 
             if (classes == null || !classes.Any())
             {
@@ -75,6 +113,8 @@ namespace CourseRegistration.Application.Services
                 Description = c.Description,
                 Code = c.Code,
             });
+            // cache the result 
+            await _cacheService.SetAsync(CACHE_KEY_ALL, classDtos,TimeSpan.FromMinutes(30));
 
             return classDtos;
         }
