@@ -102,9 +102,15 @@ namespace CourseRegistration.Infrastructure.Repositories
 
         public async Task<Class> UpdateAsync(Class entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return entity;
+           try
+            {
+                _context.Entry(entity).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return entity;
+            }catch( Exception e )
+            {
+                return null;
+            }
         }
 
         async Task IRepository<Class>.DeleteAsync(int id)

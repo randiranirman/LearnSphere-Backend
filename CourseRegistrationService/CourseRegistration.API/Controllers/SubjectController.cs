@@ -24,6 +24,8 @@ namespace CourseRegistration.API.Controllers
 
         }
 
+
+       
         [HttpPost("create-subjects")]
         public async Task<IActionResult> CreateSubject([FromBody] CreateSubjectRequest request)
         {
@@ -77,6 +79,31 @@ namespace CourseRegistration.API.Controllers
              return Ok(subject);
         }
 
+        //[Authorize(Roles ="admin")]
+        [HttpPut("subject/update/{id}")]
+        public async Task<IActionResult> updateSubjectAsync(int id, [FromBody] CreateSubjectRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var updatedSubject = await _subjectService.UpdateSubjectAsync(id, request);
+
+                if (updatedSubject == null)
+                {
+                    return NotFound(new { message = "Subject not found." });
+                }
+
+                return Ok(updatedSubject);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while updating the subject." });
+            }
+        }
+
         [Authorize(Roles ="teacher")]
         [HttpGet("getSubjecstByTeacherId/{teacherId}")]
         public async Task<IActionResult> GetSubjectByTeahcerIDAsync( int teacherId)
@@ -93,9 +120,9 @@ namespace CourseRegistration.API.Controllers
         [Authorize(Roles ="student")]
         [HttpGet("getSubjectsByStudentId/{studentId}")]
 
-        public  async Task<IActionResult> GetSubjectByStudentIDAsync( int studentId)
+        public  async Task<IActionResult> GetSubjectsByStudentIDAsync( int studentId)
         {
-            var subjects = await _subjectService.GetSubjectByIdAsync(studentId);
+            var subjects = await _subjectService.GetSubjectsByStudentIdAsync(studentId);
 
 
             if( subjects == null)
@@ -105,6 +132,48 @@ namespace CourseRegistration.API.Controllers
 
 
             return Ok(subjects);
+        }
+
+        
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteSubject(int id)
+        {
+            try
+            {
+                var result = await _subjectService.DeleteSubjectAsync(id);
+                
+                if (!result)
+                {
+                    return NotFound(new { message = "Subject not found or could not be deleted." });
+                }
+                
+                return Ok(new { message = "Subject deleted successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while deleting the subject." });
+            }
+        }
+
+
+       
+        [Authorize(Roles ="admin")]
+        [HttpPost("clear-cache")]
+        public async Task<IActionResult> ClearSubjectCache()
+        {
+            try
+            {
+                var cacheService = HttpContext.RequestServices.GetRequiredService<ICacheService>();
+                
+                // Clear all subject-related cache
+                await cacheService.RemoveByPatternAsync("subject*");
+                
+                return Ok(new { message = "All subject cache cleared successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while clearing cache.", error = ex.Message });
+            }
         }
 
 

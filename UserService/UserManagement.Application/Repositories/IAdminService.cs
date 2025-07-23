@@ -16,7 +16,8 @@ namespace UserManagement.Application.Repositories
         public Task<IEnumerable<Admin>> GetAllAdmins();
         public Task<Admin> GetAdminDetails(int id);
         public Task<IEnumerable<UserDto>> ReadCsvFile(Stream fileStream);
+        public Task<bool> EditUserDetails(  UserDto request);
 
-      
+
     }
 }

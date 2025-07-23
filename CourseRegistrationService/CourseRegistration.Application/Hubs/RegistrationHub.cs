@@ -1,8 +1,11 @@
 using CourseRegistration.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 
 namespace CourseRegistration.Application.Services
 {
+
+    [Authorize]
     public class RegistrationHub : Hub
     {
         private readonly INotificationService _notificationService;
