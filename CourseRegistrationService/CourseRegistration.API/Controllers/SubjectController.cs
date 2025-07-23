@@ -1,4 +1,4 @@
-﻿using CourseRegistration.Application.Dtos;
+using CourseRegistration.Application.Dtos;
 using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
@@ -79,6 +79,7 @@ namespace CourseRegistration.API.Controllers
              return Ok(subject);
         }
 
+
         //[Authorize(Roles ="admin")]
         [HttpPut("subject/update/{id}")]
         public async Task<IActionResult> updateSubjectAsync(int id, [FromBody] CreateSubjectRequest request)
@@ -105,8 +106,12 @@ namespace CourseRegistration.API.Controllers
         }
 
         [Authorize(Roles ="teacher")]
-        [HttpGet("getSubjecstByTeacherId/{teacherId}")]
-        public async Task<IActionResult> GetSubjectByTeahcerIDAsync( int teacherId)
+        
+
+        
+        [HttpGet("getSubjectsByTeacherId/{teacherId}")]
+        public async Task<IActionResult> GetSubjectByTeacherIDAsync( int teacherId)
+
         {
             var subjects= await _subjectService.GetSubjectsByTeacherIdAsync(teacherId);
             if( subjects == null)

@@ -17,7 +17,7 @@ namespace CourseRegistration.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.4")
+                .HasAnnotation("ProductVersion", "9.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -70,7 +70,7 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasKey("ClassId");
 
-                    b.ToTable("Classes");
+                    b.ToTable("Classes", (string)null);
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.ClassSubject", b =>
@@ -90,7 +90,7 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasIndex("SubjectId");
 
-                    b.ToTable("ClassSubjects");
+                    b.ToTable("ClassSubjects", (string)null);
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.StudentClassRegistration", b =>
@@ -136,7 +136,7 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasIndex("ClassId");
 
-                    b.ToTable("StudentClassRegistrations");
+                    b.ToTable("StudentClassRegistrations", (string)null);
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.StudentRegistrationSubject", b =>
@@ -195,7 +195,7 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasIndex("SubjectId");
 
-                    b.ToTable("StudentSubjects");
+                    b.ToTable("StudentSubjects", (string)null);
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.Subject", b =>
@@ -225,7 +225,7 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasKey("SubjectId");
 
-                    b.ToTable("Subjects");
+                    b.ToTable("Subjects", (string)null);
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.TeacherClassRegistration", b =>
@@ -276,7 +276,7 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasIndex("SubjectId");
 
-                    b.ToTable("TeacherClassRegistrations");
+                    b.ToTable("TeacherClassRegistrations", (string)null);
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.TeacherSubject", b =>
@@ -327,7 +327,7 @@ namespace CourseRegistration.Infrastructure.Migrations
 
                     b.HasIndex("SubjectId");
 
-                    b.ToTable("TeacherSubjects");
+                    b.ToTable("TeacherSubjects", (string)null);
                 });
 
             modelBuilder.Entity("CourseRegistration.Domain.Models.ClassSubject", b =>

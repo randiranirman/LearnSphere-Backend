@@ -1,26 +1,23 @@
-﻿using FileStorage.Application.Interfaces;
+using FileStorage.Application.Interfaces;
 using FileStorage.Infrastructure.Data;
 using FileStorage.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FileStorage.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddInfraStructureDI(this IServiceCollection services)
+        public static IServiceCollection AddInfraStructureDI(this IServiceCollection services, IConfiguration configuration)
         {
 
             services.AddDbContext<FileStorageDbContext>(options =>
             {
-                options.UseSqlServer("Data Source=localhost\\MSSQLSERVER02;Initial Catalog=LMS;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+                options.UseSqlServer(configuration.GetConnectionString("Database"));
             });
 
-            services.AddScoped<ISubjectTopicRepository, SubjectTopicRepository>();
-
-            services.AddScoped<IMetirealRepository, MetirealRepository>();
-
-            services.AddScoped<ITeacherRepository, TeacherRepository>();
+            services.AddScoped<ITeacherFilesRepository, TeacherFileRepository>();
 
             return services;
         }

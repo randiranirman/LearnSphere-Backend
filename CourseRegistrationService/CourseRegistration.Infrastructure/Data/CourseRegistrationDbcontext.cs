@@ -25,14 +25,14 @@ namespace CourseRegistration.Infrastructure.Data
         }
 
         // CourseRegistration specific tables
-        public DbSet<Class>? Classes { get; set; }
-        public DbSet<Subject>? Subjects { get; set; }
-        public DbSet<ClassSubject>? ClassSubjects { get; set; }
-        public DbSet<StudentClassRegistration>? StudentClassRegistrations { get; set; }
-        public DbSet<TeacherClassRegistration>? TeacherClassRegistrations { get; set; }
-        public DbSet<StudentRegistrationSubject>? StudentRegistrationSubjects { get; set; }
-        public DbSet<StudentSubject>? StudentSubjects { get; set; }
-        public DbSet<TeacherSubject>? TeacherSubjects { get; set; }
+        public DbSet<Class> Classes { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<ClassSubject> ClassSubjects { get; set; }
+        public DbSet<StudentClassRegistration> StudentClassRegistrations { get; set; }
+        public DbSet<TeacherClassRegistration> TeacherClassRegistrations { get; set; }
+        public DbSet<StudentRegistrationSubject> StudentRegistrationSubjects { get; set; }
+        public DbSet<StudentSubject> StudentSubjects { get; set; }
+        public DbSet<TeacherSubject> TeacherSubjects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

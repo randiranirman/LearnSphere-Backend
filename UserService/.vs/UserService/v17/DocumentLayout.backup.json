@@ -1,54 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\project\\UserService\\",
+  "WorkspaceRootPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC3B60B3-E36C-4E94-884D-9A96765E7A52}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|c:\\project\\userservice\\usermanagement.infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC3B60B3-E36C-4E94-884D-9A96765E7A52}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|c:\\project\\userservice\\usermanagement.domain\\domain\\emailtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\emailtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\emailtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}|UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}|UserManagement.API\\UserManagement.API.csproj|solutionrelative:usermanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|c:\\project\\userservice\\usermanagement.domain\\domain\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC3B60B3-E36C-4E94-884D-9A96765E7A52}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|c:\\project\\userservice\\usermanagement.infrastructure\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC3B60B3-E36C-4E94-884D-9A96765E7A52}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}|UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}|UserManagement.API\\UserManagement.API.csproj|solutionrelative:usermanagement.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC3B60B3-E36C-4E94-884D-9A96765E7A52}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|c:\\project\\userservice\\usermanagement.infrastructure\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC3B60B3-E36C-4E94-884D-9A96765E7A52}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}|UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}|UserManagement.API\\UserManagement.API.csproj|solutionrelative:usermanagement.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A20E3C34-9625-4034-BF9D-3A8AF51AC263}|UserManagement.Application\\UserManagement.Application.csproj|c:\\project\\userservice\\usermanagement.application\\repositories\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A20E3C34-9625-4034-BF9D-3A8AF51AC263}|UserManagement.Application\\UserManagement.Application.csproj|solutionrelative:usermanagement.application\\repositories\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|c:\\project\\userservice\\usermanagement.domain\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|c:\\project\\userservice\\usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}|UserManagement.API\\UserManagement.API.csproj|c:\\project\\userservice\\usermanagement.api\\usermanagement.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{17FCAD0F-6A41-49ED-9BB5-076A1586B73A}|UserManagement.API\\UserManagement.API.csproj|solutionrelative:usermanagement.api\\usermanagement.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.domain\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F829D4E-3C6C-43A2-83C5-866544B3BF7B}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3B60B3-E36C-4E94-884D-9A96765E7A52}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\userservice\\usermanagement.infrastructure\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3B60B3-E36C-4E94-884D-9A96765E7A52}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,170 +34,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailTemplate.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\EmailTemplate.cs",
+              "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\EmailTemplate.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\EmailTemplate.cs",
+              "RelativeToolTip": "UserManagement.Domain\\Domain\\EmailTemplate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:12:58.86Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmailTemplate.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\EmailTemplate.cs",
-              "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\EmailTemplate.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\EmailTemplate.cs",
-              "RelativeToolTip": "UserManagement.Domain\\Domain\\EmailTemplate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
+              "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\Student.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
+              "RelativeToolTip": "UserManagement.Domain\\Domain\\Student.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAA9wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T12:37:51.935Z",
+              "WhenOpened": "2025-07-10T08:08:35.975Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\appsettings.json",
-              "RelativeDocumentMoniker": "UserManagement.API\\appsettings.json",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.API\\appsettings.json",
-              "RelativeToolTip": "UserManagement.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-16T10:49:48.075Z",
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
+              "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\Teacher.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
+              "RelativeToolTip": "UserManagement.Domain\\Domain\\Teacher.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAA9wDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T17:55:00.37Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\User.cs",
+              "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\User.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\User.cs",
+              "RelativeToolTip": "UserManagement.Domain\\Domain\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T17:51:54.96Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Admin.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Admin.cs",
               "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\Admin.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Admin.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Admin.cs",
               "RelativeToolTip": "UserManagement.Domain\\Domain\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T10:39:27.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Infrastructure\\Services\\AdminService.cs",
-              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Services\\AdminService.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Infrastructure\\Services\\AdminService.cs",
-              "RelativeToolTip": "UserManagement.Infrastructure\\Services\\AdminService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T10:38:55.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Infrastructure\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Services\\UserService.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Infrastructure\\Services\\UserService.cs",
-              "RelativeToolTip": "UserManagement.Infrastructure\\Services\\UserService.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T10:38:22.396Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "UserManagement.API\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "UserManagement.API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T19:14:59.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Infrastructure\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Services\\AuthService.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Infrastructure\\Services\\AuthService.cs",
-              "RelativeToolTip": "UserManagement.Infrastructure\\Services\\AuthService.cs",
-              "ViewState": "AgIAAOkAAAAAAAAAAAAqwB0BAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T19:03:45.432Z",
+              "WhenOpened": "2025-07-09T17:51:39.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "UserManagement.API\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.API\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "UserManagement.API\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Title": "UserDbContext.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
+              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Data\\UserDbContext.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
+              "RelativeToolTip": "UserManagement.Infrastructure\\Data\\UserDbContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T19:03:38.13Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
-              "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\Student.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
-              "RelativeToolTip": "UserManagement.Domain\\Domain\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T19:03:28.885Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Teacher.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
-              "RelativeDocumentMoniker": "UserManagement.Domain\\Domain\\Teacher.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
-              "RelativeToolTip": "UserManagement.Domain\\Domain\\Teacher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T19:03:28.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserManagement.API.http",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.http",
-              "RelativeDocumentMoniker": "UserManagement.API\\UserManagement.API.http",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.http",
-              "RelativeToolTip": "UserManagement.API\\UserManagement.API.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-05-15T19:03:24.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\project\\UserService\\UserManagement.Application\\Repositories\\IEmailService.cs",
-              "RelativeDocumentMoniker": "UserManagement.Application\\Repositories\\IEmailService.cs",
-              "ToolTip": "C:\\project\\UserService\\UserManagement.Application\\Repositories\\IEmailService.cs",
-              "RelativeToolTip": "UserManagement.Application\\Repositories\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T19:03:17.957Z"
+              "WhenOpened": "2025-07-09T17:50:19.596Z"
             }
           ]
         }
