@@ -6,6 +6,9 @@ using CourseRegistration.Infrastructure.Data;
 using CourseRegistration.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,7 +49,13 @@ builder.Services.AddDbContext<CourseRegistrationDbcontext>(options =>
         {
             sqlOptions.CommandTimeout(300);
             sqlOptions.EnableRetryOnFailure(maxRetryCount: 3, maxRetryDelay: TimeSpan.FromSeconds(30), errorNumbersToAdd: null);
-        });
+        }
+    );
+    
+    // Configure query splitting for better performance with multiple includes
+    
+    // Configure warnings - suppress the multiple collection include warning since we're using split queries
+    options.ConfigureWarnings(w => w.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.MultipleCollectionIncludeWarning));
     
     // Enable sensitive data logging in development
     if (builder.Environment.IsDevelopment())
@@ -87,6 +96,45 @@ else
     // For now, we'll register the Redis service anyway but it might fail
     builder.Services.AddSingleton<ICacheService, RedisCacheService>();
 }
+
+// =============================================================================
+// AUTHENTICATION & AUTHORIZATION
+// =============================================================================
+
+// Add Authentication (if you need it - remove this block if you don't need auth)
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? "your-super-secret-key-here-must-be-at-least-16-characters"))
+        };
+
+        // Configure JWT for SignalR
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/notificationHub"))
+                {
+                    context.Token = accessToken;
+                }
+                return Task.CompletedTask;
+            }
+        };
+    });
+
+// Add Authorization
+builder.Services.AddAuthorization();
 
 // Add SignalR for real-time notifications
 builder.Services.AddSignalR(options =>
@@ -129,6 +177,7 @@ builder.Services.AddScoped<ITeacherHttpService, TeacherHttpService>();
 builder.Services.AddScoped<IStudentRegistrationService, StudentRegistrationService>();
 builder.Services.AddScoped<ITeacherRegistrationService, TeacherRegistrationService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
 builder.Services.AddScoped<IClassService, ClassService>();
 builder.Services.AddSingleton<StudentRegistrationQueueService>();
 builder.Services.AddHostedService(provider => provider.GetRequiredService<StudentRegistrationQueueService>());
@@ -169,6 +218,8 @@ else
 
 app.UseHttpsRedirection();
 
+// Authentication must come before Authorization
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

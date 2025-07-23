@@ -17,6 +17,8 @@ namespace UserManagement.Infrastructure.Services
 {
     public class AdminService(UserDbContext _context, IAuthService _authService) : IAdminService
     {
+
+        private readonly RedisCacheService _cache; 
         public async Task<bool> EditAdminDetails(int id, Admin request)
         {
             var admin = await _context.Admins.FindAsync(id);
@@ -78,6 +80,35 @@ namespace UserManagement.Infrastructure.Services
                 throw new Exception(" something went wrong " +  ex);
 
             }
+        }
+
+        public async Task<bool>  EditUserDetails( UserDto request)
+        {
+
+
+            var user =  await  _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username);
+
+            if (user == null)
+            {
+                return false;
+            }
+
+
+            user.Name = request.Name;
+            user.Email = request.Email;
+            user.Username = request.Username;
+            user.Role = request.Role;
+
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+
+            await _cache.RemoveAsync("AllUsers");
+
+
+            
+            return true;
+
         }
     }
 }

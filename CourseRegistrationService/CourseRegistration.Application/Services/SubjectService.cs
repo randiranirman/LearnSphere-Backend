@@ -68,10 +68,15 @@ namespace CourseRegistration.Application.Services
                 // Delete from repository
                 await _subjectRepository.DeleteAsync(id);
                 
-                // Clear related cache entries
+                // Clear all related cache entries
                 await _cacheService.RemoveAsync($"{CACHE_KEY_PREFIX}{id}");
                 await _cacheService.RemoveAsync($"{CACHE_KEY_BY_CODE}{existingSubject.Code}");
                 await _cacheService.RemoveAsync(CACHE_KEY_ALL);
+                
+                // Clear student-subject and teacher-subject caches using pattern matching
+                // This ensures that any cached subject lists for students/teachers are also cleared
+                await _cacheService.RemoveByPatternAsync($"{CACHE_KEY_BY_STUDENT}*");
+                await _cacheService.RemoveByPatternAsync($"{CACHE_KEY_BY_TEACHER}*");
                 
                 return true;
             }

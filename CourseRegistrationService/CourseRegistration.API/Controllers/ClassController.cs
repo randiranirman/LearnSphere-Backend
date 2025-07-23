@@ -1,4 +1,5 @@
-﻿using CourseRegistration.Application.Dtos;
+﻿using System.Net.WebSockets;
+using CourseRegistration.Application.Dtos;
 using CourseRegistration.Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -56,7 +57,23 @@ namespace CourseRegistration.API.Controllers
             return Ok(classes);
 
         }
-        
+        [HttpPut("class/updateClass")]
+        public async Task<IActionResult> UpdateClass( [FromBody] CreateClassRequset request)
+        {
+
+
+            var classTOUpdate = await _classService.GetClassByIdAsync(request.ClassId);
+            if (classTOUpdate == null)
+                return NotFound("Class not found");
+
+
+            var success = await _classService.UpdateClassAsync(request);
+            if (!success)
+                return NotFound("Class not found");
+
+            return Ok("Class updated successfully");
+        }
+
 
 
 

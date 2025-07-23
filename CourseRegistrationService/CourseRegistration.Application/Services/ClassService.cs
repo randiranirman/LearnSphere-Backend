@@ -8,6 +8,7 @@ using CourseRegistration.Application.Dtos;
 using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CourseRegistration.Application.Services
 {
@@ -129,9 +130,30 @@ namespace CourseRegistration.Application.Services
             return classToGet;
         }
 
-        public Task<bool> UpdateClassAsync(CreateClassRequset request)
+
+
+
+
+        public async Task<bool> UpdateClassAsync(CreateClassRequset request)
         {
-            throw new NotImplementedException();
+            var existingClass = await _classRepository.GetByIdAsync(request.ClassId);
+            if (existingClass == null)
+                return false;
+
+            // Update fields
+            existingClass.Name = request.Name;
+            existingClass.Description = request.Description;
+            existingClass.Code = request.Code;
+            existingClass.ClassId = request.ClassId;
+            
+
+            // Clear cache
+            await _cacheService.RemoveAsync(CACHE_KEY_ALL);
+            await _cacheService.RemoveAsync($"{CACHE_KEY_BY_CODE}{existingClass.Code}");
+            await _cacheService.RemoveAsync($"{CACHE_KEY_PREFIX}{existingClass.ClassId}");
+
+            await _classRepository.UpdateAsync(existingClass);
+            return true;
         }
 
 
