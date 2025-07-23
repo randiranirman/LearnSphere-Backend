@@ -35,7 +35,7 @@ builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddSingleton<RedisCacheService>();
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = builder.Configuration.GetConnectionString("RedisCache");
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
     options.InstanceName = "UserListCache:";
 });
 builder.Services.AddCors(options =>
