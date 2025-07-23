@@ -12,5 +12,6 @@ namespace CourseRegistration.Application.Dtos
         public string Code { get; set; } = string.Empty;
         public string? Description { get; set; } = string.Empty;
         public int Credit { get; set; }
+        public int ClassId { get; set; } 
     }
 }

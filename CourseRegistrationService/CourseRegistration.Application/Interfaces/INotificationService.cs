@@ -22,5 +22,9 @@ namespace CourseRegistration.Application.Interfaces
         // System notifications
         Task NotifySystemMessageAsync(string message, string type = "info");
         Task NotifyAllUsersAsync(string title, string message, string type = "info");
+        
+        // Additional registration notifications
+        Task NotifyRegistrationCompletedAsync(int studentId, string className, string message);
+        Task NotifyAdminsOnRegistrationAsync(int studentId, string className, List<string> subjectNames);
     }
 }

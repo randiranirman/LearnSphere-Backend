@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CourseRegistration.Application.Interfaces;
+using CourseRegistration.Application.Repositories;
+using CourseRegistration.Domain.Models;
 using Microsoft.AspNetCore.SignalR;
 
 namespace CourseRegistration.Application.Services
@@ -9,14 +11,30 @@ namespace CourseRegistration.Application.Services
     public class NotificationService : INotificationService
     {
         private readonly IHubContext<RegistrationHub> _hubContext;
+        private readonly INotificationRepository _notificationRepository;
 
-        public NotificationService(IHubContext<RegistrationHub> hubContext)
+        public NotificationService(IHubContext<RegistrationHub> hubContext, INotificationRepository notificationRepository)
         {
             _hubContext = hubContext;
+            _notificationRepository = notificationRepository;
         }
 
         public async Task NotifyNewRegistrationAsync(int studentId, int classId, string className, List<int> subjectIds, List<string> subjectNames, string indexNumber)
         {
+            // Create persistent notification for admins
+            var notification = new Notification
+            {
+                Title = "New Registration Request",
+                Message = $"Student {indexNumber} requested registration for class {className}",
+                Type = "registration",
+                TargetRole = "Admin",
+                CreatedAt = DateTime.UtcNow,
+                IsRead = false
+            };
+            
+            await _notificationRepository.CreateAsync(notification);
+            
+            // Send real-time notification
             Console.WriteLine("notification send to admins ");
             await _hubContext.Clients.Group("Admins").SendAsync("NotifyNewRegistrationAsync", new
             {
@@ -31,7 +49,22 @@ namespace CourseRegistration.Application.Services
 
         public async Task NotifyRegistrationApprovedAsync(int studentId, int registrationId, string className, List<string> subjectNames)
         {
-            Console.WriteLine("notification send to admins ");
+            // Create persistent notification for student
+            var notification = new Notification
+            {
+                Title = "Registration Approved",
+                Message = $"Your registration for class {className} has been approved",
+                Type = "approval",
+                TargetRole = "Student",
+                TargetUserId = studentId,
+                CreatedAt = DateTime.UtcNow,
+                IsRead = false
+            };
+            
+            await _notificationRepository.CreateAsync(notification);
+            
+            // Send real-time notification
+            Console.WriteLine("notification send to student ");
             await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("NotifyRegistrationApproved", new
             {
                 RegistrationId = registrationId,
@@ -42,6 +75,21 @@ namespace CourseRegistration.Application.Services
 
         public async Task NotifyRegistrationRejectedAsync(int studentId, int registrationId, string className, List<string> subjectNames, string reason)
         {
+            // Create persistent notification for student
+            var notification = new Notification
+            {
+                Title = "Registration Rejected",
+                Message = $"Your registration for class {className} has been rejected. Reason: {reason}",
+                Type = "rejection",
+                TargetRole = "Student",
+                TargetUserId = studentId,
+                CreatedAt = DateTime.UtcNow,
+                IsRead = false
+            };
+            
+            await _notificationRepository.CreateAsync(notification);
+            
+            // Send real-time notification
             await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("RegistrationRejected", new
             {
                 RegistrationId = registrationId,
@@ -85,6 +133,54 @@ namespace CourseRegistration.Application.Services
         {
             // Implementation for notifying all users
             return Task.CompletedTask;
+        }
+        public async Task NotifyRegistrationCompletedAsync(int studentId, string className, string message)
+        {
+            // Create persistent notification for students
+            var notification = new Notification
+            {
+                Title = "Registration Completed",
+                Message = message,
+                Type = "completion",
+                TargetRole = "Student",
+                TargetUserId = studentId,
+                CreatedAt = DateTime.UtcNow,
+                IsRead = false
+            };
+            
+            await _notificationRepository.CreateAsync(notification);
+            
+            // Send real-time notification
+            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("NotifyRegistrationCompleted", new
+            {
+                ClassName = className,
+                Message = message
+            });
+        }
+
+        public async Task NotifyAdminsOnRegistrationAsync(int studentId, string className, List<string> subjectNames)
+        {
+            var message = $"Student {studentId} registered for class {className} with subjects {string.Join(", ", subjectNames)}";
+            
+            var notification = new Notification
+            {
+                Title = "Student Registered",
+                Message = message,
+                Type = "info",
+                TargetRole = "Admin",
+                CreatedAt = DateTime.UtcNow,
+                IsRead = false
+            };
+            
+            await _notificationRepository.CreateAsync(notification);
+            
+            // Send real-time notification
+            await _hubContext.Clients.Group("Admins").SendAsync("NotifyAdminsOnRegistration", new
+            {
+                StudentId = studentId,
+                ClassName = className,
+                SubjectNames = subjectNames
+            });
         }
     }
 }
