@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cRaY2p5LYeA=",
+  "dgSpecHash": "0ubBIv7GH3o=",
   "success": true,
-  "projectFilePath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\project\\UserService\\UserManagement.Domain\\UserManagement.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\binad\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.18\\microsoft.windowsdesktop.app.ref.8.0.18.nupkg.sha512",
+    "C:\\Users\\binad\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.18\\microsoft.netcore.app.ref.8.0.18.nupkg.sha512",
+    "C:\\Users\\binad\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.18\\microsoft.aspnetcore.app.ref.8.0.18.nupkg.sha512"
+  ],
   "logs": []
 }
