@@ -49,20 +49,13 @@ namespace UserManagement.API.Controllers
         [HttpDelete("{username}")]
         public async Task<ActionResult> DeleteUser(string username)
         {
-
             var result = await _userService.DeleteUserAsync(username);
             if (!result)
             {
-                return NotFound("User with username " + username + " Not Found");
+                return NotFound(new { message = $"User with username {username} not found" });
             }
 
-            return Ok("User with username " + username + " deleted successfully");
-
-
-
-
-
-
+            return Ok(new { message = $"User with username {username} deleted successfully" });
         }
 
 

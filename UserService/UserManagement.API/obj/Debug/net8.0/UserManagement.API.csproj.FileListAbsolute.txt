@@ -14,7 +14,6 @@ C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.AspNetCore.
 C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
 C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -375,3 +374,9 @@ D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\U
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\bin\Debug\net8.0\StackExchange.Redis.dll
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\UserService\UserManagement.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\project\UserService\UserManagement.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\project\UserService\UserManagement.API\bin\Debug\net8.0\StackExchange.Redis.dll

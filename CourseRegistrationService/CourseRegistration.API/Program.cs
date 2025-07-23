@@ -198,13 +198,24 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+
+
+
+// ======================================
+// MIDDLEWARE PIPELINE
+// ======================================
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+
+
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger(c =>
-    {
-        c.OpenApiVersion = Microsoft.OpenApi.OpenApiSpecVersion.OpenApi2_0;
-    });
+
+    app.UseSwagger();
     app.UseSwaggerUI();
 
     // ? Apply correct CORS policy for development

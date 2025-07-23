@@ -79,7 +79,7 @@ namespace UserManagement.API.Controllers
         }
 
             [HttpPost("upload-csv")]
-        [Authorize(Roles ="admin")]
+      
         
         public async Task<ActionResult> ImportUserFromCSV(IFormFile file)
         {
