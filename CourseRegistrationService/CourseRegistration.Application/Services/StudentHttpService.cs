@@ -2,6 +2,7 @@ using System.Text.Json;
 using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Dtos;
 using Microsoft.Extensions.Configuration;
+using System.Text;
 
 namespace CourseRegistration.Application.Services
 {
@@ -22,9 +23,9 @@ namespace CourseRegistration.Application.Services
             {
                 var userServiceUrl = _configuration["ExternalServices:UserManagement:BaseUrl"] ?? "https://localhost:7033";
                 var endpoint = $"{userServiceUrl}/user/students/{studentId}";
-                
+
                 var response = await _httpClient.GetAsync(endpoint);
-                
+
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonContent = await response.Content.ReadAsStringAsync();
@@ -32,10 +33,10 @@ namespace CourseRegistration.Application.Services
                     {
                         PropertyNameCaseInsensitive = true
                     };
-                    
+
                     return JsonSerializer.Deserialize<StudentDto>(jsonContent, options);
                 }
-                
+
                 return null;
             }
             catch (Exception ex)
@@ -54,7 +55,7 @@ namespace CourseRegistration.Application.Services
         public async Task<List<StudentDto>> GetStudentsByIdsAsync(List<int> studentIds)
         {
             var students = new List<StudentDto>();
-            
+
             foreach (var studentId in studentIds)
             {
                 var student = await GetStudentByIdAsync(studentId);
@@ -63,8 +64,47 @@ namespace CourseRegistration.Application.Services
                     students.Add(student);
                 }
             }
-            
+
             return students;
+        }
+
+        public async Task<List<StudentDto>> GetStudentDetailsByIds(List<int> StudentIdList)
+        {
+            try
+            {
+                var userServiceUrl = _configuration["ExternalServices:UserManagement:BaseUrl"] ?? "https://localhost:7033";
+                var endpoint = "https://localhost:7033/user/getstudentsbyIdList";
+                
+                // Prepare the request body
+                var requestBody = new
+                {
+                    studentList = StudentIdList
+                };
+
+                var json = JsonSerializer.Serialize(requestBody);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                // Send the POST request
+                var response = await _httpClient.PostAsync(endpoint, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonContent = await response.Content.ReadAsStringAsync();
+                    var options = new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    };
+
+                    return JsonSerializer.Deserialize<List<StudentDto>>(jsonContent, options);
+                }
+
+                // Handle non-success response
+                return [];
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Error retrieving student details: {ex.Message}", ex);
+            }
         }
     }
 }

@@ -17,6 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<ICourseHttpService, CourseHttpService>();
 builder.Services.AddScoped<ITeacherFilesRepository, TeacherFileRepository>();
 builder.Services.AddScoped<IStudentFilesRepository, StudentFileRepository>();
+builder.Services.AddScoped<IAssignmentRepository, AssignmentRepository>();
 
 builder.Services.AddCors(options =>
 {

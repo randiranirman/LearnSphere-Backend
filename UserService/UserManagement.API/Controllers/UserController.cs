@@ -85,6 +85,22 @@ namespace UserManagement.API.Controllers
             return result;
         }
 
+        [HttpGet("students/get-all-students")]
+        public async Task<IActionResult> GetAllStudentsRegistered()
+        {
+            var result = await _userService.GetAllStudentsRegistered();
+            if (result is null) return BadRequest();
+            return Ok(result);
+        }
+
+        [HttpGet("students/get-student-by-indexNo")]
+        public async Task<IActionResult> GetStudentByIndexNo([FromQuery] string indexNo)
+        {
+            var result = await _userService.GetStudentByIndexNoAsync(indexNo);
+            if (result is null) return BadRequest();
+            return Ok(result);
+        }
+
         [HttpGet("teachers/{id}")]
         public async Task<ActionResult<TeacherDto>> GetTeacherByID(int id)
         {
@@ -110,6 +126,15 @@ namespace UserManagement.API.Controllers
             return result;
 
         }
+
+        [HttpGet("teachers/get-all-teachers")]
+        public async Task<IActionResult> GetAllTeachersThatRegistered()
+        {
+            var result = await _userService.GetAllTeachersRegistered();
+            if (result is null) return BadRequest();
+            return Ok(result);
+        }
+
         [HttpPut("edit-student/{id}")]
         public async Task<ActionResult<StudentDto>> EditStudentDetailsByID(int id, StudentDto request)
         {
@@ -121,6 +146,29 @@ namespace UserManagement.API.Controllers
             return result;
         }
 
+
+        [HttpPost("getstudentsbyIdList")]
+
+        public async Task<IActionResult> GetStudentDetailsByIdList([FromBody] StudentListDto request)
+        {
+
+
+            var result = await _userService.getDeatilsStudentsByIds(request.StudentList);
+            if(result == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(result);
+        }
+
+        [HttpGet("get-students-and-teachers-count")]
+        public async Task<IActionResult> GetNoOfStudentsAndNoOfTeachers()
+        {
+            var result = await _userService.GetNoOfTeachersAndNoOfStudents();
+            if (result is null) return BadRequest();
+            return Ok(result);
+        }
 
     }
 

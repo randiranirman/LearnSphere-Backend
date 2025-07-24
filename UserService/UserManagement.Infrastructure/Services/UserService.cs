@@ -245,6 +245,89 @@ namespace UserManagement.Infrastructure.Services
             };
         }
 
+        async Task<IEnumerable<StudentDto>> IUserService.getDeatilsStudentsByIds(List<int> studentIDs)
+        {
+            var studentDetails = await _context.Students
+                    .Where(s => studentIDs.Contains(s.Id)) // Id is the foreign key from Student to User
+                    .Join(_context.Students,
+                          student => student.Id,
+                          user => user.Id,
+                          (student, user) => new StudentDto
+                          {
+                              StudentID = student.Id,
+                              StudentName = student.FullName,
+                              Email = user.Email,
+                              ContactNumber = user.ContactNumber,
+                              IndexNumber = user.IndexNumber,
+                              DateOfBirth = user.DateOfBirth,
+                              Address = user.Address,
+                              ParentContactNumber = user.ParentContactNumber,
+                              ParentName = user.ParentName,
+                              Grade = user.Grade
+                          })
+                    .ToListAsync();
 
+            return studentDetails;
+        }
+
+        async Task<GetNoOfTeachersAndNoOfStudentsResponseDTO> IUserService.GetNoOfTeachersAndNoOfStudents()
+        {
+            var noOfStudents = await _context.Students.CountAsync();
+            var noOfTeachers = await _context.Teachers.CountAsync();
+
+            return new GetNoOfTeachersAndNoOfStudentsResponseDTO
+            {
+                NoOfStudents = noOfStudents,
+                NoOfTeachers = noOfTeachers
+            };
+        }
+
+        async Task<IEnumerable<GetAllTeachersResponseDTO>> IUserService.GetAllTeachersRegistered()
+        {
+            var result = await _context.Teachers
+                .Select(t => new GetAllTeachersResponseDTO
+                {
+                    TeacherID = t.Id,
+                    TeacherName = $"{t.FirstName} {t.LastName}",
+                    ContactNumber = t.ContactNumber,
+                    EmployeeId = t.EmployeeId ?? string.Empty,
+                    Email = t.Email
+                })
+                .ToListAsync();
+
+            return result;
+        }
+
+        async Task<IEnumerable<GetAllStudentsRegisteredResponseDTO>> IUserService.GetAllStudentsRegistered()
+        {
+            var result = await _context.Students
+                .Select(s => new GetAllStudentsRegisteredResponseDTO
+                {
+                    Id = s.Id,
+                    IndexNo = s.IndexNumber,
+                    FullName = $"{s.FirstName} {s.LastName}",
+                    Grade = s.Grade
+                })
+                .ToListAsync();
+
+            return result;
+        }
+
+        async Task<GetAllStudentsRegisteredResponseDTO> IUserService.GetStudentByIndexNoAsync(string indexNo)
+        {
+            var student = await _context.Students
+                .FirstOrDefaultAsync(s => s.IndexNumber == indexNo);
+
+            if (student == null)
+                return null;
+
+            return new GetAllStudentsRegisteredResponseDTO
+            {
+                Id = student.Id,
+                IndexNo = student.IndexNumber,
+                FullName = $"{student.FirstName} {student.LastName}",
+                Grade = student.Grade
+            };
+        }
     }
 }

@@ -20,13 +20,37 @@ namespace CourseRegistration.Application.Services
             _httpClient = httpClient;
             _configuration = configuration;
         }
-        
-        public Task<List<TeacherDto>> GetAllTeachersAsync()
+
+        public async Task<List<GetAllTeachersDTO>> GetAllTeachersAsync()
         {
-            throw new NotImplementedException();
-           
-        
+            try
+            {
+                var userServiceUrl = _configuration["ExternalServices:UserManagement:BaseUrl"] ?? "https://localhost:7033";
+                var endpoint = $"{userServiceUrl}/user/teachers/get-all-teachers";
+
+                var response = await _httpClient.GetAsync(endpoint);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonContent = await response.Content.ReadAsStringAsync();
+                    var options = new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    };
+
+                    var teachers = JsonSerializer.Deserialize<List<GetAllTeachersDTO>>(jsonContent, options);
+                    return teachers ?? new List<GetAllTeachersDTO>();
+                }
+
+                return new List<GetAllTeachersDTO>();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception if needed
+                throw new InvalidOperationException($"Error retrieving all teachers: {ex.Message}", ex);
+            }
         }
+
 
         public async Task<TeacherDto?> GetTeacherByIdAsync(int teachedID)
         {

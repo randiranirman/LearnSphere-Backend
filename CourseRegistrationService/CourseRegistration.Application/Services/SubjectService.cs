@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using CourseRegistration.Application.Dtos;
 using CourseRegistration.Application.Interfaces;
-using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
 
 namespace CourseRegistration.Application.Services
