@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <Folder Include="Commands\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 
 </Project>

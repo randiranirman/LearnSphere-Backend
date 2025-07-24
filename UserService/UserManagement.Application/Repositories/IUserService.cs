@@ -20,9 +20,16 @@ namespace UserManagement.Application.Repositories
         Task<StudentDto> GetStudentByID(int id);
         Task<TeacherDto> GetTeacherByID(int id);
         Task<TeacherDto> EditTeacherDetailsById(int id  , TeacherDto  requset );
-        Task<StudentDto> EditStudentDetailsByID(int id, StudentDto request); 
-        
-        
+        Task<StudentDto> EditStudentDetailsByID(int id, StudentDto request);
+        Task<IEnumerable<StudentDto>> getDeatilsStudentsByIds(List<int> studentIDs);
+
+        Task<IEnumerable<GetAllTeachersResponseDTO>> GetAllTeachersRegistered();
+
+        Task<IEnumerable<GetAllStudentsRegisteredResponseDTO>> GetAllStudentsRegistered();
+
+        Task<GetAllStudentsRegisteredResponseDTO> GetStudentByIndexNoAsync(string indexNo);
+
+        Task<GetNoOfTeachersAndNoOfStudentsResponseDTO> GetNoOfTeachersAndNoOfStudents();
 
     }
 }

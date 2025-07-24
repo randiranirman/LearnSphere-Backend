@@ -1,4 +1,5 @@
 ﻿using CourseRegistration.Application.Interfaces;
+using CourseRegistration.Application.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +11,11 @@ namespace CourseRegistration.API.Controllers
     {
 
         private readonly ITeacherHttpService teacherHttpService;
-        public TeacherController(ITeacherHttpService teacherHttpService)
+        private readonly ITeacherSubjectRepository teacherSubjectRepository;
+        public TeacherController(ITeacherHttpService teacherHttpService, ITeacherSubjectRepository teacherSubjectRepository)
         {
             this.teacherHttpService = teacherHttpService;
+            this.teacherSubjectRepository = teacherSubjectRepository;
         }
 
         [HttpGet("{teacherId}")]
@@ -31,6 +34,15 @@ namespace CourseRegistration.API.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new { Error = "Internal server error", Details = ex.Message });
             }
+        }
+
+        [HttpGet("get-all-teachers-with-subjectCount")]
+        public async Task<IActionResult> GetAllTeachersWithSubjectCount()
+        {
+            var result = await teacherSubjectRepository.GetAllTeachersWithSubjectCount();
+            if (result is null) return BadRequest();
+
+            return Ok(result);
         }
 
     }

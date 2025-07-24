@@ -1,0 +1,6 @@
+@NewAnalyticsService.API_HostAddress = http://localhost:5056
+
+GET {{NewAnalyticsService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

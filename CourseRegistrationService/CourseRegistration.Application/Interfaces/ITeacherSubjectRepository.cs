@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CourseRegistration.Application.Dtos;
 using CourseRegistration.Domain.Models;
 
 namespace CourseRegistration.Application.Repositories
@@ -14,5 +15,7 @@ namespace CourseRegistration.Application.Repositories
         Task<TeacherSubject?> GetByTeacherAndSubjectAsync(int teacherId, int subjectId);
         Task<bool> IsTeacherAssignedToSubjectAsync(int teacherId, int subjectId);
         Task<IEnumerable<TeacherSubject>> GetByStatusAsync(RegistrationStatus status);
+
+        Task<IEnumerable<GetAllTeachersWithSubjectCountResponseDTO>> GetAllTeachersWithSubjectCount();
     }
 }

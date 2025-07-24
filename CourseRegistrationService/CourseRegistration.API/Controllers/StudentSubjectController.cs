@@ -77,5 +77,7 @@ namespace CourseRegistration.API.Controllers
                 });
             }
         }
+
+        
     }
 }

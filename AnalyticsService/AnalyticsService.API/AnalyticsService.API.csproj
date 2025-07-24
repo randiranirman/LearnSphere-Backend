@@ -20,4 +20,8 @@
     <ProjectReference Include="..\AnalyticsService.Infrastructure\AnalyticsService.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>

@@ -7,5 +7,8 @@ namespace CourseRegistration.Application.Interfaces
         Task<StudentDto?> GetStudentByIdAsync(int studentId);
         Task<bool> ValidateStudentExistsAsync(int studentId);
         Task<List<StudentDto>> GetStudentsByIdsAsync(List<int> studentIds);
+
+        Task<List<StudentDto>> GetStudentDetailsByIds(List<int> StudentIdList);
+
     }
 }

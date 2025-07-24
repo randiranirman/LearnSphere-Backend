@@ -1,3 +1,5 @@
+using CourseRegistration.Application.Dtos;
+using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
 using CourseRegistration.Infrastructure.Data;
@@ -8,12 +10,14 @@ namespace CourseRegistration.Infrastructure.Repositories
     public class TeacherSubjectRepository : ITeacherSubjectRepository
     {
         private readonly CourseRegistrationDbcontext _context;
+        private readonly ITeacherHttpService _teacherHttpService;
 
         public DbContext Context => _context;
 
-        public TeacherSubjectRepository(CourseRegistrationDbcontext context)
+        public TeacherSubjectRepository(CourseRegistrationDbcontext context, ITeacherHttpService teacherHttpService)
         {
             _context = context;
+            _teacherHttpService = teacherHttpService;
         }
 
         public async Task<TeacherSubject> AddAsync(TeacherSubject entity)
@@ -97,5 +101,39 @@ namespace CourseRegistration.Infrastructure.Repositories
                 .Where(t => t.Status == status)
                 .ToListAsync() ?? new List<TeacherSubject>();
         }
+
+        async Task<IEnumerable<GetAllTeachersWithSubjectCountResponseDTO>> ITeacherSubjectRepository.GetAllTeachersWithSubjectCount()
+        {
+            var allTeachers = await _teacherHttpService.GetAllTeachersAsync();
+
+            // Fetch all teacher-subject records once to avoid multiple DB hits in the loop
+            var teacherSubjectGroups = await _context.TeacherSubjects
+                .Where(ts => ts.IsActive)
+                .GroupBy(ts => ts.TeacherId)
+                .Select(group => new
+                {
+                    TeacherId = group.Key,
+                    SubjectCount = group.Count()
+                })
+                .ToListAsync();
+
+            var result = allTeachers.Select(teacher =>
+            {
+                var subjectCount = teacherSubjectGroups
+                    .FirstOrDefault(g => g.TeacherId == teacher.TeacherID)?.SubjectCount ?? 0;
+
+                return new GetAllTeachersWithSubjectCountResponseDTO
+                {
+                    TeacherId = teacher.TeacherID,
+                    TeacherFullName = teacher.TeacherName,
+                    EmployeeId = teacher.EmployeeId,
+                    TeacherEmail = teacher.Email,
+                    SubjectCount = subjectCount
+                };
+            });
+
+            return result;
+        }
+
     }
 }

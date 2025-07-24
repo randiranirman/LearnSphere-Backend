@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CourseRegistration.Application.Dtos;
+using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
 
-namespace CourseRegistration.Application.Repositories
+namespace CourseRegistration.Application.Interfaces
 {
     public  interface ISubjectRepository: IRepository<Subject>
     {
@@ -15,6 +16,8 @@ namespace CourseRegistration.Application.Repositories
         Task<IEnumerable<Subject>> GetSubjectsByTeacherIdAsync(int teacherId);
         Task<IEnumerable<Subject>> GetSubjectByStudentIdAsync(int studentId);
         Task<IEnumerable<Subject>> GetSubjectsByGradeIdAsync(int grade);
+
+        Task<IEnumerable<GetAllSubjectsDetailsWithStudentCountByTeacherIdResponseDTO>> GetAllSubjectsDeatilsWithStudentCountByTeacherId(int teacherId);
 
         
     }

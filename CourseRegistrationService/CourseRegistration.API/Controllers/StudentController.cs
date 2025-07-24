@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Dtos;
+using CourseRegistration.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CourseRegistration.API.Controllers
 {
@@ -9,10 +11,12 @@ namespace CourseRegistration.API.Controllers
     public class StudentController : ControllerBase
     {
         private readonly IStudentHttpService _studentHttpService;
+        private readonly CourseRegistrationDbcontext _context;
 
-        public StudentController(IStudentHttpService studentHttpService)
+        public StudentController(IStudentHttpService studentHttpService, CourseRegistrationDbcontext context)
         {
             _studentHttpService = studentHttpService;
+            _context = context;
         }
 
         /// <summary>
@@ -83,6 +87,43 @@ namespace CourseRegistration.API.Controllers
             }
         }
 
+        [HttpPost("students/details-by-ids")]
+        public async Task<ActionResult<IEnumerable<StudentDto>>> GetStudentDetailsByIds([FromBody] StudentListRequsetDto request)
+        {
+            if (request.StudentDetailsRequestIds == null || request.StudentDetailsRequestIds.Count == 0)
+            {
+                return BadRequest("Student ID list cannot be empty.");
+            }
+
+            var result = await  _studentHttpService.GetStudentDetailsByIds(request.StudentDetailsRequestIds);
+
+            if (result == null || !result.Any())
+            {
+                return NotFound("No matching students found.");
+            }
+
+            return Ok(result);
+        }
+
+        [HttpGet("students/student-details-by-subjectId")]
+        public async Task<IActionResult> GetStudentDetailsBySubjectId([FromQuery] int subjectId)
+        {
+            var studentIds = await _context.StudentSubjects
+                .Where(ss => ss.SubjectId == subjectId && ss.IsActive)
+                .Select(ss => ss.StudentId)
+                .Distinct()
+                .ToListAsync();
+
+            var studentDetailsFromResult = await _studentHttpService.GetStudentDetailsByIds(studentIds);
+
+            if (studentDetailsFromResult is null)
+            {
+                return BadRequest();
+            }
+            return Ok(studentDetailsFromResult);
+        }
+
+
         /// <summary>
         /// Register a student for course registration using their existing ID
         /// </summary>
@@ -141,6 +182,17 @@ namespace CourseRegistration.API.Controllers
             {
                 return StatusCode(500, new { Error = "Internal server error", Details = ex.Message });
             }
+
+        }
+
+        [HttpGet("student/get-student-count-by-subjectId")]
+        public async Task<IActionResult> GetStudentCountBySubjectId([FromQuery] int subjectId)
+        {
+            var studentCount = await _context.StudentSubjects
+                .Where(ss => ss.SubjectId == subjectId && ss.IsActive)
+                .CountAsync();
+
+            return Ok(studentCount);
         }
     }
 }
