@@ -31,20 +31,58 @@ namespace CourseRegistration.Application.Services
                 CreatedAt = DateTime.UtcNow,
                 IsRead = false
             };
-            
+
             await _notificationRepository.CreateAsync(notification);
-            
-            // Send real-time notification
+
+            // Send real-time notification with individual parameters (matches frontend)
             Console.WriteLine("notification send to admins ");
-            await _hubContext.Clients.Group("Admins").SendAsync("NotifyNewRegistrationAsync", new
+            await _hubContext.Clients.Group("Admins").SendAsync("NotifyNewRegistrationAsync",
+                studentId, classId, className, subjectIds, subjectNames, indexNumber);
+        }
+        public async Task NotifyNewRegistrationAsyncByTeacher(int teacherId, List<int> classIds, List<int> subjectIds)
+        {
+            var notification = new Notification
             {
-                StudentId = studentId,
-                ClassId = classId,
-                ClassName = className,
-                SubjectIds = subjectIds,
-                SubjectNames = subjectNames,
-                IndexNumber = indexNumber
-            });
+                Title = "New Registration Request by Teacher",
+                Message = $"Teacher with ID {teacherId} has requested registration for classes {string.Join(", ", classIds)} and subjects {string.Join(", ", subjectIds)}.",
+                Type = "registration",
+                TargetRole = "Admin",
+                CreatedAt = DateTime.UtcNow,
+                IsRead = false
+
+            };
+            Console.WriteLine("notification send to admins by teacher ");
+            await _hubContext.Clients.Group("Admins").SendAsync("NotifyNewRegistrationAsyncByTeacher",
+                teacherId, classIds, subjectIds);
+
+
+
+        }
+
+
+
+        public async Task NotifyNewRegistrationApprovedAsyncTeacher(int teacherId, List<int> subjectIds, string employeeID, List<int> classIds)
+        {
+            var notification= new Notification
+            {
+                Title = "New Registration Approved",
+                Message = $"Your registration for subjects {string.Join(", ", subjectIds)} has been approved.",
+                Type = "approval",
+                TargetRole = "Teacher",
+                TargetUserId = teacherId,
+                CreatedAt = DateTime.UtcNow,
+                IsRead = false
+            };
+
+            await _notificationRepository.CreateAsync(notification);
+            // send real-time notification to teacher
+            await _hubContext.Clients.Group($"Teacher_{teacherId}").SendAsync("NotifyNewRegistrationApprovedAsyncTeacher",
+                teacherId, subjectIds, employeeID, classIds);
+
+        }
+        public Task NotifyRegistrationApprovedAsyncTeacher(int teacherId, List<int> subjectIds, int employeeID, List<int> classIds)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task NotifyRegistrationApprovedAsync(int studentId, int registrationId, string className, List<string> subjectNames)
@@ -60,17 +98,13 @@ namespace CourseRegistration.Application.Services
                 CreatedAt = DateTime.UtcNow,
                 IsRead = false
             };
-            
+
             await _notificationRepository.CreateAsync(notification);
-            
-            // Send real-time notification
+
+            // Send real-time notification with individual parameters (matches frontend)
             Console.WriteLine("notification send to student ");
-            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("NotifyRegistrationApproved", new
-            {
-                RegistrationId = registrationId,
-                ClassName = className,
-                SubjectNames = subjectNames
-            });
+            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("NotifyRegistrationApproved",
+                studentId, registrationId, className, subjectNames);
         }
 
         public async Task NotifyRegistrationRejectedAsync(int studentId, int registrationId, string className, List<string> subjectNames, string reason)
@@ -86,17 +120,12 @@ namespace CourseRegistration.Application.Services
                 CreatedAt = DateTime.UtcNow,
                 IsRead = false
             };
-            
+
             await _notificationRepository.CreateAsync(notification);
-            
-            // Send real-time notification
-            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("RegistrationRejected", new
-            {
-                RegistrationId = registrationId,
-                ClassName = className,
-                SubjectNames = subjectNames,
-                Reason = reason
-            });
+
+            // Fixed method name and parameters to match frontend
+            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("NotifyRegistrationRejected",
+                studentId, registrationId, className, subjectNames, reason);
         }
 
         public Task NotifyStudentAsync(int studentId, string title, string message, string type = "info")
@@ -110,7 +139,7 @@ namespace CourseRegistration.Application.Services
             // Implementation for notifying admins
             return Task.CompletedTask;
         }
-        
+
         public Task NotifyTeacherAsync(int teacherId, string title, string message, string type = "info")
         {
             // Implementation for notifying teachers
@@ -134,6 +163,7 @@ namespace CourseRegistration.Application.Services
             // Implementation for notifying all users
             return Task.CompletedTask;
         }
+
         public async Task NotifyRegistrationCompletedAsync(int studentId, string className, string message)
         {
             // Create persistent notification for students
@@ -147,21 +177,18 @@ namespace CourseRegistration.Application.Services
                 CreatedAt = DateTime.UtcNow,
                 IsRead = false
             };
-            
+
             await _notificationRepository.CreateAsync(notification);
-            
+
             // Send real-time notification
-            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("NotifyRegistrationCompleted", new
-            {
-                ClassName = className,
-                Message = message
-            });
+            await _hubContext.Clients.Group($"Student_{studentId}").SendAsync("NotifyRegistrationCompleted",
+                studentId, className, message);
         }
 
         public async Task NotifyAdminsOnRegistrationAsync(int studentId, string className, List<string> subjectNames)
         {
             var message = $"Student {studentId} registered for class {className} with subjects {string.Join(", ", subjectNames)}";
-            
+
             var notification = new Notification
             {
                 Title = "Student Registered",
@@ -171,16 +198,34 @@ namespace CourseRegistration.Application.Services
                 CreatedAt = DateTime.UtcNow,
                 IsRead = false
             };
-            
+
             await _notificationRepository.CreateAsync(notification);
-            
+
             // Send real-time notification
-            await _hubContext.Clients.Group("Admins").SendAsync("NotifyAdminsOnRegistration", new
+            await _hubContext.Clients.Group("Admins").SendAsync("NotifyAdminsOnRegistration",
+                studentId, className, subjectNames);
+        }
+
+        public async Task NotifyRegistrationApprovedAsyncTeacher(int teacherId, List<int> subjectIds, string employeeID, List<int> classIds)
+        {
+            var message = $"Your registration for subjects {string.Join(", ", subjectIds)} has been approved.";
+            var notification = new Notification
             {
-                StudentId = studentId,
-                ClassName = className,
-                SubjectNames = subjectNames
-            });
+                Title = "Registration Approved",
+                Message = message,
+                Type = "approval",
+                TargetRole = "Teacher",
+                TargetUserId = teacherId,
+                CreatedAt = DateTime.UtcNow,
+                IsRead = false
+            };
+            await _hubContext.Clients.Group($"Teacher_{teacherId}").SendAsync("NotifyRegistrationApprovedAsyncTeacher",
+                teacherId, subjectIds, employeeID, classIds);
+        }
+
+        public Task NotifyNewRegistrationApprovedAsyncTeacher(int teacherId, List<int> subjectIds, int employeeID, List<int> classIds)
+        {
+            throw new NotImplementedException();
         }
     }
 }

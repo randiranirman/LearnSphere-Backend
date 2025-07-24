@@ -5,18 +5,9 @@ using Microsoft.AspNetCore.SignalR;
 namespace CourseRegistration.Application.Services
 {
 
-    [Authorize]
+    
     public class RegistrationHub : Hub
     {
-        private readonly INotificationService _notificationService;
-        public RegistrationHub(INotificationService notificationService)
-        {
-
-            _notificationService = notificationService ?? throw new ArgumentNullException(nameof(notificationService));
-
-
-
-        }
         public async Task JoinStudentGroup(int studentId)
         {
             await Groups.AddToGroupAsync(Context.ConnectionId, $"Student_{studentId}");
@@ -51,7 +42,7 @@ namespace CourseRegistration.Application.Services
         {
             await base.OnDisconnectedAsync(exception);
         }
-         // Add authorization as needed
+         
         
     }
 }
