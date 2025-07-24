@@ -215,7 +215,10 @@ if (app.Environment.IsDevelopment())
 if (app.Environment.IsDevelopment())
 {
 
-    app.UseSwagger();
+    app.UseSwagger(c =>
+    {
+        c.OpenApiVersion = Microsoft.OpenApi.OpenApiSpecVersion.OpenApi2_0;
+    });
     app.UseSwaggerUI();
 
     // ? Apply correct CORS policy for development
