@@ -8,8 +8,13 @@ namespace CourseRegistration.Application.Interfaces
     {
         // Registration notifications
         Task NotifyNewRegistrationAsync(int studentId, int classId, string className, List<int> subjectIds, List<string> subjectNames, string indexNumber);
+        Task NotifyNewRegistrationAsyncByTeacher(int teacherId, List<int> classIds , List<int> subjectIds);
         Task NotifyRegistrationApprovedAsync(int studentId, int registrationId, string className, List<string> subjectNames);
+
+        Task NotifyRegistrationApprovedAsyncTeacher(int teacherId, List<int> subjectIds, string  employeeID, List<int> classIds);
         Task NotifyRegistrationRejectedAsync(int studentId, int registrationId, string className, List<string> subjectNames, string reason);
+
+        Task NotifyNewRegistrationApprovedAsyncTeacher(int teacherId, List<int> subjectIds, string employeeID, List<int> classIds);
         
         // General notifications
         Task NotifyStudentAsync(int studentId, string title, string message, string type = "info");

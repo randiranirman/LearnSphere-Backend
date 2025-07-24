@@ -1,4 +1,5 @@
 using System.Text;
+using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -9,17 +10,20 @@ using UserManagement.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// =======================================================
+// SERVICES
+// =======================================================
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<UserDbContext>(options => 
+
+// -------------------- DB Context -----------------------
+builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Database"),
         sqlOptions =>
         {
-            sqlOptions.CommandTimeout(120); // Reduced from 300 to 120 seconds
+            sqlOptions.CommandTimeout(120);
             sqlOptions.MigrationsAssembly("UserManagement.Infrastructure");
             sqlOptions.EnableRetryOnFailure(
                 maxRetryCount: 3,
@@ -27,44 +31,78 @@ builder.Services.AddDbContext<UserDbContext>(options =>
                 errorNumbersToAdd: null);
         }));
 
+// -------------------- Rate Limiting --------------------
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+    options.OnRejected = async (context, token) =>
+    {
+        context.HttpContext.Response.ContentType = "application/json";
+        await context.HttpContext.Response.WriteAsync(
+            "{\"message\": \"Too many login attempts. Please try again later.\"}",
+            cancellationToken: token);
+    };
+
+    options.AddPolicy("LoginPolicy", context =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "default",
+            factory: _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 5,
+                Window = TimeSpan.FromMinutes(1),
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                QueueLimit = 2
+            }));
+});
+
+// -------------------- Caching --------------------------
 builder.Services.AddMemoryCache();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IAdminService, AdminService>();
-builder.Services.AddTransient<IEmailService, EmailService>();
-builder.Services.AddSingleton<RedisCacheService>();
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
     options.InstanceName = "UserListCache:";
 });
+builder.Services.AddSingleton<RedisCacheService>();
+
+// -------------------- Services -------------------------
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddTransient<IEmailService, EmailService>();
+
+// -------------------- CORS -----------------------------
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost",
-        policy => policy.WithOrigins("http://localhost:5173")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials());
+    options.AddPolicy("AllowLocalhost", policy =>
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials());
 });
 
-builder.Services.AddAuthentication( JwtBearerDefaults.AuthenticationScheme ).AddJwtBearer( options => options.TokenValidationParameters= new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-{
-    ValidateIssuer = true,
-    ValidIssuer= builder.Configuration["Appsettings:Issuer"],
-    ValidateAudience = true,
-    ValidAudience = builder.Configuration["AppSettings:Audience"],
-    IssuerSigningKey = new SymmetricSecurityKey(
-        Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Token"]!)),
-    ValidateIssuerSigningKey = true
+// -------------------- JWT Auth -------------------------
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = builder.Configuration["AppSettings:Issuer"],
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["AppSettings:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Token"]!)),
+            ValidateIssuerSigningKey = true
+        };
+    });
 
 
-
-});
+// =======================================================
+// MIDDLEWARE PIPELINE
+// =======================================================
 
 var app = builder.Build();
 
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -73,8 +111,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("AllowLocalhost");
+
+app.UseRateLimiter();
+
+app.UseAuthentication();  // <---- Important: before UseAuthorization
 app.UseAuthorization();
 
 app.MapControllers();
-app.UseCors("AllowLocalhost");
+
 app.Run();

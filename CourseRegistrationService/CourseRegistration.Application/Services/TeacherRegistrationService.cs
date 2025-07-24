@@ -14,14 +14,18 @@ namespace CourseRegistration.Application.Services
         private readonly ISubjectRepository _subjectRepository;
         private readonly ITeacherHttpService _teacherHttpService;
         private readonly IHubContext<RegistrationHub> _hubContext;
-
+        private readonly INotificationService _notificationService;
+ 
         public TeacherRegistrationService(
             ITeacherClassRegistrationRepository teacherClassRegistrationRepository,
             ITeacherSubjectRepository teacherSubjectRepository,
             IClassRepository classRepository,
             ISubjectRepository subjectRepository,
             ITeacherHttpService teacherHttpService,
-            IHubContext<RegistrationHub> hubContext)
+            IHubContext<RegistrationHub> hubContext,
+            INotificationService notificationService
+            
+            )
         {
             _teacherClassRegistrationRepository = teacherClassRegistrationRepository;
             _teacherSubjectRepository = teacherSubjectRepository;
@@ -29,6 +33,9 @@ namespace CourseRegistration.Application.Services
             _subjectRepository = subjectRepository;
             _teacherHttpService = teacherHttpService;
             _hubContext = hubContext;
+            _notificationService = notificationService;
+
+
         }
 
         public async Task<TeacherRegistrationResponseDto> RegisterTeacherAsync(TeacherRegistrationRequestDto request)
@@ -133,20 +140,13 @@ namespace CourseRegistration.Application.Services
                         subjectRegistrationIds.Add(subjectRegistration.Id);
                     }
                 }
+                await  _notificationService.NotifyNewRegistrationAsyncByTeacher(
+                    request.TeacherId, request.ClassIds, request.SubjectIds);
 
-                // Send SignalR notification to admin
-                await _hubContext.Clients.Group("Admins").SendAsync("NewTeacherRegistration", new
-                {
-                    TeacherId = request.TeacherId,
-                    TeacherName = teacher.FullName,
-                    EmployeeId = request.EmployeeId,
-                    ClassCount = request.ClassIds.Count,
-                    SubjectCount = request.SubjectIds.Count,
-                    ClassRegistrationIds = classRegistrationIds,
-                    SubjectRegistrationIds = subjectRegistrationIds,
-                    RegisteredAt = DateTime.UtcNow,
-                    Message = "New teacher registration awaiting approval"
-                });
+
+
+
+
 
                 response.ClassRegistrationIds = classRegistrationIds;
                 response.SubjectRegistrationIds = subjectRegistrationIds;
@@ -195,17 +195,14 @@ namespace CourseRegistration.Application.Services
                     // Send appropriate SignalR notification to teacher
                     if (request.Status == RegistrationStatus.Approved)
                     {
-                        await _hubContext.Clients.Group($"Teacher_{subjectRegistration.TeacherId}")
-                            .SendAsync("TeacherRegistrationApproved", new
-                            {
-                                RegistrationId = request.RegistrationId,
-                                Type = "Subject",
-                                SubjectName = subjectDetails?.Name ?? "Unknown Subject",
-                                EmployeeId = subjectRegistration.EmployeeId,
-                                ApprovedAt = DateTime.UtcNow,
-                                ApprovedByAdminId = request.AdminId,
-                                Message = $"Your registration for subject '{subjectDetails?.Name}' has been approved"
-                            });
+                       await _notificationService.NotifyNewRegistrationApprovedAsyncTeacher(
+                            subjectRegistration.TeacherId,
+                            new List<int> { subjectRegistration.SubjectId },
+                            subjectRegistration.EmployeeId,
+                            new List<int>()); // No class IDs for subject registration
+                            
+
+                       
                     }
                     else if (request.Status == RegistrationStatus.Rejected)
                     {
