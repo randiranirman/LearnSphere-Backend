@@ -17,5 +17,7 @@ namespace CourseRegistration.Application.Interfaces
         Task<bool> DeleteClassByIdAsync(int classId);
         Task<IEnumerable<ClassDto>> GetAllClassesAsync();
         Task<Class?> GetClassByIdAsync(int classId);
+
+      
     }
 }

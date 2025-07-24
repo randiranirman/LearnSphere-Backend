@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using UserManagement.Application.Dtos;
 using UserManagement.Application.Repositories;
 using UserManagement.Domain.Domain;
 using UserManagement.Domain.Repositories;
@@ -60,8 +61,25 @@ namespace UserManagement.API.Controllers
 
         }
 
-        [HttpPost("upload-csv")]
-        [Authorize(Roles ="admin")]
+
+        [HttpPut("updateUserDetails")]
+
+        public async Task<IActionResult> UpdateUserDetails([FromBody] UserDto request)
+        {
+
+
+            var result = await adminService.EditUserDetails(request);
+            if (!result)
+            {
+                return NotFound(new { message = "User not found" });
+            }
+            return Ok(new { message = "User details updated successfully" });
+
+
+        }
+
+            [HttpPost("upload-csv")]
+      
         
         public async Task<ActionResult> ImportUserFromCSV(IFormFile file)
         {

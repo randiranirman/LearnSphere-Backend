@@ -16,6 +16,8 @@ namespace UserManagement.Infrastructure.Services
         {
             var email = configuration.GetValue<string>("EMAIL_CONFIGURATION:EMAIL");
             var password = configuration.GetValue<string>("EMAIL_CONFIGURATION:PASSWORD");
+
+            
             var host = configuration.GetValue<string>("EMAIL_CONFIGURATION:HOST");
             var port = configuration.GetValue<int>("EMAIL_CONFIGURATION:PORT");
 

@@ -52,10 +52,12 @@ public class SubjectRepository : ISubjectRepository, IRepository<Subject>
 
     public async Task<IEnumerable<Subject>> GetAllAsync()
     {
+        // Use AsSplitQuery to avoid complex joins and improve performance
         return await _context.Subjects
             .Include(s => s.StudentSubjects)
             .Include(s => s.TeacherSubjects)
             .Include(s => s.Classes)
+            .AsSplitQuery()
             .ToListAsync();
     }
 
@@ -66,10 +68,12 @@ public class SubjectRepository : ISubjectRepository, IRepository<Subject>
 
     public async Task<Subject?> GetByIdAsync(int id)
     {
+        // Use AsSplitQuery to avoid complex joins and improve performance
         return await _context.Subjects
             .Include(s => s.StudentSubjects)
             .Include(s => s.TeacherSubjects)
             .Include(s => s.Classes)
+            .AsSplitQuery()
             .FirstOrDefaultAsync(s => s.SubjectId == id);
     }
 

@@ -14,6 +14,16 @@ namespace CourseRegistration.Infrastructure.Data
         {
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            // Only configure if not already configured (to avoid overriding the configuration from Program.cs)
+            if (!optionsBuilder.IsConfigured)
+            {
+                // This will only run if not configured via DI
+                base.OnConfiguring(optionsBuilder);
+            }
+        }
+
         // CourseRegistration specific tables
         public DbSet<Class> Classes { get; set; }
         public DbSet<Subject> Subjects { get; set; }
