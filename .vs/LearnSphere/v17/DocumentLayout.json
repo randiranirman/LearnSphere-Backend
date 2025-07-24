@@ -330,8 +330,7 @@
               "RelativeToolTip": "NewAnalyticsService.Infrastructure\\Data\\NewAnalyticsServiceDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T11:06:34.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T11:06:34.417Z"
             },
             {
               "$type": "Document",
@@ -343,8 +342,7 @@
               "RelativeToolTip": "NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T11:02:40.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T11:02:40.328Z"
             },
             {
               "$type": "Document",
@@ -356,8 +354,7 @@
               "RelativeToolTip": "NewAnalyticsServcie.Application\\Interfaces\\IMarksRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T23:33:15.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T23:33:15.276Z"
             },
             {
               "$type": "Document",
@@ -406,8 +403,7 @@
               "RelativeToolTip": "NewAnalyticsService.Infrastructure\\Repositories\\MarksRepository.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAkwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T23:35:37.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T23:35:37.089Z"
             },
             {
               "$type": "Document",

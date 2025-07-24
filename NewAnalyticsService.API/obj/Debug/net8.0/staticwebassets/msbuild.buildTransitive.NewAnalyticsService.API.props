@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\NewAnalyticsService.API.props" />
+</Project>

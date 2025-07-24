@@ -7150,23 +7150,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\binad\\.nuget\\packages\\": {},
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\project\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
+      "projectUniqueName": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
       "projectName": "QuizManagement.API",
-      "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
-      "packagesPath": "C:\\Users\\binad\\.nuget\\packages\\",
-      "outputPath": "C:\\project\\QuizManagementService\\QuizManagement.API\\obj\\",
+      "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.API\\QuizManagement.API.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\binad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7175,23 +7175,24 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\project\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj": {
-              "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj"
+            "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj": {
+              "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Application\\QuizManagement.Application.csproj"
             },
-            "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
-              "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj"
+            "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj": {
+              "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Domain\\QuizManagement.Domain.csproj"
             },
-            "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj": {
-              "projectPath": "C:\\project\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj"
+            "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj": {
+              "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\QuizManagementService\\QuizManagement.Infrastructure\\QuizManagement.Infrastructure.csproj"
             },
-            "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.csproj": {
-              "projectPath": "C:\\project\\UserService\\UserManagement.API\\UserManagement.API.csproj"
+            "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\UserManagement.API.csproj": {
+              "projectPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\UserManagement.API.csproj"
             }
           }
         }
@@ -7204,9 +7205,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -7228,24 +7229,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.18, 8.0.18]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.18, 8.0.18]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.18, 8.0.18]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.18, 8.0.18]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7254,20 +7237,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.108/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Newtonsoft.Json' 9.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "libraryId": "Newtonsoft.Json",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

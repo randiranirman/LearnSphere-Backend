@@ -1,0 +1,16 @@
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Application.deps.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Application.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Application.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Domain.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\bin\Debug\net8.0\CourseRegistration.Domain.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.csproj.AssemblyReference.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.AssemblyInfoInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.AssemblyInfo.cs
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.csproj.CoreCompileInputs.cache
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.sourcelink.json
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRe.A4819F08.Up2Date
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\refint\CourseRegistration.Application.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\CourseRegistration.Application.pdb
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\CourseRegistrationService\CourseRegistration.Application\obj\Debug\net8.0\ref\CourseRegistration.Application.dll
