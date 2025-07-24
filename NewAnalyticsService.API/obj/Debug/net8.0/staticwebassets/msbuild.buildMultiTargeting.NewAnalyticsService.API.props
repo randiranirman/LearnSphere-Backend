@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\NewAnalyticsService.API.props" />
-</Project>
