@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CourseRegistration.Application.Dtos;
+using CourseRegistration.Application.Interfaces;
 using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
 using CourseRegistration.Infrastructure.Data;
@@ -115,4 +116,24 @@ public class SubjectRepository : ISubjectRepository, IRepository<Subject>
 
         return existingSubject;
     }
+
+    public async Task<IEnumerable<GetAllSubjectsDetailsWithStudentCountByTeacherIdResponseDTO>> GetAllSubjectsDeatilsWithStudentCountByTeacherId(int teacherId)
+    {
+        var result = await _context.Subjects
+        .Include(s => s.TeacherSubjects)
+        .Include(s => s.StudentSubjects)
+        .Where(s => s.TeacherSubjects.Any(ts => ts.TeacherId == teacherId))
+        .Select(s => new GetAllSubjectsDetailsWithStudentCountByTeacherIdResponseDTO
+        {
+            SubjectId = s.SubjectId,
+            SubjectTitle = s.Name,
+            Code = s.Code,
+            NoOfRegisteredStudents = s.StudentSubjects.Count()
+        })
+        .ToListAsync();
+
+        return result;
+
+    }
+
 }

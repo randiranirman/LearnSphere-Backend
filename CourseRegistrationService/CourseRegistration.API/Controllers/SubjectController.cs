@@ -1,6 +1,5 @@
 ﻿using CourseRegistration.Application.Dtos;
 using CourseRegistration.Application.Interfaces;
-using CourseRegistration.Application.Repositories;
 using CourseRegistration.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -14,13 +13,14 @@ namespace CourseRegistration.API.Controllers
     {
 
         private readonly ISubjectService _subjectService;
+        private readonly ISubjectRepository _subjectRepository;
 
 
-        public SubjectController(ISubjectService subjectService)
+        public SubjectController(ISubjectService subjectService, ISubjectRepository subjectRepository)
         {
             _subjectService = subjectService;
-            
 
+            _subjectRepository = subjectRepository;
 
         }
 
@@ -87,6 +87,7 @@ namespace CourseRegistration.API.Controllers
                 return NotFound("subject not found invalid teacher id ");
             }
 
+
             return  Ok(subjects);
         }
 
@@ -105,6 +106,15 @@ namespace CourseRegistration.API.Controllers
 
 
             return Ok(subjects);
+        }
+
+        [HttpGet("get-all-subjectDetails-withStudentCount-by-teacherId")]
+        public async Task<IActionResult> GetAllSubjectsDetailsWithStudentsCountByTeacherId([FromQuery] int teacherId)
+        {
+            var result = await _subjectRepository.GetAllSubjectsDeatilsWithStudentCountByTeacherId(teacherId);
+            Console.WriteLine(result);
+            if (result is null) return NotFound();
+            return Ok(result);
         }
 
 

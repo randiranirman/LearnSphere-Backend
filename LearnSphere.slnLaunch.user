@@ -17,6 +17,10 @@
       {
         "Path": "AnalyticsService\\AnalyticsService.API\\AnalyticsService.API.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "NewAnalyticsService.API\\NewAnalyticsService.API.csproj",
+        "Action": "Start"
       }
     ]
   }

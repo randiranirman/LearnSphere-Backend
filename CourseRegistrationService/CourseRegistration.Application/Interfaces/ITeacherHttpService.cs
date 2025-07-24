@@ -15,7 +15,7 @@ namespace CourseRegistration.Application.Interfaces
         Task<bool> ValidateStudentExistsAsync(int studentId);
 
 
-        Task<List<TeacherDto>> GetAllTeachersAsync();
+        Task<List<GetAllTeachersDTO>> GetAllTeachersAsync();
 
     }
 }
