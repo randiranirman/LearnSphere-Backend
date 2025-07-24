@@ -1339,7 +1339,7 @@
         },
         "runtime": {
           "UserManagement.Application.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1347,7 +1347,7 @@
       "UserManagement.Domain/1.0.0": {
         "runtime": {
           "UserManagement.Domain.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1366,7 +1366,7 @@
         },
         "runtime": {
           "UserManagement.Infrastructure.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

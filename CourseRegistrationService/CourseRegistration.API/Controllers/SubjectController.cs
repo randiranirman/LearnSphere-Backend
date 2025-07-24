@@ -105,7 +105,7 @@ namespace CourseRegistration.API.Controllers
             }
         }
 
-        [Authorize(Roles ="teacher")]
+        
         
 
         

@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{715C3361-8EB2-4649-96D9-A1833507E63F}|NewAnalyticsService.API\\NewAnalyticsService.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\newanalyticsservice.api\\controllers\\markscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{715C3361-8EB2-4649-96D9-A1833507E63F}|NewAnalyticsService.API\\NewAnalyticsService.API.csproj|solutionrelative:newanalyticsservice.api\\controllers\\markscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|solutionrelative:courseregistrationservice\\courseregistration.api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.api\\controllers\\studentregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|solutionrelative:courseregistrationservice\\courseregistration.api\\controllers\\studentregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10715918-2E06-4011-BF73-81FD5624E30A}|FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\filestorage.api\\filestorage.application\\services\\coursehttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10715918-2E06-4011-BF73-81FD5624E30A}|FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.api\\filestorage.application\\services\\coursehttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20ECCB18-351D-4066-A80A-CEE767666ED1}|NewAnalyticsServcie.Application\\NewAnalyticsServcie.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\newanalyticsservcie.application\\interfaces\\imarksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20ECCB18-351D-4066-A80A-CEE767666ED1}|NewAnalyticsServcie.Application\\NewAnalyticsServcie.Application.csproj|solutionrelative:newanalyticsservcie.application\\interfaces\\imarksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54AB079-3F2C-41BD-82CF-D6658123BC6B}|NewAnalyticsService.Infrastructure\\NewAnalyticsService.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\newanalyticsservice.infrastructure\\repositories\\teachersubjecthttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54AB079-3F2C-41BD-82CF-D6658123BC6B}|NewAnalyticsService.Infrastructure\\NewAnalyticsService.Infrastructure.csproj|solutionrelative:newanalyticsservice.infrastructure\\repositories\\teachersubjecthttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.application\\services\\studentregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\services\\studentregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|solutionrelative:courseregistrationservice\\courseregistration.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715C3361-8EB2-4649-96D9-A1833507E63F}|NewAnalyticsService.API\\NewAnalyticsService.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\newanalyticsservice.api\\controllers\\markscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715C3361-8EB2-4649-96D9-A1833507E63F}|NewAnalyticsService.API\\NewAnalyticsService.API.csproj|solutionrelative:newanalyticsservice.api\\controllers\\markscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F54AB079-3F2C-41BD-82CF-D6658123BC6B}|NewAnalyticsService.Infrastructure\\NewAnalyticsService.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\newanalyticsservice.infrastructure\\repositories\\marksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{715C3361-8EB2-4649-96D9-A1833507E63F}|NewAnalyticsService.API\\NewAnalyticsService.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\newanalyticsservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{715C3361-8EB2-4649-96D9-A1833507E63F}|NewAnalyticsService.API\\NewAnalyticsService.API.csproj|solutionrelative:newanalyticsservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|solutionrelative:courseregistrationservice\\courseregistration.api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{715C3361-8EB2-4649-96D9-A1833507E63F}|NewAnalyticsService.API\\NewAnalyticsService.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\newanalyticsservice.api\\controllers\\analyticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,10 +139,6 @@
       "RelativeMoniker": "D:0:0:{10715918-2E06-4011-BF73-81FD5624E30A}|FileStorage.API\\FileStorage.Application\\FileStorage.Application.csproj|solutionrelative:filestorage.api\\filestorage.application\\interfaces\\iassignmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54AB079-3F2C-41BD-82CF-D6658123BC6B}|NewAnalyticsService.Infrastructure\\NewAnalyticsService.Infrastructure.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\newanalyticsservice.infrastructure\\repositories\\teachersubjecthttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54AB079-3F2C-41BD-82CF-D6658123BC6B}|NewAnalyticsService.Infrastructure\\NewAnalyticsService.Infrastructure.csproj|solutionrelative:newanalyticsservice.infrastructure\\repositories\\teachersubjecthttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39BEB753-849B-494E-AD85-247BCC785C27}|CourseRegistrationService\\CourseRegistration.API\\CourseRegistration.API.csproj|solutionrelative:courseregistrationservice\\courseregistration.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -137,10 +153,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.application\\interfaces\\istudentregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\interfaces\\istudentregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.application\\services\\studentregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|solutionrelative:courseregistrationservice\\courseregistration.application\\services\\studentregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE5A4B99-7FC8-465C-AABD-E8C970332170}|CourseRegistrationService\\CourseRegistration.Application\\CourseRegistration.Application.csproj|d:\\lms full project\\learning-management-system-new-backend\\learnsphere-backend\\courseregistrationservice\\courseregistration.application\\services\\teacherhttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -314,7 +326,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -322,7 +334,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
+              "Title": "SubmitMarksRequestDTO.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\SubmitMarksRequestDTO.cs",
+              "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\SubmitMarksRequestDTO.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\SubmitMarksRequestDTO.cs",
+              "RelativeToolTip": "NewAnalyticsServcie.Application\\DTOs\\SubmitMarksRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T23:31:07.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MarksController.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.API\\Controllers\\MarksController.cs",
+              "RelativeDocumentMoniker": "NewAnalyticsService.API\\Controllers\\MarksController.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.API\\Controllers\\MarksController.cs",
+              "RelativeToolTip": "NewAnalyticsService.API\\Controllers\\MarksController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T23:27:17.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseHttpService.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Services\\CourseHttpService.cs",
+              "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.Application\\Services\\CourseHttpService.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Services\\CourseHttpService.cs",
+              "RelativeToolTip": "FileStorage.API\\FileStorage.Application\\Services\\CourseHttpService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:19:42.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "NewAnalyticsServiceDbContext.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Data\\NewAnalyticsServiceDbContext.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.Infrastructure\\Data\\NewAnalyticsServiceDbContext.cs",
@@ -330,25 +379,36 @@
               "RelativeToolTip": "NewAnalyticsService.Infrastructure\\Data\\NewAnalyticsServiceDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T11:06:34.417Z",
+              "WhenOpened": "2025-07-24T11:06:34.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentRegistrationService.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentRegistrationService.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentRegistrationService.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentRegistrationService.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentRegistrationService.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAYwLUBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T13:16:25.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubjectController.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\SubjectController.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\SubjectController.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\SubjectController.cs*",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\SubjectController.cs*",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAEwGsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T08:49:09.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MarkAllocation.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
-              "RelativeDocumentMoniker": "NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
-              "RelativeToolTip": "NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T11:02:40.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "IMarksRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\Interfaces\\IMarksRepository.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\Interfaces\\IMarksRepository.cs",
@@ -361,32 +421,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SubmitMarksRequestDTO.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\SubmitMarksRequestDTO.cs",
-              "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\SubmitMarksRequestDTO.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\SubmitMarksRequestDTO.cs",
-              "RelativeToolTip": "NewAnalyticsServcie.Application\\DTOs\\SubmitMarksRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "StudentRegistrationController.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\StudentRegistrationController.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\StudentRegistrationController.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\StudentRegistrationController.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\StudentRegistrationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T23:31:07.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MarksController.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.API\\Controllers\\MarksController.cs",
-              "RelativeDocumentMoniker": "NewAnalyticsService.API\\Controllers\\MarksController.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.API\\Controllers\\MarksController.cs",
-              "RelativeToolTip": "NewAnalyticsService.API\\Controllers\\MarksController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T23:27:17.295Z",
+              "WhenOpened": "2025-07-24T16:34:43.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "TeacherSubjectHttpService.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\TeacherSubjectHttpService.cs",
+              "RelativeDocumentMoniker": "NewAnalyticsService.Infrastructure\\Repositories\\TeacherSubjectHttpService.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\TeacherSubjectHttpService.cs",
+              "RelativeToolTip": "NewAnalyticsService.Infrastructure\\Repositories\\TeacherSubjectHttpService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:51:57.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MarkAllocation.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
+              "RelativeDocumentMoniker": "NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
+              "RelativeToolTip": "NewAnalyticsService.Domain\\Entities\\MarkAllocation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T11:02:40.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Program.cs",
+              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.API\\Program.cs",
+              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Program.cs",
+              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.API\\Program.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAANwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T14:23:12.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Marks.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Domain\\Entities\\Marks.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.Domain\\Entities\\Marks.cs",
@@ -398,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "MarksRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\MarksRepository.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.Infrastructure\\Repositories\\MarksRepository.cs",
@@ -406,12 +490,11 @@
               "RelativeToolTip": "NewAnalyticsService.Infrastructure\\Repositories\\MarksRepository.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAkwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T23:35:37.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T23:35:37.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "MarksAllocationDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\MarksAllocationDTO.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\MarksAllocationDTO.cs",
@@ -423,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.API\\Program.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.API\\Program.cs",
@@ -435,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "AnalyticController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.API\\Controllers\\AnalyticController.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.API\\Controllers\\AnalyticController.cs",
@@ -447,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "StudentDetailsDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\StudentDetailsDTO.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\StudentDetailsDTO.cs",
@@ -459,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "SubjectsByTeacherIdDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\SubjectsByTeacherIdDTO.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\SubjectsByTeacherIdDTO.cs",
@@ -471,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "AnalyticsRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\AnalyticsRepository.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.Infrastructure\\Repositories\\AnalyticsRepository.cs",
@@ -483,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "GetAllStudentsBySubjectIdResponseDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\GetAllStudentsBySubjectIdResponseDTO.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\GetAllStudentsBySubjectIdResponseDTO.cs",
@@ -495,19 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SubjectController.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\SubjectController.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\SubjectController.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\SubjectController.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\SubjectController.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAEwFkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T08:49:09.36Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "IStudentDetailsHttpRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\Interfaces\\IStudentDetailsHttpRepository.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\Interfaces\\IStudentDetailsHttpRepository.cs",
@@ -519,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "StudentViewController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.API\\Controllers\\StudentViewController.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.API\\Controllers\\StudentViewController.cs",
@@ -531,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "GetAllSubjectsWithAssignmentsAndSubmissionsByTeacherIdResponseDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\GetAllSubjectsWithAssignmentsAndSubmissionsByTeacherIdResponseDTO.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\GetAllSubjectsWithAssignmentsAndSubmissionsByTeacherIdResponseDTO.cs",
@@ -543,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "GetAllStudentMarksByAssignmentIdResponseDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\GetAllStudentMarksByAssignmentIdResponseDTO.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\GetAllStudentMarksByAssignmentIdResponseDTO.cs",
@@ -555,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "IAnalyticsRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\Interfaces\\IAnalyticsRepository.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\Interfaces\\IAnalyticsRepository.cs",
@@ -567,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "GetAllAssignmentMarksByStudentIdAndSubjectIdResponseDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\DTOs\\GetAllAssignmentMarksByStudentIdAndSubjectIdResponseDTO.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\DTOs\\GetAllAssignmentMarksByStudentIdAndSubjectIdResponseDTO.cs",
@@ -579,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.API\\Program.cs",
               "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.API\\Program.cs",
@@ -591,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "ITeacherSubjectHttpService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\Interfaces\\ITeacherSubjectHttpService.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\Interfaces\\ITeacherSubjectHttpService.cs",
@@ -603,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "AssignmentHttpService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\AssignmentHttpService.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.Infrastructure\\Repositories\\AssignmentHttpService.cs",
@@ -615,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "TestController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.API\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.API\\Controllers\\TestController.cs",
@@ -627,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "IAssignmentHttpService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\Interfaces\\IAssignmentHttpService.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\Interfaces\\IAssignmentHttpService.cs",
@@ -639,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "AssignmentController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Controllers\\AssignmentController.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.API\\Controllers\\AssignmentController.cs",
@@ -651,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "IAssignmentRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Application\\Interfaces\\IAssignmentRepository.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.Application\\Interfaces\\IAssignmentRepository.cs",
@@ -663,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "AssignmentRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Infrastructure\\Repositories\\AssignmentRepository.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.Infrastructure\\Repositories\\AssignmentRepository.cs",
@@ -675,19 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "TeacherSubjectHttpService.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\TeacherSubjectHttpService.cs",
-              "RelativeDocumentMoniker": "NewAnalyticsService.Infrastructure\\Repositories\\TeacherSubjectHttpService.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\TeacherSubjectHttpService.cs",
-              "RelativeToolTip": "NewAnalyticsService.Infrastructure\\Repositories\\TeacherSubjectHttpService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAwEIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T12:51:57.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "StudentController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\StudentController.cs",
@@ -699,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "StudentSubject.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentSubject.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\StudentSubject.cs",
@@ -711,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "StudentSubjectController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\StudentSubjectController.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\StudentSubjectController.cs",
@@ -723,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "IStudentRegistrationService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentRegistrationService.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentRegistrationService.cs",
@@ -735,19 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "StudentRegistrationService.cs",
-              "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentRegistrationService.cs",
-              "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentRegistrationService.cs",
-              "ToolTip": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentRegistrationService.cs",
-              "RelativeToolTip": "CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentRegistrationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALUBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T13:16:25.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "TeacherHttpService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Services\\TeacherHttpService.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Services\\TeacherHttpService.cs",
@@ -759,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "ISubjectService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectService.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectService.cs",
@@ -771,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "TeacherRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\TeacherRepository.cs",
               "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\TeacherRepository.cs",
@@ -783,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "AnalyticsController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.API\\Controllers\\AnalyticsController.cs",
               "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.API\\Controllers\\AnalyticsController.cs",
@@ -795,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "AllSubjectsByTeacherIdDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\DTOs\\AllSubjectsByTeacherIdDTO.cs",
               "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Application\\DTOs\\AllSubjectsByTeacherIdDTO.cs",
@@ -807,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "TeacherSubjectRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\TeacherSubjectRepository.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\TeacherSubjectRepository.cs",
@@ -819,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\Repositories\\IUserService.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Repositories\\IUserService.cs",
@@ -831,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Infrastructure\\Services\\UserService.cs",
@@ -843,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "Assignment.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.Domain\\Entities\\Assignment.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.Domain\\Entities\\Assignment.cs",
@@ -855,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "GetAllStudentsRegisteredResponseDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\Dtos\\GetAllStudentsRegisteredResponseDTO.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\GetAllStudentsRegisteredResponseDTO.cs",
@@ -867,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "SubjectService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Services\\SubjectService.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Services\\SubjectService.cs",
@@ -879,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.API\\Controllers\\UserController.cs",
@@ -891,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "TeacherSubject.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherSubject.cs",
@@ -903,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "Student.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Student.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Domain\\Domain\\Student.cs",
@@ -915,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "GetAllTeachersWithSubjectCountResponseDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Dtos\\GetAllTeachersWithSubjectCountResponseDTO.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Dtos\\GetAllTeachersWithSubjectCountResponseDTO.cs",
@@ -927,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "GetAllTeachersDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Dtos\\GetAllTeachersDTO.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Dtos\\GetAllTeachersDTO.cs",
@@ -939,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "TeacherStudent.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherStudent.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Domain\\Models\\TeacherStudent.cs",
@@ -951,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "TeacherController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.API\\Controllers\\TeacherController.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.API\\Controllers\\TeacherController.cs",
@@ -963,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "ITeacherSubjectRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherSubjectRepository.cs",
@@ -975,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "ITeacherHttpService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherHttpService.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ITeacherHttpService.cs",
@@ -987,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "TeacherDto.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\Dtos\\TeacherDto.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\TeacherDto.cs",
@@ -999,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "AnalyticsRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\AnalyticsRepository.cs",
               "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\AnalyticsRepository.cs",
@@ -1011,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "ISubjectRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\ISubjectRepository.cs",
@@ -1023,7 +1070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "Teacher.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Domain\\Domain\\Teacher.cs",
@@ -1035,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "GetNoOfTeachersAndNoOfStudentsResponseDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\Dtos\\GetNoOfTeachersAndNoOfStudentsResponseDTO.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\GetNoOfTeachersAndNoOfStudentsResponseDTO.cs",
@@ -1047,7 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "SubjectRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\SubjectRepository.cs",
@@ -1059,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "GetAllSubjectsDetailsWithStudentCountByTeacherIdResponseDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Dtos\\GetAllSubjectsDetailsWithStudentCountByTeacherIdResponseDTO.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Dtos\\GetAllSubjectsDetailsWithStudentCountByTeacherIdResponseDTO.cs",
@@ -1071,7 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "IStudentsRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsServcie.Application\\Interfaces\\IStudentsRepository.cs",
               "RelativeDocumentMoniker": "NewAnalyticsServcie.Application\\Interfaces\\IStudentsRepository.cs",
@@ -1083,7 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "StudentRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\StudentRepository.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.Infrastructure\\Repositories\\StudentRepository.cs",
@@ -1095,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 67,
               "Title": "AssignmentsRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\AssignmentsRepository.cs",
               "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Infrastructure\\Repositories\\AssignmentsRepository.cs",
@@ -1107,7 +1154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": "AssignmentsController.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.API\\Controllers\\AssignmentsController.cs",
               "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.API\\Controllers\\AssignmentsController.cs",
@@ -1119,7 +1166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 69,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\FileStorage.API\\FileStorage.API\\Program.cs",
               "RelativeDocumentMoniker": "FileStorage.API\\FileStorage.API\\Program.cs",
@@ -1131,7 +1178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 70,
               "Title": "AssignmentDTO.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\AnalyticsService\\AnalyticsService.Application\\DTOs\\AssignmentDTO.cs",
               "RelativeDocumentMoniker": "AnalyticsService\\AnalyticsService.Application\\DTOs\\AssignmentDTO.cs",
@@ -1143,7 +1190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "StudentDetailsHttpRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\NewAnalyticsService.Infrastructure\\Repositories\\StudentDetailsHttpRepository.cs",
               "RelativeDocumentMoniker": "NewAnalyticsService.Infrastructure\\Repositories\\StudentDetailsHttpRepository.cs",
@@ -1155,7 +1202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "StudentSubjectRepository.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\StudentSubjectRepository.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Infrastructure\\Repositories\\StudentSubjectRepository.cs",
@@ -1167,7 +1214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "StudentHttpService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentHttpService.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Services\\StudentHttpService.cs",
@@ -1179,7 +1226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "IStudentHttpService.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentHttpService.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Interfaces\\IStudentHttpService.cs",
@@ -1191,7 +1238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "StudentDto.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\Dtos\\StudentDto.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\StudentDto.cs",
@@ -1203,7 +1250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "StudentListDto.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Application\\Dtos\\StudentListDto.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Application\\Dtos\\StudentListDto.cs",
@@ -1215,7 +1262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "StudentListRequsetDto.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\CourseRegistrationService\\CourseRegistration.Application\\Dtos\\StudentListRequsetDto.cs",
               "RelativeDocumentMoniker": "CourseRegistrationService\\CourseRegistration.Application\\Dtos\\StudentListRequsetDto.cs",
@@ -1227,7 +1274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "UserDbContext.cs",
               "DocumentMoniker": "D:\\LMS FULL PROJECT\\learning-Management-System-new-backend\\LearnSphere-Backend\\UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
               "RelativeDocumentMoniker": "UserService\\UserManagement.Infrastructure\\Data\\UserDbContext.cs",
