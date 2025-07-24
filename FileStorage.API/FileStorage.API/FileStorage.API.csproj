@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\AnalyticsService\AnalyticsService.Application\AnalyticsService.Application.csproj" />
+    <ProjectReference Include="..\..\AnalyticsService\AnalyticsService.Infrastructure\AnalyticsService.Infrastructure.csproj" />
     <ProjectReference Include="..\FileStorage.Application\FileStorage.Application.csproj" />
     <ProjectReference Include="..\FileStorage.Infrastructure\FileStorage.Infrastructure.csproj" />
   </ItemGroup>

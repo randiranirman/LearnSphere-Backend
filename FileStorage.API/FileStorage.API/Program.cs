@@ -1,7 +1,11 @@
+using AnalyticsService.Application.Interfaces;
+using AnalyticsService.Infrastructure.Data;
+using AnalyticsService.Infrastructure.Repositories;
 using FileStorage.API;
 using FileStorage.Application.Interfaces;
 using FileStorage.Application.Services;
 using FileStorage.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +21,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<ICourseHttpService, CourseHttpService>();
 builder.Services.AddScoped<ITeacherFilesRepository, TeacherFileRepository>();
 builder.Services.AddScoped<IStudentFilesRepository, StudentFileRepository>();
-builder.Services.AddScoped<IAssignmentRepository, AssignmentRepository>();
+builder.Services.AddScoped<IAssignmentsRepository, AssignmentsRepository>();
 
 builder.Services.AddCors(options =>
 {
@@ -31,6 +35,10 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddAppDI(builder.Configuration);
+
+builder.Services.AddDbContext<AnalyticsDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
+
 
 var app = builder.Build();
 
