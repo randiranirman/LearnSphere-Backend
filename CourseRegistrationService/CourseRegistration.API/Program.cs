@@ -227,6 +227,9 @@ else
     app.UseCors("AllowLocalhost");
 }
 
+app.UseCors("AllowLocalhost");
+
+
 app.UseHttpsRedirection();
 
 // Authentication must come before Authorization
