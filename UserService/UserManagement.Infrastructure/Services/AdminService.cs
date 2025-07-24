@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CsvHelper;
 using CsvHelper.TypeConversion;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using UserManagement.Application.Dtos;
 using UserManagement.Application.Repositories;
 using UserManagement.Domain.Domain;
@@ -15,10 +16,9 @@ using UserManagement.Infrastructure.Data;
 
 namespace UserManagement.Infrastructure.Services
 {
-    public class AdminService(UserDbContext _context, IAuthService _authService) : IAdminService
+    public class AdminService(UserDbContext _context, IAuthService _authService, RedisCacheService _cache ) : IAdminService
     {
 
-        private readonly RedisCacheService _cache; 
         public async Task<bool> EditAdminDetails(int id, Admin request)
         {
             var admin = await _context.Admins.FindAsync(id);
