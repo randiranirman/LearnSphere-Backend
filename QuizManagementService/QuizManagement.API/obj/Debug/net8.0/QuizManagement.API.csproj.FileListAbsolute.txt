@@ -129,3 +129,7 @@ D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\Q
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.pdb
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\QuizManagement.API.genruntimeconfig.cache
 D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\ref\QuizManagement.API.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\LMS FULL PROJECT\learning-Management-System-new-backend\LearnSphere-Backend\QuizManagementService\QuizManagement.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
